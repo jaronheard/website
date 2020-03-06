@@ -43,6 +43,13 @@ module.exports = {
         spaceId: `3j4jpxgb52st`,
         accessToken: `xiK4OR-Zu0SkKqqZGvCnej4wkJB3vMB5Yn6ptGWcTts`
       }
+    },
+    {
+      resolve: `gatsby-plugin-google-fonts`,
+      options: {
+        fonts: [`Merriweather`, `Rubik`, `Roboto Condensed`],
+        display: "swap"
+      }
     }
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
