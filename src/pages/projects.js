@@ -3,16 +3,20 @@ import { Link } from "gatsby";
 
 import SEO from "../components/SEO";
 import Wrapper from "../components/Wrapper";
+import ProjectDetailList from "../components/ProjectDetailList";
 
-const SecondPage = () => (
+const Projects = () => (
   <Wrapper>
-    <SEO title="Page two" />
+    <SEO title="Projects" />
     <div heroTitle="Civic and Gatsby Starter" heroSubtitle="They play nice!">
-      <h1>Hi from the second page</h1>
-      <p>Welcome to page 2</p>
+      <h1>Projects</h1>
+      <p>
+        <em>These projects are pulled in from Contentful</em>
+      </p>
+      <ProjectDetailList />
       <Link to="/">Go back to the homepage</Link>
     </div>
   </Wrapper>
 );
 
-export default SecondPage;
+export default Projects;

@@ -6,6 +6,7 @@ module.exports = {
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
+    // Prefer contentful for images instead
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -34,6 +35,13 @@ module.exports = {
       options: {
         analyzerPort: 3000,
         production: true
+      }
+    },
+    {
+      resolve: `gatsby-source-contentful`,
+      options: {
+        spaceId: `3j4jpxgb52st`,
+        accessToken: `xiK4OR-Zu0SkKqqZGvCnej4wkJB3vMB5Yn6ptGWcTts`
       }
     }
     // this (optional) plugin enables Progressive Web App + Offline functionality
