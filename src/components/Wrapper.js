@@ -1,7 +1,8 @@
 /** @jsx jsx */
 import PropTypes from "prop-types";
 import { Global, jsx, css } from "@emotion/core";
-import { BrandTheme } from "@hackoregon/ui-themes";
+// Temporarily use the brand theme locally for ease of tweaking
+import UpdatedBrandTheme from "../_Theme/UpdatedBrandTheme";
 
 const Wrapper = ({ children }) => (
   <div
@@ -11,7 +12,7 @@ const Wrapper = ({ children }) => (
       max-width: 600px;
     `}
   >
-    <Global styles={BrandTheme} />
+    <Global styles={UpdatedBrandTheme} />
     {children}
   </div>
 );
