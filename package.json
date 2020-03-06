@@ -1,0 +1,80 @@
+{
+  "name": "gatsby-starter-default-civic-component-library-ci",
+  "private": true,
+  "description": "A simple starter to get up and developing quickly with Gatsby - with the CIVIC component library added!",
+  "version": "0.1.0",
+  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "dependencies": {
+    "@emotion/core": "^10.0.10",
+    "@emotion/styled": "^10.0.10",
+    "@hackoregon/ui-core": "^0.0.4",
+    "@hackoregon/ui-themes": "^0.0.4",
+    "gatsby": "^2.3.29",
+    "gatsby-image": "^2.0.40",
+    "gatsby-plugin-emotion": "^4.0.6",
+    "gatsby-plugin-manifest": "^2.0.29",
+    "gatsby-plugin-offline": "3",
+    "gatsby-plugin-react-helmet": "^3.0.12",
+    "gatsby-plugin-sharp": "^2.0.35",
+    "gatsby-plugin-webpack-bundle-analyzer": "^1.0.5",
+    "gatsby-source-filesystem": "^2.0.32",
+    "gatsby-transformer-sharp": "^2.1.18",
+    "prop-types": "^15.7.2",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-helmet": "^5.2.0"
+  },
+  "devDependencies": {
+    "babel-eslint": "^10.0.1",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-config-prettier": "^4.0.0",
+    "eslint-plugin-babel": "^5.3.0",
+    "eslint-plugin-emotion": "^10.0.7",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-jsx-a11y": "^6.2.1",
+    "eslint-plugin-prefer-object-spread": "^1.1.0",
+    "eslint-plugin-prettier": "^3.0.1",
+    "eslint-plugin-react": "^7.12.4",
+    "eslint-plugin-react-hooks": "^1.7.0",
+    "eslint-watch": "^5.0.1",
+    "husky": "^4.2.3",
+    "lint-staged": "^10.0.8",
+    "prettier": "1.16.4"
+  },
+  "keywords": [],
+  "license": "MIT",
+  "scripts": {
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "format": "prettier --write src/**/*.{js,jsx,css,md}",
+    "start": "yarn run develop",
+    "serve": "gatsby serve",
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\"",
+    "eslint-check": "eslint --print-config . | eslint-config-prettier-check",
+    "lint": "eslint src",
+    "lint:fix": "eslint src --fix",
+    "pretty": "yarn run format"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{css,md,json}": [
+      "prettier --write"
+    ],
+    "*.{js,jsx}": [
+      "prettier --write",
+      "eslint --fix"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+  },
+  "bugs": {
+    "url": "https://github.com/gatsbyjs/gatsby/issues"
+  }
+}
