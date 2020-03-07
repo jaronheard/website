@@ -139,7 +139,8 @@ const IndexPage = () => {
               </p>
               <p>
                 Diverse voices and skills power our custom built,
-                multidisciplinary teams.
+                multidisciplinary teams – with CIVIC Platform supporting from
+                start to scale.
               </p>
             </Box>
             <Box textAlign="center">
@@ -153,11 +154,11 @@ const IndexPage = () => {
               <h3>Real impact to make</h3>
               <p>
                 Is your institution ready to scale its impact? Act on your data.
-                Make your big idea a reality. Fulfill your mission.
+                Make your big idea a reality. Fulfill your public mission.
               </p>
               <p>
-                We want institutional and philanthropic partners who are ready
-                to go big.
+                We want institutional, philanthropic, and venture partners who
+                are ready to make big waves.
               </p>
             </Box>
             <Box textAlign="center">
