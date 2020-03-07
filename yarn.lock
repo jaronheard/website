@@ -949,6 +949,19 @@
   resolved "https://registry.yarnpkg.com/@emotion/weak-memoize/-/weak-memoize-0.2.5.tgz#8eed982e2ee6f7f4e44c253e12962980791efd46"
   integrity sha512-6U71C2Wp7r5XtFtQzYrW5iKFT67OixrSxjI4MptCHzdSVlgabczzqLe0ZSgnub/5Kp4hSbpDB1tMytZY9pwxxA==
 
+"@hackoregon/ui-brand@^0.0.4":
+  version "0.0.4"
+  resolved "https://registry.yarnpkg.com/@hackoregon/ui-brand/-/ui-brand-0.0.4.tgz#24fc0927f23534eaa2a85c9e908fabe5af67d0ea"
+  integrity sha512-/eEkLYSgcsf0rx8q2XIgHXLgQwzFiWOvE6o0XN6LlHOyji7LvK0Kp8frajeOJmekw2y/OMxKjq4iCPZk2kEDtw==
+  dependencies:
+    "@emotion/core" "^10.0.15"
+    "@hackoregon/ui-docs" "^0.0.4"
+    "@hackoregon/ui-themes" "^0.0.4"
+    "@hackoregon/utils" "^0.0.4"
+    prop-types "^15.7.2"
+    react "^16.8.4"
+    react-dom "^16.8.4"
+
 "@hackoregon/ui-core@^0.0.4":
   version "0.0.4"
   resolved "https://registry.yarnpkg.com/@hackoregon/ui-core/-/ui-core-0.0.4.tgz#2a2753933188fde0cab17e8f87f77e3c92199f32"
@@ -968,6 +981,16 @@
     react-dom "^16.8.4"
     react-share "^2.2.0"
     shortid "^2.2.14"
+
+"@hackoregon/ui-docs@^0.0.4":
+  version "0.0.4"
+  resolved "https://registry.yarnpkg.com/@hackoregon/ui-docs/-/ui-docs-0.0.4.tgz#4a0dce4955489b9b334dc0d2316dd9a207ffdfba"
+  integrity sha512-hR0L2+DSM+59RCIIcSW6beWsgtZmNNxdsR2HBGzq2lNg8YiGvYTqHIzDSZVDoaFJUtaX91lIlCkLF20j94j06A==
+  dependencies:
+    "@hackoregon/ui-brand" "^0.0.4"
+    "@hackoregon/ui-themes" "^0.0.4"
+    react "^16.8.4"
+    react-dom "^16.8.4"
 
 "@hackoregon/ui-themes@^0.0.4":
   version "0.0.4"
@@ -1278,7 +1301,7 @@
   dependencies:
     core-js "^2.5.7"
 
-"@material-ui/core@^4.4.0":
+"@material-ui/core@^4.4.0", "@material-ui/core@^4.9.5":
   version "4.9.5"
   resolved "https://registry.yarnpkg.com/@material-ui/core/-/core-4.9.5.tgz#384869f2840b243241f7881a902f5ffc48360830"
   integrity sha512-hVuUqw6847jcgRsUqzCiYCXcIJYhPUfM3gS9sNehTsbI0SF3tufLNO2B2Cgkuns8uOGy0nicD4p3L7JqhnEElg==

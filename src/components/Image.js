@@ -11,7 +11,7 @@ const Image = ({ title }) => {
             node {
               title
               description
-              fluid(maxWidth: 300) {
+              fluid(maxWidth: 600) {
                 srcSet
                 sizes
               }
