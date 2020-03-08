@@ -26,12 +26,17 @@ const IndexPage = () => {
       <Grid container spacing={0}>
         <Grid container xs={12}>
           <Grid item xs={1} md={4}>
-            <Box p={8}>
-              <Image title="Ven Graph" />
+            <Box mt={4} pt={8}>
+              <Image
+                css={css`
+                  max-width: 90vw%;
+                `}
+                title="Ven Graph"
+              />
             </Box>
           </Grid>
           <Grid item xs={11} md={8}>
-            <Box p={8}>
+            <Box mt={4} p={8}>
               <h2
                 css={css`
                   background-color: white;
