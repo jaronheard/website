@@ -7,6 +7,7 @@ const md = MaterialTheme.breakpoints.between("sm", "md");
 
 // Typography
 const body = {
+  fontFamily: "Merriweather",
   fontSize: "1.0625rem",
   lineHeight: "1.75rem",
   margin: 0,
