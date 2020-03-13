@@ -5,7 +5,6 @@ import PropTypes from "prop-types";
 import { Box } from "@material-ui/core";
 
 import SEO from "./SEO";
-import Wrapper from "./Wrapper";
 import Header from "./Header";
 import Contact from "./Contact";
 import Footer from "./Footer";
@@ -14,13 +13,11 @@ import CommonCTA from "./CommonCTA";
 const PageLayout = ({ title, keywords, children }) => {
   return (
     <Fragment>
-      <Wrapper>
-        <SEO title={`CIVIC${title && `: ${title}`}`} keywords={keywords} />
-        <Header />
-        <Box mt={8}>{children}</Box>
-        <CommonCTA />
-        <Contact />
-      </Wrapper>
+      <SEO title={`CIVIC${title && `: ${title}`}`} keywords={keywords} />
+      <Header />
+      <Box mt={8}>{children}</Box>
+      <CommonCTA />
+      <Contact />
       <Footer />
     </Fragment>
   );

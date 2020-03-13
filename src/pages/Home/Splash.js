@@ -2,22 +2,31 @@
 import { jsx, css } from "@emotion/core";
 import { Grid, Box } from "@material-ui/core";
 
-import Image from "../../components/Image";
+import pathsImg from "../../images/paths.png";
+
+import DividerLine from "../../components/DividerLine";
 import CTAButtons from "../../components/CTAButtons";
 
 const Splash = () => (
   <Grid container xs={12}>
-    <Grid item xs={1} md={4}>
-      <Box mt={4} pt={8}>
-        <Image
-          css={css`
-            max-width: 90vw%;
-          `}
-          title="Ven Graph"
-        />
-      </Box>
-    </Grid>
-    <Grid item xs={11} md={8}>
+    <Grid
+      item
+      xs={11}
+      md={8}
+      css={css`
+        overflow: hidden;
+      `}
+    >
+      <img
+        src={pathsImg}
+        alt=""
+        css={css`
+          position: absolute;
+          width: 100%;
+          z-index: -1;
+          opacity: 0.2;
+        `}
+      />
       <Box mt={4} p={8}>
         <h2
           css={css`
@@ -50,6 +59,7 @@ const Splash = () => (
         </Grid>
       </Box>
     </Grid>
+    <DividerLine />
   </Grid>
 );
 
