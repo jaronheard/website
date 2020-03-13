@@ -2,6 +2,7 @@
 import { BrandColors, VisualizationColors } from "@hackoregon/ui-themes";
 
 // Breakpoints
+export const xsBreak = "@media (max-width:659.95px)";
 export const smBreak = "@media (max-width:959.95px)";
 export const mdBreak = "@media (min-width:959.95px)";
 export const lgBreak = "@media (max-width:1279.95px)";

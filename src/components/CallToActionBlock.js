@@ -3,12 +3,18 @@
 import { jsx, css } from "@emotion/core";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 import DividerLine from "./DividerLine";
-import { colors } from "../_Theme/UpdatedBrandTheme";
+import { colors, smBreak, xsBreak } from "../_Theme/UpdatedBrandTheme";
 
 // https://app.contentful.com/spaces/3j4jpxgb52st/content_types/callToActionBlock/fields
 
 const imageStyle = css`
-  height: 400px;
+  width: 400px;
+  max-width: 40vw;
+
+  ${xsBreak} {
+    width: 100%;
+    max-width: 400px;
+  }
 `;
 
 const contentStyle = css`
@@ -42,6 +48,9 @@ const CallToActionBlock = ({
       <div
         css={css`
           padding: 0 70px;
+          ${smBreak} {
+            padding: 0 35px;
+          }
         `}
       >
         <div
@@ -52,6 +61,14 @@ const CallToActionBlock = ({
             width: 100%;
             max-width: 1230px;
             margin: 0 auto;
+            align-items: center;
+
+            ${xsBreak} {
+              grid-template-columns: auto;
+              grid-template-rows: repeat(2, auto);
+              grid-row-gap: 80px;
+              justify-items: center;
+            }
           `}
         >
           {image && reverseLayout && CTAimage}
