@@ -1,15 +1,19 @@
 /** @jsx jsx */
 import PropTypes from "prop-types";
-import { Global, jsx } from "@emotion/core";
-import { MaterialTheme } from "@hackoregon/ui-themes";
-import { ThemeProvider } from "@material-ui/core";
+import { Global, css, jsx } from "@emotion/core";
+import emotionReset from "emotion-reset";
 // Temporarily use the brand theme locally for ease of tweaking
 import UpdatedBrandTheme from "../_Theme/UpdatedBrandTheme";
 
 const Wrapper = ({ children }) => (
   <div>
-    <Global styles={UpdatedBrandTheme} />
-    <ThemeProvider theme={MaterialTheme}>{children}</ThemeProvider>
+    <Global
+      styles={css`
+        ${emotionReset}
+        ${UpdatedBrandTheme}
+      `}
+    />
+    {children}
   </div>
 );
 

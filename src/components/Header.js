@@ -2,54 +2,57 @@
 import { jsx, css } from "@emotion/core";
 import { Link } from "gatsby";
 import { Logo } from "@hackoregon/ui-brand";
-import { BrandColors } from "@hackoregon/ui-themes";
-import { AppBar, Toolbar, Box, Grid } from "@material-ui/core";
+// import { BrandColors } from "@hackoregon/ui-themes";
+
+import { colors, shadows, smBreak } from "../_Theme/UpdatedBrandTheme";
 
 const Header = () => {
   return (
-    <AppBar
-      color="transparent"
-      elevation={0}
-      position="absolute"
+    <div
       css={css`
-        border-bottom: 2px solid ${BrandColors.primary.hex};
+        height: 90px;
+        background-color: ${colors.white};
+        box-shadow: ${shadows.bottom};
+        display: grid;
+        padding: 0 30px;
       `}
     >
-      <Toolbar>
-        <Grid container xs={12}>
-          <Grid item xs={5} />
-          <Grid item xs={2}>
-            <Link to="/">
-              <Box textAlign="center" mt={1}>
-                <Logo type="squareLogo" />
-              </Box>
-            </Link>
-          </Grid>
-          <Grid item xs={1} />
-          <Grid item xs={1}>
-            <Link to="/platform/">
-              <Box textAlign="center">
-                <h3>Platform</h3>
-              </Box>
-            </Link>
-          </Grid>
-          <Grid item xs={1}>
-            <Link to="/studios/">
-              <Box textAlign="center">
-                <h3>Studios</h3>
-              </Box>
-            </Link>
-          </Grid>
-          <Grid item xs={1}>
-            <Link to="/ventures/">
-              <Box textAlign="center">
-                <h3>Ventures</h3>
-              </Box>
-            </Link>
-          </Grid>
-        </Grid>
-      </Toolbar>
-    </AppBar>
+      <div
+        className="centerSelf"
+        css={css`
+          position: absolute;
+        `}
+      >
+        <Link to="/">
+          <Logo type="standardLogo" />
+        </Link>
+      </div>
+      <div
+        css={css`
+          display: grid;
+          grid-template-columns: repeat(3, auto);
+          justify-self: end;
+          max-width: 300px;
+          width: 27vw;
+          justify-content: space-between;
+          align-content: center;
+
+          ${smBreak} {
+            display: none;
+          }
+        `}
+      >
+        <Link to="/platform/">
+          <p className="action">Platform</p>
+        </Link>
+        <Link to="/studios/">
+          <p className="action">Studios</p>
+        </Link>
+        <Link to="/ventures/">
+          <p className="action">Ventures</p>
+        </Link>
+      </div>
+    </div>
   );
 };
 

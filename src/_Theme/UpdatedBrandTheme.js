@@ -1,9 +1,20 @@
 // Use with emotion's Global component
-import { BrandColors, MaterialTheme } from "@hackoregon/ui-themes";
+import { BrandColors } from "@hackoregon/ui-themes";
 
 // Breakpoints
-const sm = MaterialTheme.breakpoints.down("sm");
-const md = MaterialTheme.breakpoints.between("sm", "md");
+export const smBreak = "@media (max-width:959.95px)";
+export const mdBreak = "@media (max-width:1279.95px)";
+
+// Colors
+export const colors = {
+  ...BrandColors,
+  white: "#fff"
+};
+
+// Shadows
+export const shadows = {
+  bottom: "0px 1px 4px rgba(0, 0, 0, 0.4)"
+};
 
 // Typography
 const body = {
@@ -13,7 +24,7 @@ const body = {
   margin: 0,
   display: "flex",
   flexDirection: "column",
-  [sm]: {
+  [smBreak]: {
     fontSize: "1rem",
     lineHeight: "1.5rem"
   }
@@ -25,7 +36,7 @@ const p = {
   color: BrandColors.tertiary.hex,
   marginBlockStart: "0.875rem",
   marginBlockEnd: "0.875rem",
-  [sm]: {
+  [smBreak]: {
     fontSize: "1rem",
     lineHeight: "1.5rem"
   }
@@ -45,7 +56,7 @@ const pLarge = {
   color: BrandColors.tertiary.hex,
   marginBlockStart: "0.875rem",
   marginBlockEnd: "0.875rem",
-  [sm]: {
+  [smBreak]: {
     fontSize: "1.0625rem",
     lineHeight: "1.75rem"
   }
@@ -58,12 +69,12 @@ const h1 = {
   fontWeight: "500",
   marginBlockStart: "4rem",
   marginBlockEnd: "4rem",
-  [md]: {
+  [mdBreak]: {
     fontSize: "3rem",
     marginBlockStart: "3rem",
     marginBlockEnd: "3rem"
   },
-  [sm]: {
+  [smBreak]: {
     fontSize: "2rem",
     marginBlockStart: "2rem",
     marginBlockEnd: "2rem"
@@ -77,7 +88,7 @@ const h2 = {
   fontWeight: "400",
   marginBlockStart: "2rem",
   marginBlockEnd: "2rem",
-  [sm]: {
+  [smBreak]: {
     fontSize: "1.7rem",
     marginBlockStart: "1.7rem",
     marginBlockEnd: "1.7rem"
@@ -91,7 +102,7 @@ const h3 = {
   fontWeight: "500",
   marginBlockStart: "1.5rem",
   marginBlockEnd: "1.5rem",
-  [sm]: {
+  [smBreak]: {
     fontSize: "1.35rem",
     marginBlockStart: "1.35rem",
     marginBlockEnd: "1.35rem"
@@ -105,7 +116,7 @@ const h4 = {
   fontWeight: "400",
   marginBlockStart: "1.25rem",
   marginBlockEnd: "1.25rem",
-  [sm]: {
+  [smBreak]: {
     fontSize: "1.15rem",
     marginBlockStart: "1.15rem",
     marginBlockEnd: "1.15rem"
@@ -228,6 +239,14 @@ export default {
 
   ".code": code,
 
+  ".action": {
+    fontFamily: "Rubik",
+    fontStyle: "normal",
+    fontWeight: "normal",
+    fontSize: p.fontSize,
+    lineHeight: p.lineHeight
+  },
+
   ".Description": {
     maxWidth: "900px",
     margin: "0 auto",
@@ -257,5 +276,10 @@ export default {
 
   ".Pullquote": {
     fontSize: "2.85rem"
+  },
+
+  ".centerSelf": {
+    justifySelf: "center",
+    alignSelf: "center"
   }
 };

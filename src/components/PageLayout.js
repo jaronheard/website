@@ -2,7 +2,6 @@
 import { jsx } from "@emotion/core";
 import { Fragment } from "react";
 import PropTypes from "prop-types";
-import { Box } from "@material-ui/core";
 
 import SEO from "./SEO";
 import Header from "./Header";
@@ -17,7 +16,7 @@ const PageLayout = ({ title, keywords, children }) => {
       <SEO title={`CIVIC${title && `: ${title}`}`} keywords={keywords} />
       <Wrapper>
         <Header />
-        <Box mt={8}>{children}</Box>
+        {children}
         <CommonCTA />
         <Contact />
         <Footer />
