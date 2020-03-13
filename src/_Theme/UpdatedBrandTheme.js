@@ -8,6 +8,7 @@ export const lgBreak = "@media (max-width:1279.95px)";
 
 // Colors
 export const colors = {
+  ...VisualizationColors.categorical,
   ...BrandColors,
   white: "#fff"
 };

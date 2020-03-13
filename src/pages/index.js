@@ -5,7 +5,26 @@ import { jsx, css } from "@emotion/core";
 import OurDifferenceCards from "./Home/OurDifferenceCards";
 import OurDifferenceHeader from "./Home/OurDifferenceHeader";
 import Splash from "./Home/Splash";
+import DividerLine from "../components/DividerLine";
 import PageLayout from "../components/PageLayout";
+import { smBreak, mdBreak, colors } from "../_Theme/UpdatedBrandTheme";
+
+const dividerLineStyle = css`
+  ${smBreak} {
+    display: none;
+  }
+`;
+
+const dividerLinePadding = css`
+  border-top: 10px solid ${colors.purple.hex};
+  height: 130px;
+  background-color: white;
+  margin-top: 100px;
+
+  ${mdBreak} {
+    display: none;
+  }
+`;
 
 const IndexPage = () => {
   return (
@@ -14,6 +33,8 @@ const IndexPage = () => {
       keywords={[`Civic Software Foundation`, `CIVIC Platform`]}
     >
       <Splash />
+      <DividerLine hexColor={colors.purple.hex} cssStyle={dividerLineStyle} />
+      <div css={dividerLinePadding} />
       <div
         css={css`
           background-color: white;
@@ -25,6 +46,19 @@ const IndexPage = () => {
         <OurDifferenceHeader />
         <OurDifferenceCards />
       </div>
+      <DividerLine
+        hexColor={colors.yellow.hex}
+        cssStyle={css`
+          ${dividerLineStyle}
+          margin-top: -60px;
+        `}
+      />
+      <div
+        css={css`
+          ${dividerLinePadding}
+          border-top: 10px solid ${colors.yellow.hex};
+        `}
+      />
       {/* <CallToActionBlocks /> */}
     </PageLayout>
   );

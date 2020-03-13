@@ -2,9 +2,8 @@
 import { jsx, css } from "@emotion/core";
 
 import pathsImg from "../../images/paths.png";
-import DividerLine from "../../components/DividerLine";
 import CTAButtons from "../../components/CTAButtons";
-import { smBreak, mdBreak } from "../../_Theme/UpdatedBrandTheme";
+import { smBreak } from "../../_Theme/UpdatedBrandTheme";
 
 const Splash = () => (
   <div
@@ -49,28 +48,6 @@ const Splash = () => (
         public
       </h2>
       <CTAButtons />
-    </div>
-    <div>
-      <DividerLine
-        hexColor="#721D7C"
-        cssStyle={css`
-          ${smBreak} {
-            display: none;
-          }
-        `}
-      />
-      <div
-        css={css`
-          border-top: 10px solid #721d7c;
-          height: 130px;
-          background-color: white;
-          margin-top: 100px;
-
-          ${mdBreak} {
-            display: none;
-          }
-        `}
-      />
     </div>
   </div>
 );
