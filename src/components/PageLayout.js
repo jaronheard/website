@@ -8,7 +8,7 @@ import Header from "./Header";
 // import Contact from "./Contact";
 // import Footer from "./Footer";
 import Wrapper from "./Wrapper";
-// import CommonCTA from "./CommonCTA";
+import CommonCTA from "./CommonCTA";
 
 const PageLayout = ({ title, keywords, children }) => {
   return (
@@ -17,7 +17,7 @@ const PageLayout = ({ title, keywords, children }) => {
       <Wrapper>
         <Header />
         {children}
-        {/* <CommonCTA /> */}
+        <CommonCTA />
         {/* <Contact /> */}
         {/* <Footer /> */}
       </Wrapper>

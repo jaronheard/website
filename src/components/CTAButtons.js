@@ -1,10 +1,19 @@
 /** @jsx jsx */
 import { jsx, css } from "@emotion/core";
+import { PropTypes } from "prop-types";
 import { Link } from "gatsby";
 
 import { smBreak } from "../_Theme/UpdatedBrandTheme";
 
-const CTAButtons = () => (
+const verticalStyle = css`
+  grid-template-columns: auto;
+  justify-content: center;
+  align-content: space-between;
+  height: 200px;
+  margin-top: 80px;
+`;
+
+const CTAButtons = ({ vertical = false }) => (
   <div
     css={css`
       display: grid;
@@ -13,12 +22,10 @@ const CTAButtons = () => (
       grid-column-gap: 20px;
 
       ${smBreak} {
-        grid-template-columns: auto;
-        justify-content: center;
-        align-content: space-between;
-        height: 200px;
-        margin-top: 80px;
+        ${verticalStyle}
       }
+
+      ${vertical ? verticalStyle : ""}
     `}
   >
     <Link
@@ -53,5 +60,9 @@ const CTAButtons = () => (
     </Link>
   </div>
 );
+
+CTAButtons.propTypes = {
+  vertical: PropTypes.bool
+};
 
 export default CTAButtons;
