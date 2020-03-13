@@ -7,24 +7,7 @@ import OurDifferenceHeader from "./Home/OurDifferenceHeader";
 import OurDifferenceCards from "./Home/OurDifferenceCards";
 import CallToActionBlocks from "./Home/CallToActionBlocks";
 import DividerLine from "../components/DividerLine";
-import { smBreak, mdBreak, colors } from "../_Theme/UpdatedBrandTheme";
-
-const dividerLineStyle = css`
-  ${smBreak} {
-    display: none;
-  }
-`;
-
-const dividerLinePadding = css`
-  border-top: 10px solid ${colors.purple.hex};
-  height: 130px;
-  background-color: white;
-  margin-top: 100px;
-
-  ${mdBreak} {
-    display: none;
-  }
-`;
+import { colors } from "../_Theme/UpdatedBrandTheme";
 
 const IndexPage = () => {
   return (
@@ -33,8 +16,8 @@ const IndexPage = () => {
       keywords={[`Civic Software Foundation`, `CIVIC Platform`]}
     >
       <Splash />
-      <DividerLine hexColor={colors.purple.hex} cssStyle={dividerLineStyle} />
-      <div css={dividerLinePadding} />
+      <DividerLine hexColor={colors.purple.hex} />
+      <div className="DividerLinePadding" />
       <div
         css={css`
           background-color: white;
@@ -49,15 +32,14 @@ const IndexPage = () => {
       <DividerLine
         hexColor={colors.yellow.hex}
         cssStyle={css`
-          ${dividerLineStyle}
           margin-top: -60px;
           transform: rotate(10deg);
           margin-left: -14px;
         `}
       />
       <div
+        className="DividerLinePadding"
         css={css`
-          ${dividerLinePadding}
           border-top: 10px solid ${colors.yellow.hex};
         `}
       />
