@@ -51,6 +51,8 @@ const IndexPage = () => {
         cssStyle={css`
           ${dividerLineStyle}
           margin-top: -60px;
+          transform: rotate(10deg);
+          margin-left: -14px;
         `}
       />
       <div
