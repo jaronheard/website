@@ -12,8 +12,9 @@ const DividerLine = ({ hexColor = "#721D7C", cssStyle }) => (
     css={css`
       margin-top: -100px;
       z-index: -1;
-      ${cssStyle}
+      ${cssStyle || ""}
     `}
+    className="DividerLineStyle"
   >
     <rect x="83" y="273" width="1301" height="79" fill="#FDFDFD" />
     <path

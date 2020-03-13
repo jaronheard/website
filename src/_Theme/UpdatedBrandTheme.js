@@ -323,6 +323,23 @@ export default {
     padding: "30px"
   },
 
+  ".DividerLineStyle": {
+    [smBreak]: {
+      display: "none"
+    }
+  },
+
+  ".DividerLinePadding": {
+    borderTop: `10px solid ${colors.purple.hex}`,
+    height: "130px",
+    backgroundColor: "white",
+    marginTop: "100px",
+
+    [mdBreak]: {
+      display: "none"
+    }
+  },
+
   ".centerSelf": {
     justifySelf: "center",
     alignSelf: "center"

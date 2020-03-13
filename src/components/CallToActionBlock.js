@@ -93,12 +93,13 @@ const CallToActionBlock = ({
           margin-bottom: -50px;
         `}
       />
-      {/* <div
+      <div
+        className="DividerLinePadding"
         css={css`
-          ${dividerLinePadding}
-          border-top: 10px solid ${colors.yellow.hex};
+          border-top: 10px solid ${colors[dividerColor].hex};
+          margin-bottom: -40px;
         `}
-      /> */}
+      />
     </div>
   );
 };
