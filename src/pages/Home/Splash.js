@@ -41,6 +41,8 @@ const Splash = () => (
       <h2
         css={css`
           max-width: 650px;
+          display: grid;
+          justify-self: center;
         `}
       >
         Imagine a future where information and technology equitably serve the

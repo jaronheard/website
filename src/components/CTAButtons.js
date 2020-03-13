@@ -9,8 +9,8 @@ const CTAButtons = () => (
     css={css`
       display: grid;
       grid-template-columns: repeat(3, auto);
-      justify-content: space-between;
       margin-top: 165px;
+      grid-column-gap: 20px;
 
       ${smBreak} {
         grid-template-columns: auto;
