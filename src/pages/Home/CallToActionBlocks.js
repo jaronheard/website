@@ -17,6 +17,13 @@ const CallToActionBlocks = () => {
                 json
               }
               button
+              image {
+                description
+                fluid(maxWidth: 600) {
+                  srcSet
+                  sizes
+                }
+              }
             }
           }
         }
@@ -24,11 +31,13 @@ const CallToActionBlocks = () => {
     `
   );
 
-  return allContentfulCallToActionBlock.edges.map(el => (
+  return allContentfulCallToActionBlock.edges.map((el, i) => (
     <CallToActionBlock
       tagline={el.node.tagline}
       summary={el.node.summary && el.node.summary.json}
       button={el.node.button}
+      image={el.node.image}
+      reverseLayout={i % 2}
     />
   ));
 };

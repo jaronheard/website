@@ -1,12 +1,12 @@
 /** @jsx jsx */
 import { jsx, css } from "@emotion/core";
 
-// import CallToActionBlocks from "./Home/CallToActionBlocks";
-import OurDifferenceCards from "./Home/OurDifferenceCards";
-import OurDifferenceHeader from "./Home/OurDifferenceHeader";
-import Splash from "./Home/Splash";
-import DividerLine from "../components/DividerLine";
 import PageLayout from "../components/PageLayout";
+import Splash from "./Home/Splash";
+import OurDifferenceHeader from "./Home/OurDifferenceHeader";
+import OurDifferenceCards from "./Home/OurDifferenceCards";
+import CallToActionBlocks from "./Home/CallToActionBlocks";
+import DividerLine from "../components/DividerLine";
 import { smBreak, mdBreak, colors } from "../_Theme/UpdatedBrandTheme";
 
 const dividerLineStyle = css`
@@ -61,7 +61,7 @@ const IndexPage = () => {
           border-top: 10px solid ${colors.yellow.hex};
         `}
       />
-      {/* <CallToActionBlocks /> */}
+      <CallToActionBlocks />
     </PageLayout>
   );
 };
