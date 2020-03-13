@@ -5,8 +5,7 @@ import PropTypes from "prop-types";
 
 import SEO from "./SEO";
 import Header from "./Header";
-// import Contact from "./Contact";
-// import Footer from "./Footer";
+import Footer from "./Footer";
 import Wrapper from "./Wrapper";
 import CommonCTA from "./CommonCTA";
 import DividerLine from "./DividerLine";
@@ -32,8 +31,7 @@ const PageLayout = ({ title, keywords, children }) => {
             border-top: 10px solid ${colors.yellow.hex};
           `}
         />
-        {/* <Contact /> */}
-        {/* <Footer /> */}
+        <Footer />
       </Wrapper>
     </Fragment>
   );
