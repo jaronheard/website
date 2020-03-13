@@ -1,6 +1,5 @@
 /** @jsx jsx */
 import { jsx, css } from "@emotion/core";
-import { Grid } from "@material-ui/core";
 
 import CallToActionBlocks from "./Home/CallToActionBlocks";
 import OurDifferenceCards from "./Home/OurDifferenceCards";
@@ -14,25 +13,17 @@ const IndexPage = () => {
       title="Home"
       keywords={[`Civic Software Foundation`, `CIVIC Platform`]}
     >
-      <Grid container spacing={0}>
-        <Splash />
-        <Grid
-          container
-          xs={12}
-          spacing={4}
-          css={css`
-            margin-top: -100px;
-          `}
-        >
-          <Grid item xs={12}>
-            <OurDifferenceHeader />
-          </Grid>
-          <OurDifferenceCards />
-        </Grid>
-        <Grid container xs={12}>
-          <CallToActionBlocks />
-        </Grid>
-      </Grid>
+      <Splash />
+      <div
+        css={css`
+          background-color: white;
+          display: grid;
+        `}
+      >
+        <OurDifferenceHeader />
+        <OurDifferenceCards />
+      </div>
+      <CallToActionBlocks />
     </PageLayout>
   );
 };

@@ -25,6 +25,7 @@ const body = {
   margin: 0,
   display: "flex",
   flexDirection: "column",
+  overflowX: "hidden",
   [smBreak]: {
     fontSize: "1rem",
     lineHeight: "1.5rem"
@@ -310,6 +311,14 @@ export default {
 
   ".Pullquote": {
     fontSize: "2.85rem"
+  },
+
+  ".ShadowBox": {
+    maxWidth: "322px",
+    margin: "0 10px",
+    background: "white",
+    boxShadow: "0px 2px 5px rgba(0, 0, 0, 0.25)",
+    padding: "30px"
   },
 
   ".centerSelf": {

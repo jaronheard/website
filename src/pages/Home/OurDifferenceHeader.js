@@ -21,7 +21,7 @@ const OurDifferenceHeader = () => {
   );
 
   return allContentfulHeading.edges.map(el => (
-    <SectionHeader title={el.node.title} subtitle={el.node.subtitle} big />
+    <SectionHeader title={el.node.title} />
   ));
 };
 
