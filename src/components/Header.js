@@ -2,9 +2,9 @@
 import { jsx, css } from "@emotion/core";
 import { Link } from "gatsby";
 import { Logo } from "@hackoregon/ui-brand";
-// import { BrandColors } from "@hackoregon/ui-themes";
+import MenuIcon from "@material-ui/icons/Menu";
 
-import { colors, shadows, smBreak } from "../_Theme/UpdatedBrandTheme";
+import { colors, shadows, smBreak, mdBreak } from "../_Theme/UpdatedBrandTheme";
 
 const Header = () => {
   return (
@@ -21,12 +21,33 @@ const Header = () => {
         className="centerSelf"
         css={css`
           position: absolute;
+
+          ${smBreak} {
+            display: none;
+          }
         `}
       >
         <Link to="/">
           <Logo type="standardLogo" />
         </Link>
       </div>
+
+      <div
+        className="centerSelf"
+        css={css`
+          position: absolute;
+          margin-left: -60px;
+
+          ${mdBreak} {
+            display: none;
+          }
+        `}
+      >
+        <Link to="/">
+          <Logo type="squareLogo" />
+        </Link>
+      </div>
+
       <div
         css={css`
           display: grid;
@@ -51,6 +72,20 @@ const Header = () => {
         <Link to="/ventures/">
           <p className="action">Ventures</p>
         </Link>
+      </div>
+
+      <div
+        css={css`
+          display: grid;
+          justify-self: end;
+          align-content: center;
+
+          ${mdBreak} {
+            display: none;
+          }
+        `}
+      >
+        <MenuIcon style={{ fontSize: "2.5rem" }} />
       </div>
     </div>
   );

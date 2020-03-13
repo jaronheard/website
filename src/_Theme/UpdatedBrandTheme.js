@@ -3,7 +3,8 @@ import { BrandColors } from "@hackoregon/ui-themes";
 
 // Breakpoints
 export const smBreak = "@media (max-width:959.95px)";
-export const mdBreak = "@media (max-width:1279.95px)";
+export const mdBreak = "@media (min-width:959.95px)";
+export const lgBreak = "@media (max-width:1279.95px)";
 
 // Colors
 export const colors = {
@@ -69,7 +70,7 @@ const h1 = {
   fontWeight: "500",
   marginBlockStart: "4rem",
   marginBlockEnd: "4rem",
-  [mdBreak]: {
+  [lgBreak]: {
     fontSize: "3rem",
     marginBlockStart: "3rem",
     marginBlockEnd: "3rem"
