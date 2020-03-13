@@ -2,7 +2,7 @@
 /** @jsx jsx */
 import { jsx, css } from "@emotion/core";
 
-const DividerLine = ({ hexColor = "#721D7C" }) => (
+const DividerLine = ({ hexColor = "#721D7C", cssStyle }) => (
   <svg
     preserveAspectRatio="none"
     width="100%"
@@ -10,8 +10,9 @@ const DividerLine = ({ hexColor = "#721D7C" }) => (
     viewBox="88 0 1250 422"
     fill="none"
     css={css`
-      margin-top: -200px;
+      margin-top: -100px;
       z-index: -1;
+      ${cssStyle}
     `}
   >
     <rect x="83" y="273" width="1301" height="79" fill="#FDFDFD" />

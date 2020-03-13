@@ -1,56 +1,77 @@
 /** @jsx jsx */
 import { jsx, css } from "@emotion/core";
-import { Grid, Box } from "@material-ui/core";
-import { MaterialTheme } from "@hackoregon/ui-themes";
 
 import pathsImg from "../../images/paths.png";
 import DividerLine from "../../components/DividerLine";
 import CTAButtons from "../../components/CTAButtons";
-
-const mdBreak = MaterialTheme.breakpoints.up("md");
-const acrossMedUp = css`
-  ${mdBreak} {
-    display: inline-flex;
-  }
-`;
+import { smBreak, mdBreak } from "../../_Theme/UpdatedBrandTheme";
 
 const Splash = () => (
-  <Grid container xs={12}>
-    <Grid
-      item
-      xs={12}
+  <div
+    css={css`
+      display: grid;
+      height: 75vh;
+      width: 100vw;
+    `}
+  >
+    <img
+      src={pathsImg}
+      alt=""
       css={css`
-        overflow: hidden;
+        position: absolute;
+        width: 125%;
+        min-width: 1460px;
+        z-index: -1;
+        opacity: 0.2;
+        justify-self: center;
+      `}
+    />
+    <div
+      css={css`
+        display: grid;
+        justify-content: center;
+        align-content: center;
+        text-align: center;
+        padding-top: 130px;
+
+        ${smBreak} {
+          padding: 65px 20px 0;
+        }
       `}
     >
-      <img
-        src={pathsImg}
-        alt=""
+      <h2
         css={css`
-          position: absolute;
-          width: 100%;
-          z-index: -1;
-          opacity: 0.2;
+          max-width: 650px;
+        `}
+      >
+        Imagine a future where information and technology equitably serve the
+        public
+      </h2>
+      <CTAButtons />
+    </div>
+    <div>
+      <DividerLine
+        hexColor="#721D7C"
+        cssStyle={css`
+          ${smBreak} {
+            display: none;
+          }
         `}
       />
-      <Box my={16} p={8} textAlign="center">
-        <h2>
-          Imagine a future where information and technology equitably serve the
-          public
-        </h2>
-        <Box mt={4}>
-          <Grid container xs={12}>
-            <Grid item md={3} />
-            <Grid item md={6} xs={12} justify="space-around" css={acrossMedUp}>
-              <CTAButtons />
-            </Grid>
-            <Grid item md={3} />
-          </Grid>
-        </Box>
-      </Box>
-    </Grid>
-    <DividerLine hexColor="#721D7C" />
-  </Grid>
+      <div
+        css={css`
+          border-top: 10px solid #721d7c;
+          height: 130px;
+          background-color: white;
+          margin-top: 100px;
+
+          ${mdBreak} {
+            display: none;
+          }
+        `}
+      />
+    </div>
+  </div>
 );
 
 export default Splash;

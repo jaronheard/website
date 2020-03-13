@@ -1,10 +1,26 @@
 /** @jsx jsx */
 import { jsx, css } from "@emotion/core";
-import { Fragment } from "react";
 import { Link } from "gatsby";
 
+import { smBreak } from "../_Theme/UpdatedBrandTheme";
+
 const CTAButtons = () => (
-  <Fragment>
+  <div
+    css={css`
+      display: grid;
+      grid-template-columns: repeat(3, auto);
+      justify-content: space-between;
+      margin-top: 165px;
+
+      ${smBreak} {
+        grid-template-columns: auto;
+        justify-content: center;
+        align-content: space-between;
+        height: 200px;
+        margin-top: 80px;
+      }
+    `}
+  >
     <Link
       to="/projects/"
       css={css`
@@ -35,7 +51,7 @@ const CTAButtons = () => (
         <p>Bring Your Project</p>
       </button>
     </Link>
-  </Fragment>
+  </div>
 );
 
 export default CTAButtons;
