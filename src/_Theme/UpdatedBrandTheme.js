@@ -264,6 +264,7 @@ export default {
   ".code": code,
 
   ".btn": button,
+  ".btn-pink": button,
   ".btn-blue": {
     ...button,
     boxShadow: `4px 4px 1px ${VisualizationColors.categorical.blue.hex}`

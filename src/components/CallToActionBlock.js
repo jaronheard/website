@@ -2,6 +2,8 @@
 /** @jsx jsx */
 import { jsx, css } from "@emotion/core";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
+import DividerLine from "./DividerLine";
+import { colors } from "../_Theme/UpdatedBrandTheme";
 
 // https://app.contentful.com/spaces/3j4jpxgb52st/content_types/callToActionBlock/fields
 
@@ -29,55 +31,74 @@ const CallToActionBlock = ({
   button,
   image,
   reverseLayout,
-  big
+  big,
+  buttonColor,
+  dividerColor
 }) => {
   const CTAimage = image && makeImage(image);
 
   return (
-    <div
-      css={css`
-        padding: 0 70px;
-      `}
-    >
+    <div>
       <div
         css={css`
-          display: grid;
-          grid-template-columns: repeat(2, auto);
-          grid-column-gap: 80px;
-          width: 100%;
-          max-width: 1230px;
-          margin: 0 auto;
+          padding: 0 70px;
         `}
       >
-        {image && reverseLayout && CTAimage}
-        <div css={contentStyle}>
-          {tagline && (
-            <h2
-              className={big && "h-1"}
-              css={css`
-                margin: 0;
-              `}
-            >
-              {tagline}
-            </h2>
-          )}
-          {summary && (
-            <div
-              css={css`
-                margin: 40px 0;
-              `}
-            >
-              {documentToReactComponents(summary)}
-            </div>
-          )}
-          {button && (
-            <button type="button" className="btn-yellow">
-              <p>{button}</p>
-            </button>
-          )}
+        <div
+          css={css`
+            display: grid;
+            grid-template-columns: repeat(2, auto);
+            grid-column-gap: 80px;
+            width: 100%;
+            max-width: 1230px;
+            margin: 0 auto;
+          `}
+        >
+          {image && reverseLayout && CTAimage}
+          <div css={contentStyle}>
+            {tagline && (
+              <h2
+                className={big && "h-1"}
+                css={css`
+                  margin: 0;
+                `}
+              >
+                {tagline}
+              </h2>
+            )}
+            {summary && (
+              <div
+                css={css`
+                  margin: 40px 0;
+                `}
+              >
+                {documentToReactComponents(summary)}
+              </div>
+            )}
+            {button && (
+              <button type="button" className={`btn-${buttonColor}`}>
+                <p>{button}</p>
+              </button>
+            )}
+          </div>
+          {image && !reverseLayout && CTAimage}
         </div>
-        {image && !reverseLayout && CTAimage}
       </div>
+      <DividerLine
+        hexColor={colors[dividerColor].hex}
+        cssStyle={css`
+          margin-top: -60px;
+          transform: ${reverseLayout ? "rotate(10deg)" : "rotate(0deg)"};
+          margin-left: ${reverseLayout ? "-14px" : "0px"};
+          margin-bottom: -50px;
+        `}
+      />
+      {/* <div
+        css={css`
+          ${dividerLinePadding}
+          border-top: 10px solid ${colors.yellow.hex};
+        `}
+      /> */}
     </div>
   );
 };

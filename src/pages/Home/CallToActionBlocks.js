@@ -2,6 +2,8 @@ import React from "react";
 import { useStaticQuery, graphql } from "gatsby";
 import CallToActionBlock from "../../components/CallToActionBlock";
 
+const colorOrder = ["yellow", "pink", "green", "blue"];
+
 const CallToActionBlocks = () => {
   const { allContentfulCallToActionBlock } = useStaticQuery(
     graphql`
@@ -38,6 +40,8 @@ const CallToActionBlocks = () => {
       button={el.node.button}
       image={el.node.image}
       reverseLayout={i % 2}
+      buttonColor={colorOrder[i]}
+      dividerColor={colorOrder[i + 1]}
     />
   ));
 };
