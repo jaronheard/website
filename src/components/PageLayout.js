@@ -5,10 +5,10 @@ import PropTypes from "prop-types";
 
 import SEO from "./SEO";
 import Header from "./Header";
-import Contact from "./Contact";
-import Footer from "./Footer";
+// import Contact from "./Contact";
+// import Footer from "./Footer";
 import Wrapper from "./Wrapper";
-import CommonCTA from "./CommonCTA";
+// import CommonCTA from "./CommonCTA";
 
 const PageLayout = ({ title, keywords, children }) => {
   return (
@@ -17,9 +17,9 @@ const PageLayout = ({ title, keywords, children }) => {
       <Wrapper>
         <Header />
         {children}
-        <CommonCTA />
-        <Contact />
-        <Footer />
+        {/* <CommonCTA /> */}
+        {/* <Contact /> */}
+        {/* <Footer /> */}
       </Wrapper>
     </Fragment>
   );

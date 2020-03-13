@@ -10,7 +10,6 @@ const Splash = () => (
   <div
     css={css`
       display: grid;
-      height: 75vh;
       width: 100vw;
     `}
   >

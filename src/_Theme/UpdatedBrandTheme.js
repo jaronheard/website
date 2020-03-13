@@ -315,7 +315,7 @@ export default {
 
   ".ShadowBox": {
     maxWidth: "322px",
-    margin: "0 10px",
+    margin: "0 15px",
     background: "white",
     boxShadow: "0px 2px 5px rgba(0, 0, 0, 0.25)",
     padding: "30px"
