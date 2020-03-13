@@ -2,7 +2,6 @@
 import { jsx, css } from "@emotion/core";
 import { Fragment } from "react";
 import { Link } from "gatsby";
-import { Button } from "@hackoregon/ui-core";
 
 const CTAButtons = () => (
   <Fragment>
@@ -12,7 +11,9 @@ const CTAButtons = () => (
         background-size: 0% 2px !important;
       `}
     >
-      <Button>Explore The Platform</Button>
+      <button type="button" className="btn-purple">
+        <p>Explore The Platform</p>
+      </button>
     </Link>
     <Link
       to="/projects/"
@@ -20,7 +21,9 @@ const CTAButtons = () => (
         background-size: 0% 2px !important;
       `}
     >
-      <Button>Scale Your Impact</Button>
+      <button type="button" className="btn-blue">
+        <p>Scale Your Impact</p>
+      </button>
     </Link>
     <Link
       to="/projects/"
@@ -28,7 +31,9 @@ const CTAButtons = () => (
         background-size: 0% 2px !important;
       `}
     >
-      <Button>Bring Your Project</Button>
+      <button type="button" className="btn-green">
+        <p>Bring Your Project</p>
+      </button>
     </Link>
   </Fragment>
 );

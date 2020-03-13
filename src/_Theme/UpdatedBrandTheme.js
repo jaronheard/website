@@ -1,5 +1,5 @@
 // Use with emotion's Global component
-import { BrandColors } from "@hackoregon/ui-themes";
+import { BrandColors, VisualizationColors } from "@hackoregon/ui-themes";
 
 // Breakpoints
 export const smBreak = "@media (max-width:959.95px)";
@@ -61,6 +61,13 @@ const pLarge = {
     fontSize: "1.0625rem",
     lineHeight: "1.75rem"
   }
+};
+
+const action = {
+  ...p,
+  fontFamily: "Rubik",
+  fontStyle: "normal",
+  fontWeight: "normal"
 };
 
 const h1 = {
@@ -171,6 +178,20 @@ const dataLarge = {
   lineHeight: "1.596rem"
 };
 
+const button = {
+  width: "214px",
+  height: "50px",
+  background: "#FDFDFD",
+  border: "5px solid #EE495C",
+  boxSizing: "border-box",
+  boxShadow: `4px 4px 1px ${VisualizationColors.categorical.pink.hex}`,
+
+  p: {
+    ...action,
+    margin: 0
+  }
+};
+
 export default {
   /* Base */
 
@@ -240,13 +261,25 @@ export default {
 
   ".code": code,
 
-  ".action": {
-    fontFamily: "Rubik",
-    fontStyle: "normal",
-    fontWeight: "normal",
-    fontSize: p.fontSize,
-    lineHeight: p.lineHeight
+  ".btn": button,
+  ".btn-blue": {
+    ...button,
+    boxShadow: `4px 4px 1px ${VisualizationColors.categorical.blue.hex}`
   },
+  ".btn-purple": {
+    ...button,
+    boxShadow: `4px 4px 1px ${VisualizationColors.categorical.purple.hex}`
+  },
+  ".btn-yellow": {
+    ...button,
+    boxShadow: `4px 4px 1px ${VisualizationColors.categorical.yellow.hex}`
+  },
+  ".btn-green": {
+    ...button,
+    boxShadow: `4px 4px 1px ${VisualizationColors.categorical.green.hex}`
+  },
+
+  ".action": action,
 
   ".Description": {
     maxWidth: "900px",
