@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { jsx } from "@emotion/core";
+import { jsx, css } from "@emotion/core";
 import { Grid } from "@material-ui/core";
 
 import CallToActionBlocks from "./Home/CallToActionBlocks";
@@ -16,7 +16,14 @@ const IndexPage = () => {
     >
       <Grid container spacing={0}>
         <Splash />
-        <Grid container xs={12} spacing={4}>
+        <Grid
+          container
+          xs={12}
+          spacing={4}
+          css={css`
+            margin-top: -100px;
+          `}
+        >
           <Grid item xs={12}>
             <OurDifferenceHeader />
           </Grid>

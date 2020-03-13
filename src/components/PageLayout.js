@@ -8,17 +8,20 @@ import SEO from "./SEO";
 import Header from "./Header";
 import Contact from "./Contact";
 import Footer from "./Footer";
+import Wrapper from "./Wrapper";
 import CommonCTA from "./CommonCTA";
 
 const PageLayout = ({ title, keywords, children }) => {
   return (
     <Fragment>
       <SEO title={`CIVIC${title && `: ${title}`}`} keywords={keywords} />
-      <Header />
-      <Box mt={8}>{children}</Box>
-      <CommonCTA />
-      <Contact />
-      <Footer />
+      <Wrapper>
+        <Header />
+        <Box mt={8}>{children}</Box>
+        <CommonCTA />
+        <Contact />
+        <Footer />
+      </Wrapper>
     </Fragment>
   );
 };

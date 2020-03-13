@@ -9,9 +9,9 @@ const DividerLine = ({ hexColor = "#721D7C" }) => (
     height="422"
     viewBox="88 0 1250 422"
     fill="none"
-    xmlns="http://www.w3.org/2000/svg"
     css={css`
       margin-top: -200px;
+      z-index: -1;
     `}
   >
     <rect x="83" y="273" width="1301" height="79" fill="#FDFDFD" />

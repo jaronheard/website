@@ -1,18 +1,24 @@
 /** @jsx jsx */
 import { jsx, css } from "@emotion/core";
 import { Grid, Box } from "@material-ui/core";
+import { MaterialTheme } from "@hackoregon/ui-themes";
 
 import pathsImg from "../../images/paths.png";
-
 import DividerLine from "../../components/DividerLine";
 import CTAButtons from "../../components/CTAButtons";
+
+const mdBreak = MaterialTheme.breakpoints.up("md");
+const acrossMedUp = css`
+  ${mdBreak} {
+    display: inline-flex;
+  }
+`;
 
 const Splash = () => (
   <Grid container xs={12}>
     <Grid
       item
-      xs={11}
-      md={8}
+      xs={12}
       css={css`
         overflow: hidden;
       `}
@@ -27,39 +33,23 @@ const Splash = () => (
           opacity: 0.2;
         `}
       />
-      <Box mt={4} p={8}>
-        <h2
-          css={css`
-            background-color: white;
-            outline: 0.25em solid white;
-          `}
-        >
+      <Box my={16} p={8} textAlign="center">
+        <h2>
           Imagine a future where information and technology equitably serve the
           public
         </h2>
-        <h3
-          css={css`
-            background-color: white;
-            outline: 0.25em solid white;
-          `}
-        >
-          We&apos;re building teams, technology, and process to get there
-          quickly.
-        </h3>
-        <h3
-          css={css`
-            background-color: white;
-            outline: 0.25em solid white;
-          `}
-        >
-          You can be a part of it.
-        </h3>
-        <Grid container xs={12} justify="space-around">
-          <CTAButtons />
-        </Grid>
+        <Box mt={4}>
+          <Grid container xs={12}>
+            <Grid item md={3} />
+            <Grid item md={6} xs={12} justify="space-around" css={acrossMedUp}>
+              <CTAButtons />
+            </Grid>
+            <Grid item md={3} />
+          </Grid>
+        </Box>
       </Box>
     </Grid>
-    <DividerLine />
+    <DividerLine hexColor="#721D7C" />
   </Grid>
 );
 
