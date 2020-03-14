@@ -21,9 +21,9 @@ export const shadows = {
 
 // Typography
 const body = {
-  fontFamily: "Merriweather",
+  fontFamily: "Roboto",
   fontSize: "1.0625rem",
-  lineHeight: "1.75rem",
+  lineHeight: "1.765rem",
   margin: 0,
   display: "flex",
   flexDirection: "column",
@@ -36,7 +36,7 @@ const body = {
 
 const p = {
   fontSize: "1.0625rem",
-  lineHeight: "1.75rem",
+  lineHeight: "1.765rem",
   color: BrandColors.tertiary.hex,
   marginBlockStart: "0.875rem",
   marginBlockEnd: "0.875rem",
@@ -202,7 +202,7 @@ export default {
     fontSize: "1rem",
     lineHeight: "1.4",
     backgroundColor: BrandColors.background.hex,
-    fontFamily: "Merriweather",
+    fontFamily: "Roboto",
     fontWeight: "400",
     color: BrandColors.primary.hex,
     minHeight: "100%" /* [3] */,
