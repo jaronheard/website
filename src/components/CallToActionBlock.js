@@ -8,6 +8,7 @@ import { colors, smBreak, xsBreak } from "../_Theme/UpdatedBrandTheme";
 // https://app.contentful.com/spaces/3j4jpxgb52st/content_types/callToActionBlock/fields
 
 const imageStyle = css`
+  grid-area: image;
   width: 400px;
   max-width: 40vw;
 
@@ -18,6 +19,7 @@ const imageStyle = css`
 `;
 
 const contentStyle = css`
+  grid-area: content;
   display: grid;
   align-content: center;
 `;
@@ -57,7 +59,11 @@ const CallToActionBlock = ({
           css={css`
             display: grid;
             grid-template-columns: repeat(2, auto);
+            grid-template-rows: auto;
             grid-column-gap: 80px;
+            grid-template-areas: "${
+              reverseLayout ? "image content" : "content image"
+            }";
             width: 100%;
             max-width: 1230px;
             margin: 0 auto;
@@ -66,12 +72,15 @@ const CallToActionBlock = ({
             ${xsBreak} {
               grid-template-columns: auto;
               grid-template-rows: repeat(2, auto);
+              grid-template-areas: 
+                "image"
+                "content";
               grid-row-gap: 80px;
               justify-items: center;
             }
           `}
         >
-          {image && reverseLayout && CTAimage}
+          {CTAimage}
           <div css={contentStyle}>
             {tagline && (
               <h2
@@ -98,7 +107,6 @@ const CallToActionBlock = ({
               </button>
             )}
           </div>
-          {image && !reverseLayout && CTAimage}
         </div>
       </div>
       <DividerLine

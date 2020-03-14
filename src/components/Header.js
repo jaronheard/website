@@ -9,7 +9,8 @@ import {
   shadows,
   smBreak,
   mdBreak,
-  xsBreak
+  xsBreak,
+  noHover
 } from "../_Theme/UpdatedBrandTheme";
 
 const Header = () => {
@@ -43,7 +44,7 @@ const Header = () => {
           }
         `}
       >
-        <Link to="/">
+        <Link to="/" css={noHover}>
           <Logo type="standardLogo" />
         </Link>
       </div>
@@ -65,7 +66,7 @@ const Header = () => {
           }
         `}
       >
-        <Link to="/">
+        <Link to="/" css={noHover}>
           <Logo type="squareLogo" />
         </Link>
       </div>

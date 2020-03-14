@@ -23,6 +23,12 @@ export const shadows = {
 export const borders = {
   box: `4px solid ${BrandColors.subdued.hex}`
 };
+
+export const noHover = {
+  ":hover, :focus": {
+    backgroundSize: "0% 2px"
+  }
+};
 // Typography
 const body = {
   fontFamily: "Roboto",
@@ -211,6 +217,10 @@ const button = {
   boxSizing: "border-box",
   boxShadow: `6px 6px 0px ${VisualizationColors.categorical.pink.hex}`,
   transition: "all .1s ease-in-out-circ",
+  display: "flex",
+  justifyContent: "center",
+  alignItems: "center",
+  zIndex: 10,
 
   p: {
     ...action,
@@ -220,11 +230,6 @@ const button = {
     cursor: "pointer",
     boxShadow: `3px 3px 0px ${VisualizationColors.categorical.pink.hex}`
   }
-  // "&:focus": {
-  //   border: "0px",
-  //   outline: "6px solid #EE495C",
-  //   p: { fontSize: "1.08rem", letterSpacing: 1.025 }
-  // }
 };
 
 export default {

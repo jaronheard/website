@@ -33,6 +33,14 @@ const Contact = () => (
       `}
     >
       <div>
+        <p
+          css={css`
+            ${whiteText}
+          `}
+          className="h-4"
+        >
+          Email
+        </p>
         <a
           css={whiteText}
           className="p-sm"

@@ -15,16 +15,14 @@ const Splash = () => {
   `);
 
   return (
-    <div
-      css={css`
-        height: max-content;
-        :before {
+    <div>
+      <picture
+        css={css`
           background-image: url(${file.publicURL});
           background-size: cover;
           background-repeat: no-repeat;
           background-attachment: local;
           background-position: center;
-          content: "";
           display: block;
           position: absolute;
           top: 0;
@@ -33,9 +31,8 @@ const Splash = () => {
           height: 100%;
           z-index: -2;
           opacity: 0.2;
-        }
-      `}
-    >
+        `}
+      />
       <div
         css={css`
           display: grid;

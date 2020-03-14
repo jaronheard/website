@@ -28,35 +28,16 @@ const CTAButtons = ({ vertical = false }) => (
       ${vertical ? verticalStyle : ""}
     `}
   >
-    <Link
-      to="/projects/"
-      css={css`
-        background-size: 0% 2px !important;
-      `}
-    >
-      <button type="button" className="btn-purple">
-        <p>Explore The Platform</p>
-      </button>
+    <Link to="/projects/" className="btn-purple">
+      <p>Explore The Platform</p>
     </Link>
-    <Link
-      to="/projects/"
-      css={css`
-        background-size: 0% 2px !important;
-      `}
-    >
-      <button type="button" className="btn-blue">
-        <p>Scale Your Impact</p>
-      </button>
+
+    <Link to="/projects/" className="btn-blue">
+      <p>Scale Your Impact</p>
     </Link>
-    <Link
-      to="/projects/"
-      css={css`
-        background-size: 0% 2px !important;
-      `}
-    >
-      <button type="button" className="btn-green">
-        <p>Bring Your Project</p>
-      </button>
+
+    <Link to="/projects/" className="btn-green">
+      <p>Bring Your Project</p>
     </Link>
   </div>
 );
