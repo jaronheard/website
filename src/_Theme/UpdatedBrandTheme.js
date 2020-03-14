@@ -16,9 +16,13 @@ export const colors = {
 
 // Shadows
 export const shadows = {
-  bottom: "0px 1px 4px rgba(0, 0, 0, 0.4)"
+  bottom: `0px 3px 0px #AAA4AB`,
+  rightDown: `6px 6px 0px #AAA4AB`
 };
 
+export const borders = {
+  box: `4px solid ${BrandColors.subdued.hex}`
+};
 // Typography
 const body = {
   fontFamily: "Roboto",
@@ -31,6 +35,23 @@ const body = {
   [smBreak]: {
     fontSize: "1rem",
     lineHeight: "1.5rem"
+  }
+};
+
+const a = {
+  color: BrandColors.action.hex,
+  textDecoration: "none",
+  cursor: "pointer",
+  transition: "background-size .2s",
+  backgroundImage: "linear-gradient(currentColor, currentColor)",
+  backgroundPosition: "0% 100%",
+  backgroundRepeat: "no-repeat",
+  backgroundSize: "0% 2px",
+
+  ":hover, :focus": {
+    color: BrandColors.action.hex,
+    cursor: "pointer",
+    backgroundSize: "100% 2px"
   }
 };
 
@@ -70,7 +91,8 @@ const action = {
   ...p,
   fontFamily: "Rubik",
   fontStyle: "normal",
-  fontWeight: "normal"
+  fontWeight: "normal",
+  fontSize: "1.25rem"
 };
 
 const h1 = {
@@ -182,17 +204,27 @@ const dataLarge = {
 };
 
 const button = {
-  width: "214px",
+  width: "225px",
   height: "50px",
   background: "#FDFDFD",
-  border: "5px solid #EE495C",
+  border: "4px solid #EE495C",
   boxSizing: "border-box",
-  boxShadow: `4px 4px 1px ${VisualizationColors.categorical.pink.hex}`,
+  boxShadow: `6px 6px 0px ${VisualizationColors.categorical.pink.hex}`,
+  transition: "all .1s ease-in-out-circ",
 
   p: {
     ...action,
     margin: 0
+  },
+  "&:hover,:focus": {
+    cursor: "pointer",
+    boxShadow: `3px 3px 0px ${VisualizationColors.categorical.pink.hex}`
   }
+  // "&:focus": {
+  //   border: "0px",
+  //   outline: "6px solid #EE495C",
+  //   p: { fontSize: "1.08rem", letterSpacing: 1.025 }
+  // }
 };
 
 export default {
@@ -214,23 +246,6 @@ export default {
     WebkitTapHighlightColor: "rgba(0, 0, 0, 0)"
   },
 
-  a: {
-    color: BrandColors.action.hex,
-    textDecoration: "none",
-    cursor: "pointer",
-    transition: "background-size .3s",
-    backgroundImage: "linear-gradient(currentColor, currentColor)",
-    backgroundPosition: "0% 100%",
-    backgroundRepeat: "no-repeat",
-    backgroundSize: "0% 2px",
-
-    ":hover, :focus": {
-      color: BrandColors.action.hex,
-      cursor: "pointer",
-      backgroundSize: "100% 2px"
-    }
-  },
-
   /* Global Styles from product_design */
 
   /* Typography */
@@ -238,6 +253,7 @@ export default {
   // Default styles
   body,
   code,
+  a,
   p,
   h1,
   h2,
@@ -263,24 +279,41 @@ export default {
   ".data-lg": dataLarge,
 
   ".code": code,
+  ".a": a,
 
   ".btn": button,
   ".btn-pink": button,
   ".btn-blue": {
     ...button,
-    boxShadow: `4px 4px 1px ${VisualizationColors.categorical.blue.hex}`
+    boxShadow: `6px 6px 0px ${VisualizationColors.categorical.blue.hex}`,
+    "&:hover,:focus": {
+      cursor: "pointer",
+      boxShadow: `3px 3px 0px ${VisualizationColors.categorical.blue.hex}`
+    }
   },
   ".btn-purple": {
     ...button,
-    boxShadow: `4px 4px 1px ${VisualizationColors.categorical.purple.hex}`
+    boxShadow: `6px 6px 0px ${VisualizationColors.categorical.purple.hex}`,
+    "&:hover,:focus": {
+      cursor: "pointer",
+      boxShadow: `3px 3px 0px ${VisualizationColors.categorical.purple.hex}`
+    }
   },
   ".btn-yellow": {
     ...button,
-    boxShadow: `4px 4px 1px ${VisualizationColors.categorical.yellow.hex}`
+    boxShadow: `6px 6px 0px ${VisualizationColors.categorical.yellow.hex}`,
+    "&:hover,:focus": {
+      cursor: "pointer",
+      boxShadow: `3px 3px 0px ${VisualizationColors.categorical.yellow.hex}`
+    }
   },
   ".btn-green": {
     ...button,
-    boxShadow: `4px 4px 1px ${VisualizationColors.categorical.green.hex}`
+    boxShadow: `6px 6px 0px ${VisualizationColors.categorical.green.hex}`,
+    "&:hover,:focus": {
+      cursor: "pointer",
+      boxShadow: `3px 3px 0px ${VisualizationColors.categorical.green.hex}`
+    }
   },
 
   ".action": action,
@@ -320,7 +353,8 @@ export default {
     maxWidth: "322px",
     margin: "0 15px",
     background: "white",
-    boxShadow: "0px 2px 5px rgba(0, 0, 0, 0.25)",
+    border: borders.box,
+    boxShadow: shadows.rightDown,
     padding: "30px"
   },
 

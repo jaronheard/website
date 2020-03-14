@@ -39,9 +39,10 @@ const CallToActionBlocks = () => {
       summary={el.node.summary && el.node.summary.json}
       button={el.node.button}
       image={el.node.image}
-      reverseLayout={i % 2}
+      reverseLayout={i % 2 === 0}
       buttonColor={colorOrder[i]}
       dividerColor={colorOrder[i + 1]}
+      big
     />
   ));
 };
