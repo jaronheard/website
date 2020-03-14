@@ -6,11 +6,7 @@ import emotionReset from "emotion-reset";
 import UpdatedBrandTheme from "../_Theme/UpdatedBrandTheme";
 
 const Wrapper = ({ children }) => (
-  <div
-    css={css`
-      display: grid;
-    `}
-  >
+  <div css={css``}>
     <Global
       styles={css`
         ${emotionReset}

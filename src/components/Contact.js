@@ -1,5 +1,6 @@
 /** @jsx jsx */
 import { jsx, css } from "@emotion/core";
+import { xsBreak } from "../_Theme/UpdatedBrandTheme";
 
 const whiteText = css`
   color: white;
@@ -9,13 +10,10 @@ const whiteText = css`
 const Contact = () => (
   <div
     css={css`
-      display: grid;
-      grid-template-rows: repeat(2, auto);
-      grid-row-gap: 40px;
       text-align: left;
-      width: 100%;
       max-width: 1230px;
       margin: 80px auto 0;
+      padding: 0 2em;
     `}
   >
     <h3 css={whiteText} className="h-3">
@@ -25,8 +23,13 @@ const Contact = () => (
     <div
       css={css`
         display: grid;
-        grid-template-columns: repeat(3, auto);
+        width: 100%;
+        grid-template: auto / 1fr 1fr 1fr;
         justify-content: space-between;
+        ${xsBreak} {
+          grid-template: auto auto auto / 1fr;
+          grid-row-gap: 1em;
+        }
       `}
     >
       <div>
@@ -43,7 +46,6 @@ const Contact = () => (
         <p
           css={css`
             ${whiteText}
-            margin-bottom: 40px;
           `}
           className="h-4"
         >
@@ -61,7 +63,6 @@ const Contact = () => (
         <p
           css={css`
             ${whiteText}
-            margin-bottom: 40px;
           `}
           className="h-4"
         >

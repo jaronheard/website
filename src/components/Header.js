@@ -4,7 +4,13 @@ import { Link } from "gatsby";
 import { Logo } from "@hackoregon/ui-brand";
 import MenuIcon from "@material-ui/icons/Menu";
 
-import { colors, shadows, smBreak, mdBreak } from "../_Theme/UpdatedBrandTheme";
+import {
+  colors,
+  shadows,
+  smBreak,
+  mdBreak,
+  xsBreak
+} from "../_Theme/UpdatedBrandTheme";
 
 const Header = () => {
   return (
@@ -14,16 +20,26 @@ const Header = () => {
         background-color: ${colors.white};
         box-shadow: ${shadows.bottom};
         display: grid;
-        padding: 0 30px;
+        padding: 0 2rem;
+        ${xsBreak} {
+          padding: 0 1rem;
+        }
       `}
     >
       <div
         className="centerSelf"
         css={css`
           position: absolute;
+          left: 50%;
+          top: 1em;
 
           ${smBreak} {
             display: none;
+          }
+
+          a {
+            position: relative;
+            left: -50%;
           }
         `}
       >
@@ -36,10 +52,16 @@ const Header = () => {
         className="centerSelf"
         css={css`
           position: absolute;
-          margin-left: -60px;
+          top: 1em;
+          left: 50%;
 
           ${mdBreak} {
             display: none;
+          }
+
+          a {
+            position: relative;
+            left: -50%;
           }
         `}
       >
@@ -76,9 +98,10 @@ const Header = () => {
 
       <div
         css={css`
-          display: grid;
+          display: flex;
+          flex-direction: column;
           justify-self: end;
-          align-content: center;
+          justify-content: center;
 
           ${mdBreak} {
             display: none;

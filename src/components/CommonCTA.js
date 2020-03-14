@@ -8,9 +8,10 @@ const CommonCTA = () => (
       display: grid;
       max-width: 400px;
       margin: -60px auto 0;
+      text-align: center;
     `}
   >
-    <h2>Join the CIVIC Movement</h2>
+    <h2>Build with us</h2>
     <CTAButtons vertical />
   </div>
 );
