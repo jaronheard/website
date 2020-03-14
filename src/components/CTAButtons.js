@@ -1,18 +1,42 @@
 /** @jsx jsx */
 import { jsx, css } from "@emotion/core";
-import { Fragment } from "react";
+import { PropTypes } from "prop-types";
 import { Link } from "gatsby";
-import { Button } from "@hackoregon/ui-core";
 
-const CTAButtons = () => (
-  <Fragment>
+import { smBreak } from "../_Theme/UpdatedBrandTheme";
+
+const verticalStyle = css`
+  grid-template-columns: auto;
+  justify-content: center;
+  align-content: space-between;
+  height: 200px;
+  margin-top: 80px;
+`;
+
+const CTAButtons = ({ vertical = false }) => (
+  <div
+    css={css`
+      display: grid;
+      grid-template-columns: repeat(3, auto);
+      margin-top: 165px;
+      grid-column-gap: 20px;
+
+      ${smBreak} {
+        ${verticalStyle}
+      }
+
+      ${vertical ? verticalStyle : ""}
+    `}
+  >
     <Link
       to="/projects/"
       css={css`
         background-size: 0% 2px !important;
       `}
     >
-      <Button>Explore The Platform</Button>
+      <button type="button" className="btn-purple">
+        <p>Explore The Platform</p>
+      </button>
     </Link>
     <Link
       to="/projects/"
@@ -20,7 +44,9 @@ const CTAButtons = () => (
         background-size: 0% 2px !important;
       `}
     >
-      <Button>Scale Your Impact</Button>
+      <button type="button" className="btn-blue">
+        <p>Scale Your Impact</p>
+      </button>
     </Link>
     <Link
       to="/projects/"
@@ -28,9 +54,15 @@ const CTAButtons = () => (
         background-size: 0% 2px !important;
       `}
     >
-      <Button>Bring Your Project</Button>
+      <button type="button" className="btn-green">
+        <p>Bring Your Project</p>
+      </button>
     </Link>
-  </Fragment>
+  </div>
 );
+
+CTAButtons.propTypes = {
+  vertical: PropTypes.bool
+};
 
 export default CTAButtons;

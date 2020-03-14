@@ -1,9 +1,23 @@
 // Use with emotion's Global component
-import { BrandColors, MaterialTheme } from "@hackoregon/ui-themes";
+import { BrandColors, VisualizationColors } from "@hackoregon/ui-themes";
 
 // Breakpoints
-const sm = MaterialTheme.breakpoints.down("sm");
-const md = MaterialTheme.breakpoints.between("sm", "md");
+export const xsBreak = "@media (max-width:659.95px)";
+export const smBreak = "@media (max-width:959.95px)";
+export const mdBreak = "@media (min-width:959.95px)";
+export const lgBreak = "@media (max-width:1279.95px)";
+
+// Colors
+export const colors = {
+  ...VisualizationColors.categorical,
+  ...BrandColors,
+  white: "#fff"
+};
+
+// Shadows
+export const shadows = {
+  bottom: "0px 1px 4px rgba(0, 0, 0, 0.4)"
+};
 
 // Typography
 const body = {
@@ -13,7 +27,8 @@ const body = {
   margin: 0,
   display: "flex",
   flexDirection: "column",
-  [sm]: {
+  overflowX: "hidden",
+  [smBreak]: {
     fontSize: "1rem",
     lineHeight: "1.5rem"
   }
@@ -25,7 +40,7 @@ const p = {
   color: BrandColors.tertiary.hex,
   marginBlockStart: "0.875rem",
   marginBlockEnd: "0.875rem",
-  [sm]: {
+  [smBreak]: {
     fontSize: "1rem",
     lineHeight: "1.5rem"
   }
@@ -45,10 +60,17 @@ const pLarge = {
   color: BrandColors.tertiary.hex,
   marginBlockStart: "0.875rem",
   marginBlockEnd: "0.875rem",
-  [sm]: {
+  [smBreak]: {
     fontSize: "1.0625rem",
     lineHeight: "1.75rem"
   }
+};
+
+const action = {
+  ...p,
+  fontFamily: "Rubik",
+  fontStyle: "normal",
+  fontWeight: "normal"
 };
 
 const h1 = {
@@ -58,12 +80,12 @@ const h1 = {
   fontWeight: "500",
   marginBlockStart: "4rem",
   marginBlockEnd: "4rem",
-  [md]: {
+  [lgBreak]: {
     fontSize: "3rem",
     marginBlockStart: "3rem",
     marginBlockEnd: "3rem"
   },
-  [sm]: {
+  [smBreak]: {
     fontSize: "2rem",
     marginBlockStart: "2rem",
     marginBlockEnd: "2rem"
@@ -77,7 +99,7 @@ const h2 = {
   fontWeight: "400",
   marginBlockStart: "2rem",
   marginBlockEnd: "2rem",
-  [sm]: {
+  [smBreak]: {
     fontSize: "1.7rem",
     marginBlockStart: "1.7rem",
     marginBlockEnd: "1.7rem"
@@ -91,7 +113,7 @@ const h3 = {
   fontWeight: "500",
   marginBlockStart: "1.5rem",
   marginBlockEnd: "1.5rem",
-  [sm]: {
+  [smBreak]: {
     fontSize: "1.35rem",
     marginBlockStart: "1.35rem",
     marginBlockEnd: "1.35rem"
@@ -105,7 +127,7 @@ const h4 = {
   fontWeight: "400",
   marginBlockStart: "1.25rem",
   marginBlockEnd: "1.25rem",
-  [sm]: {
+  [smBreak]: {
     fontSize: "1.15rem",
     marginBlockStart: "1.15rem",
     marginBlockEnd: "1.15rem"
@@ -157,6 +179,20 @@ const dataLarge = {
   fontFamily: "Roboto Condensed",
   fontSize: "1.14rem",
   lineHeight: "1.596rem"
+};
+
+const button = {
+  width: "214px",
+  height: "50px",
+  background: "#FDFDFD",
+  border: "5px solid #EE495C",
+  boxSizing: "border-box",
+  boxShadow: `4px 4px 1px ${VisualizationColors.categorical.pink.hex}`,
+
+  p: {
+    ...action,
+    margin: 0
+  }
 };
 
 export default {
@@ -228,6 +264,27 @@ export default {
 
   ".code": code,
 
+  ".btn": button,
+  ".btn-pink": button,
+  ".btn-blue": {
+    ...button,
+    boxShadow: `4px 4px 1px ${VisualizationColors.categorical.blue.hex}`
+  },
+  ".btn-purple": {
+    ...button,
+    boxShadow: `4px 4px 1px ${VisualizationColors.categorical.purple.hex}`
+  },
+  ".btn-yellow": {
+    ...button,
+    boxShadow: `4px 4px 1px ${VisualizationColors.categorical.yellow.hex}`
+  },
+  ".btn-green": {
+    ...button,
+    boxShadow: `4px 4px 1px ${VisualizationColors.categorical.green.hex}`
+  },
+
+  ".action": action,
+
   ".Description": {
     maxWidth: "900px",
     margin: "0 auto",
@@ -257,5 +314,35 @@ export default {
 
   ".Pullquote": {
     fontSize: "2.85rem"
+  },
+
+  ".ShadowBox": {
+    maxWidth: "322px",
+    margin: "0 15px",
+    background: "white",
+    boxShadow: "0px 2px 5px rgba(0, 0, 0, 0.25)",
+    padding: "30px"
+  },
+
+  ".DividerLineStyle": {
+    [smBreak]: {
+      display: "none"
+    }
+  },
+
+  ".DividerLinePadding": {
+    borderTop: `10px solid ${colors.purple.hex}`,
+    height: "130px",
+    backgroundColor: "white",
+    marginTop: "100px",
+
+    [mdBreak]: {
+      display: "none"
+    }
+  },
+
+  ".centerSelf": {
+    justifySelf: "center",
+    alignSelf: "center"
   }
 };

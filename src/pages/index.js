@@ -1,12 +1,14 @@
 /** @jsx jsx */
-import { jsx } from "@emotion/core";
-import { Grid } from "@material-ui/core";
+import { jsx, css } from "@emotion/core";
 
-import CallToActionBlocks from "./Home/CallToActionBlocks";
-import OurDifferenceCards from "./Home/OurDifferenceCards";
-import OurDifferenceHeader from "./Home/OurDifferenceHeader";
-import Splash from "./Home/Splash";
 import PageLayout from "../components/PageLayout";
+import Splash from "./Home/Splash";
+import OurDifferenceHeader from "./Home/OurDifferenceHeader";
+import OurDifferenceCards from "./Home/OurDifferenceCards";
+import CallToActionBlocks from "./Home/CallToActionBlocks";
+import QuoteBlock from "./Home/QuoteBlock";
+import DividerLine from "../components/DividerLine";
+import { colors } from "../_Theme/UpdatedBrandTheme";
 
 const IndexPage = () => {
   return (
@@ -14,18 +16,50 @@ const IndexPage = () => {
       title="Home"
       keywords={[`Civic Software Foundation`, `CIVIC Platform`]}
     >
-      <Grid container spacing={0}>
-        <Splash />
-        <Grid container xs={12} spacing={4}>
-          <Grid item xs={12}>
-            <OurDifferenceHeader />
-          </Grid>
-          <OurDifferenceCards />
-        </Grid>
-        <Grid container xs={12}>
-          <CallToActionBlocks />
-        </Grid>
-      </Grid>
+      <Splash />
+      <DividerLine hexColor={colors.purple.hex} />
+      <div className="DividerLinePadding" />
+      <div
+        css={css`
+          background-color: white;
+          display: grid;
+          margin-top: -80px;
+          justify-content: center;
+        `}
+      >
+        <OurDifferenceHeader />
+        <OurDifferenceCards />
+      </div>
+      <DividerLine
+        hexColor={colors.yellow.hex}
+        cssStyle={css`
+          margin-top: -60px;
+          transform: rotate(10deg);
+          margin-left: -14px;
+        `}
+      />
+      <div
+        className="DividerLinePadding"
+        css={css`
+          border-top: 10px solid ${colors.yellow.hex};
+        `}
+      />
+      <CallToActionBlocks />
+      <QuoteBlock />
+      <DividerLine
+        hexColor={colors.purple.hex}
+        cssStyle={css`
+          margin-top: -60px;
+          transform: rotate(10deg);
+          margin-left: -14px;
+        `}
+      />
+      <div
+        className="DividerLinePadding"
+        css={css`
+          border-top: 10px solid ${colors.purple.hex};
+        `}
+      />
     </PageLayout>
   );
 };

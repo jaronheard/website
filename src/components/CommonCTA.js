@@ -1,15 +1,18 @@
 /** @jsx jsx */
-import { jsx } from "@emotion/core";
-import { Grid, Box } from "@material-ui/core";
+import { css, jsx } from "@emotion/core";
 import CTAButtons from "./CTAButtons";
 
 const CommonCTA = () => (
-  <Box my={16} textAlign="center">
+  <div
+    css={css`
+      display: grid;
+      max-width: 400px;
+      margin: -60px auto 0;
+    `}
+  >
     <h2>Join the CIVIC Movement</h2>
-    <Grid container direction="column" justify="center" alignItems="center">
-      <CTAButtons />
-    </Grid>
-  </Box>
+    <CTAButtons vertical />
+  </div>
 );
 
 export default CommonCTA;

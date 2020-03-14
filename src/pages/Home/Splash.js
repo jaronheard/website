@@ -1,56 +1,55 @@
 /** @jsx jsx */
 import { jsx, css } from "@emotion/core";
-import { Grid, Box } from "@material-ui/core";
 
-import Image from "../../components/Image";
+import pathsImg from "../../images/paths.png";
 import CTAButtons from "../../components/CTAButtons";
+import { smBreak } from "../../_Theme/UpdatedBrandTheme";
 
 const Splash = () => (
-  <Grid container xs={12}>
-    <Grid item xs={1} md={4}>
-      <Box mt={4} pt={8}>
-        <Image
-          css={css`
-            max-width: 90vw%;
-          `}
-          title="Ven Graph"
-        />
-      </Box>
-    </Grid>
-    <Grid item xs={11} md={8}>
-      <Box mt={4} p={8}>
-        <h2
-          css={css`
-            background-color: white;
-            outline: 0.25em solid white;
-          `}
-        >
-          Imagine a future where information and technology equitably serve the
-          public
-        </h2>
-        <h3
-          css={css`
-            background-color: white;
-            outline: 0.25em solid white;
-          `}
-        >
-          We&apos;re building teams, technology, and process to get there
-          quickly.
-        </h3>
-        <h3
-          css={css`
-            background-color: white;
-            outline: 0.25em solid white;
-          `}
-        >
-          You can be a part of it.
-        </h3>
-        <Grid container xs={12} justify="space-around">
-          <CTAButtons />
-        </Grid>
-      </Box>
-    </Grid>
-  </Grid>
+  <div
+    css={css`
+      display: grid;
+      width: 100vw;
+    `}
+  >
+    <img
+      src={pathsImg}
+      alt=""
+      css={css`
+        position: absolute;
+        width: 125%;
+        min-width: 1460px;
+        z-index: -1;
+        opacity: 0.2;
+        justify-self: center;
+      `}
+    />
+    <div
+      css={css`
+        display: grid;
+        justify-content: center;
+        align-content: center;
+        text-align: center;
+        padding-top: 130px;
+
+        ${smBreak} {
+          padding: 65px 20px 0;
+        }
+      `}
+    >
+      <h2
+        css={css`
+          max-width: 650px;
+          display: grid;
+          justify-self: center;
+        `}
+      >
+        Imagine a future where information and technology equitably serve the
+        public
+      </h2>
+      <CTAButtons />
+    </div>
+  </div>
 );
 
 export default Splash;
