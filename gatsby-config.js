@@ -29,14 +29,13 @@ module.exports = {
       }
     },
     `gatsby-plugin-emotion`,
-    // `gatsby-plugin-webpack-bundle-analyzer`
-    {
-      resolve: "gatsby-plugin-webpack-bundle-analyzer",
-      options: {
-        analyzerPort: 3000,
-        production: true
-      }
-    },
+    // {
+    //   resolve: "gatsby-plugin-webpack-bundle-analyzer",
+    //   options: {
+    //     analyzerPort: 3000,
+    //     production: true
+    //   }
+    // },
     {
       resolve: `gatsby-source-contentful`,
       options: {
@@ -50,7 +49,8 @@ module.exports = {
         fonts: [`Rubik`, `Roboto`, `Roboto Condensed`],
         display: "swap"
       }
-    }
+    },
+    `gatsby-plugin-extract-schema`
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
