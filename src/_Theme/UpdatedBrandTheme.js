@@ -364,13 +364,14 @@ export default {
   },
 
   ".DividerLineStyle": {
+    zIndex: -1,
+
     [smBreak]: {
       display: "none"
     }
   },
 
   ".DividerLinePadding": {
-    borderTop: `10px solid ${colors.purple.hex}`,
     height: "130px",
     backgroundColor: "white",
     marginTop: "100px",

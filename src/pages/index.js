@@ -18,48 +18,20 @@ const IndexPage = () => {
     >
       <Splash />
       <DividerLine hexColor={colors.purple.hex} />
-      <div className="DividerLinePadding" />
       <div
         css={css`
           background-color: white;
           display: grid;
-          margin-top: -80px;
           justify-content: center;
         `}
       >
         <OurDifferenceHeader />
         <OurDifferenceCards />
       </div>
-      <DividerLine
-        hexColor={colors.yellow.hex}
-        cssStyle={css`
-          margin-top: -60px;
-          transform: rotate(10deg);
-          margin-left: -14px;
-        `}
-      />
-      <div
-        className="DividerLinePadding"
-        css={css`
-          border-top: 10px solid ${colors.yellow.hex};
-        `}
-      />
+      <DividerLine hexColor={colors.yellow.hex} swoopUp />
       <CallToActionBlocks />
       <QuoteBlock />
-      <DividerLine
-        hexColor={colors.purple.hex}
-        cssStyle={css`
-          margin-top: -60px;
-          transform: rotate(10deg);
-          margin-left: -14px;
-        `}
-      />
-      <div
-        className="DividerLinePadding"
-        css={css`
-          border-top: 10px solid ${colors.purple.hex};
-        `}
-      />
+      <DividerLine hexColor={colors.purple.hex} swoopUp />
     </PageLayout>
   );
 };

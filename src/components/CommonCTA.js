@@ -7,7 +7,7 @@ const CommonCTA = () => (
     css={css`
       display: grid;
       max-width: 400px;
-      margin: -60px auto 0;
+      margin: 30px auto 20px;
       text-align: center;
     `}
   >

@@ -7,7 +7,7 @@ const QuoteBlock = () => {
       css={css`
         padding: 0 70px;
         max-width: 790px;
-        margin: 0 auto;
+        margin: 60px auto 0;
       `}
     >
       <h3>

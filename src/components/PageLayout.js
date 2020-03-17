@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { jsx, css } from "@emotion/core";
+import { jsx } from "@emotion/core";
 import { Fragment } from "react";
 import PropTypes from "prop-types";
 
@@ -19,18 +19,7 @@ const PageLayout = ({ title, keywords, children }) => {
         <Header />
         {children}
         <CommonCTA />
-        <DividerLine
-          hexColor={colors.yellow.hex}
-          cssStyle={css`
-            margin-top: -60px;
-          `}
-        />
-        <div
-          className="DividerLinePadding"
-          css={css`
-            border-top: 10px solid ${colors.yellow.hex};
-          `}
-        />
+        <DividerLine hexColor={colors.yellow.hex} />
         <Footer />
       </Wrapper>
     </Fragment>
