@@ -49,8 +49,10 @@ const CallToActionBlock = ({
     <div>
       <div
         css={css`
+          margin-top: 60px;
           padding: 0 70px;
           ${smBreak} {
+            margin-top: 0;
             padding: 0 35px;
           }
         `}
@@ -111,19 +113,7 @@ const CallToActionBlock = ({
       </div>
       <DividerLine
         hexColor={colors[dividerColor].hex}
-        cssStyle={css`
-          margin-top: -60px;
-          transform: ${reverseLayout ? "rotate(10deg)" : "rotate(0deg)"};
-          margin-left: ${reverseLayout ? "-14px" : "0px"};
-          margin-bottom: -50px;
-        `}
-      />
-      <div
-        className="DividerLinePadding"
-        css={css`
-          border-top: 10px solid ${colors[dividerColor].hex};
-          margin-bottom: -40px;
-        `}
+        swoopUp={!reverseLayout}
       />
     </div>
   );

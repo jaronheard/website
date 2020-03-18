@@ -2,49 +2,78 @@
 /** @jsx jsx */
 import { jsx, css } from "@emotion/core";
 
-const DividerLine = ({ hexColor = "#721D7C", cssStyle }) => (
-  <svg
-    preserveAspectRatio="none"
-    width="100%"
-    height="422"
-    viewBox="88 0 1250 422"
-    fill="none"
-    css={css`
-      margin-top: -100px;
-      z-index: -1;
-      ${cssStyle || ""}
-    `}
-    className="DividerLineStyle"
-  >
-    <rect x="83" y="273" width="1301" height="79" fill="#FDFDFD" />
-    <path
-      d="M1385.61 13.2225L1377.11 127.647L1316.41 104.745L1385.61 13.2225Z"
-      fill="white"
-    />
-    <path d="M1234 159L1384 36.8902V281.109L1234 159Z" fill="white" />
-    <path
-      d="M892.965 299.551L1356.61 151.181L1379.76 297.386L892.965 299.551Z"
-      fill="white"
-    />
-    <path
-      d="M331.363 284.146L82.8163 352.646L83.276 213.999L331.363 284.146Z"
-      fill="white"
-    />
-    <path
-      d="M87.1599 280.001L82.501 204.552L146.865 233.637L87.1599 280.001Z"
-      fill="white"
-    />
-    <path
-      d="M99.5 248.5C561 375.5 1153.5 272.5 1356 102"
-      stroke="white"
-      strokeWidth="60"
-    />
-    <path
-      d="M84.5977 200.432C262.868 327.002 1254.02 303.621 1381.52 11.0002"
-      stroke={hexColor}
-      strokeWidth="10"
-    />
-  </svg>
-);
+const DividerLine = ({
+  hexColor = "#721D7C",
+  lineStyle,
+  swoopStyle,
+  swoopUp
+}) => {
+  const swoopUpStyle = css`
+    transform: scale(-1, 1);
+  `;
+
+  return (
+    <div
+      css={css`
+        margin-bottom: -10px;
+      `}
+    >
+      {/* Straight line for smaller screens */}
+      <div
+        className="DividerLinePadding"
+        css={css`
+          border-top: 10px solid ${hexColor};
+          ${lineStyle || ""}
+        `}
+      />
+      {/* Swoop for larger screens */}
+      <svg
+        preserveAspectRatio="none"
+        width="100%"
+        height="222"
+        viewBox="0 0 1332 222"
+        fill="none"
+        className="DividerLineStyle"
+        css={css`
+          ${swoopUp ? swoopUpStyle : ""}
+          ${swoopStyle || ""}
+        `}
+      >
+        <mask
+          id="mask0"
+          mask-type="alpha"
+          maskUnits="userSpaceOnUse"
+          x="0"
+          y="0"
+          width="1332"
+          height="222"
+        >
+          <rect width="1332" height="222" fill="#C4C4C4" />
+        </mask>
+        <g mask="url(#mask0)">
+          <path d="M356.5 136L653.98 221.5H59.0203L356.5 136Z" fill="white" />
+          <path
+            d="M1199.31 227.9L1336.03 192.567L1335.52 265.139L1199.31 227.9Z"
+            fill="white"
+          />
+          <path
+            d="M405.451 132.749L-1.97049 263.489L-3.75619 7.71081L405.451 132.749Z"
+            fill="white"
+          />
+          <path
+            d="M-6.18945 35.0005C385.273 188.98 1180.98 292.226 1315.9 220.808"
+            stroke="white"
+            strokeWidth="50"
+          />
+          <path
+            d="M-2.18945 6.00049C393.647 160.595 1197.94 265.047 1334.18 193.815"
+            stroke={hexColor}
+            strokeWidth="10"
+          />
+        </g>
+      </svg>
+    </div>
+  );
+};
 
 export default DividerLine;

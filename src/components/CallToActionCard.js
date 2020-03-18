@@ -5,8 +5,8 @@ import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 
 // https://app.contentful.com/spaces/3j4jpxgb52st/content_types/callToActionBlock/fields
 
-const CallToActionCard = ({ tagline, summary, button }) => (
-  <div className="ShadowBox">
+const CallToActionCard = ({ tagline, summary, button, cardStyle }) => (
+  <div className="ShadowBox" css={cardStyle}>
     {tagline && (
       <h3
         css={css`

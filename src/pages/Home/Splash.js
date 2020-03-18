@@ -28,7 +28,7 @@ const Splash = () => {
           top: 0;
           left: 0;
           width: 100%;
-          height: 100%;
+          height: 106%;
           z-index: -2;
           opacity: 0.2;
         `}

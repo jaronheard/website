@@ -93,6 +93,20 @@ const pLarge = {
   }
 };
 
+const input = {
+  paddingLeft: "10px",
+  paddingRight: "10px",
+  color: BrandColors.tertiary.hex,
+  fontSize: "1.0625rem",
+  [smBreak]: {
+    fontSize: "1rem",
+    lineHeight: "1.5rem"
+  },
+  "::placeholder": {
+    color: colors.plumLight.hex
+  }
+};
+
 const action = {
   ...p,
   fontFamily: "Rubik",
@@ -212,8 +226,8 @@ const dataLarge = {
 const button = {
   width: "225px",
   height: "50px",
-  background: "#FDFDFD",
-  border: "4px solid #EE495C",
+  background: colors.primary.hex,
+  border: "none",
   boxSizing: "border-box",
   boxShadow: `6px 6px 0px ${VisualizationColors.categorical.pink.hex}`,
   transition: "all .1s ease-in-out-circ",
@@ -221,10 +235,12 @@ const button = {
   justifyContent: "center",
   alignItems: "center",
   zIndex: 10,
+  marginBottom: "6px",
 
   p: {
     ...action,
-    margin: 0
+    margin: 0,
+    color: "white"
   },
   "&:hover,:focus": {
     cursor: "pointer",
@@ -266,6 +282,7 @@ export default {
   h4,
   h5,
   h6,
+  input,
 
   // Class names
   ".p-sm": pSmall,
@@ -364,16 +381,17 @@ export default {
   },
 
   ".DividerLineStyle": {
+    zIndex: -1,
+
     [smBreak]: {
       display: "none"
     }
   },
 
   ".DividerLinePadding": {
-    borderTop: `10px solid ${colors.purple.hex}`,
-    height: "130px",
+    height: "10px",
     backgroundColor: "white",
-    marginTop: "100px",
+    margin: "100px 0",
 
     [mdBreak]: {
       display: "none"
