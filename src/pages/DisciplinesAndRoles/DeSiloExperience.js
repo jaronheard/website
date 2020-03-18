@@ -2,9 +2,9 @@
 /** @jsx jsx */
 import { jsx, css } from "@emotion/core";
 import { useStaticQuery, graphql } from "gatsby";
-import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 
 import DividerLine from "../../components/DividerLine";
+import CallToActionCard from "../../components/CallToActionCard";
 import { smBreak, colors } from "../../_Theme/UpdatedBrandTheme";
 
 const DeSiloExperience = () => {
@@ -53,15 +53,32 @@ const DeSiloExperience = () => {
         >
           <h2>{contentfulContentList.title}</h2>
           <p>{contentfulContentList.subtitle.subtitle}</p>
-          {contentfulContentList.content.map(({ summary, tagline }) => {
-            return (
-              <div>
-                <p>{tagline}</p>
-                {documentToReactComponents(summary.json)}
-              </div>
-            );
-          })}
         </div>
+      </div>
+      <div
+        css={css`
+          display: grid;
+          width: min-content;
+          margin: 0 auto;
+          justify-items: center;
+          align-items: start;
+          grid-template-columns: repeat(2, 430px);
+          grid-template-rows: 1fr 1fr 1fr;
+        `}
+      >
+        {contentfulContentList.content.map(({ summary, tagline }) => {
+          return (
+            <CallToActionCard
+              tagline={tagline}
+              summary={summary.json}
+              cardStyle={css`
+                width: 322px;
+                height: 400px;
+                margin: 15px;
+              `}
+            />
+          );
+        })}
       </div>
       <DividerLine hexColor={colors.pink.hex} />
     </div>
