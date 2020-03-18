@@ -7,12 +7,12 @@ import DividerLine from "../../components/DividerLine";
 import CallToActionCard from "../../components/CallToActionCard";
 import { smBreak, colors } from "../../_Theme/UpdatedBrandTheme";
 
-const DeSiloExperience = () => {
+const CivicExperience = () => {
   // eslint-disable-next-line react-hooks/rules-of-hooks
   const { contentfulContentList } = useStaticQuery(
     graphql`
       query {
-        contentfulContentList(contentful_id: { eq: "2su5Nc7QbqZ4trvZgxzK0r" }) {
+        contentfulContentList(contentful_id: { eq: "75qL3zfEQExmQmj76hJXFI" }) {
           title
           subtitle {
             subtitle
@@ -27,6 +27,7 @@ const DeSiloExperience = () => {
       }
     `
   );
+
   return (
     <div>
       <div
@@ -54,31 +55,20 @@ const DeSiloExperience = () => {
       <div
         css={css`
           display: grid;
-          width: min-content;
           margin: 0 auto;
-          justify-items: center;
-          align-items: start;
-          grid-template-columns: repeat(2, 430px);
-          grid-template-rows: 1fr 1fr 1fr;
+          grid-template-columns: repeat(3, 1fr);
+          padding: 0 40px;
+          margin: 25px auto;
+          max-width: 1330px;
         `}
       >
         {contentfulContentList.content.map(({ summary, tagline }) => {
-          return (
-            <CallToActionCard
-              tagline={tagline}
-              summary={summary.json}
-              cardStyle={css`
-                width: 322px;
-                height: 400px;
-                margin: 15px;
-              `}
-            />
-          );
+          return <CallToActionCard tagline={tagline} summary={summary.json} />;
         })}
       </div>
-      <DividerLine hexColor={colors.pink.hex} />
+      <DividerLine hexColor={colors.green.hex} swoopUp />
     </div>
   );
 };
 
-export default DeSiloExperience;
+export default CivicExperience;
