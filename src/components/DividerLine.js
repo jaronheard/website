@@ -2,7 +2,7 @@
 /** @jsx jsx */
 import { jsx, css } from "@emotion/core";
 
-const DividerLine = ({ hexColor = "#721D7C", cssStyle, swoopUp }) => {
+const DividerLine = ({ hexColor = "#721D7C", swoopStyle, swoopUp }) => {
   const swoopUpStyle = css`
     margin: 0;
     transform: scale(-1, 1);
@@ -12,7 +12,11 @@ const DividerLine = ({ hexColor = "#721D7C", cssStyle, swoopUp }) => {
   `;
 
   return (
-    <div>
+    <div
+      css={css`
+        margin-bottom: -10px;
+      `}
+    >
       {/* Straight line for smaller screens */}
       <div
         className="DividerLinePadding"
@@ -30,7 +34,7 @@ const DividerLine = ({ hexColor = "#721D7C", cssStyle, swoopUp }) => {
         className="DividerLineStyle"
         css={css`
           ${swoopUp ? swoopUpStyle : swoopDownStyle}
-          ${cssStyle || ""}
+          ${swoopStyle || ""}
         `}
       >
         <mask
@@ -45,7 +49,6 @@ const DividerLine = ({ hexColor = "#721D7C", cssStyle, swoopUp }) => {
           <rect width="1332" height="222" fill="#C4C4C4" />
         </mask>
         <g mask="url(#mask0)">
-          <rect x="-1.98047" y="217" width="1338" height="66" fill="white" />
           <path d="M356.5 136L653.98 221.5H59.0203L356.5 136Z" fill="white" />
           <path
             d="M1199.31 227.9L1336.03 192.567L1335.52 265.139L1199.31 227.9Z"
