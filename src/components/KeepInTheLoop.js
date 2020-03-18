@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { jsx, css } from "@emotion/core";
-import { colors } from "../_Theme/UpdatedBrandTheme";
+import { colors, smBreak } from "../_Theme/UpdatedBrandTheme";
 
 const KeepInTheLoop = () => (
   <div
@@ -8,6 +8,11 @@ const KeepInTheLoop = () => (
       display: grid;
       justify-items: center;
       margin-bottom: 130px;
+
+      ${smBreak} {
+        margin-bottom: 65px;
+        padding: 20px;
+      }
     `}
   >
     <div
@@ -18,6 +23,10 @@ const KeepInTheLoop = () => (
       <h2
         css={css`
           margin-bottom: 50px;
+
+          ${smBreak} {
+            margin-bottom: 25px;
+          }
         `}
       >
         Keep in the loop
@@ -41,6 +50,13 @@ const KeepInTheLoop = () => (
             ::placeholder {
               color: ${colors.plumLight};
             }
+          }
+
+          ${smBreak} {
+            margin: 45px auto 25px;
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(3, 1fr);
+            grid-row-gap: 20px;
           }
         `}
       >
