@@ -8,6 +8,7 @@ import TitleArea from "../components/TitleArea";
 import DividerLine from "../components/DividerLine";
 import scatterplotImage from "../images/scatterplot.png";
 import { colors, smBreak } from "../_Theme/UpdatedBrandTheme";
+import DeSiloExperience from "./DisciplinesAndRoles/DeSiloExperience";
 
 const disciplinesAndRoles = () => {
   // eslint-disable-next-line react-hooks/rules-of-hooks
@@ -70,6 +71,7 @@ const disciplinesAndRoles = () => {
         </div>
       </div>
       <DividerLine hexColor={colors.blue.hex} swoopUp />
+      <DeSiloExperience />
     </PageLayout>
   );
 };
