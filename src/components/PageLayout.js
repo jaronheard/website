@@ -9,6 +9,7 @@ import Footer from "./Footer";
 import Wrapper from "./Wrapper";
 import CommonCTA from "./CommonCTA";
 import DividerLine from "./DividerLine";
+import KeepInTheLoop from "./KeepInTheLoop";
 import { colors } from "../_Theme/UpdatedBrandTheme";
 
 const PageLayout = ({ title, keywords, children }) => {
@@ -20,6 +21,7 @@ const PageLayout = ({ title, keywords, children }) => {
         {children}
         <CommonCTA />
         <DividerLine hexColor={colors.yellow.hex} />
+        <KeepInTheLoop />
         <Footer />
       </Wrapper>
     </Fragment>
