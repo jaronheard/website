@@ -7,7 +7,7 @@ import PageLayout from "../components/PageLayout";
 import TitleArea from "../components/TitleArea";
 import DividerLine from "../components/DividerLine";
 import scatterplotImage from "../images/scatterplot.png";
-import { colors, smBreak } from "../_Theme/UpdatedBrandTheme";
+import { colors, smBreak, xsBreak } from "../_Theme/UpdatedBrandTheme";
 import DeSiloExperience from "./DisciplinesAndRoles/DeSiloExperience";
 import CivicExperience from "./DisciplinesAndRoles/CivicExperience";
 
@@ -57,10 +57,18 @@ const disciplinesAndRoles = () => {
       >
         <div
           css={css`
-            width: 600px;
+            max-width: 600px;
             display: grid;
             justify-items: center;
             margin: 0 auto;
+
+            ${smBreak} {
+              padding: 0 40px;
+            }
+
+            ${xsBreak} {
+              padding: 0 20px;
+            }
           `}
         >
           <h2>{contentfulCallToActionBlock.tagline}</h2>
