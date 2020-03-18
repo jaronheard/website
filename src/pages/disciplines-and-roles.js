@@ -10,6 +10,7 @@ import { colors } from "../_Theme/UpdatedBrandTheme";
 import Philosophy from "./DisciplinesAndRoles/Philosophy";
 import DeSiloExperience from "./DisciplinesAndRoles/DeSiloExperience";
 import CivicExperience from "./DisciplinesAndRoles/CivicExperience";
+import ContributorCTA from "./DisciplinesAndRoles/ContributorCTA";
 
 const disciplinesAndRoles = () => {
   // eslint-disable-next-line react-hooks/rules-of-hooks
@@ -41,6 +42,8 @@ const disciplinesAndRoles = () => {
       <DividerLine hexColor={colors.blue.hex} swoopUp />
       <DeSiloExperience />
       <CivicExperience />
+      <ContributorCTA />
+      <DividerLine hexColor={colors.yellow.hex} />
     </PageLayout>
   );
 };
