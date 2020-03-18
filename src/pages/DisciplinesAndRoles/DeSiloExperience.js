@@ -5,7 +5,12 @@ import { useStaticQuery, graphql } from "gatsby";
 
 import DividerLine from "../../components/DividerLine";
 import CallToActionCard from "../../components/CallToActionCard";
-import { smBreak, colors } from "../../_Theme/UpdatedBrandTheme";
+import {
+  smBreak,
+  colors,
+  xsBreak,
+  mdBreak
+} from "../../_Theme/UpdatedBrandTheme";
 
 const DeSiloExperience = () => {
   // eslint-disable-next-line react-hooks/rules-of-hooks
@@ -41,10 +46,18 @@ const DeSiloExperience = () => {
       >
         <div
           css={css`
-            width: 600px;
+            max-width: 600px;
             display: grid;
             justify-items: center;
             margin: 0 auto;
+
+            ${smBreak} {
+              padding: 0 40px;
+            }
+
+            ${xsBreak} {
+              padding: 0 20px;
+            }
           `}
         >
           <h2>{contentfulContentList.title}</h2>
@@ -54,12 +67,28 @@ const DeSiloExperience = () => {
       <div
         css={css`
           display: grid;
-          width: min-content;
           margin: 0 auto;
-          justify-items: center;
-          align-items: start;
-          grid-template-columns: repeat(2, 430px);
-          grid-template-rows: 1fr 1fr 1fr;
+          grid-template-columns: repeat(3, 1fr);
+          padding: 0 40px;
+          margin: 25px auto;
+          max-width: 1330px;
+
+          @media (max-width: 1230px) {
+            justify-items: center;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: 1fr 1fr 1fr;
+            grid-row-gap: 20px;
+          }
+
+          ${smBreak} {
+            width: min-content;
+            justify-items: center;
+            grid-template-columns: repeat(1, 1fr);
+            grid-template-rows: 1fr 1fr 1fr;
+            grid-row-gap: 20px;
+            width: auto;
+            padding: 0 10px;
+          }
         `}
       >
         {contentfulContentList.content.map(({ summary, tagline }) => {
@@ -68,9 +97,18 @@ const DeSiloExperience = () => {
               tagline={tagline}
               summary={summary.json}
               cardStyle={css`
-                width: 322px;
-                height: 400px;
-                margin: 15px;
+                @media (max-width: 1230px) {
+                  width: 100%;
+                }
+
+                ${mdBreak} {
+                  margin: 15px;
+                  width: 80%;
+                }
+
+                ${xsBreak} {
+                  width: 250px;
+                }
               `}
             />
           );
