@@ -74,7 +74,14 @@ const TitleArea = ({
           {title}
         </h1>
       </div>
-      <DividerLine hexColor={swooshColor} />
+      <DividerLine
+        hexColor={swooshColor}
+        lineStyle={css`
+          margin-bottom: 0;
+          height: 100px;
+          background-color: white;
+        `}
+      />
     </div>
   );
 };

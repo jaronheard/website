@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { jsx, css } from "@emotion/core";
-import { colors, smBreak } from "../_Theme/UpdatedBrandTheme";
+import { colors, smBreak, xsBreak } from "../_Theme/UpdatedBrandTheme";
 
 const KeepInTheLoop = () => (
   <div
@@ -10,7 +10,7 @@ const KeepInTheLoop = () => (
       margin-bottom: 130px;
 
       ${smBreak} {
-        margin-bottom: 65px;
+        margin-bottom: 100px;
         padding: 20px;
       }
     `}
@@ -18,6 +18,10 @@ const KeepInTheLoop = () => (
     <div
       css={css`
         display: grid;
+
+        ${xsBreak} {
+          justify-items: center;
+        }
       `}
     >
       <h2
@@ -70,6 +74,9 @@ const KeepInTheLoop = () => (
         css={css`
           display: grid;
           justify-self: end;
+          ${xsBreak} {
+            justify-self: center;
+          }
         `}
       >
         <p>Sign Up</p>

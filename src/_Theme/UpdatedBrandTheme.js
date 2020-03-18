@@ -235,6 +235,7 @@ const button = {
   justifyContent: "center",
   alignItems: "center",
   zIndex: 10,
+  marginBottom: "6px",
 
   p: {
     ...action,
@@ -388,9 +389,9 @@ export default {
   },
 
   ".DividerLinePadding": {
-    height: "130px",
+    height: "10px",
     backgroundColor: "white",
-    marginTop: "100px",
+    margin: "100px 0",
 
     [mdBreak]: {
       display: "none"

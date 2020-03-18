@@ -17,7 +17,14 @@ const IndexPage = () => {
       keywords={[`Civic Software Foundation`, `CIVIC Platform`]}
     >
       <Splash />
-      <DividerLine hexColor={colors.purple.hex} />
+      <DividerLine
+        hexColor={colors.purple.hex}
+        lineStyle={css`
+          margin-bottom: 0;
+          height: 100px;
+          background-color: white;
+        `}
+      />
       <div
         css={css`
           background-color: white;
