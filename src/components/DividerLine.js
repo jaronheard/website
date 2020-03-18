@@ -4,11 +4,7 @@ import { jsx, css } from "@emotion/core";
 
 const DividerLine = ({ hexColor = "#721D7C", swoopStyle, swoopUp }) => {
   const swoopUpStyle = css`
-    margin: 0;
     transform: scale(-1, 1);
-  `;
-  const swoopDownStyle = css`
-    margin: -40px 0 40px;
   `;
 
   return (
@@ -33,7 +29,7 @@ const DividerLine = ({ hexColor = "#721D7C", swoopStyle, swoopUp }) => {
         fill="none"
         className="DividerLineStyle"
         css={css`
-          ${swoopUp ? swoopUpStyle : swoopDownStyle}
+          ${swoopUp ? swoopUpStyle : ""}
           ${swoopStyle || ""}
         `}
       >
