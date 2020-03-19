@@ -5,106 +5,107 @@ import { PropTypes } from "prop-types";
 
 import DividerLine from "./DividerLine";
 import CallToActionCard from "./CallToActionCard";
-import { smBreak, xsBreak, mdBreak } from "../_Theme/UpdatedBrandTheme";
+import { smBreak, xsBreak, mdBreak, colors } from "../_Theme/UpdatedBrandTheme";
+
+const { purple, pink, blue, green, yellow } = colors;
+const shadowColors = [
+  purple.mapFormatRGBA.slice(0, 3),
+  pink.mapFormatRGBA.slice(0, 3),
+  blue.mapFormatRGBA.slice(0, 3),
+  green.mapFormatRGBA.slice(0, 3),
+  yellow.mapFormatRGBA.slice(0, 3)
+];
 
 const GridList = ({
   title,
   subtitle,
   callToActionBlockList,
   showDividerLine,
-  dividerLineColor
-}) => (
-  <div>
-    <div
-      css={css`
-        width: 100%;
-        background-color: white;
-        padding-top: 100px;
-        ${smBreak} {
-          padding-top: 0;
-        }
-      `}
-    >
+  dividerLineColor,
+  wideContent
+}) => {
+  return (
+    <div>
       <div
         css={css`
-          max-width: 600px;
-          display: grid;
-          justify-items: center;
-          margin: 0 auto;
-
+          width: 100%;
+          background-color: white;
+          padding-top: 100px;
           ${smBreak} {
-            padding: 0 40px;
-          }
-
-          ${xsBreak} {
-            padding: 0 20px;
+            padding-top: 0;
           }
         `}
       >
-        {title && <h2>{title}</h2>}
-        {subtitle && <p>{subtitle}</p>}
+        <div
+          css={css`
+            max-width: 600px;
+            display: grid;
+            justify-items: center;
+            margin: 0 auto;
+
+            ${smBreak} {
+              padding: 0 40px;
+            }
+
+            ${xsBreak} {
+              padding: 0 20px;
+            }
+          `}
+        >
+          {title && <h2>{title}</h2>}
+          {subtitle && <p>{subtitle}</p>}
+        </div>
       </div>
+
+      <div className={`GridListContent ${wideContent ? "WideContent" : ""}`}>
+        {callToActionBlockList.map(
+          ({ summary, tagline, extraContent, extraContentType }, i) => {
+            let index = i;
+
+            while (index > shadowColors.length - 1) {
+              index -= shadowColors.length;
+            }
+
+            const nextColor = shadowColors[index];
+
+            return (
+              <CallToActionCard
+                tagline={tagline}
+                summary={summary.json}
+                extraContent={extraContent ? extraContent.json : null}
+                extraContentType={extraContentType || null}
+                shadowColor={nextColor}
+                cardStyle={css`
+                  @media (max-width: 1230px) {
+                    width: 100%;
+                  }
+
+                  ${mdBreak} {
+                    margin: 15px;
+                    ${wideContent ? "" : "width: 80%"};
+                  }
+
+                  ${xsBreak} {
+                    width: 250px;
+                  }
+                `}
+              />
+            );
+          }
+        )}
+      </div>
+      {showDividerLine && <DividerLine hexColor={dividerLineColor} />}
     </div>
-    <div
-      css={css`
-        display: grid;
-        margin: 0 auto;
-        grid-template-columns: repeat(3, 1fr);
-        padding: 0 40px;
-        margin: 25px auto;
-        max-width: 1330px;
-
-        @media (max-width: 1230px) {
-          justify-items: center;
-          grid-template-columns: repeat(2, 1fr);
-          grid-template-rows: 1fr 1fr 1fr;
-          grid-row-gap: 20px;
-        }
-
-        ${smBreak} {
-          width: min-content;
-          justify-items: center;
-          grid-template-columns: repeat(1, 1fr);
-          grid-template-rows: 1fr 1fr 1fr;
-          grid-row-gap: 20px;
-          width: auto;
-          padding: 0 10px;
-        }
-      `}
-    >
-      {callToActionBlockList.map(({ summary, tagline }) => {
-        return (
-          <CallToActionCard
-            tagline={tagline}
-            summary={summary.json}
-            cardStyle={css`
-              @media (max-width: 1230px) {
-                width: 100%;
-              }
-
-              ${mdBreak} {
-                margin: 15px;
-                width: 80%;
-              }
-
-              ${xsBreak} {
-                width: 250px;
-              }
-            `}
-          />
-        );
-      })}
-    </div>
-    {showDividerLine && <DividerLine hexColor={dividerLineColor} />}
-  </div>
-);
+  );
+};
 
 GridList.propTypes = {
   title: PropTypes.string,
   subtitle: PropTypes.string,
   callToActionBlockList: PropTypes.arrayOf(PropTypes.shape({})),
   showDividerLine: PropTypes.bool,
-  dividerLineColor: PropTypes.string
+  dividerLineColor: PropTypes.string,
+  wideContent: PropTypes.bool
 };
 
 export default GridList;

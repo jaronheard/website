@@ -2,7 +2,7 @@
 import { jsx } from "@emotion/core";
 
 import PlatformHeader from "./Platform/PlatformHeader";
-// import ContributorBlock from "./Platform/ContributorBlock";
+import PlatformComponents from "./Platform/PlatformComponents";
 import PageLayout from "../components/PageLayout";
 import { colors } from "../_Theme/UpdatedBrandTheme";
 
@@ -15,7 +15,7 @@ const PlatformPage = () => {
       swoopColor={colors.purple.hex}
     >
       <PlatformHeader />
-      {/* <ContributorBlock /> */}
+      <PlatformComponents />
     </PageLayout>
   );
 };
