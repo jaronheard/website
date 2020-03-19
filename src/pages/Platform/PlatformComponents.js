@@ -25,21 +25,29 @@ const PlatformComponents = () => {
             extraContentType
             tagline
           }
+          extraContent {
+            json
+          }
+          buttonText
         }
       }
     `
   );
 
   return (
-    <GridList
-      title={contentfulContentList.title}
-      subtitle={contentfulContentList.subtitle.subtitle}
-      callToActionBlockList={contentfulContentList.content}
-      showDividerLine
-      dividerLineColor={colors.pink.hex}
-      wideContent
-      colorShadow
-    />
+    <div>
+      <GridList
+        title={contentfulContentList.title}
+        subtitle={contentfulContentList.subtitle.subtitle}
+        callToActionBlockList={contentfulContentList.content}
+        showDividerLine
+        dividerLineColor={colors.pink.hex}
+        wideContent
+        colorShadow
+        bottomContent={contentfulContentList.extraContent.json}
+        buttonText={contentfulContentList.buttonText}
+      />
+    </div>
   );
 };
 

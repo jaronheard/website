@@ -2,6 +2,7 @@
 /** @jsx jsx */
 import { jsx, css } from "@emotion/core";
 import { PropTypes } from "prop-types";
+import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 
 import DividerLine from "./DividerLine";
 import CallToActionCard from "./CallToActionCard";
@@ -22,7 +23,9 @@ const GridList = ({
   callToActionBlockList,
   showDividerLine,
   dividerLineColor,
-  wideContent
+  wideContent,
+  bottomContent,
+  buttonText
 }) => {
   return (
     <div>
@@ -94,6 +97,40 @@ const GridList = ({
           }
         )}
       </div>
+      {(bottomContent || buttonText) && (
+        <div
+          css={css`
+            margin: 115px auto 0;
+            max-width: 600px;
+            text-align: center;
+            display: grid;
+            justify-items: center;
+
+            ${smBreak} {
+              margin: 60px auto 0;
+              padding: 0 20px;
+            }
+          `}
+        >
+          {bottomContent && <p>{documentToReactComponents(bottomContent)}</p>}
+          {buttonText && (
+            <button
+              className="btn-purple"
+              type="button"
+              css={css`
+                margin-top: 70px;
+                width: max-content;
+
+                ${smBreak} {
+                  margin-top: 30px;
+                }
+              `}
+            >
+              <p>{buttonText}</p>
+            </button>
+          )}
+        </div>
+      )}
       {showDividerLine && <DividerLine hexColor={dividerLineColor} />}
     </div>
   );
@@ -105,7 +142,9 @@ GridList.propTypes = {
   callToActionBlockList: PropTypes.arrayOf(PropTypes.shape({})),
   showDividerLine: PropTypes.bool,
   dividerLineColor: PropTypes.string,
-  wideContent: PropTypes.bool
+  wideContent: PropTypes.bool,
+  bottomContent: PropTypes.shape({}),
+  buttonText: PropTypes.string
 };
 
 export default GridList;
