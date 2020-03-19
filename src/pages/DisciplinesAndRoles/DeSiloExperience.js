@@ -1,4 +1,3 @@
-/* eslint-disable graphql/template-strings */
 /** @jsx jsx */
 import { jsx } from "@emotion/core";
 import { useStaticQuery, graphql } from "gatsby";
