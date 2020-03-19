@@ -16,14 +16,16 @@ const PlatformComponents = () => {
             subtitle
           }
           content {
-            summary {
-              json
+            ... on ContentfulCallToActionBlock {
+              summary {
+                json
+              }
+              extraContent {
+                json
+              }
+              extraContentType
+              tagline
             }
-            extraContent {
-              json
-            }
-            extraContentType
-            tagline
           }
           extraContent {
             json
