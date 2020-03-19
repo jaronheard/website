@@ -17,7 +17,7 @@ const options = {
   }
 };
 
-const Post = ({ title, content }) => (
+const Post = ({ title, content, featured }) => (
   <div
     css={css`
       width: 100%;
@@ -36,6 +36,16 @@ const Post = ({ title, content }) => (
         margin: 0 auto;
       `}
     >
+      {featured && (
+        <div
+          css={css`
+            width: 100%;
+            display: flex;
+          `}
+        >
+          <p>Featured News</p>
+        </div>
+      )}
       <h2>{title}</h2>
       <p>{documentToReactComponents(content.json, options)}</p>
     </div>

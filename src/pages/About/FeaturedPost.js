@@ -16,7 +16,13 @@ const FeaturedPost = () => {
     `
   );
 
-  return <Post title={contentfulPost.title} content={contentfulPost.content} />;
+  return (
+    <Post
+      title={contentfulPost.title}
+      content={contentfulPost.content}
+      featured
+    />
+  );
 };
 
 export default FeaturedPost;
