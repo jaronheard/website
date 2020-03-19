@@ -11,7 +11,8 @@ const GridTrio = ({
   subtitle,
   callToActionBlockList,
   showDividerLine,
-  dividerLineColor
+  dividerLineColor,
+  children
 }) => (
   <div>
     <div
@@ -59,9 +60,11 @@ const GridTrio = ({
         }
       `}
     >
-      {callToActionBlockList.map(({ summary, tagline }) => {
-        return <CallToActionCard tagline={tagline} summary={summary.json} />;
-      })}
+      {callToActionBlockList &&
+        callToActionBlockList.map(({ summary, tagline }) => {
+          return <CallToActionCard tagline={tagline} summary={summary.json} />;
+        })}
+      {children}
     </div>
     {showDividerLine && <DividerLine hexColor={dividerLineColor} swoopUp />}
   </div>
@@ -72,7 +75,9 @@ GridTrio.propTypes = {
   subtitle: PropTypes.string,
   callToActionBlockList: PropTypes.arrayOf(PropTypes.shape({})),
   showDividerLine: PropTypes.bool,
-  dividerLineColor: PropTypes.string
+  dividerLineColor: PropTypes.string,
+  // eslint-disable-next-line react/forbid-prop-types
+  children: PropTypes.any
 };
 
 export default GridTrio;
