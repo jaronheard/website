@@ -8,9 +8,16 @@ const FeaturedPost = () => {
       query {
         contentfulPost(contentful_id: { eq: "6o7J1Bj6ar3N5pspplUGOr" }) {
           title
+          slug
           content {
             json
           }
+          authors {
+            name
+            email
+          }
+          createdAt(formatString: "MMMM DD, YYYY")
+          updatedAt(formatString: "MMMM DD, YYYY")
         }
       }
     `
@@ -20,6 +27,10 @@ const FeaturedPost = () => {
     <Post
       title={contentfulPost.title}
       content={contentfulPost.content}
+      authors={contentfulPost.authors}
+      slug={contentfulPost.slug}
+      created={contentfulPost.createdAt}
+      updated={contentfulPost.updatedAt}
       featured
     />
   );

@@ -3,6 +3,7 @@
 import { jsx, css } from "@emotion/core";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 import { BLOCKS } from "@contentful/rich-text-types";
+import { Link } from "gatsby";
 import { smBreak } from "../_Theme/UpdatedBrandTheme";
 import Video from "./Video";
 
@@ -17,7 +18,15 @@ const options = {
   }
 };
 
-const Post = ({ title, content, featured }) => (
+const Post = ({
+  title,
+  authors,
+  content,
+  featured,
+  slug,
+  updated,
+  created
+}) => (
   <div
     css={css`
       width: 100%;
@@ -43,10 +52,24 @@ const Post = ({ title, content, featured }) => (
             display: flex;
           `}
         >
-          <p>Featured News</p>
+          <p>Featured Post</p>
         </div>
       )}
-      <h2>{title}</h2>
+      <h2>
+        <Link to={`/posts/${slug}`}>{title}</Link>
+      </h2>
+      {authors.map(author => (
+        <p
+          className="data-sm"
+          css={css`
+            margin-top: -1.5rem;
+          `}
+        >
+          Posted {created}
+          {updated !== created && `, updated ${updated}`} by{" "}
+          <a href={`mailto:${author.email}`}>{author.name}</a>
+        </p>
+      ))}
       <p>{documentToReactComponents(content.json, options)}</p>
     </div>
   </div>

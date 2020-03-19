@@ -16,6 +16,12 @@ const PostTemplate = () => {
           content {
             json
           }
+          authors {
+            name
+            email
+          }
+          createdAt(formatString: "MMMM DD, YYYY")
+          updatedAt(formatString: "MMMM DD, YYYY")
         }
       }
     `
@@ -23,8 +29,15 @@ const PostTemplate = () => {
 
   return (
     <PageLayout title={contentfulPost.title}>
-      <TitleArea title={contentfulPost.title} />
-      <Post title={contentfulPost.title} content={contentfulPost.content} />
+      <TitleArea />
+      <Post
+        title={contentfulPost.title}
+        content={contentfulPost.content}
+        authors={contentfulPost.authors}
+        slug={contentfulPost.slug}
+        created={contentfulPost.createdAt}
+        updated={contentfulPost.updatedAt}
+      />
       <DividerLine hexColor={colors.pink.hex} swoopUp />
     </PageLayout>
   );
