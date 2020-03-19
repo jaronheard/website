@@ -10,9 +10,8 @@ import Wrapper from "./Wrapper";
 import CommonCTA from "./CommonCTA";
 import DividerLine from "./DividerLine";
 import KeepInTheLoop from "./KeepInTheLoop";
-import { colors } from "../_Theme/UpdatedBrandTheme";
 
-const PageLayout = ({ title, keywords, children }) => {
+const PageLayout = ({ title, keywords, children, swoopUp, swoopColor }) => {
   return (
     <Fragment>
       <SEO title={`CIVIC${title && `: ${title}`}`} keywords={keywords} />
@@ -20,7 +19,7 @@ const PageLayout = ({ title, keywords, children }) => {
         <Header />
         {children}
         <CommonCTA />
-        <DividerLine hexColor={colors.yellow.hex} />
+        <DividerLine hexColor={swoopColor} swoopUp={swoopUp} />
         <KeepInTheLoop />
         <Footer />
       </Wrapper>
@@ -34,7 +33,9 @@ PageLayout.propTypes = {
   children: PropTypes.oneOfType([
     PropTypes.arrayOf(PropTypes.node),
     PropTypes.node
-  ])
+  ]),
+  swoopUp: PropTypes.bool,
+  swoopColor: PropTypes.string
 };
 
 export default PageLayout;

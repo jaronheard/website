@@ -30,13 +30,15 @@ const disciplinesAndRoles = () => {
     <PageLayout
       title={contentfulHeading.title}
       keywords={[`Civic Software Foundation`, `CIVIC Platform`]}
+      swoopUp
+      swoopColor={colors.purple.hex}
     >
       <TitleArea
         imageURL={scatterplotImage}
         imageOpacity={1}
         title={contentfulHeading.title}
         subtitle={contentfulHeading.subtitle}
-        swooshColor={colors.green.hex}
+        swooshColor={colors.purple.hex}
       />
       <Philosophy />
       <DividerLine hexColor={colors.blue.hex} swoopUp />

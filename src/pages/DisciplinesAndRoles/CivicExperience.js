@@ -16,10 +16,13 @@ const CivicExperience = () => {
             subtitle
           }
           content {
-            summary {
-              json
+            ... on ContentfulCallToActionBlock {
+              id
+              summary {
+                json
+              }
+              tagline
             }
-            tagline
           }
         }
       }

@@ -371,13 +371,103 @@ export default {
     fontSize: "2.85rem"
   },
 
+  ".GridListContent": {
+    display: "grid",
+    gridTemplateColumns: "repeat(3, 1fr)",
+    padding: "0 40px",
+    margin: "25px auto",
+    maxWidth: "1330px",
+
+    "@media (max-width: 1230px)": {
+      justifyItems: "center",
+      gridTemplateColumns: "repeat(2, 1fr)",
+      gridTemplateRows: "1fr 1fr 1fr",
+      gridRowGap: "20px"
+    },
+
+    [smBreak]: {
+      justifyItems: "center",
+      gridTemplateColumns: "1fr",
+      gridTemplateRows: "1fr 1fr 1fr",
+      gridRowGap: "20px",
+      width: "auto",
+      padding: "0 10px",
+
+      "& .WideContent": {
+        padding: "0",
+        gridTemplateColumns: "99vw"
+      }
+    },
+
+    "& .WideContent": {
+      gridTemplateColumns: "repeat(3, 1fr)",
+
+      [smBreak]: {
+        padding: "0",
+        gridTemplateColumns: "99vw"
+      }
+    }
+  },
+
   ".ShadowBox": {
     maxWidth: "322px",
-    margin: "0 15px",
+    width: "100%",
+    margin: "15px",
     background: "white",
     border: borders.box,
     boxShadow: shadows.rightDown,
+    display: "grid"
+  },
+
+  ".ShadowBoxContent": {
     padding: "30px"
+  },
+
+  ".ShadowBoxFooter": {
+    alignItems: "end",
+    display: "grid",
+    overflow: "hidden",
+
+    "> ul": {
+      display: "grid",
+      gridAutoFlow: "column",
+      justifyContent: "space-between",
+      gridAutoColumns: "max-content",
+      gridColumnGap: "5px"
+    },
+
+    "> ul > li > p": {
+      ...pSmall,
+      margin: 0
+    },
+
+    "> p": {
+      display: "none"
+    }
+  },
+
+  ".GridListCard": {
+    "@media (max-width: 1230px)": {
+      width: "100%"
+    },
+
+    [mdBreak]: {
+      margin: "15px"
+    },
+
+    [xsBreak]: {
+      width: "250px"
+    },
+
+    "&. WideContent": {
+      [mdBreak]: {
+        width: "80%"
+      },
+      [xsBreak]: {
+        width: "99vw",
+        margin: "0"
+      }
+    }
   },
 
   ".DividerLineStyle": {

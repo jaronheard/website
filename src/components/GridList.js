@@ -1,109 +1,149 @@
 /** @jsx jsx */
 import { jsx, css } from "@emotion/core";
 import { PropTypes } from "prop-types";
+import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 
 import DividerLine from "./DividerLine";
 import CallToActionCard from "./CallToActionCard";
-import { smBreak, xsBreak, mdBreak } from "../_Theme/UpdatedBrandTheme";
+import { smBreak, xsBreak, colors } from "../_Theme/UpdatedBrandTheme";
+
+const { purple, pink, blue, green, yellow } = colors;
+const shadowColors = [
+  purple.mapFormatRGBA.slice(0, 3),
+  pink.mapFormatRGBA.slice(0, 3),
+  blue.mapFormatRGBA.slice(0, 3),
+  green.mapFormatRGBA.slice(0, 3),
+  yellow.mapFormatRGBA.slice(0, 3)
+];
 
 const GridList = ({
   title,
   subtitle,
   callToActionBlockList,
   showDividerLine,
-  dividerLineColor
-}) => (
-  <div>
-    <div
-      css={css`
-        width: 100%;
-        background-color: white;
-        padding-top: 100px;
-        ${smBreak} {
-          padding-top: 0;
-        }
-      `}
-    >
+  dividerLineColor,
+  wideContent,
+  bottomContent,
+  buttonText
+}) => {
+  return (
+    <div>
       <div
         css={css`
-          max-width: 600px;
-          display: grid;
-          justify-items: center;
-          margin: 0 auto;
-
+          width: 100%;
+          background-color: white;
+          padding-top: 100px;
           ${smBreak} {
-            padding: 0 40px;
-          }
-
-          ${xsBreak} {
-            padding: 0 20px;
+            padding-top: 0;
           }
         `}
       >
-        {title && <h2>{title}</h2>}
-        {subtitle && <p>{subtitle}</p>}
+        <div
+          css={css`
+            max-width: 600px;
+            display: grid;
+            justify-items: center;
+            margin: 0 auto;
+
+            ${smBreak} {
+              padding: 0 40px;
+            }
+
+            ${xsBreak} {
+              padding: 0 20px;
+            }
+          `}
+        >
+          {title && <h2>{title}</h2>}
+          {subtitle && <p>{subtitle}</p>}
+        </div>
       </div>
+
+      <div className={`GridListContent ${wideContent ? "WideContent" : ""}`}>
+        {callToActionBlockList.map(
+          ({ summary, tagline, extraContent, extraContentType }, i) => {
+            let index = i;
+
+            while (index > shadowColors.length - 1) {
+              index -= shadowColors.length;
+            }
+
+            const nextColor = shadowColors[index];
+
+            return (
+              <CallToActionCard
+                tagline={tagline}
+                summary={summary.json}
+                extraContent={extraContent ? extraContent.json : null}
+                extraContentType={extraContentType || null}
+                shadowColor={nextColor}
+                className="GridListCard"
+                cardStyle={css`
+                  ${wideContent
+                    ? `
+                    width: auto;
+
+                    ${xsBreak} {
+                      margin: 0 auto;
+                      width: calc(100% - 10px);
+                      justify-self: start;
+                    }
+                  `
+                    : ""}
+                `}
+              />
+            );
+          }
+        )}
+      </div>
+      {(bottomContent || buttonText) && (
+        <div
+          css={css`
+            margin: 115px auto 0;
+            max-width: 600px;
+            text-align: center;
+            display: grid;
+            justify-items: center;
+
+            ${smBreak} {
+              margin: 60px auto 0;
+              padding: 0 20px;
+            }
+          `}
+        >
+          {bottomContent && <p>{documentToReactComponents(bottomContent)}</p>}
+          {buttonText && (
+            <button
+              className="btn-purple"
+              type="button"
+              css={css`
+                margin-top: 70px;
+                width: max-content;
+
+                ${smBreak} {
+                  margin-top: 30px;
+                }
+              `}
+            >
+              <p>{buttonText}</p>
+            </button>
+          )}
+        </div>
+      )}
+      {showDividerLine && <DividerLine hexColor={dividerLineColor} />}
     </div>
-    <div
-      css={css`
-        display: grid;
-        margin: 0 auto;
-        grid-template-columns: repeat(3, 1fr);
-        padding: 0 40px;
-        margin: 25px auto;
-        max-width: 1330px;
-
-        @media (max-width: 1230px) {
-          justify-items: center;
-          grid-template-columns: repeat(2, 1fr);
-          grid-template-rows: 1fr 1fr 1fr;
-          grid-row-gap: 20px;
-        }
-
-        ${smBreak} {
-          width: min-content;
-          justify-items: center;
-          grid-template-columns: repeat(1, 1fr);
-          grid-template-rows: 1fr 1fr 1fr;
-          grid-row-gap: 20px;
-          width: auto;
-          padding: 0 10px;
-        }
-      `}
-    >
-      {callToActionBlockList.map(({ summary, tagline }) => {
-        return (
-          <CallToActionCard
-            tagline={tagline}
-            summary={summary.json}
-            cardStyle={css`
-              @media (max-width: 1230px) {
-                width: 100%;
-              }
-
-              ${mdBreak} {
-                margin: 15px;
-                width: 80%;
-              }
-
-              ${xsBreak} {
-                width: 250px;
-              }
-            `}
-          />
-        );
-      })}
-    </div>
-    {showDividerLine && <DividerLine hexColor={dividerLineColor} />}
-  </div>
-);
+  );
+};
 
 GridList.propTypes = {
   title: PropTypes.string,
   subtitle: PropTypes.string,
   callToActionBlockList: PropTypes.arrayOf(PropTypes.shape({})),
   showDividerLine: PropTypes.bool,
-  dividerLineColor: PropTypes.string
+  dividerLineColor: PropTypes.string,
+  wideContent: PropTypes.bool,
+  bottomContent: PropTypes.shape({}),
+  buttonText: PropTypes.string
 };
 
 export default GridList;

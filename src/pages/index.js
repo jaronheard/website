@@ -15,6 +15,7 @@ const IndexPage = () => {
     <PageLayout
       title="Home"
       keywords={[`Civic Software Foundation`, `CIVIC Platform`]}
+      swoopColor={colors.yellow.hex}
     >
       <Splash />
       <DividerLine

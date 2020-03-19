@@ -6,10 +6,11 @@ import StudiosHeader from "./Studios/StudiosHeader";
 import TrioBlock from "./Studios/TrioBlock";
 import PageLayout from "../components/PageLayout";
 import EmphasizedCTA from "./Ventures/EmphasizedCTA";
+import { colors } from "../_Theme/UpdatedBrandTheme";
 
 const StudiosPage = () => {
   return (
-    <PageLayout title="Studios">
+    <PageLayout title="Studios" swoopUp swoopColor={colors.purple.hex}>
       <Grid container spacing={0}>
         <StudiosHeader />
         <Grid container xs={12} spacing={4}>
