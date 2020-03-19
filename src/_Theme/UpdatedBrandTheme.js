@@ -411,11 +411,11 @@ export default {
 
   ".ShadowBox": {
     maxWidth: "322px",
-    margin: "0 15px",
+    width: "100%",
+    margin: "15px",
     background: "white",
     border: borders.box,
     boxShadow: shadows.rightDown,
-
     display: "grid"
   },
 
@@ -426,6 +426,7 @@ export default {
   ".ShadowBoxFooter": {
     alignItems: "end",
     display: "grid",
+    overflow: "hidden",
 
     "> ul": {
       display: "grid",
@@ -442,6 +443,30 @@ export default {
 
     "> p": {
       display: "none"
+    }
+  },
+
+  ".GridListCard": {
+    "@media (max-width: 1230px)": {
+      width: "100%"
+    },
+
+    [mdBreak]: {
+      margin: "15px"
+    },
+
+    [xsBreak]: {
+      width: "250px"
+    },
+
+    "&. WideContent": {
+      [mdBreak]: {
+        width: "80%"
+      },
+      [xsBreak]: {
+        width: "99vw",
+        margin: "0"
+      }
     }
   },
 

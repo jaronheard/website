@@ -20,21 +20,10 @@ const CallToActionCard = ({
     <div
       className="ShadowBox"
       css={css`
-      ${
-        showFooter
-          ? `
-        max-width: 400px;
-      `
-          : ""
-      }
-      ${
-        shadowColor
-          ? `
-        box-shadow: 6px 6px 0px rgb(${shadowColor});
-      `
-          : ""
-      }
-      ${cardStyle}`}
+        ${showFooter ? `max-width: 400px;` : ""}
+        ${shadowColor ? `box-shadow: 6px 6px 0px rgb(${shadowColor});` : ""}
+        ${cardStyle}
+      `}
     >
       <div className="ShadowBoxContent">
         {tagline && (

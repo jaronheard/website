@@ -5,7 +5,7 @@ import { PropTypes } from "prop-types";
 
 import DividerLine from "./DividerLine";
 import CallToActionCard from "./CallToActionCard";
-import { smBreak, xsBreak, mdBreak, colors } from "../_Theme/UpdatedBrandTheme";
+import { smBreak, xsBreak, colors } from "../_Theme/UpdatedBrandTheme";
 
 const { purple, pink, blue, green, yellow } = colors;
 const shadowColors = [
@@ -75,19 +75,19 @@ const GridList = ({
                 extraContent={extraContent ? extraContent.json : null}
                 extraContentType={extraContentType || null}
                 shadowColor={nextColor}
+                className="GridListCard"
                 cardStyle={css`
-                  @media (max-width: 1230px) {
-                    width: 100%;
-                  }
+                  ${wideContent
+                    ? `
+                    width: auto;
 
-                  ${mdBreak} {
-                    margin: 15px;
-                    ${wideContent ? "" : "width: 80%"};
-                  }
-
-                  ${xsBreak} {
-                    width: 250px;
-                  }
+                    ${xsBreak} {
+                      margin: 0 auto;
+                      width: calc(100% - 10px);
+                      justify-self: start;
+                    }
+                  `
+                    : ""}
                 `}
               />
             );
