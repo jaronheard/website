@@ -4,13 +4,14 @@ import { jsx } from "@emotion/core";
 import { useStaticQuery, graphql } from "gatsby";
 
 import { colors } from "../../_Theme/UpdatedBrandTheme";
-import GridList from "../../components/GridList";
+import GridTrio from "../../components/GridTrio";
 
-const DeSiloExperience = () => {
+const CivicExperience = () => {
+  // eslint-disable-next-line react-hooks/rules-of-hooks
   const { contentfulContentList } = useStaticQuery(
     graphql`
       query {
-        contentfulContentList(contentful_id: { eq: "2su5Nc7QbqZ4trvZgxzK0r" }) {
+        contentfulContentList(contentful_id: { eq: "75qL3zfEQExmQmj76hJXFI" }) {
           title
           subtitle {
             subtitle
@@ -25,15 +26,16 @@ const DeSiloExperience = () => {
       }
     `
   );
+
   return (
-    <GridList
+    <GridTrio
       title={contentfulContentList.title}
       subtitle={contentfulContentList.subtitle.subtitle}
       callToActionBlockList={contentfulContentList.content}
       showDividerLine
-      dividerLineColor={colors.pink.hex}
+      dividerLineColor={colors.green.hex}
     />
   );
 };
 
-export default DeSiloExperience;
+export default CivicExperience;
