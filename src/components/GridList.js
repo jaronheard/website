@@ -142,7 +142,9 @@ GridList.propTypes = {
   showDividerLine: PropTypes.bool,
   dividerLineColor: PropTypes.string,
   wideContent: PropTypes.bool,
-  bottomContent: PropTypes.shape({}),
+  bottomContent: PropTypes.shape({
+    /* takes an extraContent.json */
+  }),
   buttonText: PropTypes.string
 };
 

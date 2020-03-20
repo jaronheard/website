@@ -10778,6 +10778,11 @@ react-is@^16.12.0, react-is@^16.7.0, react-is@^16.8.0, react-is@^16.8.1:
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.13.0.tgz#0f37c3613c34fe6b37cd7f763a0d6293ab15c527"
   integrity sha512-GFMtL0vHkiBv9HluwNZTggSn/sCyEt9n02aM0dSAjGGyqyNlAyftYm4phPxdvCigG15JreC5biwxCgTAJZ7yAA==
 
+react-jotform-embed@^1.0.4:
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/react-jotform-embed/-/react-jotform-embed-1.0.4.tgz#ce9aec9f62fbaa22d74a8fcb8842ab2dda77602d"
+  integrity sha512-gOpor26L/QNr76t0oYCoXPMYWTyoJj1Qt1EVGwN51zS5au4Y6WlugJX+ok7vIQM4S9LMG6Z3sxwfAKshGW2A1w==
+
 react-lifecycles-compat@^3.0.4:
   version "3.0.4"
   resolved "https://registry.yarnpkg.com/react-lifecycles-compat/-/react-lifecycles-compat-3.0.4.tgz#4f1a273afdfc8f3488a8c516bfda78f872352362"
