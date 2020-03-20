@@ -1,22 +1,23 @@
-import React from "react";
-import { Link } from "gatsby";
+/** @jsx jsx */
+import { jsx } from "@emotion/core";
 
-import SEO from "../components/SEO";
-import Wrapper from "../components/Wrapper";
+import PageLayout from "../components/PageLayout";
+import ProjectsHeader from "./Projects/ProjectsHeader";
 import ProjectDetailList from "../components/ProjectDetailList";
+import { colors } from "../_Theme/UpdatedBrandTheme";
 
-const Projects = () => (
-  <Wrapper>
-    <SEO title="Projects" />
-    <div heroTitle="Civic and Gatsby Starter" heroSubtitle="They play nice!">
-      <h1>Projects</h1>
-      <p>
-        <em>These projects are pulled in from Contentful</em>
-      </p>
+const ProjectsPage = () => {
+  return (
+    <PageLayout
+      title="Platform"
+      keywords={[`Civic Software Foundation`, `CIVIC Platform`]}
+      swoopUp
+      swoopColor={colors.purple.hex}
+    >
+      <ProjectsHeader />
       <ProjectDetailList />
-      <Link to="/">Go back to the homepage</Link>
-    </div>
-  </Wrapper>
-);
+    </PageLayout>
+  );
+};
 
-export default Projects;
+export default ProjectsPage;
