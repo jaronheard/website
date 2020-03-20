@@ -2920,6 +2920,16 @@
                 "defaultValue": null
               },
               {
+                "name": "buttonLink",
+                "description": "",
+                "type": {
+                  "kind": "INPUT_OBJECT",
+                  "name": "StringQueryOperatorInput",
+                  "ofType": null
+                },
+                "defaultValue": null
+              },
+              {
                 "name": "subtitle",
                 "description": "",
                 "type": {
@@ -36896,6 +36906,14 @@
             "deprecationReason": null
           },
           {
+            "name": "buttonLink",
+            "description": null,
+            "args": [],
+            "type": { "kind": "SCALAR", "name": "String", "ofType": null },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
             "name": "subtitle",
             "description": null,
             "args": [],
@@ -39686,6 +39704,16 @@
             "defaultValue": null
           },
           {
+            "name": "buttonLink",
+            "description": "",
+            "type": {
+              "kind": "INPUT_OBJECT",
+              "name": "StringQueryOperatorInput",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
             "name": "subtitle",
             "description": "",
             "type": {
@@ -40627,6 +40655,12 @@
           },
           {
             "name": "node_locale",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "buttonLink",
             "description": null,
             "isDeprecated": false,
             "deprecationReason": null
@@ -44925,6 +44959,12 @@
           },
           {
             "name": "projects___contentlist___node_locale",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "projects___contentlist___buttonLink",
             "description": null,
             "isDeprecated": false,
             "deprecationReason": null
@@ -58418,6 +58458,12 @@
             "deprecationReason": null
           },
           {
+            "name": "contentlist___buttonLink",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
             "name": "contentlist___subtitle___id",
             "description": null,
             "isDeprecated": false,
@@ -62491,6 +62537,12 @@
             "deprecationReason": null
           },
           {
+            "name": "project___contentlist___buttonLink",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
             "name": "project___contentlist___subtitle___id",
             "description": null,
             "isDeprecated": false,
@@ -65185,6 +65237,12 @@
           },
           {
             "name": "project___contentlist___node_locale",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "project___contentlist___buttonLink",
             "description": null,
             "isDeprecated": false,
             "deprecationReason": null
@@ -69159,6 +69217,12 @@
             "deprecationReason": null
           },
           {
+            "name": "program___project___contentlist___buttonLink",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
             "name": "program___project___yearEnd",
             "description": null,
             "isDeprecated": false,
@@ -70497,6 +70561,12 @@
             "deprecationReason": null
           },
           {
+            "name": "projectcollection___projects___contentlist___buttonLink",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
             "name": "projectcollection___projects___yearEnd",
             "description": null,
             "isDeprecated": false,
@@ -71062,6 +71132,12 @@
           },
           {
             "name": "contentlist___node_locale",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "contentlist___buttonLink",
             "description": null,
             "isDeprecated": false,
             "deprecationReason": null
@@ -72004,6 +72080,12 @@
           },
           {
             "name": "links___project___contentlist___node_locale",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "links___project___contentlist___buttonLink",
             "description": null,
             "isDeprecated": false,
             "deprecationReason": null

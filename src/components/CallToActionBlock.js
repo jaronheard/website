@@ -106,7 +106,7 @@ const CallToActionBlock = ({
               </div>
             )}
             {button && (
-              <Link to={`/${buttonLocalLink}`} className={`btn-${buttonColor}`}>
+              <Link to={`${buttonLocalLink}`} className={`btn-${buttonColor}`}>
                 <p>{button}</p>
               </Link>
             )}

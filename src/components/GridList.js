@@ -2,6 +2,7 @@
 import { jsx, css } from "@emotion/core";
 import { PropTypes } from "prop-types";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
+import { Link } from "gatsby";
 
 import DividerLine from "./DividerLine";
 import CallToActionCard from "./CallToActionCard";
@@ -24,7 +25,8 @@ const GridList = ({
   dividerLineColor,
   wideContent,
   bottomContent,
-  buttonText
+  buttonText,
+  buttonLocalLink
 }) => {
   return (
     <div>
@@ -113,9 +115,9 @@ const GridList = ({
         >
           {bottomContent && <p>{documentToReactComponents(bottomContent)}</p>}
           {buttonText && (
-            <button
+            <Link
+              to={buttonLocalLink}
               className="btn-purple"
-              type="button"
               css={css`
                 margin-top: 70px;
                 width: max-content;
@@ -126,7 +128,7 @@ const GridList = ({
               `}
             >
               <p>{buttonText}</p>
-            </button>
+            </Link>
           )}
         </div>
       )}
@@ -145,7 +147,8 @@ GridList.propTypes = {
   bottomContent: PropTypes.shape({
     /* takes an extraContent.json */
   }),
-  buttonText: PropTypes.string
+  buttonText: PropTypes.string,
+  buttonLocalLink: PropTypes.string
 };
 
 export default GridList;

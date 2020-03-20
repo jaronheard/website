@@ -31,6 +31,7 @@ const PlatformComponents = () => {
             json
           }
           buttonText
+          buttonLink
         }
       }
     `
@@ -48,6 +49,7 @@ const PlatformComponents = () => {
         colorShadow
         bottomContent={contentfulContentList.extraContent.json}
         buttonText={contentfulContentList.buttonText}
+        buttonLocalLink={contentfulContentList.buttonLink}
       />
     </div>
   );
