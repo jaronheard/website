@@ -28,16 +28,16 @@ const CTAButtons = ({ vertical = false }) => (
       ${vertical ? verticalStyle : ""}
     `}
   >
-    <Link to="/projects/" className="btn-purple">
-      <p>Explore The Platform</p>
+    <Link to="/platform/" className="btn-purple">
+      <p>CIVIC Platform</p>
     </Link>
 
-    <Link to="/projects/" className="btn-blue">
-      <p>Scale Your Impact</p>
-    </Link>
-
-    <Link to="/projects/" className="btn-green">
+    <Link to="/project-form/" className="btn-blue">
       <p>Bring Your Project</p>
+    </Link>
+
+    <Link to="/impact-form/" className="btn-green">
+      <p>Scale Your Impact</p>
     </Link>
   </div>
 );

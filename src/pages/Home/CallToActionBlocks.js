@@ -13,6 +13,7 @@ const CallToActionBlocks = () => {
             ... on ContentfulCallToActionBlock {
               id
               button
+              buttonLocalLink
               tagline
               summary {
                 json
@@ -36,6 +37,7 @@ const CallToActionBlocks = () => {
       tagline={content.tagline}
       summary={content.summary && content.summary.json}
       button={content.button}
+      buttonLocalLink={content.buttonLocalLink}
       image={content.image}
       reverseLayout={i % 2 === 0}
       buttonColor={colorOrder[i]}
