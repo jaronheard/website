@@ -25,6 +25,7 @@ const Header = () => {
         ${xsBreak} {
           padding: 0 1rem;
         }
+        z-index: 100;
       `}
     >
       <div

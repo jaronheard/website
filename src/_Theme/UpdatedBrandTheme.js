@@ -135,7 +135,7 @@ const h1 = {
 };
 
 const h2 = {
-  fontSize: "2rem",
+  fontSize: "2.5rem",
   lineHeight: "1.10722",
   fontFamily: "'Rubik', sans-serif",
   fontWeight: "400",
@@ -224,7 +224,7 @@ const dataLarge = {
 };
 
 const button = {
-  width: "225px",
+  width: "250px",
   height: "50px",
   background: colors.primary.hex,
   border: "none",
@@ -436,14 +436,14 @@ export default {
     "> ul": {
       display: "grid",
       gridAutoFlow: "column",
-      justifyContent: "space-between",
+      justifyContent: "space-around",
       gridAutoColumns: "max-content",
       gridColumnGap: "5px"
     },
 
     "> ul > li > p": {
       ...pSmall,
-      margin: 0
+      margin: "0.25rem 0"
     },
 
     "> p": {

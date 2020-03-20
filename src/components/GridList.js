@@ -44,7 +44,6 @@ const GridList = ({
           css={css`
             max-width: 600px;
             display: grid;
-            justify-items: center;
             margin: 0 auto;
 
             ${smBreak} {
@@ -103,13 +102,13 @@ const GridList = ({
           css={css`
             margin: 115px auto 0;
             max-width: 600px;
-            text-align: center;
             display: grid;
-            justify-items: center;
+            justify-items: right;
 
             ${smBreak} {
               margin: 60px auto 0;
               padding: 0 20px;
+              justify-items: center;
             }
           `}
         >
@@ -121,6 +120,7 @@ const GridList = ({
               css={css`
                 margin-top: 70px;
                 width: max-content;
+                padding: 0 1rem;
 
                 ${smBreak} {
                   margin-top: 30px;

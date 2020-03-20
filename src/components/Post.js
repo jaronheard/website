@@ -4,6 +4,7 @@ import { jsx, css } from "@emotion/core";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 import { BLOCKS } from "@contentful/rich-text-types";
 import { Link } from "gatsby";
+import { Location } from "@reach/router";
 import { smBreak } from "../_Theme/UpdatedBrandTheme";
 import Video from "./Video";
 
@@ -39,10 +40,10 @@ const Post = ({
   >
     <div
       css={css`
-        width: 600px;
+        max-width: 900px;
         display: grid;
-        justify-items: center;
         margin: 0 auto;
+        padding: 0 1rem;
       `}
     >
       {featured && (
@@ -56,7 +57,14 @@ const Post = ({
         </div>
       )}
       <h2>
-        <Link to={`/posts/${slug}`}>{title}</Link>
+        <Location>
+          {({ location }) => {
+            if (location.pathname === `/posts/${slug}`) {
+              return title;
+            }
+            return <Link to={`/posts/${slug}`}>{title}</Link>;
+          }}
+        </Location>
       </h2>
       {authors.map(author => (
         <p
