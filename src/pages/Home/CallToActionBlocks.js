@@ -5,20 +5,18 @@ import CallToActionBlock from "../../components/CallToActionBlock";
 const colorOrder = ["yellow", "pink", "green", "blue"];
 
 const CallToActionBlocks = () => {
-  const { allContentfulCallToActionBlock } = useStaticQuery(
+  const { contentfulContentList } = useStaticQuery(
     graphql`
       query {
-        allContentfulCallToActionBlock(
-          filter: { homePagePosition: { gte: 1, lte: 3 } }
-          sort: { fields: homePagePosition, order: ASC }
-        ) {
-          edges {
-            node {
+        contentfulContentList(contentful_id: { eq: "1o8nWAMQMk6Qsziv9SkwRe" }) {
+          content {
+            ... on ContentfulCallToActionBlock {
+              id
+              button
               tagline
               summary {
                 json
               }
-              button
               image {
                 description
                 fluid(maxWidth: 600) {
@@ -33,12 +31,12 @@ const CallToActionBlocks = () => {
     `
   );
 
-  return allContentfulCallToActionBlock.edges.map((el, i) => (
+  return contentfulContentList.content.map((content, i) => (
     <CallToActionBlock
-      tagline={el.node.tagline}
-      summary={el.node.summary && el.node.summary.json}
-      button={el.node.button}
-      image={el.node.image}
+      tagline={content.tagline}
+      summary={content.summary && content.summary.json}
+      button={content.button}
+      image={content.image}
       reverseLayout={i % 2 === 0}
       buttonColor={colorOrder[i]}
       dividerColor={colorOrder[i + 1]}
