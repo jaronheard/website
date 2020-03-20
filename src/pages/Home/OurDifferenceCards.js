@@ -4,20 +4,18 @@ import { useStaticQuery, graphql } from "gatsby";
 import CallToActionCard from "../../components/CallToActionCard";
 
 const OurDifferenceCards = () => {
-  const { allContentfulCallToActionBlock } = useStaticQuery(
+  const { contentfulContentList } = useStaticQuery(
     graphql`
       query {
-        allContentfulCallToActionBlock(
-          filter: { ourDifferencePosition: { gte: 1, lte: 3 } }
-          sort: { fields: ourDifferencePosition, order: ASC }
-        ) {
-          edges {
-            node {
+        contentfulContentList(contentful_id: { eq: "3GwkbpioeQXOQPRF0sZNz7" }) {
+          content {
+            ... on ContentfulCallToActionBlock {
+              id
+              button
               tagline
               summary {
                 json
               }
-              button
             }
           }
         }
@@ -43,11 +41,11 @@ const OurDifferenceCards = () => {
         }
       `}
     >
-      {allContentfulCallToActionBlock.edges.map(el => (
+      {contentfulContentList.content.map(content => (
         <CallToActionCard
-          tagline={el.node.tagline}
-          summary={el.node.summary && el.node.summary.json}
-          button={el.node.button}
+          tagline={content.tagline}
+          summary={content.summary && content.summary.json}
+          button={content.button}
         />
       ))}
     </div>
