@@ -2,8 +2,26 @@
 /** @jsx jsx */
 import { jsx, css } from "@emotion/core";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
+import ShadowBox from "./ShadowBox";
 
 // https://app.contentful.com/spaces/3j4jpxgb52st/content_types/callToActionBlock/fields
+
+const Button = ({ button }) => (
+  <div
+    css={css`
+      text-align: right;
+      margin-right: 1.5em;
+    `}
+  >
+    <span className="a">{button}</span>
+  </div>
+);
+
+const MainContent = ({ content }) => (
+  <div>{documentToReactComponents(content)}</div>
+);
+
+const FooterContent = ({ content }) => documentToReactComponents(content);
 
 const CallToActionCard = ({
   tagline,
@@ -17,54 +35,14 @@ const CallToActionCard = ({
   const showFooter = extraContentType === "card-footer";
 
   return (
-    <div
-      className="ShadowBox"
-      css={css`
-        ${showFooter ? `max-width: 400px;` : ""}
-        ${shadowColor ? `box-shadow: 6px 6px 0px rgb(${shadowColor});` : ""}
-        ${cardStyle}
-      `}
-    >
-      <div className="ShadowBoxContent">
-        {tagline && (
-          <h3
-            css={css`
-              text-align: center;
-              margin-top: 0;
-            `}
-          >
-            {tagline}
-          </h3>
-        )}
-        {summary && <div>{documentToReactComponents(summary)}</div>}
-        {button && (
-          <div
-            css={css`
-              text-align: right;
-              margin-right: 1.5em;
-            `}
-          >
-            <span className="a">{button}</span>
-          </div>
-        )}
-      </div>
-      {extraContentType === "card-footer" && (
-        <div
-          className="ShadowBoxFooter"
-          css={css`
-            ${shadowColor
-              ? `
-            > ul {
-              background-color: rgba(${shadowColor}, .1);
-            }
-          `
-              : ""}
-          `}
-        >
-          {documentToReactComponents(extraContent)}
-        </div>
-      )}
-    </div>
+    <ShadowBox
+      title={tagline}
+      MainContent={summary && <MainContent content={summary} />}
+      Button={button && <Button button={button} />}
+      FooterContent={showFooter && <FooterContent content={extraContent} />}
+      cardStyle={cardStyle}
+      shadowColor={shadowColor}
+    />
   );
 };
 
