@@ -2,6 +2,7 @@
 /** @jsx jsx */
 import { jsx, css } from "@emotion/core";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
+import { Link } from "gatsby";
 import DividerLine from "./DividerLine";
 import { colors, smBreak, xsBreak } from "../_Theme/UpdatedBrandTheme";
 
@@ -37,6 +38,7 @@ const CallToActionBlock = ({
   tagline,
   summary,
   button,
+  buttonLocalLink,
   image,
   reverseLayout,
   big,
@@ -104,9 +106,9 @@ const CallToActionBlock = ({
               </div>
             )}
             {button && (
-              <button type="button" className={`btn-${buttonColor}`}>
+              <Link to={`${buttonLocalLink}`} className={`btn-${buttonColor}`}>
                 <p>{button}</p>
-              </button>
+              </Link>
             )}
           </div>
         </div>
