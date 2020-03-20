@@ -13,7 +13,7 @@ const Contact = () => (
       text-align: left;
       max-width: 1230px;
       margin: 80px auto 0;
-      padding: 0 2em;
+      padding: 0 3em;
     `}
   >
     <h3 css={whiteText} className="h-3">

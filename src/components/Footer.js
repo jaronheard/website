@@ -12,8 +12,7 @@ const Footer = () => (
   <footer
     css={css`
       background-color: ${BrandColors.primary.hex};
-      text-align: center;
-      padding: 1em;
+      padding: 1em 0;
     `}
   >
     <Contact />
@@ -21,6 +20,7 @@ const Footer = () => (
       css={css`
         border-top: 1px solid white;
         margin-top: 90px;
+        text-align: center;
       `}
     >
       <p className="p-sm" css={footerText}>
