@@ -3,7 +3,7 @@ import { jsx } from "@emotion/core";
 
 import PageLayout from "../components/PageLayout";
 import ProjectsHeader from "./Projects/ProjectsHeader";
-import ProjectDetailList from "../components/ProjectDetailList";
+import FeaturedProjects from "../components/FeaturedProjects";
 import { colors } from "../_Theme/UpdatedBrandTheme";
 
 const ProjectsPage = () => {
@@ -15,7 +15,7 @@ const ProjectsPage = () => {
       swoopColor={colors.purple.hex}
     >
       <ProjectsHeader />
-      <ProjectDetailList />
+      <FeaturedProjects />
     </PageLayout>
   );
 };

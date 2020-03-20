@@ -8,13 +8,14 @@ const ShadowBox = ({
   FooterContent,
   Button,
   cardStyle,
-  shadowColor
+  shadowColor,
+  wide
 }) => {
   return (
     <div
       className="ShadowBox"
       css={css`
-        ${FooterContent ? `max-width: 400px;` : ""}
+        ${wide || FooterContent ? `max-width: 400px;` : ""}
         ${shadowColor ? `box-shadow: 6px 6px 0px rgb(${shadowColor});` : ""}
         ${cardStyle}
       `}
@@ -59,7 +60,8 @@ ShadowBox.propTypes = {
   FooterContent: PropTypes.node,
   Button: PropTypes.node,
   cardStyle: PropTypes.string, // css
-  shadowColor: PropTypes.string // hex code
+  shadowColor: PropTypes.string, // hex code
+  wide: PropTypes.bool
 };
 
 export default ShadowBox;

@@ -248,6 +248,10 @@ const button = {
   }
 };
 
+const strong = {
+  fontWeight: 600
+};
+
 export default {
   /* Base */
 
@@ -283,6 +287,7 @@ export default {
   h5,
   h6,
   input,
+  strong,
 
   // Class names
   ".p-sm": pSmall,
