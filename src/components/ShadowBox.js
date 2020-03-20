@@ -24,7 +24,6 @@ const ShadowBox = ({
         {title && (
           <h3
             css={css`
-              text-align: center;
               margin-top: 0;
             `}
           >

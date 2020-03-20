@@ -54,25 +54,27 @@ const TitleArea = ({
         {subtitle && (
           <h2
             css={css`
-              max-width: 650px;
+              max-width: 800px;
               display: grid;
             `}
           >
             {subtitle}
           </h2>
         )}
-        <h1
-          css={css`
-            margin-top: 150px;
-            justify-self: end;
+        {title && (
+          <h1
+            css={css`
+              margin-top: 150px;
+              justify-self: end;
 
-            ${smBreak} {
-              margin-top: 75px;
-            }
-          `}
-        >
-          {title}
-        </h1>
+              ${smBreak} {
+                margin-top: 75px;
+              }
+            `}
+          >
+            {title}
+          </h1>
+        )}
       </div>
       <DividerLine
         hexColor={swooshColor}
