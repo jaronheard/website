@@ -2,14 +2,17 @@
 import { jsx, css } from "@emotion/core";
 import { useStaticQuery, graphql } from "gatsby";
 
-import CTAButtons from "../../components/CTAButtons";
 import { smBreak } from "../../_Theme/UpdatedBrandTheme";
 
 const Splash = () => {
-  const { file } = useStaticQuery(graphql`
+  const { file, contentfulHeading } = useStaticQuery(graphql`
     query {
       file(base: { eq: "paths.svg" }) {
         publicURL
+      }
+      contentfulHeading(contentful_id: { eq: "3Hy2d9lrRRmragYcOSoDl3" }) {
+        subtitle
+        title
       }
     }
   `);
@@ -53,10 +56,18 @@ const Splash = () => {
             justify-self: center;
           `}
         >
-          Imagine a future where information and technology equitably serve the
-          public
+          {contentfulHeading.title}
         </h2>
-        <CTAButtons />
+        <h4
+          css={css`
+            max-width: 750px;
+            display: grid;
+            justify-self: center;
+            margin-top: 65px;
+          `}
+        >
+          {contentfulHeading.subtitle}
+        </h4>
       </div>
     </div>
   );

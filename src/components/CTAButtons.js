@@ -25,7 +25,7 @@ const CTAButtons = ({ vertical = false }) => (
         ${verticalStyle}
       }
 
-      ${vertical ? verticalStyle : "opacity: 0;"}
+      ${vertical ? verticalStyle : ""}
     `}
   >
     <Link to="/platform/" className="btn-purple">
