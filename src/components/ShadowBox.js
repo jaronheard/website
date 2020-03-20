@@ -9,7 +9,8 @@ const ShadowBox = ({
   Button,
   cardStyle,
   shadowColor,
-  wide
+  wide,
+  children
 }) => {
   return (
     <div
@@ -31,6 +32,7 @@ const ShadowBox = ({
           </h3>
         )}
         {MainContent}
+        {children}
         {Button}
       </div>
       {FooterContent && (
@@ -60,7 +62,9 @@ ShadowBox.propTypes = {
   Button: PropTypes.node,
   cardStyle: PropTypes.string, // css
   shadowColor: PropTypes.string, // hex code
-  wide: PropTypes.bool
+  wide: PropTypes.bool,
+  // eslint-disable-next-line react/forbid-prop-types
+  children: PropTypes.any
 };
 
 export default ShadowBox;
