@@ -106,7 +106,6 @@ const p = {
 const pSmall = {
   fontSize: "0.86rem",
   lineHeight: "1.4165rem",
-  color: BrandColors.tertiary.hex,
   marginBlockStart: "0.875rem",
   marginBlockEnd: "0.875rem"
 };
@@ -114,7 +113,6 @@ const pSmall = {
 const pLarge = {
   fontSize: "1.21125rem",
   lineHeight: "1.995rem",
-  color: BrandColors.tertiary.hex,
   marginBlockStart: "0.875rem",
   marginBlockEnd: "0.875rem",
   [smBreak]: {
