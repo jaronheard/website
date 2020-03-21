@@ -26,7 +26,7 @@ export const borders = {
 
 export const noHover = {
   ":hover, :focus": {
-    backgroundSize: "0% 2px"
+    backgroundSize: "0% 3px"
   }
 };
 
@@ -42,7 +42,7 @@ export const underlineFocus = {
   backgroundImage: "linear-gradient(currentColor, currentColor)",
   backgroundPosition: "0% 100%",
   backgroundRepeat: "no-repeat",
-  backgroundSize: "0% 2px",
+  backgroundSize: "0% 3px",
 
   "&:focus": {
     outline: "none"
@@ -51,7 +51,7 @@ export const underlineFocus = {
   ":hover, :focus": {
     color: BrandColors.action.hex,
     cursor: "pointer",
-    backgroundSize: "100% 2px"
+    backgroundSize: "100% 3px"
   }
 };
 
@@ -78,7 +78,7 @@ const a = {
   backgroundImage: "linear-gradient(currentColor, currentColor)",
   backgroundPosition: "0% 100%",
   backgroundRepeat: "no-repeat",
-  backgroundSize: "0% 2px",
+  backgroundSize: "0% 3px",
 
   "&:focus": {
     outline: "none"
@@ -87,7 +87,7 @@ const a = {
   ":hover, :focus": {
     color: BrandColors.action.hex,
     cursor: "pointer",
-    backgroundSize: "100% 2px"
+    backgroundSize: "100% 3px"
   }
 };
 
@@ -106,7 +106,6 @@ const p = {
 const pSmall = {
   fontSize: "0.86rem",
   lineHeight: "1.4165rem",
-  color: BrandColors.tertiary.hex,
   marginBlockStart: "0.875rem",
   marginBlockEnd: "0.875rem"
 };
@@ -114,7 +113,6 @@ const pSmall = {
 const pLarge = {
   fontSize: "1.21125rem",
   lineHeight: "1.995rem",
-  color: BrandColors.tertiary.hex,
   marginBlockStart: "0.875rem",
   marginBlockEnd: "0.875rem",
   [smBreak]: {
@@ -293,6 +291,8 @@ const strong = {
   fontWeight: 600
 };
 
+const b = strong;
+
 export default {
   /* Base */
 
@@ -329,6 +329,7 @@ export default {
   h6,
   input,
   strong,
+  b,
 
   // Class names
   ".p-sm": pSmall,

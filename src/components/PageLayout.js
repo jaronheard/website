@@ -11,15 +11,26 @@ import CommonCTA from "./CommonCTA";
 import DividerLine from "./DividerLine";
 import KeepInTheLoop from "./KeepInTheLoop";
 
-const PageLayout = ({ title, keywords, children, swoopUp, swoopColor }) => {
+const PageLayout = ({
+  title,
+  keywords,
+  children,
+  hideCommonCTA,
+  swoopUp,
+  swoopColor
+}) => {
   return (
     <Fragment>
-      <SEO title={`CIVIC${title && `: ${title}`}`} keywords={keywords} />
+      <SEO title={title} keywords={keywords} />
       <Wrapper>
         <Header />
         {children}
-        <CommonCTA />
-        <DividerLine hexColor={swoopColor} swoopUp={swoopUp} />
+        {!hideCommonCTA && (
+          <Fragment>
+            <CommonCTA />
+            <DividerLine hexColor={swoopColor} swoopUp={swoopUp} />
+          </Fragment>
+        )}
         <KeepInTheLoop />
         <Footer />
       </Wrapper>
@@ -34,6 +45,7 @@ PageLayout.propTypes = {
     PropTypes.arrayOf(PropTypes.node),
     PropTypes.node
   ]),
+  hideCommonCTA: PropTypes.bool,
   swoopUp: PropTypes.bool,
   swoopColor: PropTypes.string
 };

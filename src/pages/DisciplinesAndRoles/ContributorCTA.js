@@ -4,6 +4,7 @@ import { useStaticQuery, graphql } from "gatsby";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 
 import { smBreak, xsBreak } from "../../_Theme/UpdatedBrandTheme";
+import SectionHeader from "../../components/SectionHeader";
 
 const disciplinesAndRoles = () => {
   // eslint-disable-next-line react-hooks/rules-of-hooks
@@ -38,7 +39,6 @@ const disciplinesAndRoles = () => {
         css={css`
           max-width: 600px;
           display: grid;
-          justify-items: center;
           margin: 0 auto;
 
           ${smBreak} {
@@ -50,18 +50,10 @@ const disciplinesAndRoles = () => {
           }
         `}
       >
-        <h2
-          css={css`
-            margin-bottom: 85px;
-
-            ${xsBreak} {
-              margin-bottom: 30px;
-            }
-          `}
-        >
-          {contentfulCallToActionBlock.tagline}
-        </h2>
-        {documentToReactComponents(contentfulCallToActionBlock.summary.json)}
+        <SectionHeader title={contentfulCallToActionBlock.tagline} />
+        <p>
+          {documentToReactComponents(contentfulCallToActionBlock.summary.json)}
+        </p>
         <button
           type="button"
           className="btn-green"

@@ -3,11 +3,12 @@ import { jsx, css } from "@emotion/core";
 import { useStaticQuery, graphql } from "gatsby";
 
 import { smBreak } from "../../_Theme/UpdatedBrandTheme";
+import GridSingle from "../../components/GridSingle";
 
 const Splash = () => {
   const { file, contentfulHeading } = useStaticQuery(graphql`
     query {
-      file(base: { eq: "paths.svg" }) {
+      file(base: { eq: "hero__test--graph.png" }) {
         publicURL
       }
       contentfulHeading(contentful_id: { eq: "3Hy2d9lrRRmragYcOSoDl3" }) {
@@ -41,33 +42,48 @@ const Splash = () => {
           display: grid;
           justify-content: center;
           align-content: center;
-          text-align: center;
-          padding-top: 130px;
+          text-align: left;
+          padding-top: 90px;
+          margin-bottom: -90px;
 
           ${smBreak} {
-            padding: 65px 20px 0;
+            padding: 45px 20px 0;
+            margin-bottom: -45px;
           }
         `}
       >
-        <h2
+        <GridSingle
           css={css`
-            max-width: 650px;
-            display: grid;
-            justify-self: center;
+            width: 100%;
           `}
         >
-          {contentfulHeading.title}
-        </h2>
-        <h4
-          css={css`
-            max-width: 750px;
-            display: grid;
-            justify-self: center;
-            margin-top: 65px;
-          `}
-        >
-          {contentfulHeading.subtitle}
-        </h4>
+          <h2
+            css={css`
+              max-width: 650px;
+              display: grid;
+              justify-self: left;
+              font-weight: 600;
+              letter-spacing: 0.025rem;
+              line-height: 1.15;
+            `}
+          >
+            {contentfulHeading.title}
+          </h2>
+          <h4
+            css={css`
+              max-width: 750px;
+              display: grid;
+              justify-self: right;
+              margin-top: 65px;
+              margin-left: 300px;
+              ${smBreak} {
+                margin-left: 0;
+              }
+            `}
+          >
+            {contentfulHeading.subtitle}
+          </h4>
+        </GridSingle>
       </div>
     </div>
   );

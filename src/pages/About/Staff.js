@@ -3,7 +3,6 @@ import { jsx, css } from "@emotion/core";
 import { useStaticQuery, graphql } from "gatsby";
 import { Fragment } from "react";
 
-import DividerLine from "../../components/DividerLine";
 import { colors, noHover } from "../../_Theme/UpdatedBrandTheme";
 import GridTrio from "../../components/GridTrio";
 
@@ -99,7 +98,6 @@ const Staff = () => {
           );
         })}
       </GridTrio>
-      <DividerLine hexColor={colors.pink.hex} />
     </Fragment>
   );
 };

@@ -11,15 +11,15 @@ const QuoteBlock = () => {
       `}
     >
       <h3>
-        “It would be super awesome if whe had a dope quote to put here that
-        communicates something rather profound from...”
+        “When political will meets public imagination, the technology we can
+        create is unlike anything the world has ever seen.”
       </h3>
       <p
         css={css`
           text-align: right;
         `}
       >
-        &mdash;Data Feminism
+        &mdash;Cat Nikolovski, Founder of CIVIC
       </p>
     </div>
   );

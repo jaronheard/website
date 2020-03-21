@@ -33,7 +33,7 @@ const Post = ({
     css={css`
       width: 100%;
       background-color: white;
-      padding-top: 200px;
+      padding-top: 4rem;
       ${smBreak} {
         padding-top: 0;
       }

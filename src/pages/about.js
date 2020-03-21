@@ -75,6 +75,7 @@ const about = () => {
       </div>
       <DividerLine hexColor={colors.pink.hex} />
       <Staff />
+      <DividerLine hexColor={colors.blue.hex} swoopUp />
     </PageLayout>
   );
 };

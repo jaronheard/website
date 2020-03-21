@@ -26,9 +26,11 @@ const KeepInTheLoop = () => (
     >
       <h2
         css={css`
+          margin-top: 50px;
           margin-bottom: 50px;
 
           ${smBreak} {
+            margin-top: 25px;
             margin-bottom: 25px;
           }
         `}
@@ -41,7 +43,7 @@ const KeepInTheLoop = () => (
       </p>
       <div
         css={css`
-          margin: 90px auto 50px;
+          margin: 50px auto 50px;
           display: grid;
           grid-template-columns: 200px 200px 330px;
           grid-column-gap: 40px;
@@ -80,7 +82,7 @@ const KeepInTheLoop = () => (
         css={css`
           display: grid;
           justify-self: end;
-          ${xsBreak} {
+          ${smBreak} {
             justify-self: center;
           }
         `}

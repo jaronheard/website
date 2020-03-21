@@ -29,7 +29,7 @@ const PostTemplate = () => {
 
   return (
     <PageLayout title={contentfulPost.title}>
-      <TitleArea />
+      <TitleArea title="Post" />
       <Post
         title={contentfulPost.title}
         content={contentfulPost.content}

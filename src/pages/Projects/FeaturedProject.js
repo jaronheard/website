@@ -1,4 +1,5 @@
-import React from "react";
+/** @jsx jsx */
+import { jsx, css } from "@emotion/core";
 import { useStaticQuery, graphql } from "gatsby";
 import ProjectFeature from "../../components/ProjectFeature";
 import GridSingle from "../../components/GridSingle";
@@ -52,27 +53,34 @@ const FeaturedProject = () => {
   const project = contentfulProjectCollection.projects[0];
 
   return (
-    <GridSingle>
-      <SectionHeader
-        title={contentfulProjectCollection.title}
-        subtitle={project.title}
-      />
-      <ProjectFeature
-        year={project.year}
-        yearEnd={project.yearEnd}
-        current={project.current}
-        title={project.title}
-        summary={project.summary && project.summary.summary}
-        partners={project.partners}
-        description={project.description && project.description.json}
-        program={project.program && project.program.name}
-        organizations={project.organizations}
-        topics={project.topics}
-        projectTypes={project.projectTypes}
-        projectUrl={project.projectUrl}
-        image={project.image}
-      />
-    </GridSingle>
+    <div
+      css={css`
+        width: 100%;
+        background-color: white;
+      `}
+    >
+      <GridSingle>
+        <SectionHeader
+          title={contentfulProjectCollection.title}
+          subtitle={project.title}
+        />
+        <ProjectFeature
+          year={project.year}
+          yearEnd={project.yearEnd}
+          current={project.current}
+          title={project.title}
+          summary={project.summary && project.summary.summary}
+          partners={project.partners}
+          description={project.description && project.description.json}
+          program={project.program && project.program.name}
+          organizations={project.organizations}
+          topics={project.topics}
+          projectTypes={project.projectTypes}
+          projectUrl={project.projectUrl}
+          image={project.image}
+        />
+      </GridSingle>
+    </div>
   );
 };
 
