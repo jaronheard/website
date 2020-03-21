@@ -17,7 +17,15 @@ const SectionHeader = ({ title, subtitle, summary, big }) => (
       </h2>
     )}
     {subtitle && <h3 className={big ? "h-2" : "h-3"}>{subtitle}</h3>}
-    {summary && <div>{documentToReactComponents(summary)}</div>}
+    {summary && (
+      <div
+        css={css`
+          max-width: 600px;
+        `}
+      >
+        {documentToReactComponents(summary)}
+      </div>
+    )}
   </Box>
 );
 

@@ -293,6 +293,8 @@ const strong = {
   fontWeight: 600
 };
 
+const b = strong;
+
 export default {
   /* Base */
 
@@ -329,6 +331,7 @@ export default {
   h6,
   input,
   strong,
+  b,
 
   // Class names
   ".p-sm": pSmall,

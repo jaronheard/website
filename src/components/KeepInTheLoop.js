@@ -82,7 +82,7 @@ const KeepInTheLoop = () => (
         css={css`
           display: grid;
           justify-self: end;
-          ${xsBreak} {
+          ${smBreak} {
             justify-self: center;
           }
         `}

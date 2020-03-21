@@ -11,8 +11,7 @@ const PlatformPage = () => {
     <PageLayout
       title="Platform"
       keywords={[`Civic Software Foundation`, `CIVIC Platform`]}
-      swoopUp
-      swoopColor={colors.purple.hex}
+      swoopColor={colors.pink.hex}
     >
       <PlatformHeader />
       <PlatformComponents />
