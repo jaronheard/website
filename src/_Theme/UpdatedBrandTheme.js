@@ -29,6 +29,32 @@ export const noHover = {
     backgroundSize: "0% 2px"
   }
 };
+
+export const focusBorder = {
+  ":hover, :focus": {
+    outline: "none",
+    boxShadow: `0px 0px 5px ${colors.blue.hex}`
+  }
+};
+
+const underlineFocus = {
+  transition: "background-size .2s",
+  backgroundImage: "linear-gradient(currentColor, currentColor)",
+  backgroundPosition: "0% 100%",
+  backgroundRepeat: "no-repeat",
+  backgroundSize: "0% 2px",
+
+  "&:focus": {
+    outline: "none"
+  },
+
+  ":hover, :focus": {
+    color: BrandColors.action.hex,
+    cursor: "pointer",
+    backgroundSize: "100% 2px"
+  }
+};
+
 // Typography
 const body = {
   fontFamily: "Roboto",
@@ -53,6 +79,10 @@ const a = {
   backgroundPosition: "0% 100%",
   backgroundRepeat: "no-repeat",
   backgroundSize: "0% 2px",
+
+  "&:focus": {
+    outline: "none"
+  },
 
   ":hover, :focus": {
     color: BrandColors.action.hex,
@@ -102,6 +132,12 @@ const input = {
     fontSize: "1rem",
     lineHeight: "1.5rem"
   },
+
+  "&:focus": {
+    outline: "none",
+    border: `3px solid ${colors.blue.hex}`
+  },
+
   "::placeholder": {
     color: colors.plumLight.hex
   }
@@ -242,6 +278,11 @@ const button = {
     margin: 0,
     color: "white"
   },
+
+  "&:focus": {
+    outline: "none"
+  },
+
   "&:hover,:focus": {
     cursor: "pointer",
     boxShadow: `3px 3px 0px ${VisualizationColors.categorical.pink.hex}`
@@ -349,6 +390,7 @@ export default {
     cursor: "pointer",
     background: "none",
     border: "none",
+    ...underlineFocus,
     ...action
   },
 
@@ -509,6 +551,8 @@ export default {
     background: "none",
     border: "none",
     padding: "0",
-    cursor: "pointer"
+    cursor: "pointer",
+
+    ...underlineFocus
   }
 };

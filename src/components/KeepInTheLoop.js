@@ -51,6 +51,12 @@ const KeepInTheLoop = () => (
             border-radius: 10px;
             border: 1px solid ${colors.primary.hex};
 
+            &:focus {
+              outline: none;
+              border: 3px solid ${colors.blue.hex};
+              margin-top: -2px;
+            }
+
             ::placeholder {
               color: ${colors.plumLight};
             }

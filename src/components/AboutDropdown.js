@@ -50,6 +50,7 @@ const AboutDropdown = ({ goTo }) => {
         <ul>
           <li>
             <button
+              tabIndex={`${dropdownOpen ? "0" : "-1"}`}
               type="button"
               className="headerButton"
               onClick={() => {
@@ -61,6 +62,7 @@ const AboutDropdown = ({ goTo }) => {
           </li>
           <li>
             <button
+              tabIndex={`${dropdownOpen ? "0" : "-1"}`}
               type="button"
               className="headerButton"
               onClick={() => {
@@ -71,7 +73,7 @@ const AboutDropdown = ({ goTo }) => {
             </button>
           </li>
           <li>
-            <a href="#contact">
+            <a href="#contact" tabIndex={`${dropdownOpen ? "0" : "1`"}`}>
               <p>Contact</p>
             </a>
           </li>
