@@ -40,7 +40,7 @@ const AboutDropdown = ({ goTo }) => {
       <div
         css={css`
           position: absolute;
-          margin-top: ${dropdownOpen ? "89px" : "-2000px"};
+          top: ${dropdownOpen ? "89px" : "-2000px"};
           background-color: white;
           border: 2px solid #aaa4ab;
           margin-left: -5px;
