@@ -33,15 +33,15 @@ const AboutDropdown = ({ goTo }) => {
           About{" "}
           {dropdownOpen ? (
             <KeyboardArrowUpIcon
+              style={{ fontSize: 25 }}
               css={css`
-                font-size: 1.5em;
                 margin-bottom: -5px;
               `}
             />
           ) : (
             <KeyboardArrowDownIcon
+              style={{ fontSize: 25 }}
               css={css`
-                font-size: 1.5em;
                 margin-bottom: -5px;
               `}
             />
