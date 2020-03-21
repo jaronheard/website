@@ -32,6 +32,7 @@ const disciplinesAndRoles = () => {
       keywords={[`Civic Software Foundation`, `CIVIC Platform`]}
       swoopUp
       swoopColor={colors.purple.hex}
+      hideCommonCTA
     >
       <TitleArea
         imageURL={scatterplotImage}
