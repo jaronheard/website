@@ -5,7 +5,7 @@ import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 import { Box } from "@material-ui/core";
 
 const SectionHeader = ({ title, subtitle, summary, big }) => (
-  <Box p={2}>
+  <Box>
     {title && (
       <h2
         className={big ? "h-1" : "h-2"}

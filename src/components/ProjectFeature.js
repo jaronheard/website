@@ -1,15 +1,19 @@
 /** @jsx jsx */
 import { jsx, css } from "@emotion/core";
+import { Fragment } from "react";
+import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
+import { Collapsable } from "@hackoregon/ui-core";
 import PropTypes from "prop-types";
 import UpdatedBrandTheme from "../_Theme/UpdatedBrandTheme";
-import ShadowBox from "./ShadowBox";
 
 // https://app.contentful.com/spaces/3j4jpxgb52st/content_types/project/fields
 
 const details = css`
-  p {
-    ${UpdatedBrandTheme[".data-sm"]} margin-block-start: 0.075rem;
-    margin-block-end: 0.075rem;
+  ${UpdatedBrandTheme[".data-sm"]}
+  margin-bottom: 1rem;
+  li {
+    display: inline-block;
+    margin: 0.075rem 0.25rem;
   }
 `;
 
@@ -28,8 +32,8 @@ Button.propTypes = {
   url: PropTypes.string
 };
 
-const ProjectDetail = ({
-  title,
+const ProjectFeature = ({
+  description,
   year,
   yearEnd,
   current,
@@ -38,57 +42,67 @@ const ProjectDetail = ({
   program,
   projectTypes,
   topics,
-  projectUrl
+  image
 }) => {
   const pluralizeYears = current || (year && yearEnd && year !== yearEnd);
 
   return (
-    <ShadowBox
-      title={title}
-      wide
-      Button={projectUrl && <Button url={projectUrl} />}
-    >
-      <div css={details}>
+    <Fragment>
+      <h4>{summary}</h4>
+      <ul css={details}>
         {year && (
-          <p>
+          <li>
             <strong>{pluralizeYears ? "Years: " : "Year: "}</strong>
             {`${year || ""}${(pluralizeYears && "–") || ""}${(pluralizeYears &&
               (current ? "present" : yearEnd)) ||
               ""}`}
-          </p>
+          </li>
         )}
         {program && (
-          <p>
+          <li>
             <strong>Program: </strong>
             {program}
-          </p>
+          </li>
         )}
         {organizations && (
-          <p>
+          <li>
             <strong>Organizations: </strong>
             {organizations.map(org => org.name).join(", ")}
-          </p>
+          </li>
         )}
         {projectTypes && (
-          <p>
+          <li>
             <strong>Project Types: </strong>
             {projectTypes.map(type => type.name).join(", ")}
-          </p>
+          </li>
         )}
         {topics && (
-          <p>
+          <li>
             <strong>Topics: </strong>
             {topics.map(topic => topic.name).join(", ")}
-          </p>
+          </li>
         )}
-      </div>
-      {summary && <p>{summary}</p>}
-    </ShadowBox>
+      </ul>
+      {image && (
+        <img
+          srcSet={image.fluid.srcSet}
+          sizes={image.fluid.sizes}
+          alt={image.title}
+          css={css`
+            width: 100%;
+          `}
+        />
+      )}
+      <Collapsable>
+        <Collapsable.Section hidden>
+          {description && documentToReactComponents(description)}
+        </Collapsable.Section>
+      </Collapsable>
+    </Fragment>
   );
 };
 
-ProjectDetail.propTypes = {
-  title: PropTypes.string,
+ProjectFeature.propTypes = {
   year: PropTypes.string,
   yearEnd: PropTypes.string,
   current: PropTypes.bool,
@@ -99,8 +113,11 @@ ProjectDetail.propTypes = {
   description: PropTypes.shape({
     /* contentful JSON */
   }),
-  program: PropTypes.string,
-  projectUrl: PropTypes.string
+  image: PropTypes.shape({
+    title: PropTypes.string,
+    fluid: PropTypes.shape({ srcSet: PropTypes.any, sizes: PropTypes.any })
+  }),
+  program: PropTypes.string
 };
 
-export default ProjectDetail;
+export default ProjectFeature;

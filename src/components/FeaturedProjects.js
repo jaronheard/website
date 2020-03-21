@@ -1,7 +1,7 @@
 import React from "react";
 import { useStaticQuery, graphql } from "gatsby";
 import GridTrio from "./GridTrio";
-import ProjectCard from "./ProjectCard";
+import ProjectDetail from "./ProjectDetail";
 import { colors } from "../_Theme/UpdatedBrandTheme";
 
 const FeaturedProjects = () => {
@@ -14,13 +14,25 @@ const FeaturedProjects = () => {
           title
           projects {
             title
-            partners
-            summary {
-              summary
-            }
             year
             yearEnd
             current
+            projectUrl
+            summary {
+              summary
+            }
+            program {
+              name
+            }
+            organizations {
+              name
+            }
+            topics {
+              name
+            }
+            projectTypes {
+              name
+            }
           }
         }
       }
@@ -34,13 +46,19 @@ const FeaturedProjects = () => {
       dividerLineColor={colors.yellow.hex}
     >
       {contentfulProjectCollection.projects.map(project => (
-        <ProjectCard
-          title={project.title}
-          summary={project.summary.summary}
-          partners={project.partners || ["CIVIC"]}
+        <ProjectDetail
           year={project.year}
           yearEnd={project.yearEnd}
           current={project.current}
+          title={project.title}
+          summary={project.summary && project.summary.summary}
+          partners={project.partners}
+          description={project.description && project.description.json}
+          program={project.program && project.program.name}
+          organizations={project.organizations}
+          topics={project.topics}
+          projectTypes={project.projectTypes}
+          projectUrl={project.projectUrl}
         />
       ))}
     </GridTrio>

@@ -10,10 +10,7 @@ const ProjectDetailList = () => {
           edges {
             node {
               year
-              yearEnd
-              current
               title
-              projectUrl
               summary {
                 summary
               }
@@ -39,20 +36,17 @@ const ProjectDetailList = () => {
     `
   );
 
-  return allContentfulProject.edges.map(({ node }) => (
+  return allContentfulProject.edges.map(el => (
     <ProjectDetail
-      year={node.year}
-      yearEnd={node.yearEnd}
-      current={node.current}
-      title={node.title}
-      summary={node.summary && node.summary.summary}
-      partners={node.partners}
-      description={node.description && node.description.json}
-      program={node.program && node.program.name}
-      organizations={node.organizations}
-      topics={node.topics}
-      projectTypes={node.projectTypes}
-      projectUrl={node.projectUrl}
+      year={el.node.year}
+      title={el.node.title}
+      summary={el.node.summary && el.node.summary.summary}
+      partners={el.node.partners}
+      description={el.node.description && el.node.description.json}
+      program={el.node.program && el.node.program.name}
+      organizations={el.node.organizations}
+      topics={el.node.topics}
+      projectTypes={el.node.projectTypes}
     />
   ));
 };

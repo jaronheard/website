@@ -7,6 +7,7 @@ import { Link } from "gatsby";
 import { Location } from "@reach/router";
 import { smBreak } from "../_Theme/UpdatedBrandTheme";
 import Video from "./Video";
+import GridSingle from "./GridSingle";
 
 const options = {
   renderNode: {
@@ -32,20 +33,13 @@ const Post = ({
     css={css`
       width: 100%;
       background-color: white;
-      padding-top: 100px;
+      padding-top: 200px;
       ${smBreak} {
         padding-top: 0;
       }
     `}
   >
-    <div
-      css={css`
-        max-width: 900px;
-        display: grid;
-        margin: 0 auto;
-        padding: 0 1rem;
-      `}
-    >
+    <GridSingle>
       {featured && (
         <div
           css={css`
@@ -79,7 +73,7 @@ const Post = ({
         </p>
       ))}
       <p>{documentToReactComponents(content.json, options)}</p>
-    </div>
+    </GridSingle>
   </div>
 );
 

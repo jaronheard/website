@@ -34,7 +34,7 @@ const GridTrio = ({
         `}
       >
         {title && <h2>{title}</h2>}
-        {subtitle && <p>{subtitle}</p>}
+        {subtitle && <h3 className="h-4">{subtitle}</h3>}
       </div>
     </div>
     <div
