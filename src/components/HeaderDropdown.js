@@ -2,7 +2,12 @@
 import { jsx, css } from "@emotion/core";
 import { PropTypes } from "prop-types";
 
-import { colors, xsBreak, mdBreak } from "../_Theme/UpdatedBrandTheme";
+import {
+  colors,
+  xsBreak,
+  mdBreak,
+  underlineFocus
+} from "../_Theme/UpdatedBrandTheme";
 
 // eslint-disable-next-line react/prop-types
 const DropdownSection = ({ children }) => {
@@ -52,39 +57,52 @@ const HeaderDropdown = ({ open, headerHeight, goTo }) => {
         </button>
       </DropdownSection>
       <DropdownSection>
-        <h3
+        <h4
           css={css`
             margin-left: -1em;
           `}
         >
           About Us
-        </h3>
+        </h4>
         <ul>
           <li>
             <button
               type="button"
+              tabIndex={`${open ? "0" : "-1"}`}
               className="headerButton"
               onClick={() => {
                 goTo("/disciplines-and-roles/");
               }}
             >
-              <h4>Disciplines & Roles</h4>
+              <h3>Disciplines & Roles</h3>
             </button>
           </li>
           <li>
             <button
               type="button"
+              tabIndex={`${open ? "0" : "-1"}`}
               className="headerButton"
               onClick={() => {
                 goTo("/projects/");
               }}
             >
-              <h4>Projects</h4>
+              <h3>Projects</h3>
             </button>
           </li>
-          <li>
-            <a href="#contact">
-              <h4>Contact</h4>
+          <li
+            css={css`
+              margin: 15px 0;
+            `}
+          >
+            <a
+              href="#contact"
+              tabIndex={`${open ? "0" : "-1"}`}
+              css={css`
+                color: black;
+                ${underlineFocus}
+              `}
+            >
+              <h3>Contact</h3>
             </a>
           </li>
         </ul>

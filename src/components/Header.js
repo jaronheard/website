@@ -13,7 +13,8 @@ import {
   smBreak,
   mdBreak,
   xsBreak,
-  noHover
+  noHover,
+  focusBorder
 } from "../_Theme/UpdatedBrandTheme";
 
 const headerHeight = "90px";
@@ -126,6 +127,9 @@ const Header = () => {
             border: none;
             height: max-content;
             align-self: center;
+            border-radius: 5px;
+
+            ${focusBorder}
 
             ${mdBreak} {
               display: none;

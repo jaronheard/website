@@ -13,7 +13,7 @@ const Footer = () => (
     css={css`
       background-color: ${BrandColors.primary.hex};
       text-align: center;
-      padding: 1em;
+      padding-bottom: 1rem;
     `}
   >
     <Contact />
