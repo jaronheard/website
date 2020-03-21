@@ -19,7 +19,7 @@ const ProjectDetailList = () => {
                 json
               }
               program {
-                title
+                name
               }
             }
           }
@@ -35,7 +35,7 @@ const ProjectDetailList = () => {
       summary={el.node.summary && el.node.summary.summary}
       partners={el.node.partners}
       description={el.node.description && el.node.description.json}
-      program={el.node.program && el.node.program.title}
+      program={el.node.program && el.node.program.name}
     />
   ));
 };
