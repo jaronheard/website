@@ -345,6 +345,13 @@ export default {
 
   ".action": action,
 
+  ".btn-link": {
+    cursor: "pointer",
+    background: "none",
+    border: "none",
+    ...action
+  },
+
   ".Description": {
     maxWidth: "900px",
     margin: "0 auto",
@@ -496,5 +503,12 @@ export default {
   ".centerSelf": {
     justifySelf: "center",
     alignSelf: "center"
+  },
+
+  ".headerButton": {
+    background: "none",
+    border: "none",
+    padding: "0",
+    cursor: "pointer"
   }
 };

@@ -15,6 +15,7 @@ const Contact = () => (
       margin: 80px auto 0;
       padding: 0 2em;
     `}
+    name="contact"
   >
     <h3 css={whiteText} className="h-3">
       Contact Us
