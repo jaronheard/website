@@ -9,7 +9,6 @@ import HeaderDropdown from "./HeaderDropdown";
 import AboutDropdown from "./AboutDropdown";
 import {
   colors,
-  shadows,
   smBreak,
   mdBreak,
   xsBreak,
@@ -37,7 +36,7 @@ const Header = () => {
         css={css`
           height: ${headerHeight};
           background-color: ${colors.white};
-          box-shadow: ${shadows.bottom};
+          border-bottom: 3px solid ${colors.subdued.hex};
           display: grid;
           padding: 0 2rem;
           ${xsBreak} {

@@ -14,7 +14,7 @@ const DropdownSection = ({ children }) => {
   return (
     <div
       css={css`
-        border-top: 1px solid #aaa4ab;
+        border-top: 3px solid ${colors.subdued.hex};
         height: max-content;
         padding: 0 3rem;
         ${xsBreak} {
@@ -33,7 +33,8 @@ const HeaderDropdown = ({ open, headerHeight, goTo }) => {
       css={css`
         height: auto;
         background-color: ${colors.white};
-        box-shadow: 0px 3px 6px #aaa4ab;
+        border-bottom: 3px solid ${colors.subdued.hex};
+        box-shadow: 6px 6px 0px ${colors.medium.hex};
         display: grid;
         z-index: 100;
         position: absolute;

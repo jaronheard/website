@@ -31,7 +31,7 @@ const TitleArea = ({
       >
         <picture
           css={css`
-            background-image: url(${imageURL || file.imageURL});
+            background-image: url(${imageURL || file.publicURL});
             background-size: cover;
             background-repeat: no-repeat;
             background-attachment: local;
@@ -51,7 +51,7 @@ const TitleArea = ({
         css={css`
           display: grid;
           padding: 60px 75px 0;
-          grid-template-rows: 1fr 1fr;
+          grid-template-rows: ${subtitle ? "1fr 1fr" : "1fr"};
           align-items: start;
           margin-bottom: -150px;
 
@@ -74,11 +74,11 @@ const TitleArea = ({
         {title && (
           <h1
             css={css`
-              margin-top: 150px;
+              margin-top: 80px;
               justify-self: end;
 
               ${smBreak} {
-                margin-top: 75px;
+                margin-top: 50px;
               }
             `}
           >

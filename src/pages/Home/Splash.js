@@ -44,9 +44,11 @@ const Splash = () => {
           align-content: center;
           text-align: left;
           padding-top: 90px;
+          margin-bottom: -90px;
 
           ${smBreak} {
             padding: 45px 20px 0;
+            margin-bottom: -45px;
           }
         `}
       >
@@ -60,6 +62,9 @@ const Splash = () => {
               max-width: 650px;
               display: grid;
               justify-self: left;
+              font-weight: 600;
+              letter-spacing: 0.025rem;
+              line-height: 1.15;
             `}
           >
             {contentfulHeading.title}

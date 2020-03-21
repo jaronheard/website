@@ -5,7 +5,6 @@ import { useStaticQuery, graphql } from "gatsby";
 import PageLayout from "../components/PageLayout";
 import TitleArea from "../components/TitleArea";
 import DividerLine from "../components/DividerLine";
-import hackOregonTeam from "../images/team.png";
 import EmbeddedForm from "../components/EmbeddedForm";
 import { colors } from "../_Theme/UpdatedBrandTheme";
 
@@ -27,8 +26,6 @@ const ContributorApplication = () => {
       keywords={[`Civic Software Foundation`, `CIVIC Impact Application`]}
     >
       <TitleArea
-        imageURL={hackOregonTeam}
-        imageOpacity={0.2}
         title={contentfulHeading.title}
         swooshColor={colors.yellow.hex}
       />

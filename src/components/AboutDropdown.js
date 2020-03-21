@@ -3,6 +3,7 @@ import { jsx, css } from "@emotion/core";
 import KeyboardArrowDownIcon from "@material-ui/icons/KeyboardArrowDown";
 import { useState } from "react";
 import { PropTypes } from "prop-types";
+import { colors } from "../_Theme/UpdatedBrandTheme";
 
 const AboutDropdown = ({ goTo }) => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
@@ -41,10 +42,11 @@ const AboutDropdown = ({ goTo }) => {
       <div
         css={css`
           position: absolute;
-          top: ${dropdownOpen ? "89px" : "-2000px"};
-          right: 0;
+          top: ${dropdownOpen ? "88px" : "-2000px"};
+          right: -1em;
           background-color: white;
-          border: 2px solid #aaa4ab;
+          border: 3px solid ${colors.subdued.hex};
+          box-shadow: 6px 6px 0px ${colors.medium.hex};
           padding: 0 1em;
           width: max-content;
         `}
