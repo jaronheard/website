@@ -1,6 +1,7 @@
 /** @jsx jsx */
 import { jsx, css } from "@emotion/core";
 import { PropTypes } from "prop-types";
+import { useStaticQuery, graphql } from "gatsby";
 
 import { smBreak } from "../_Theme/UpdatedBrandTheme";
 import DividerLine from "./DividerLine";
@@ -12,6 +13,15 @@ const TitleArea = ({
   subtitle,
   swooshColor
 }) => {
+  // default image
+  const { file } = useStaticQuery(graphql`
+    query {
+      file(base: { eq: "paths.svg" }) {
+        publicURL
+      }
+    }
+  `);
+
   return (
     <div>
       <div
@@ -21,7 +31,7 @@ const TitleArea = ({
       >
         <picture
           css={css`
-            background-image: url(${imageURL});
+            background-image: url(${imageURL || file.imageURL});
             background-size: cover;
             background-repeat: no-repeat;
             background-attachment: local;
