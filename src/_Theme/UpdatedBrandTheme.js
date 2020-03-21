@@ -37,7 +37,7 @@ export const focusBorder = {
   }
 };
 
-const underlineFocus = {
+export const underlineFocus = {
   transition: "background-size .2s",
   backgroundImage: "linear-gradient(currentColor, currentColor)",
   backgroundPosition: "0% 100%",
@@ -552,7 +552,11 @@ export default {
     border: "none",
     padding: "0",
     cursor: "pointer",
+    margin: "15px 0",
+    ...underlineFocus,
 
-    ...underlineFocus
+    "> h3": {
+      margin: "0"
+    }
   }
 };
