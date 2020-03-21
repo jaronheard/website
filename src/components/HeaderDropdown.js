@@ -2,7 +2,7 @@
 import { jsx, css } from "@emotion/core";
 import { PropTypes } from "prop-types";
 
-import { colors, xsBreak } from "../_Theme/UpdatedBrandTheme";
+import { colors, xsBreak, mdBreak } from "../_Theme/UpdatedBrandTheme";
 
 // eslint-disable-next-line react/prop-types
 const DropdownSection = ({ children }) => {
@@ -35,11 +35,15 @@ const HeaderDropdown = ({ open, headerHeight, goTo }) => {
         width: 100%;
         top: 0;
         margin-top: ${open ? headerHeight : "-2000px"};
+        ${mdBreak} {
+          display: none;
+        }
       `}
     >
       <DropdownSection>
         <button
           type="button"
+          className="headerButton"
           onClick={() => {
             goTo("/platform/");
           }}
@@ -55,25 +59,35 @@ const HeaderDropdown = ({ open, headerHeight, goTo }) => {
         >
           About Us
         </h3>
-        <button
-          type="button"
-          onClick={() => {
-            goTo("/disciplines-and-roles/");
-          }}
-        >
-          <h4>Disciplines & Roles</h4>
-        </button>
-        <button
-          type="button"
-          onClick={() => {
-            goTo("/projects/");
-          }}
-        >
-          <h4>Projects</h4>
-        </button>
-        <a href="#contact">
-          <h4>Contact</h4>
-        </a>
+        <ul>
+          <li>
+            <button
+              type="button"
+              className="headerButton"
+              onClick={() => {
+                goTo("/disciplines-and-roles/");
+              }}
+            >
+              <h4>Disciplines & Roles</h4>
+            </button>
+          </li>
+          <li>
+            <button
+              type="button"
+              className="headerButton"
+              onClick={() => {
+                goTo("/projects/");
+              }}
+            >
+              <h4>Projects</h4>
+            </button>
+          </li>
+          <li>
+            <a href="#contact">
+              <h4>Contact</h4>
+            </a>
+          </li>
+        </ul>
       </DropdownSection>
     </div>
   );
