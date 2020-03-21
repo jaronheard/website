@@ -8,7 +8,7 @@ import GridSingle from "../../components/GridSingle";
 const Splash = () => {
   const { file, contentfulHeading } = useStaticQuery(graphql`
     query {
-      file(base: { eq: "paths.svg" }) {
+      file(base: { eq: "hero__test--graph.png" }) {
         publicURL
       }
       contentfulHeading(contentful_id: { eq: "3Hy2d9lrRRmragYcOSoDl3" }) {

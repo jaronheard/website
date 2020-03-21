@@ -21,7 +21,7 @@ const PageLayout = ({
 }) => {
   return (
     <Fragment>
-      <SEO title={`CIVIC${title && `: ${title}`}`} keywords={keywords} />
+      <SEO title={title} keywords={keywords} />
       <Wrapper>
         <Header />
         {children}

@@ -15,8 +15,7 @@ const ProjectsPage = () => {
     <PageLayout
       title="Platform"
       keywords={[`Civic Software Foundation`, `CIVIC Platform`]}
-      swoopUp
-      swoopColor={colors.purple.hex}
+      swoopColor={colors.yellow.hex}
     >
       <ProjectsHeader />
       <FeaturedProject />

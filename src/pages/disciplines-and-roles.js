@@ -5,7 +5,6 @@ import { useStaticQuery, graphql } from "gatsby";
 import PageLayout from "../components/PageLayout";
 import TitleArea from "../components/TitleArea";
 import DividerLine from "../components/DividerLine";
-import scatterplotImage from "../images/scatterplot.png";
 import { colors } from "../_Theme/UpdatedBrandTheme";
 import Philosophy from "./DisciplinesAndRoles/Philosophy";
 import DeSiloExperience from "./DisciplinesAndRoles/DeSiloExperience";
@@ -35,8 +34,6 @@ const disciplinesAndRoles = () => {
       hideCommonCTA
     >
       <TitleArea
-        imageURL={scatterplotImage}
-        imageOpacity={1}
         title={contentfulHeading.title}
         subtitle={contentfulHeading.subtitle}
         swooshColor={colors.purple.hex}

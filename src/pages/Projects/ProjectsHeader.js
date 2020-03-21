@@ -1,7 +1,6 @@
 import React from "react";
 import { useStaticQuery, graphql } from "gatsby";
 
-import scatterplotImage from "../../images/scatterplot.png";
 import { colors } from "../../_Theme/UpdatedBrandTheme";
 import TitleArea from "../../components/TitleArea";
 
@@ -19,8 +18,6 @@ const ProjectsHeader = () => {
 
   return (
     <TitleArea
-      imageURL={scatterplotImage}
-      imageOpacity={1}
       title={contentfulHeading.title}
       subtitle={contentfulHeading.subtitle}
       swooshColor={colors.purple.hex}

@@ -1,6 +1,6 @@
 /* eslint-disable graphql/template-strings */
 /** @jsx jsx */
-import { jsx } from "@emotion/core";
+import { jsx, css } from "@emotion/core";
 import { useStaticQuery, graphql } from "gatsby";
 
 import { colors } from "../../_Theme/UpdatedBrandTheme";
@@ -43,7 +43,12 @@ const PlatformComponents = () => {
   );
 
   return (
-    <div>
+    <div
+      css={css`
+        width: 100%;
+        background-color: white;
+      `}
+    >
       <GridSingle>
         <SectionHeader
           title={contentfulHeading.title}
