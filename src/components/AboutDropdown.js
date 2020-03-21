@@ -16,6 +16,7 @@ const AboutDropdown = ({ goTo }) => {
       css={css`
         align-items: center;
         display: grid;
+        position: relative;
       `}
     >
       <button
@@ -27,7 +28,7 @@ const AboutDropdown = ({ goTo }) => {
         `}
       >
         <p className="action">
-          About Us{" "}
+          About{" "}
           <KeyboardArrowDownIcon
             css={css`
               font-size: 1.5em;
@@ -41,13 +42,20 @@ const AboutDropdown = ({ goTo }) => {
         css={css`
           position: absolute;
           top: ${dropdownOpen ? "89px" : "-2000px"};
+          right: 0;
           background-color: white;
           border: 2px solid #aaa4ab;
-          margin-left: -5px;
           padding: 0 1em;
+          width: max-content;
         `}
       >
-        <ul>
+        <ul
+          css={css`
+            > li > button > p {
+              margin: 0;
+            }
+          `}
+        >
           <li>
             <button
               tabIndex={`${dropdownOpen ? "0" : "-1"}`}
@@ -70,6 +78,18 @@ const AboutDropdown = ({ goTo }) => {
               }}
             >
               <p>Projects</p>
+            </button>
+          </li>
+          <li>
+            <button
+              tabIndex={`${dropdownOpen ? "0" : "-1"}`}
+              type="button"
+              className="headerButton"
+              onClick={() => {
+                goTo("/about/");
+              }}
+            >
+              <p>About Us</p>
             </button>
           </li>
           <li>

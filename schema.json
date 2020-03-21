@@ -66560,6 +66560,16 @@
         "fields": null,
         "inputFields": [
           {
+            "name": "marks",
+            "description": "",
+            "type": {
+              "kind": "INPUT_OBJECT",
+              "name": "contentfulHeadingSummaryRichTextNodeContentContentMarksFilterListInput",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
             "name": "value",
             "description": "",
             "type": {
@@ -66571,6 +66581,48 @@
           },
           {
             "name": "nodeType",
+            "description": "",
+            "type": {
+              "kind": "INPUT_OBJECT",
+              "name": "StringQueryOperatorInput",
+              "ofType": null
+            },
+            "defaultValue": null
+          }
+        ],
+        "interfaces": null,
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "INPUT_OBJECT",
+        "name": "contentfulHeadingSummaryRichTextNodeContentContentMarksFilterListInput",
+        "description": null,
+        "fields": null,
+        "inputFields": [
+          {
+            "name": "elemMatch",
+            "description": "",
+            "type": {
+              "kind": "INPUT_OBJECT",
+              "name": "contentfulHeadingSummaryRichTextNodeContentContentMarksFilterInput",
+              "ofType": null
+            },
+            "defaultValue": null
+          }
+        ],
+        "interfaces": null,
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "INPUT_OBJECT",
+        "name": "contentfulHeadingSummaryRichTextNodeContentContentMarksFilterInput",
+        "description": null,
+        "fields": null,
+        "inputFields": [
+          {
+            "name": "type",
             "description": "",
             "type": {
               "kind": "INPUT_OBJECT",
@@ -66732,6 +66784,22 @@
         "description": null,
         "fields": [
           {
+            "name": "marks",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "LIST",
+              "name": null,
+              "ofType": {
+                "kind": "OBJECT",
+                "name": "contentfulHeadingSummaryRichTextNodeContentContentMarks",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
             "name": "value",
             "description": null,
             "args": [],
@@ -66741,6 +66809,25 @@
           },
           {
             "name": "nodeType",
+            "description": null,
+            "args": [],
+            "type": { "kind": "SCALAR", "name": "String", "ofType": null },
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
+        "inputFields": null,
+        "interfaces": [],
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "OBJECT",
+        "name": "contentfulHeadingSummaryRichTextNodeContentContentMarks",
+        "description": null,
+        "fields": [
+          {
+            "name": "type",
             "description": null,
             "args": [],
             "type": { "kind": "SCALAR", "name": "String", "ofType": null },
@@ -67415,6 +67502,18 @@
           },
           {
             "name": "content___content",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "content___content___marks",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "content___content___marks___type",
             "description": null,
             "isDeprecated": false,
             "deprecationReason": null
@@ -69155,6 +69254,12 @@
             "deprecationReason": null
           },
           {
+            "name": "summary___content___content___marks",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
             "name": "summary___content___content___value",
             "description": null,
             "isDeprecated": false,
@@ -69492,6 +69597,12 @@
           },
           {
             "name": "childContentfulHeadingSummaryRichTextNode___content___content",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "childContentfulHeadingSummaryRichTextNode___content___content___marks",
             "description": null,
             "isDeprecated": false,
             "deprecationReason": null
