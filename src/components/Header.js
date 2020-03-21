@@ -6,6 +6,7 @@ import { Logo } from "@hackoregon/ui-brand";
 import MenuIcon from "@material-ui/icons/Menu";
 
 import HeaderDropdown from "./HeaderDropdown";
+import AboutDropdown from "./AboutDropdown";
 import {
   colors,
   shadows,
@@ -112,7 +113,7 @@ const Header = () => {
           >
             <p className="action">Platform</p>
           </button>
-          <p className="action">About Us</p>
+          <AboutDropdown goTo={goTo} />
         </div>
 
         <button

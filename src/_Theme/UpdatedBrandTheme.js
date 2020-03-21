@@ -503,5 +503,12 @@ export default {
   ".centerSelf": {
     justifySelf: "center",
     alignSelf: "center"
+  },
+
+  ".headerButton": {
+    background: "none",
+    border: "none",
+    padding: "0",
+    cursor: "pointer"
   }
 };
