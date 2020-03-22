@@ -9,6 +9,7 @@ import CallToActionBlocks from "./Home/CallToActionBlocks";
 import QuoteBlock from "./Home/QuoteBlock";
 import DividerLine from "../components/DividerLine";
 import { colors } from "../_Theme/UpdatedBrandTheme";
+import GridSingle from "../components/GridSingle";
 
 const IndexPage = () => {
   return (
@@ -28,12 +29,21 @@ const IndexPage = () => {
       />
       <div
         css={css`
+          width: 100%;
+          background-color: white;
+        `}
+      >
+        <GridSingle>
+          <OurDifferenceHeader />
+        </GridSingle>
+      </div>
+      <div
+        css={css`
           background-color: white;
           display: grid;
           justify-content: center;
         `}
       >
-        <OurDifferenceHeader />
         <OurDifferenceCards />
       </div>
       <DividerLine hexColor={colors.yellow.hex} swoopUp />

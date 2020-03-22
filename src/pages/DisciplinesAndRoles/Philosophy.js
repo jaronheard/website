@@ -27,7 +27,6 @@ const disciplinesAndRoles = () => {
       css={css`
         width: 100%;
         background-color: white;
-        padding-top: 100px;
         ${smBreak} {
           padding-top: 0;
         }

@@ -8,9 +8,9 @@ const SectionHeader = ({ title, subtitle, summary, big }) => (
   <Box>
     {title && (
       <h2
-        className={big ? "h-1" : "h-2"}
+        className={big ? "h-1" : "h-2-alt"}
         css={css`
-          margin-bottom: 0;
+          ${big ? "margin-bottom: 0" : ""};
         `}
       >
         {title}

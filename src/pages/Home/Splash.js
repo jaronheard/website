@@ -43,8 +43,8 @@ const Splash = () => {
           justify-content: center;
           align-content: center;
           text-align: left;
-          padding-top: 90px;
-          margin-bottom: -90px;
+          padding-top: 30px;
+          margin-bottom: -45px;
 
           ${smBreak} {
             padding: 45px 20px 0;
@@ -74,7 +74,6 @@ const Splash = () => {
               max-width: 750px;
               display: grid;
               justify-self: right;
-              margin-top: 65px;
               margin-left: 300px;
               ${smBreak} {
                 margin-left: 0;

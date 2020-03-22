@@ -58,15 +58,15 @@ export const underlineFocus = {
 // Typography
 const body = {
   fontFamily: "Roboto",
-  fontSize: "1.0625rem",
-  lineHeight: "1.765rem",
+  fontSize: "1rem",
+  lineHeight: "1.45rem",
   margin: 0,
   display: "flex",
   flexDirection: "column",
   overflowX: "hidden",
   [smBreak]: {
     fontSize: "1rem",
-    lineHeight: "1.5rem"
+    lineHeight: "1.45rem"
   }
 };
 
@@ -92,14 +92,14 @@ const a = {
 };
 
 const p = {
-  fontSize: "1.0625rem",
-  lineHeight: "1.765rem",
-  color: BrandColors.tertiary.hex,
+  fontSize: "1rem",
+  lineHeight: "1.45rem",
+  color: BrandColors.plumLight.hex,
   marginBlockStart: "0.875rem",
   marginBlockEnd: "0.875rem",
   [smBreak]: {
     fontSize: "1rem",
-    lineHeight: "1.5rem"
+    lineHeight: "1.45rem"
   }
 };
 
@@ -179,6 +179,25 @@ const h2 = {
     fontSize: "1.7rem",
     marginBlockStart: "1.7rem",
     marginBlockEnd: "1.7rem"
+  }
+};
+
+const h2alt = {
+  fontSize: "2.5rem",
+  lineHeight: "1.10722",
+  fontFamily: "'Rubik', sans-serif",
+  fontWeight: "500",
+  marginBlockStart: "1.5rem",
+  marginBlockEnd: "1.5rem",
+  padding: "0.5rem",
+  width: "max-content",
+  color: BrandColors.plumLight.hex,
+  border: `4px solid ${BrandColors.plumLight.hex}`,
+  boxShadow: `6px 6px 0px ${BrandColors.medium.hex}`,
+  [smBreak]: {
+    fontSize: "1.7rem",
+    marginBlockStart: "1.2rem",
+    marginBlockEnd: "1.2rem"
   }
 };
 
@@ -338,6 +357,7 @@ export default {
 
   ".h-1": h1,
   ".h-2": h2,
+  ".h-2-alt": h2alt,
   ".h-3": h3,
   ".h-4": h4,
   ".h-5": h5,
@@ -526,21 +546,21 @@ export default {
   },
 
   ".DividerLineStyle": {
-    zIndex: -1,
+    zIndex: -1
 
-    [smBreak]: {
-      display: "none"
-    }
+    // [smBreak]: {
+    //   display: "none"
+    // }
   },
 
   ".DividerLinePadding": {
     height: "10px",
     backgroundColor: "white",
-    margin: "100px 0",
+    margin: "100px 0"
 
-    [mdBreak]: {
-      display: "none"
-    }
+    // [mdBreak]: {
+    //   display: "none"
+    // }
   },
 
   ".centerSelf": {

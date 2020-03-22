@@ -10,7 +10,7 @@ import { colors, smBreak, xsBreak } from "../_Theme/UpdatedBrandTheme";
 
 const imageStyle = css`
   grid-area: image;
-  width: 400px;
+  width: 500px;
   max-width: 40vw;
 
   ${xsBreak} {
@@ -69,7 +69,7 @@ const CallToActionBlock = ({
               reverseLayout ? "image content" : "content image"
             }";
             width: 100%;
-            max-width: 1230px;
+            max-width: 1100px;
             margin: 0 auto;
             align-items: center;
 

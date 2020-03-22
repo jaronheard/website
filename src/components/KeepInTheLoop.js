@@ -34,6 +34,7 @@ const KeepInTheLoop = () => (
             margin-bottom: 25px;
           }
         `}
+        className="h-2-alt"
       >
         Keep in the loop
       </h2>

@@ -9,9 +9,10 @@ const CommonCTA = () => (
       max-width: 400px;
       margin: 30px auto 20px;
       text-align: center;
+      justify-content: center;
     `}
   >
-    <h2>Build with us</h2>
+    <h2 className="h-2-alt">Build with us</h2>
     <CTAButtons vertical />
   </div>
 );
