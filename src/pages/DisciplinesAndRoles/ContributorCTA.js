@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { jsx, css } from "@emotion/core";
-import { useStaticQuery, graphql } from "gatsby";
+import { useStaticQuery, graphql, Link } from "gatsby";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 
 import { smBreak, xsBreak } from "../../_Theme/UpdatedBrandTheme";
@@ -19,6 +19,7 @@ const disciplinesAndRoles = () => {
             json
           }
           button
+          buttonLocalLink
         }
       }
     `
@@ -54,16 +55,18 @@ const disciplinesAndRoles = () => {
         <p>
           {documentToReactComponents(contentfulCallToActionBlock.summary.json)}
         </p>
-        <button
-          type="button"
-          className="btn-green"
-          css={css`
-            justify-self: end;
-            margin-top: 20px;
-          `}
-        >
-          <p>{contentfulCallToActionBlock.button}</p>
-        </button>
+        {contentfulCallToActionBlock.button && (
+          <Link
+            to={`${contentfulCallToActionBlock.buttonLocalLink}`}
+            className="btn-green"
+            css={css`
+              justify-self: end;
+              margin-top: 20px;
+            `}
+          >
+            <p>{contentfulCallToActionBlock.button}</p>
+          </Link>
+        )}
       </div>
     </div>
   );
