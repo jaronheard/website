@@ -438,7 +438,6 @@ export default {
 
     [lgCardBreak]: {
       justifyItems: "center",
-      gridTemplateColumns: "repeat(2, 1fr)",
       gridTemplateRows: "1fr 1fr 1fr",
       gridRowGap: "20px",
       maxWidth: "900px"

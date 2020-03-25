@@ -6,7 +6,12 @@ import { Link } from "gatsby";
 
 import DividerLine from "./DividerLine";
 import CallToActionCard from "./CallToActionCard";
-import { smBreak, xsBreak, colors } from "../_Theme/UpdatedBrandTheme";
+import {
+  lgCardBreak,
+  smBreak,
+  xsBreak,
+  colors
+} from "../_Theme/UpdatedBrandTheme";
 
 const { purple, pink, blue, green, yellow } = colors;
 const shadowColors = [
@@ -27,7 +32,8 @@ const GridList = ({
   bottomContent,
   buttonText,
   buttonLocalLink,
-  colorShadow
+  colorShadow,
+  shrinkToColumn
 }) => {
   return (
     <div>
@@ -65,6 +71,12 @@ const GridList = ({
         className="GridListContent"
         css={css`
           max-width: ${wideContent ? "1330px" : "1040px"};
+
+          ${lgCardBreak} {
+            grid-template-columns: ${shrinkToColumn
+              ? `100%;`
+              : `repeat(2,1fr);`};
+          }
 
           ${smBreak} {
             padding: ${wideContent ? "0" : "0 10px"};
@@ -160,7 +172,8 @@ GridList.propTypes = {
   }),
   buttonText: PropTypes.string,
   buttonLocalLink: PropTypes.string,
-  colorShadow: PropTypes.bool
+  colorShadow: PropTypes.bool,
+  shrinkToColumn: PropTypes.bool
 };
 
 export default GridList;

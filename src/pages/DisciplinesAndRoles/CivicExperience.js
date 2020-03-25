@@ -3,7 +3,7 @@ import { jsx } from "@emotion/core";
 import { useStaticQuery, graphql } from "gatsby";
 
 import { colors } from "../../_Theme/UpdatedBrandTheme";
-import GridTrio from "../../components/GridTrio";
+import GridList from "../../components/GridList";
 
 const CivicExperience = () => {
   // eslint-disable-next-line react-hooks/rules-of-hooks
@@ -30,12 +30,13 @@ const CivicExperience = () => {
   );
 
   return (
-    <GridTrio
+    <GridList
       title={contentfulContentList.title}
       subtitle={contentfulContentList.subtitle.subtitle}
       callToActionBlockList={contentfulContentList.content}
       showDividerLine
       dividerLineColor={colors.green.hex}
+      shrinkToColumn
     />
   );
 };
