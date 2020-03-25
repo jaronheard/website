@@ -26,17 +26,21 @@ const DividerLine = ({
           ${lineStyle || ""}
         `}
       />
+
       {/* Swoop for larger screens */}
       <svg
         preserveAspectRatio="none"
         width="100%"
-        height="222"
-        viewBox="0 0 1332 222"
+        height="96"
+        viewBox="0 0 1332 96"
         fill="none"
         className="DividerLineStyle"
         css={css`
           ${swoopUp ? swoopUpStyle : ""}
           ${swoopStyle || ""}
+          @media (max-width: 1230px) {
+            height: 70px;
+          }
         `}
       >
         <mask
@@ -46,27 +50,27 @@ const DividerLine = ({
           x="0"
           y="0"
           width="1332"
-          height="222"
+          height="96"
         >
-          <rect width="1332" height="222" fill="#C4C4C4" />
+          <rect width="1332" height="96" fill="#C4C4C4" />
         </mask>
         <g mask="url(#mask0)">
-          <path d="M356.5 136L653.98 221.5H59.0203L356.5 136Z" fill="white" />
           <path
-            d="M1199.31 227.9L1336.03 192.567L1335.52 265.139L1199.31 227.9Z"
+            d="M356.502 60.1772L653.982 100.664H59.0222L356.502 60.1772Z"
             fill="white"
           />
           <path
-            d="M405.451 132.749L-1.97049 263.489L-3.75619 7.71081L405.451 132.749Z"
+            d="M1186.83 82.1357L1332.91 50.9248L1332.4 115.149L1186.83 82.1357Z"
             fill="white"
           />
+          <path d="M180 85.8406L0 126.46L0 45.2218L180 85.8406Z" fill="white" />
           <path
-            d="M-6.18945 35.0005C385.273 188.98 1180.98 292.226 1315.9 220.808"
+            d="M-15.9512 28.6152C392.064 128.003 1204.93 146.182 1332.43 70.87"
             stroke="white"
             strokeWidth="50"
           />
           <path
-            d="M-2.18945 6.00049C393.647 160.595 1197.94 265.047 1334.18 193.815"
+            d="M-12.0137 2.68848C397.844 102.261 1208.64 120.041 1336.65 44.7835"
             stroke={hexColor}
             strokeWidth="10"
           />
