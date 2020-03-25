@@ -45,6 +45,7 @@ const GridTrio = ({
         padding: 0 40px;
         margin: 25px auto;
         max-width: 1330px;
+        grid-column-gap: 15px;
 
         @media (max-width: 1230px) {
           width: min-content;

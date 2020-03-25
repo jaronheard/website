@@ -35,6 +35,7 @@ const IndexPage = () => {
           background-color: white;
           display: grid;
           justify-content: center;
+          margin-top: 10px;
         `}
       >
         <OurDifferenceHeader />

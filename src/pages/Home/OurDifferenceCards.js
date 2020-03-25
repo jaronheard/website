@@ -28,6 +28,7 @@ const OurDifferenceCards = () => {
       css={css`
         display: grid;
         grid-template-columns: repeat(3, auto);
+        grid-column-gap: 15px;
         justify-content: space-around;
         width: 100%;
         margin-top: 80px;

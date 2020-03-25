@@ -432,12 +432,15 @@ export default {
     padding: "0 40px",
     margin: "25px auto",
     maxWidth: "1330px",
+    gridRowGap: "30px",
+    gridColumnGap: "15px",
 
     "@media (max-width: 1230px)": {
       justifyItems: "center",
       gridTemplateColumns: "repeat(2, 1fr)",
       gridTemplateRows: "1fr 1fr 1fr",
-      gridRowGap: "20px"
+      gridRowGap: "20px",
+      maxWidth: "900px"
     },
 
     [smBreak]: {
@@ -467,7 +470,6 @@ export default {
   ".ShadowBox": {
     maxWidth: "322px",
     width: "100%",
-    margin: "15px",
     background: "white",
     border: borders.box,
     boxShadow: shadows.rightDown,
