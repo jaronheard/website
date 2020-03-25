@@ -88,6 +88,10 @@ const TitleArea = ({
       </div>
       <DividerLine
         hexColor={swooshColor}
+        swoopStyle={css`
+          margin-bottom: -30px;
+          margin-top: 70px;
+        `}
         lineStyle={css`
           margin-bottom: 0;
           height: 100px;

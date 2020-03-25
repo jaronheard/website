@@ -21,8 +21,8 @@ const DividerLine = ({ hexColor = "#721D7C", lineStyle, swoopStyle }) => {
       {/* Swoop for larger screens */}
 
       <svg
-        height="47"
-        viewBox="0 0 1332 47"
+        height="31"
+        viewBox="0 0 1332 31"
         fill="none"
         preserveAspectRatio="none"
         width="100%"
@@ -30,9 +30,6 @@ const DividerLine = ({ hexColor = "#721D7C", lineStyle, swoopStyle }) => {
         css={css`
           ${swoopStyle || ""}
           padding: 20px 0;
-          @media (max-width: 1230px) {
-            height: 30px;
-          }
         `}
       >
         <mask
@@ -42,21 +39,23 @@ const DividerLine = ({ hexColor = "#721D7C", lineStyle, swoopStyle }) => {
           x="0"
           y="0"
           width="1332"
-          height="47"
+          height="31"
         >
-          <rect width="1332" height="47" fill="#C4C4C4" />
+          <rect width="1332" height="31" fill="white" />
         </mask>
         <g mask="url(#mask0)">
-          <path d="M437 45.5L-1 68.4497V22.5503L437 45.5Z" fill="white" />
-          <rect x="811" y="13" width="521" height="65" fill="white" />
-          <rect x="290" y="37" width="521" height="10" fill="white" />
-          <rect x="925" y="10" width="253" height="4" fill="white" />
           <path
-            d="M593.556 37.3199L818.805 17.8252L819.639 39.3082L593.556 37.3199Z"
+            d="M436.879 35.5034L-1.2372 31.1987L-0.470247 9.23608L436.879 35.5034Z"
+            fill="white"
+          />
+          <rect x="811" y="10" width="521" height="30" fill="white" />
+          <rect x="290" y="28" width="521" height="10" fill="white" />
+          <path
+            d="M593.556 28.3199L818.805 8.82517L819.639 30.3082L593.556 28.3199Z"
             fill="white"
           />
           <path
-            d="M-9.30175 16.5002C660.482 91.7727 660.5 -29.7275 1340.02 16.5002"
+            d="M-9.30069 7.50027C660.5 53 661 -2.5 1340.02 7.50027"
             stroke={hexColor}
             strokeWidth="10"
           />
