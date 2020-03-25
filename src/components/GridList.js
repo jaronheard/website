@@ -26,7 +26,8 @@ const GridList = ({
   wideContent,
   bottomContent,
   buttonText,
-  buttonLocalLink
+  buttonLocalLink,
+  colorShadow
 }) => {
   return (
     <div>
@@ -87,7 +88,7 @@ const GridList = ({
                 summary={summary.json}
                 extraContent={extraContent ? extraContent.json : null}
                 extraContentType={extraContentType || null}
-                shadowColor={nextColor}
+                shadowColor={colorShadow ? nextColor : null}
                 className="GridListCard"
                 cardStyle={css`
                   ${wideContent
@@ -158,7 +159,8 @@ GridList.propTypes = {
     /* takes an extraContent.json */
   }),
   buttonText: PropTypes.string,
-  buttonLocalLink: PropTypes.string
+  buttonLocalLink: PropTypes.string,
+  colorShadow: PropTypes.bool
 };
 
 export default GridList;

@@ -32,6 +32,7 @@ const DeSiloExperience = () => {
       title={contentfulContentList.title}
       subtitle={contentfulContentList.subtitle.subtitle}
       callToActionBlockList={contentfulContentList.content}
+      colorShadow
       showDividerLine
       dividerLineColor={colors.pink.hex}
     />
