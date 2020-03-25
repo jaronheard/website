@@ -2,6 +2,7 @@
 import { jsx, css } from "@emotion/core";
 import { useStaticQuery, graphql } from "gatsby";
 import CallToActionCard from "../../components/CallToActionCard";
+import { lgBreak } from "../../_Theme/UpdatedBrandTheme";
 
 const OurDifferenceCards = () => {
   const { contentfulContentList } = useStaticQuery(
@@ -33,7 +34,7 @@ const OurDifferenceCards = () => {
         width: 100%;
         margin-top: 80px;
 
-        @media (max-width: 1260px) {
+        ${lgBreak} {
           grid-template-columns: auto;
           justify-content: center;
           align-content: space-between;

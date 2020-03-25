@@ -4,7 +4,7 @@ import { PropTypes } from "prop-types";
 
 import DividerLine from "./DividerLine";
 import CallToActionCard from "./CallToActionCard";
-import { smBreak } from "../_Theme/UpdatedBrandTheme";
+import { smBreak, lgCardBreak } from "../_Theme/UpdatedBrandTheme";
 
 const GridTrio = ({
   title,
@@ -47,7 +47,7 @@ const GridTrio = ({
         max-width: 1330px;
         grid-column-gap: 15px;
 
-        @media (max-width: 1230px) {
+        ${lgCardBreak} {
           width: min-content;
           justify-items: center;
           grid-template-columns: repeat(1, 1fr);

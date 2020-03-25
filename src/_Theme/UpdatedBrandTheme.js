@@ -5,7 +5,8 @@ import { BrandColors, VisualizationColors } from "@hackoregon/ui-themes";
 export const xsBreak = "@media (max-width:659.95px)";
 export const smBreak = "@media (max-width:959.95px)";
 export const mdBreak = "@media (min-width:959.95px)";
-export const lgBreak = "@media (max-width:1279.95px)";
+export const lgCardBreak = "@media (max-width:1230px)";
+export const lgBreak = "@media (max-width:1260px)";
 
 // Colors
 export const colors = {
@@ -435,7 +436,7 @@ export default {
     gridColumnGap: "15px",
     justifyContent: "center",
 
-    "@media (max-width: 1230px)": {
+    [lgCardBreak]: {
       justifyItems: "center",
       gridTemplateColumns: "repeat(2, 1fr)",
       gridTemplateRows: "1fr 1fr 1fr",
@@ -490,7 +491,7 @@ export default {
   },
 
   ".GridListCard": {
-    "@media (max-width: 1230px)": {
+    [lgCardBreak]: {
       width: "100%"
     },
 
