@@ -431,9 +431,9 @@ export default {
     gridTemplateColumns: "repeat(3, 1fr)",
     padding: "0 40px",
     margin: "25px auto",
-    maxWidth: "1330px",
     gridRowGap: "30px",
     gridColumnGap: "15px",
+    justifyContent: "center",
 
     "@media (max-width: 1230px)": {
       justifyItems: "center",
@@ -449,21 +449,7 @@ export default {
       gridTemplateRows: "1fr 1fr 1fr",
       gridRowGap: "20px",
       width: "auto",
-      padding: "0 10px",
-
-      "& .WideContent": {
-        padding: "0",
-        gridTemplateColumns: "99vw"
-      }
-    },
-
-    "& .WideContent": {
-      gridTemplateColumns: "repeat(3, 1fr)",
-
-      [smBreak]: {
-        padding: "0",
-        gridTemplateColumns: "99vw"
-      }
+      padding: "0 10px"
     }
   },
 

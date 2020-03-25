@@ -60,7 +60,17 @@ const GridList = ({
         </div>
       </div>
 
-      <div className={`GridListContent ${wideContent ? "WideContent" : ""}`}>
+      <div
+        className="GridListContent"
+        css={css`
+          max-width: ${wideContent ? "1330px" : "1040px"};
+
+          ${smBreak} {
+            padding: ${wideContent ? "0" : "0 10px"};
+            grid-template-columns: 99vw;
+          }
+        `}
+      >
         {callToActionBlockList.map(
           ({ summary, tagline, extraContent, extraContentType }, i) => {
             let index = i;
