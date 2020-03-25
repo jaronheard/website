@@ -63,7 +63,7 @@ const PlatformComponents = () => {
         buttonText={contentfulContentList.buttonText}
         buttonLocalLink={contentfulContentList.buttonLink}
       />
-      <DividerLine hexColor={colors.yellow.hex} swoopUp />
+      <DividerLine hexColor={colors.yellow.hex} />
     </div>
   );
 };

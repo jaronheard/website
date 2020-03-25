@@ -113,10 +113,7 @@ const CallToActionBlock = ({
           </div>
         </div>
       </div>
-      <DividerLine
-        hexColor={colors[dividerColor].hex}
-        swoopUp={!reverseLayout}
-      />
+      <DividerLine hexColor={colors[dividerColor].hex} />
     </div>
   );
 };

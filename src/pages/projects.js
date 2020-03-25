@@ -19,7 +19,7 @@ const ProjectsPage = () => {
     >
       <ProjectsHeader />
       <FeaturedProject />
-      <DividerLine hexColor={colors.pink.hex} swoopUp />
+      <DividerLine hexColor={colors.pink.hex} />
       <AboutOurProjects />
       <DividerLine hexColor={colors.blue.hex} />
       <GridTrio
@@ -28,7 +28,7 @@ const ProjectsPage = () => {
       >
         <ProjectDetailList />
       </GridTrio>
-      <DividerLine hexColor={colors.green.hex} swoopUp />
+      <DividerLine hexColor={colors.green.hex} />
     </PageLayout>
   );
 };

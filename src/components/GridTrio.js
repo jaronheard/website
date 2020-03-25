@@ -66,7 +66,7 @@ const GridTrio = ({
         })}
       {children}
     </div>
-    {showDividerLine && <DividerLine hexColor={dividerLineColor} swoopUp />}
+    {showDividerLine && <DividerLine hexColor={dividerLineColor} />}
   </div>
 );
 
