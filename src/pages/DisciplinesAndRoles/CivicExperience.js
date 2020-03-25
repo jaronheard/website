@@ -36,11 +36,9 @@ const CivicExperience = () => {
       subtitle={contentfulContentList.subtitle.subtitle}
       showDividerLine
       dividerLineColor={colors.green.hex}
+      shrinkToColumn
     >
-      <GridListMap
-        callToActionBlockList={contentfulContentList.content}
-        shrinkToColumn
-      />
+      <GridListMap callToActionBlockList={contentfulContentList.content} />
     </GridList>
   );
 };

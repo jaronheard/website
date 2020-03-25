@@ -5,7 +5,7 @@ import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 import { Link } from "gatsby";
 
 import DividerLine from "./DividerLine";
-import { smBreak, xsBreak } from "../_Theme/UpdatedBrandTheme";
+import { lgCardBreak, smBreak, xsBreak } from "../_Theme/UpdatedBrandTheme";
 
 const GridList = ({
   title,
@@ -15,7 +15,10 @@ const GridList = ({
   bottomContent,
   buttonText,
   buttonLocalLink,
-  children
+  children,
+
+  wideContent,
+  shrinkToColumn
 }) => {
   return (
     <div>
@@ -48,7 +51,25 @@ const GridList = ({
           {subtitle && <p>{subtitle}</p>}
         </div>
       </div>
-      {children}
+      <div
+        className="GridListContent"
+        css={css`
+          max-width: ${wideContent ? "1330px" : "1040px"};
+
+          ${lgCardBreak} {
+            grid-template-columns: ${shrinkToColumn
+              ? `100%;`
+              : `repeat(2,1fr);`};
+          }
+
+          ${smBreak} {
+            padding: ${wideContent ? "0" : "0 10px"};
+            grid-template-columns: 99vw;
+          }
+        `}
+      >
+        {children}
+      </div>
       {(bottomContent || buttonText) && (
         <div
           css={css`
@@ -100,7 +121,9 @@ GridList.propTypes = {
   buttonText: PropTypes.string,
   buttonLocalLink: PropTypes.string,
   // eslint-disable-next-line react/forbid-prop-types
-  children: PropTypes.any
+  children: PropTypes.any,
+  wideContent: PropTypes.bool,
+  shrinkToColumn: PropTypes.bool
 };
 
 export default GridList;

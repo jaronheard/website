@@ -1,14 +1,10 @@
 /** @jsx jsx */
 import { jsx, css } from "@emotion/core";
 import { PropTypes } from "prop-types";
+import { Fragment } from "react";
 
 import CallToActionCard from "./CallToActionCard";
-import {
-  lgCardBreak,
-  smBreak,
-  xsBreak,
-  colors
-} from "../_Theme/UpdatedBrandTheme";
+import { xsBreak, colors } from "../_Theme/UpdatedBrandTheme";
 
 const { purple, pink, blue, green, yellow } = colors;
 const shadowColors = [
@@ -19,28 +15,9 @@ const shadowColors = [
   yellow.mapFormatRGBA.slice(0, 3)
 ];
 
-const GridListMap = ({
-  callToActionBlockList,
-  wideContent,
-  colorShadow,
-  shrinkToColumn
-}) => {
+const GridListMap = ({ callToActionBlockList, wideContent, colorShadow }) => {
   return (
-    <div
-      className="GridListContent"
-      css={css`
-        max-width: ${wideContent ? "1330px" : "1040px"};
-
-        ${lgCardBreak} {
-          grid-template-columns: ${shrinkToColumn ? `100%;` : `repeat(2,1fr);`};
-        }
-
-        ${smBreak} {
-          padding: ${wideContent ? "0" : "0 10px"};
-          grid-template-columns: 99vw;
-        }
-      `}
-    >
+    <Fragment>
       {callToActionBlockList.map(
         ({ summary, tagline, extraContent, extraContentType }, i) => {
           let index = i;
@@ -76,7 +53,7 @@ const GridListMap = ({
           );
         }
       )}
-    </div>
+    </Fragment>
   );
 };
 
@@ -86,8 +63,7 @@ GridListMap.propTypes = {
   bottomContent: PropTypes.shape({
     /* takes an extraContent.json */
   }),
-  colorShadow: PropTypes.bool,
-  shrinkToColumn: PropTypes.bool
+  colorShadow: PropTypes.bool
 };
 
 export default GridListMap;

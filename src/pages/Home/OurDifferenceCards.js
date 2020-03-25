@@ -25,11 +25,8 @@ const OurDifferenceCards = () => {
   );
 
   return (
-    <GridList>
-      <GridListMap
-        callToActionBlockList={contentfulContentList.content}
-        shrinkToColumn
-      />
+    <GridList shrinkToColumn>
+      <GridListMap callToActionBlockList={contentfulContentList.content} />
     </GridList>
   );
 };
