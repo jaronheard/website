@@ -4,6 +4,7 @@ import { useStaticQuery, graphql } from "gatsby";
 
 import { colors } from "../../_Theme/UpdatedBrandTheme";
 import GridList from "../../components/GridList";
+import GridListMap from "../../components/GridListMap";
 import SectionHeader from "../../components/SectionHeader";
 import GridSingle from "../../components/GridSingle";
 import DividerLine from "../../components/DividerLine";
@@ -55,13 +56,17 @@ const PlatformComponents = () => {
         />
       </GridSingle>
       <GridList
-        callToActionBlockList={contentfulContentList.content}
         wideContent
-        colorShadow
         bottomContent={contentfulContentList.extraContent.json}
         buttonText={contentfulContentList.buttonText}
         buttonLocalLink={contentfulContentList.buttonLink}
-      />
+      >
+        <GridListMap
+          callToActionBlockList={contentfulContentList.content}
+          colorShadow
+          wideContent
+        />
+      </GridList>
       <DividerLine hexColor={colors.yellow.hex} />
     </div>
   );

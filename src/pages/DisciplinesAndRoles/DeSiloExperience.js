@@ -4,6 +4,7 @@ import { useStaticQuery, graphql } from "gatsby";
 
 import { colors } from "../../_Theme/UpdatedBrandTheme";
 import GridList from "../../components/GridList";
+import GridListMap from "../../components/GridListMap";
 
 const DeSiloExperience = () => {
   const { contentfulContentList } = useStaticQuery(
@@ -31,11 +32,14 @@ const DeSiloExperience = () => {
     <GridList
       title={contentfulContentList.title}
       subtitle={contentfulContentList.subtitle.subtitle}
-      callToActionBlockList={contentfulContentList.content}
-      colorShadow
       showDividerLine
       dividerLineColor={colors.pink.hex}
-    />
+    >
+      <GridListMap
+        callToActionBlockList={contentfulContentList.content}
+        colorShadow
+      />
+    </GridList>
   );
 };
 

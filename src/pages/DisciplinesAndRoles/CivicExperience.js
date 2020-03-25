@@ -4,6 +4,7 @@ import { useStaticQuery, graphql } from "gatsby";
 
 import { colors } from "../../_Theme/UpdatedBrandTheme";
 import GridList from "../../components/GridList";
+import GridListMap from "../../components/GridListMap";
 
 const CivicExperience = () => {
   // eslint-disable-next-line react-hooks/rules-of-hooks
@@ -33,11 +34,14 @@ const CivicExperience = () => {
     <GridList
       title={contentfulContentList.title}
       subtitle={contentfulContentList.subtitle.subtitle}
-      callToActionBlockList={contentfulContentList.content}
       showDividerLine
       dividerLineColor={colors.green.hex}
-      shrinkToColumn
-    />
+    >
+      <GridListMap
+        callToActionBlockList={contentfulContentList.content}
+        shrinkToColumn
+      />
+    </GridList>
   );
 };
 

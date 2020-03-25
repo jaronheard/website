@@ -5,35 +5,17 @@ import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 import { Link } from "gatsby";
 
 import DividerLine from "./DividerLine";
-import CallToActionCard from "./CallToActionCard";
-import {
-  lgCardBreak,
-  smBreak,
-  xsBreak,
-  colors
-} from "../_Theme/UpdatedBrandTheme";
-
-const { purple, pink, blue, green, yellow } = colors;
-const shadowColors = [
-  purple.mapFormatRGBA.slice(0, 3),
-  pink.mapFormatRGBA.slice(0, 3),
-  blue.mapFormatRGBA.slice(0, 3),
-  green.mapFormatRGBA.slice(0, 3),
-  yellow.mapFormatRGBA.slice(0, 3)
-];
+import { smBreak, xsBreak } from "../_Theme/UpdatedBrandTheme";
 
 const GridList = ({
   title,
   subtitle,
-  callToActionBlockList,
   showDividerLine,
   dividerLineColor,
-  wideContent,
   bottomContent,
   buttonText,
   buttonLocalLink,
-  colorShadow,
-  shrinkToColumn
+  children
 }) => {
   return (
     <div>
@@ -66,60 +48,7 @@ const GridList = ({
           {subtitle && <p>{subtitle}</p>}
         </div>
       </div>
-
-      <div
-        className="GridListContent"
-        css={css`
-          max-width: ${wideContent ? "1330px" : "1040px"};
-
-          ${lgCardBreak} {
-            grid-template-columns: ${shrinkToColumn
-              ? `100%;`
-              : `repeat(2,1fr);`};
-          }
-
-          ${smBreak} {
-            padding: ${wideContent ? "0" : "0 10px"};
-            grid-template-columns: 99vw;
-          }
-        `}
-      >
-        {callToActionBlockList.map(
-          ({ summary, tagline, extraContent, extraContentType }, i) => {
-            let index = i;
-
-            while (index > shadowColors.length - 1) {
-              index -= shadowColors.length;
-            }
-
-            const nextColor = shadowColors[index];
-
-            return (
-              <CallToActionCard
-                tagline={tagline}
-                summary={summary.json}
-                extraContent={extraContent ? extraContent.json : null}
-                extraContentType={extraContentType || null}
-                shadowColor={colorShadow ? nextColor : null}
-                className="GridListCard"
-                cardStyle={css`
-                  ${wideContent
-                    ? `
-                    width: auto;
-
-                    ${xsBreak} {
-                      margin: 0 auto;
-                      width: calc(100% - 10px);
-                      justify-self: start;
-                    }
-                  `
-                    : ""}
-                `}
-              />
-            );
-          }
-        )}
-      </div>
+      {children}
       {(bottomContent || buttonText) && (
         <div
           css={css`
@@ -163,17 +92,15 @@ const GridList = ({
 GridList.propTypes = {
   title: PropTypes.string,
   subtitle: PropTypes.string,
-  callToActionBlockList: PropTypes.arrayOf(PropTypes.shape({})),
   showDividerLine: PropTypes.bool,
   dividerLineColor: PropTypes.string,
-  wideContent: PropTypes.bool,
   bottomContent: PropTypes.shape({
     /* takes an extraContent.json */
   }),
   buttonText: PropTypes.string,
   buttonLocalLink: PropTypes.string,
-  colorShadow: PropTypes.bool,
-  shrinkToColumn: PropTypes.bool
+  // eslint-disable-next-line react/forbid-prop-types
+  children: PropTypes.any
 };
 
 export default GridList;
