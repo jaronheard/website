@@ -42,8 +42,6 @@ const GridListMap = ({ callToActionBlockList, wideContent, colorShadow }) => {
                   width: auto;
 
                   ${xsBreak} {
-                    margin: 0 auto;
-                    width: calc(100% - 10px);
                     justify-self: start;
                   }
                 `
@@ -51,10 +49,11 @@ const GridListMap = ({ callToActionBlockList, wideContent, colorShadow }) => {
                   ${lgCardBreak} {
                     width: 322px;
                   }
-                  ${xsBreak} {
-                    width: 100%;
-                  }
                 `}
+                ${xsBreak} {
+                  margin: 0 auto;
+                  width: calc(100% - 20px);
+                }
               `}
             />
           );

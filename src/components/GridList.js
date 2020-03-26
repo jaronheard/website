@@ -5,7 +5,7 @@ import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 import { Link } from "gatsby";
 
 import DividerLine from "./DividerLine";
-import { lgCardBreak, smBreak } from "../_Theme/UpdatedBrandTheme";
+import { lgCardBreak, smBreak, xsBreak } from "../_Theme/UpdatedBrandTheme";
 
 const GridList = ({
   showDividerLine,
@@ -41,6 +41,10 @@ const GridList = ({
             padding: ${wideContent ? "0" : "0 10px"};
             grid-template-columns: 99vw;
             justify-content: center;
+          }
+
+          ${xsBreak} {
+            padding: 0 5px 0 0;
           }
         `}
       >

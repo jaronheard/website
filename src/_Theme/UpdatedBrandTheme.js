@@ -310,7 +310,8 @@ export default {
     MozOsxFontSmoothing: "grayscale" /* [5] */,
     WebkitFontSmoothing: "antialiased" /* [5] */,
     WebkitOverflowScrolling: "touch",
-    WebkitTapHighlightColor: "rgba(0, 0, 0, 0)"
+    WebkitTapHighlightColor: "rgba(0, 0, 0, 0)",
+    overflowX: "hidden"
   },
 
   /* Global Styles from product_design */
@@ -456,7 +457,11 @@ export default {
     background: "white",
     border: borders.box,
     boxShadow: shadows.rightDown,
-    display: "grid"
+    display: "grid",
+
+    [xsBreak]: {
+      width: "calc(100% - 20px)"
+    }
   },
 
   ".ShadowBoxContent": {
