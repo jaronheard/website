@@ -1,6 +1,6 @@
 import React from "react";
 import { useStaticQuery, graphql } from "gatsby";
-import GridTrio from "./GridTrio";
+import GridList from "./GridList";
 import ProjectDetail from "./ProjectDetail";
 import { colors } from "../_Theme/UpdatedBrandTheme";
 
@@ -40,10 +40,11 @@ const FeaturedProjects = () => {
   );
 
   return (
-    <GridTrio
-      title={contentfulProjectCollection.title}
+    <GridList
+      wideContent
       showDividerLine
       dividerLineColor={colors.yellow.hex}
+      shrinkToColumn
     >
       {contentfulProjectCollection.projects.map(project => (
         <ProjectDetail
@@ -61,7 +62,7 @@ const FeaturedProjects = () => {
           projectUrl={project.projectUrl}
         />
       ))}
-    </GridTrio>
+    </GridList>
   );
 };
 

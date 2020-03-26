@@ -37,7 +37,7 @@ const ContributorApplication = () => {
         swooshColor={colors.yellow.hex}
       />
       <EmbeddedForm formSrc="https://form.jotform.com/200786890019057" />
-      <DividerLine hexColor={colors.pink.hex} swoopUp />
+      <DividerLine hexColor={colors.pink.hex} />
     </PageLayout>
   );
 };

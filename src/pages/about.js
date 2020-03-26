@@ -46,7 +46,7 @@ const about = () => {
         swooshColor={colors.green.hex}
       />
       <FeaturedPost />
-      <DividerLine hexColor={colors.blue.hex} swoopUp />
+      <DividerLine hexColor={colors.blue.hex} />
       <div
         css={css`
           width: 100%;
@@ -75,7 +75,7 @@ const about = () => {
       </div>
       <DividerLine hexColor={colors.pink.hex} />
       <Staff />
-      <DividerLine hexColor={colors.blue.hex} swoopUp />
+      <DividerLine hexColor={colors.blue.hex} />
     </PageLayout>
   );
 };

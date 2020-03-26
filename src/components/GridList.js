@@ -5,97 +5,50 @@ import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 import { Link } from "gatsby";
 
 import DividerLine from "./DividerLine";
-import CallToActionCard from "./CallToActionCard";
-import { smBreak, xsBreak, colors } from "../_Theme/UpdatedBrandTheme";
-
-const { purple, pink, blue, green, yellow } = colors;
-const shadowColors = [
-  purple.mapFormatRGBA.slice(0, 3),
-  pink.mapFormatRGBA.slice(0, 3),
-  blue.mapFormatRGBA.slice(0, 3),
-  green.mapFormatRGBA.slice(0, 3),
-  yellow.mapFormatRGBA.slice(0, 3)
-];
+import { lgCardBreak, smBreak, xsBreak } from "../_Theme/UpdatedBrandTheme";
 
 const GridList = ({
-  title,
-  subtitle,
-  callToActionBlockList,
   showDividerLine,
   dividerLineColor,
-  wideContent,
   bottomContent,
   buttonText,
-  buttonLocalLink
+  buttonLocalLink,
+  children,
+  wideContent,
+  shrinkToColumn
 }) => {
   return (
     <div>
       <div
+        className="GridListContent"
         css={css`
-          width: 100%;
-          background-color: white;
-          padding-top: 100px;
+          max-width: ${wideContent ? "1330px" : "1040px"};
+          padding: ${wideContent ? "0 40px" : ""};
+
+          ${lgCardBreak} {
+            grid-template-columns: ${shrinkToColumn
+              ? `100%;`
+              : `repeat(2, auto);`};
+            max-width: 900px;
+            ${shrinkToColumn
+              ? `
+              justify-items: center;
+            `
+              : ""}
+          }
+
           ${smBreak} {
-            padding-top: 0;
+            padding: ${wideContent ? "0" : "0 10px"};
+            grid-template-columns: 99vw;
+            justify-content: center;
+          }
+
+          ${xsBreak} {
+            padding: 0 5px 0 0;
           }
         `}
       >
-        <div
-          css={css`
-            max-width: 600px;
-            display: grid;
-            margin: 0 auto;
-
-            ${smBreak} {
-              padding: 0 40px;
-            }
-
-            ${xsBreak} {
-              padding: 0 20px;
-            }
-          `}
-        >
-          {title && <h2>{title}</h2>}
-          {subtitle && <p>{subtitle}</p>}
-        </div>
-      </div>
-
-      <div className={`GridListContent ${wideContent ? "WideContent" : ""}`}>
-        {callToActionBlockList.map(
-          ({ summary, tagline, extraContent, extraContentType }, i) => {
-            let index = i;
-
-            while (index > shadowColors.length - 1) {
-              index -= shadowColors.length;
-            }
-
-            const nextColor = shadowColors[index];
-
-            return (
-              <CallToActionCard
-                tagline={tagline}
-                summary={summary.json}
-                extraContent={extraContent ? extraContent.json : null}
-                extraContentType={extraContentType || null}
-                shadowColor={nextColor}
-                className="GridListCard"
-                cardStyle={css`
-                  ${wideContent
-                    ? `
-                    width: auto;
-
-                    ${xsBreak} {
-                      margin: 0 auto;
-                      width: calc(100% - 10px);
-                      justify-self: start;
-                    }
-                  `
-                    : ""}
-                `}
-              />
-            );
-          }
-        )}
+        {children}
       </div>
       {(bottomContent || buttonText) && (
         <div
@@ -138,17 +91,17 @@ const GridList = ({
 };
 
 GridList.propTypes = {
-  title: PropTypes.string,
-  subtitle: PropTypes.string,
-  callToActionBlockList: PropTypes.arrayOf(PropTypes.shape({})),
   showDividerLine: PropTypes.bool,
   dividerLineColor: PropTypes.string,
-  wideContent: PropTypes.bool,
   bottomContent: PropTypes.shape({
     /* takes an extraContent.json */
   }),
   buttonText: PropTypes.string,
-  buttonLocalLink: PropTypes.string
+  buttonLocalLink: PropTypes.string,
+  // eslint-disable-next-line react/forbid-prop-types
+  children: PropTypes.any,
+  wideContent: PropTypes.bool,
+  shrinkToColumn: PropTypes.bool
 };
 
 export default GridList;

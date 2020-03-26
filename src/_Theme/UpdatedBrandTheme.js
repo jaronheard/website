@@ -5,7 +5,8 @@ import { BrandColors, VisualizationColors } from "@hackoregon/ui-themes";
 export const xsBreak = "@media (max-width:659.95px)";
 export const smBreak = "@media (max-width:959.95px)";
 export const mdBreak = "@media (min-width:959.95px)";
-export const lgBreak = "@media (max-width:1279.95px)";
+export const lgCardBreak = "@media (max-width:1230px)";
+export const lgBreak = "@media (max-width:1260px)";
 
 // Colors
 export const colors = {
@@ -309,7 +310,8 @@ export default {
     MozOsxFontSmoothing: "grayscale" /* [5] */,
     WebkitFontSmoothing: "antialiased" /* [5] */,
     WebkitOverflowScrolling: "touch",
-    WebkitTapHighlightColor: "rgba(0, 0, 0, 0)"
+    WebkitTapHighlightColor: "rgba(0, 0, 0, 0)",
+    overflowX: "hidden"
   },
 
   /* Global Styles from product_design */
@@ -429,13 +431,12 @@ export default {
   ".GridListContent": {
     display: "grid",
     gridTemplateColumns: "repeat(3, 1fr)",
-    padding: "0 40px",
     margin: "25px auto",
-    maxWidth: "1330px",
+    gridRowGap: "30px",
+    gridColumnGap: "15px",
+    justifyContent: "space-between",
 
-    "@media (max-width: 1230px)": {
-      justifyItems: "center",
-      gridTemplateColumns: "repeat(2, 1fr)",
+    [lgCardBreak]: {
       gridTemplateRows: "1fr 1fr 1fr",
       gridRowGap: "20px"
     },
@@ -446,32 +447,21 @@ export default {
       gridTemplateRows: "1fr 1fr 1fr",
       gridRowGap: "20px",
       width: "auto",
-      padding: "0 10px",
-
-      "& .WideContent": {
-        padding: "0",
-        gridTemplateColumns: "99vw"
-      }
-    },
-
-    "& .WideContent": {
-      gridTemplateColumns: "repeat(3, 1fr)",
-
-      [smBreak]: {
-        padding: "0",
-        gridTemplateColumns: "99vw"
-      }
+      padding: "0 10px"
     }
   },
 
   ".ShadowBox": {
     maxWidth: "322px",
     width: "100%",
-    margin: "15px",
     background: "white",
     border: borders.box,
     boxShadow: shadows.rightDown,
-    display: "grid"
+    display: "grid",
+
+    [xsBreak]: {
+      width: "calc(100% - 20px)"
+    }
   },
 
   ".ShadowBoxContent": {
@@ -502,7 +492,7 @@ export default {
   },
 
   ".GridListCard": {
-    "@media (max-width: 1230px)": {
+    [lgCardBreak]: {
       width: "100%"
     },
 
@@ -540,6 +530,10 @@ export default {
 
     [mdBreak]: {
       display: "none"
+    },
+
+    [xsBreak]: {
+      margin: "50px 0"
     }
   },
 

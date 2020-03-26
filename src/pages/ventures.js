@@ -10,7 +10,7 @@ import { colors } from "../_Theme/UpdatedBrandTheme";
 
 const VenturesPage = () => {
   return (
-    <PageLayout title="Ventures" swoopUp swoopColor={colors.purple.hex}>
+    <PageLayout title="Ventures" swoopColor={colors.purple.hex}>
       <Grid container spacing={0}>
         <VenturesHeader />
         <Grid container xs={12} spacing={4}>

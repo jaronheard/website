@@ -20,9 +20,13 @@ const IndexPage = () => {
       <Splash />
       <DividerLine
         hexColor={colors.purple.hex}
+        swoopStyle={css`
+          margin-bottom: -30px;
+          margin-top: 70px;
+        `}
         lineStyle={css`
-          margin-bottom: 0;
-          height: 100px;
+          margin-bottom: 0px;
+          height: 50px;
           background-color: white;
         `}
       />
@@ -31,15 +35,17 @@ const IndexPage = () => {
           background-color: white;
           display: grid;
           justify-content: center;
+          margin-top: 10px;
+          padding-top: 10px;
         `}
       >
         <OurDifferenceHeader />
         <OurDifferenceCards />
       </div>
-      <DividerLine hexColor={colors.yellow.hex} swoopUp />
+      <DividerLine hexColor={colors.yellow.hex} />
       <CallToActionBlocks />
       <QuoteBlock />
-      <DividerLine hexColor={colors.purple.hex} swoopUp />
+      <DividerLine hexColor={colors.purple.hex} />
     </PageLayout>
   );
 };

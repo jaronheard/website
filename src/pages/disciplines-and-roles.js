@@ -29,7 +29,6 @@ const disciplinesAndRoles = () => {
     <PageLayout
       title={contentfulHeading.title}
       keywords={[`Civic Software Foundation`, `CIVIC Platform`]}
-      swoopUp
       swoopColor={colors.purple.hex}
       hideCommonCTA
     >
@@ -39,7 +38,7 @@ const disciplinesAndRoles = () => {
         swooshColor={colors.purple.hex}
       />
       <Philosophy />
-      <DividerLine hexColor={colors.blue.hex} swoopUp />
+      <DividerLine hexColor={colors.blue.hex} />
       <DeSiloExperience />
       <CivicExperience />
       <ContributorCTA />

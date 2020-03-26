@@ -1,7 +1,8 @@
 /** @jsx jsx */
-import { jsx, css } from "@emotion/core";
+import { jsx } from "@emotion/core";
 import { useStaticQuery, graphql } from "gatsby";
-import CallToActionCard from "../../components/CallToActionCard";
+import GridList from "../../components/GridList";
+import GridListMap from "../../components/GridListMap";
 
 const OurDifferenceCards = () => {
   const { contentfulContentList } = useStaticQuery(
@@ -24,31 +25,9 @@ const OurDifferenceCards = () => {
   );
 
   return (
-    <div
-      css={css`
-        display: grid;
-        grid-template-columns: repeat(3, auto);
-        justify-content: space-around;
-        width: 100%;
-        margin-top: 80px;
-
-        @media (max-width: 1260px) {
-          grid-template-columns: auto;
-          justify-content: center;
-          align-content: space-between;
-          margin-top: 80px;
-          grid-row-gap: 50px;
-        }
-      `}
-    >
-      {contentfulContentList.content.map(content => (
-        <CallToActionCard
-          tagline={content.tagline}
-          summary={content.summary && content.summary.json}
-          button={content.button}
-        />
-      ))}
-    </div>
+    <GridList shrinkToColumn>
+      <GridListMap callToActionBlockList={contentfulContentList.content} />
+    </GridList>
   );
 };
 

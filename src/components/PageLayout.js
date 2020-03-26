@@ -16,7 +16,6 @@ const PageLayout = ({
   keywords,
   children,
   hideCommonCTA,
-  swoopUp,
   swoopColor
 }) => {
   return (
@@ -28,7 +27,7 @@ const PageLayout = ({
         {!hideCommonCTA && (
           <Fragment>
             <CommonCTA />
-            <DividerLine hexColor={swoopColor} swoopUp={swoopUp} />
+            <DividerLine hexColor={swoopColor} />
           </Fragment>
         )}
         <KeepInTheLoop />
@@ -46,7 +45,6 @@ PageLayout.propTypes = {
     PropTypes.node
   ]),
   hideCommonCTA: PropTypes.bool,
-  swoopUp: PropTypes.bool,
   swoopColor: PropTypes.string
 };
 

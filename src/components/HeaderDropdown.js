@@ -63,7 +63,7 @@ const HeaderDropdown = ({ open, headerHeight, goTo }) => {
             margin-left: -1em;
           `}
         >
-          About Us
+          About
         </h4>
         <ul>
           <li>
@@ -88,6 +88,18 @@ const HeaderDropdown = ({ open, headerHeight, goTo }) => {
               }}
             >
               <h3>Projects</h3>
+            </button>
+          </li>
+          <li>
+            <button
+              type="button"
+              tabIndex={`${open ? "0" : "-1"}`}
+              className="headerButton"
+              onClick={() => {
+                goTo("/about/");
+              }}
+            >
+              <h3>About Us</h3>
             </button>
           </li>
           <li

@@ -38,7 +38,7 @@ const PostTemplate = () => {
         created={contentfulPost.createdAt}
         updated={contentfulPost.updatedAt}
       />
-      <DividerLine hexColor={colors.pink.hex} swoopUp />
+      <DividerLine hexColor={colors.pink.hex} />
     </PageLayout>
   );
 };

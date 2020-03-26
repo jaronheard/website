@@ -2,16 +2,7 @@
 /** @jsx jsx */
 import { jsx, css } from "@emotion/core";
 
-const DividerLine = ({
-  hexColor = "#721D7C",
-  lineStyle,
-  swoopStyle,
-  swoopUp
-}) => {
-  const swoopUpStyle = css`
-    transform: scale(-1, 1);
-  `;
-
+const DividerLine = ({ hexColor = "#721D7C", lineStyle, swoopStyle }) => {
   return (
     <div
       css={css`
@@ -26,17 +17,19 @@ const DividerLine = ({
           ${lineStyle || ""}
         `}
       />
+
       {/* Swoop for larger screens */}
+
       <svg
+        height="31"
+        viewBox="0 0 1332 31"
+        fill="none"
         preserveAspectRatio="none"
         width="100%"
-        height="222"
-        viewBox="0 0 1332 222"
-        fill="none"
         className="DividerLineStyle"
         css={css`
-          ${swoopUp ? swoopUpStyle : ""}
           ${swoopStyle || ""}
+          padding: 20px 0;
         `}
       >
         <mask
@@ -46,27 +39,23 @@ const DividerLine = ({
           x="0"
           y="0"
           width="1332"
-          height="222"
+          height="31"
         >
-          <rect width="1332" height="222" fill="#C4C4C4" />
+          <rect width="1332" height="31" fill="white" />
         </mask>
         <g mask="url(#mask0)">
-          <path d="M356.5 136L653.98 221.5H59.0203L356.5 136Z" fill="white" />
           <path
-            d="M1199.31 227.9L1336.03 192.567L1335.52 265.139L1199.31 227.9Z"
+            d="M436.879 35.5034L-1.2372 31.1987L-0.470247 9.23608L436.879 35.5034Z"
+            fill="white"
+          />
+          <rect x="811" y="10" width="521" height="30" fill="white" />
+          <rect x="290" y="28" width="521" height="10" fill="white" />
+          <path
+            d="M593.556 28.3199L818.805 8.82517L819.639 30.3082L593.556 28.3199Z"
             fill="white"
           />
           <path
-            d="M405.451 132.749L-1.97049 263.489L-3.75619 7.71081L405.451 132.749Z"
-            fill="white"
-          />
-          <path
-            d="M-6.18945 35.0005C385.273 188.98 1180.98 292.226 1315.9 220.808"
-            stroke="white"
-            strokeWidth="50"
-          />
-          <path
-            d="M-2.18945 6.00049C393.647 160.595 1197.94 265.047 1334.18 193.815"
+            d="M-9.30069 7.50027C660.5 53 661 -2.5 1340.02 7.50027"
             stroke={hexColor}
             strokeWidth="10"
           />

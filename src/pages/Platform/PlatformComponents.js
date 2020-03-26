@@ -1,12 +1,11 @@
-/* eslint-disable graphql/template-strings */
 /** @jsx jsx */
 import { jsx, css } from "@emotion/core";
 import { useStaticQuery, graphql } from "gatsby";
 
 import { colors } from "../../_Theme/UpdatedBrandTheme";
 import GridList from "../../components/GridList";
+import GridListMap from "../../components/GridListMap";
 import SectionHeader from "../../components/SectionHeader";
-import GridSingle from "../../components/GridSingle";
 import DividerLine from "../../components/DividerLine";
 
 const PlatformComponents = () => {
@@ -49,21 +48,24 @@ const PlatformComponents = () => {
         background-color: white;
       `}
     >
-      <GridSingle>
-        <SectionHeader
-          title={contentfulHeading.title}
-          summary={contentfulHeading.summary.json}
-        />
-      </GridSingle>
-      <GridList
-        callToActionBlockList={contentfulContentList.content}
+      <SectionHeader
+        title={contentfulHeading.title}
+        summary={contentfulHeading.summary.json}
         wideContent
-        colorShadow
+      />
+      <GridList
+        wideContent
         bottomContent={contentfulContentList.extraContent.json}
         buttonText={contentfulContentList.buttonText}
         buttonLocalLink={contentfulContentList.buttonLink}
-      />
-      <DividerLine hexColor={colors.yellow.hex} swoopUp />
+      >
+        <GridListMap
+          callToActionBlockList={contentfulContentList.content}
+          colorShadow
+          wideContent
+        />
+      </GridList>
+      <DividerLine hexColor={colors.yellow.hex} />
     </div>
   );
 };
