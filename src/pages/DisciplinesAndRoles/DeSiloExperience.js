@@ -9,14 +9,10 @@ import GridListMap from "../../components/GridListMap";
 import SectionHeader from "../../components/SectionHeader";
 
 const DeSiloExperience = () => {
-  const { contentfulContentList } = useStaticQuery(
+  const { contentfulContentList, contentfulHeading } = useStaticQuery(
     graphql`
       query {
         contentfulContentList(contentful_id: { eq: "2su5Nc7QbqZ4trvZgxzK0r" }) {
-          title
-          subtitle {
-            subtitle
-          }
           content {
             ... on ContentfulCallToActionBlock {
               id
@@ -27,14 +23,20 @@ const DeSiloExperience = () => {
             }
           }
         }
+        contentfulHeading(contentful_id: { eq: "5iSEmMbxPa1br7iEXOn7TM" }) {
+          title
+          summary {
+            json
+          }
+        }
       }
     `
   );
   return (
     <Fragment>
       <SectionHeader
-        title={contentfulContentList.title}
-        subtitle={contentfulContentList.subtitle.subtitle}
+        title={contentfulHeading.title}
+        summary={contentfulHeading.summary.json}
       />
       <GridList showDividerLine dividerLineColor={colors.pink.hex}>
         <GridListMap
