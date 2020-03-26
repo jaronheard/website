@@ -26,7 +26,7 @@ const IndexPage = () => {
         `}
         lineStyle={css`
           margin-bottom: 0px;
-          height: 100px;
+          height: 50px;
           background-color: white;
         `}
       />
@@ -36,6 +36,7 @@ const IndexPage = () => {
           display: grid;
           justify-content: center;
           margin-top: 10px;
+          padding-top: 10px;
         `}
       >
         <OurDifferenceHeader />

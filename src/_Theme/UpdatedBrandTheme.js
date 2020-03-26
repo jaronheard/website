@@ -530,6 +530,10 @@ export default {
 
     [mdBreak]: {
       display: "none"
+    },
+
+    [xsBreak]: {
+      margin: "50px 0"
     }
   },
 

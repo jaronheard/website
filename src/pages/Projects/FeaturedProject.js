@@ -4,6 +4,7 @@ import { useStaticQuery, graphql } from "gatsby";
 import ProjectFeature from "../../components/ProjectFeature";
 import GridSingle from "../../components/GridSingle";
 import SectionHeader from "../../components/SectionHeader";
+import { smBreak } from "../../_Theme/UpdatedBrandTheme";
 
 const FeaturedProject = () => {
   const { contentfulProjectCollection } = useStaticQuery(
@@ -57,6 +58,11 @@ const FeaturedProject = () => {
       css={css`
         width: 100%;
         background-color: white;
+        margin-top: 12px;
+
+        ${smBreak} {
+          margin-top: 10px;
+        }
       `}
     >
       <GridSingle>

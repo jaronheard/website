@@ -94,7 +94,7 @@ const TitleArea = ({
         `}
         lineStyle={css`
           margin-bottom: 0;
-          height: 100px;
+          height: 50px;
           background-color: white;
         `}
       />
