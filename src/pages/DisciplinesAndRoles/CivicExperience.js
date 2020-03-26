@@ -1,10 +1,12 @@
 /** @jsx jsx */
 import { jsx } from "@emotion/core";
 import { useStaticQuery, graphql } from "gatsby";
+import { Fragment } from "react";
 
 import { colors } from "../../_Theme/UpdatedBrandTheme";
 import GridList from "../../components/GridList";
 import GridListMap from "../../components/GridListMap";
+import SectionHeader from "../../components/SectionHeader";
 
 const CivicExperience = () => {
   // eslint-disable-next-line react-hooks/rules-of-hooks
@@ -31,15 +33,20 @@ const CivicExperience = () => {
   );
 
   return (
-    <GridList
-      title={contentfulContentList.title}
-      subtitle={contentfulContentList.subtitle.subtitle}
-      showDividerLine
-      dividerLineColor={colors.green.hex}
-      shrinkToColumn
-    >
-      <GridListMap callToActionBlockList={contentfulContentList.content} />
-    </GridList>
+    <Fragment>
+      <SectionHeader
+        title={contentfulContentList.title}
+        subtitle={contentfulContentList.subtitle.subtitle}
+        shrinkToColumn
+      />
+      <GridList
+        showDividerLine
+        dividerLineColor={colors.green.hex}
+        shrinkToColumn
+      >
+        <GridListMap callToActionBlockList={contentfulContentList.content} />
+      </GridList>
+    </Fragment>
   );
 };
 

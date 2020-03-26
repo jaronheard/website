@@ -430,17 +430,14 @@ export default {
   ".GridListContent": {
     display: "grid",
     gridTemplateColumns: "repeat(3, 1fr)",
-    padding: "0 40px",
     margin: "25px auto",
     gridRowGap: "30px",
     gridColumnGap: "15px",
-    justifyContent: "center",
+    justifyContent: "space-between",
 
     [lgCardBreak]: {
-      justifyItems: "center",
       gridTemplateRows: "1fr 1fr 1fr",
-      gridRowGap: "20px",
-      maxWidth: "900px"
+      gridRowGap: "20px"
     },
 
     [smBreak]: {

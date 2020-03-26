@@ -5,11 +5,9 @@ import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 import { Link } from "gatsby";
 
 import DividerLine from "./DividerLine";
-import { lgCardBreak, smBreak, xsBreak } from "../_Theme/UpdatedBrandTheme";
+import { lgCardBreak, smBreak } from "../_Theme/UpdatedBrandTheme";
 
 const GridList = ({
-  title,
-  subtitle,
   showDividerLine,
   dividerLineColor,
   bottomContent,
@@ -22,48 +20,27 @@ const GridList = ({
   return (
     <div>
       <div
-        css={css`
-          width: 100%;
-          background-color: white;
-          padding-top: 100px;
-          ${smBreak} {
-            padding-top: 0;
-          }
-        `}
-      >
-        <div
-          css={css`
-            max-width: 600px;
-            display: grid;
-            margin: 0 auto;
-
-            ${smBreak} {
-              padding: 0 40px;
-            }
-
-            ${xsBreak} {
-              padding: 0 20px;
-            }
-          `}
-        >
-          {title && <h2>{title}</h2>}
-          {subtitle && <p>{subtitle}</p>}
-        </div>
-      </div>
-      <div
         className="GridListContent"
         css={css`
           max-width: ${wideContent ? "1330px" : "1040px"};
+          padding: ${wideContent ? "0 40px" : ""};
 
           ${lgCardBreak} {
             grid-template-columns: ${shrinkToColumn
               ? `100%;`
-              : `repeat(2,1fr);`};
+              : `repeat(2, auto);`};
+            max-width: 900px;
+            ${shrinkToColumn
+              ? `
+              justify-items: center;
+            `
+              : ""}
           }
 
           ${smBreak} {
             padding: ${wideContent ? "0" : "0 10px"};
             grid-template-columns: 99vw;
+            justify-content: center;
           }
         `}
       >
@@ -110,8 +87,6 @@ const GridList = ({
 };
 
 GridList.propTypes = {
-  title: PropTypes.string,
-  subtitle: PropTypes.string,
   showDividerLine: PropTypes.bool,
   dividerLineColor: PropTypes.string,
   bottomContent: PropTypes.shape({

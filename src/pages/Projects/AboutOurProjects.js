@@ -3,7 +3,6 @@ import { useStaticQuery, graphql } from "gatsby";
 import SectionHeader from "../../components/SectionHeader";
 import ShadowBox from "../../components/ShadowBox";
 import GridList from "../../components/GridList";
-import GridSingle from "../../components/GridSingle";
 
 const AboutOurProjectsHeader = () => {
   const {
@@ -54,13 +53,12 @@ const AboutOurProjectsHeader = () => {
 
   return (
     <Fragment>
-      <GridSingle>
-        <SectionHeader
-          title={contentfulHeading.title}
-          subtitle={subtitle}
-          summary={contentfulHeading.summary.json}
-        />
-      </GridSingle>
+      <SectionHeader
+        title={contentfulHeading.title}
+        subtitle={subtitle}
+        summary={contentfulHeading.summary.json}
+        shrinkToColumn
+      />
       <GridList shrinkToColumn>
         <ShadowBox title="Organizations:">
           <ul>

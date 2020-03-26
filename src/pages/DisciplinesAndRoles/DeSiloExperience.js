@@ -1,10 +1,12 @@
 /** @jsx jsx */
 import { jsx } from "@emotion/core";
 import { useStaticQuery, graphql } from "gatsby";
+import { Fragment } from "react";
 
 import { colors } from "../../_Theme/UpdatedBrandTheme";
 import GridList from "../../components/GridList";
 import GridListMap from "../../components/GridListMap";
+import SectionHeader from "../../components/SectionHeader";
 
 const DeSiloExperience = () => {
   const { contentfulContentList } = useStaticQuery(
@@ -29,17 +31,18 @@ const DeSiloExperience = () => {
     `
   );
   return (
-    <GridList
-      title={contentfulContentList.title}
-      subtitle={contentfulContentList.subtitle.subtitle}
-      showDividerLine
-      dividerLineColor={colors.pink.hex}
-    >
-      <GridListMap
-        callToActionBlockList={contentfulContentList.content}
-        colorShadow
+    <Fragment>
+      <SectionHeader
+        title={contentfulContentList.title}
+        subtitle={contentfulContentList.subtitle.subtitle}
       />
-    </GridList>
+      <GridList showDividerLine dividerLineColor={colors.pink.hex}>
+        <GridListMap
+          callToActionBlockList={contentfulContentList.content}
+          colorShadow
+        />
+      </GridList>
+    </Fragment>
   );
 };
 

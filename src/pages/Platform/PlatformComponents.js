@@ -6,7 +6,6 @@ import { colors } from "../../_Theme/UpdatedBrandTheme";
 import GridList from "../../components/GridList";
 import GridListMap from "../../components/GridListMap";
 import SectionHeader from "../../components/SectionHeader";
-import GridSingle from "../../components/GridSingle";
 import DividerLine from "../../components/DividerLine";
 
 const PlatformComponents = () => {
@@ -49,12 +48,11 @@ const PlatformComponents = () => {
         background-color: white;
       `}
     >
-      <GridSingle>
-        <SectionHeader
-          title={contentfulHeading.title}
-          summary={contentfulHeading.summary.json}
-        />
-      </GridSingle>
+      <SectionHeader
+        title={contentfulHeading.title}
+        summary={contentfulHeading.summary.json}
+        wideContent
+      />
       <GridList
         wideContent
         bottomContent={contentfulContentList.extraContent.json}

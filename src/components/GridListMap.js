@@ -4,7 +4,7 @@ import { PropTypes } from "prop-types";
 import { Fragment } from "react";
 
 import CallToActionCard from "./CallToActionCard";
-import { xsBreak, colors } from "../_Theme/UpdatedBrandTheme";
+import { xsBreak, colors, lgCardBreak } from "../_Theme/UpdatedBrandTheme";
 
 const { purple, pink, blue, green, yellow } = colors;
 const shadowColors = [
@@ -47,7 +47,14 @@ const GridListMap = ({ callToActionBlockList, wideContent, colorShadow }) => {
                     justify-self: start;
                   }
                 `
-                  : ""}
+                  : `
+                  ${lgCardBreak} {
+                    width: 322px;
+                  }
+                  ${xsBreak} {
+                    width: 100%;
+                  }
+                `}
               `}
             />
           );
