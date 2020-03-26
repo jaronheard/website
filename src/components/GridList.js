@@ -16,7 +16,6 @@ const GridList = ({
   buttonText,
   buttonLocalLink,
   children,
-
   wideContent,
   shrinkToColumn
 }) => {

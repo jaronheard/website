@@ -4,7 +4,7 @@ import { useStaticQuery, graphql } from "gatsby";
 import { Fragment } from "react";
 
 import { colors, noHover } from "../../_Theme/UpdatedBrandTheme";
-import GridTrio from "../../components/GridTrio";
+import GridList from "../../components/GridList";
 
 const Staff = () => {
   // eslint-disable-next-line react-hooks/rules-of-hooks
@@ -32,7 +32,7 @@ const Staff = () => {
   );
   return (
     <Fragment>
-      <GridTrio title={contentfulTeam.name}>
+      <GridList>
         {contentfulTeam.members.map(({ name, photo, title, email }) => {
           return (
             <section
@@ -97,7 +97,7 @@ const Staff = () => {
             </section>
           );
         })}
-      </GridTrio>
+      </GridList>
     </Fragment>
   );
 };

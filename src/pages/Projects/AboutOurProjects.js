@@ -2,7 +2,7 @@ import React, { Fragment } from "react";
 import { useStaticQuery, graphql } from "gatsby";
 import SectionHeader from "../../components/SectionHeader";
 import ShadowBox from "../../components/ShadowBox";
-import GridTrio from "../../components/GridTrio";
+import GridList from "../../components/GridList";
 import GridSingle from "../../components/GridSingle";
 
 const AboutOurProjectsHeader = () => {
@@ -61,7 +61,7 @@ const AboutOurProjectsHeader = () => {
           summary={contentfulHeading.summary.json}
         />
       </GridSingle>
-      <GridTrio>
+      <GridList shrinkToColumn>
         <ShadowBox title="Organizations:">
           <ul>
             {allContentfulOrganization.edges.map(({ node }) => (
@@ -83,7 +83,7 @@ const AboutOurProjectsHeader = () => {
             ))}
           </ul>
         </ShadowBox>
-      </GridTrio>
+      </GridList>
     </Fragment>
   );
 };

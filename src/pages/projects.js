@@ -4,7 +4,7 @@ import { jsx } from "@emotion/core";
 import PageLayout from "../components/PageLayout";
 import ProjectsHeader from "./Projects/ProjectsHeader";
 import ProjectDetailList from "../components/ProjectDetailList";
-import GridTrio from "../components/GridTrio";
+import GridList from "../components/GridList";
 import { colors } from "../_Theme/UpdatedBrandTheme";
 import DividerLine from "../components/DividerLine";
 import AboutOurProjects from "./Projects/AboutOurProjects";
@@ -22,12 +22,13 @@ const ProjectsPage = () => {
       <DividerLine hexColor={colors.pink.hex} />
       <AboutOurProjects />
       <DividerLine hexColor={colors.blue.hex} />
-      <GridTrio
+      <GridList
         title="All Projects"
         subtitle="Only 2019–2020 projects for now. More history coming soon"
+        wideContent
       >
         <ProjectDetailList />
-      </GridTrio>
+      </GridList>
       <DividerLine hexColor={colors.green.hex} />
     </PageLayout>
   );
