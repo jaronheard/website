@@ -18,11 +18,15 @@ const GridList = ({
   shrinkToColumn
 }) => {
   return (
-    <div>
+    <div
+      css={css`
+        width: 100vw;
+      `}
+    >
       <div
         className="GridListContent"
         css={css`
-          max-width: ${wideContent ? "1330px" : "1040px"};
+          max-width: ${wideContent ? "1330px" : "1100px"};
           padding: ${wideContent ? "0 40px" : ""};
 
           ${lgCardBreak} {

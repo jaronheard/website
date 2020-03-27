@@ -433,7 +433,7 @@ export default {
     gridTemplateColumns: "repeat(3, 1fr)",
     margin: "25px auto",
     gridRowGap: "30px",
-    gridColumnGap: "15px",
+    gridColumnGap: "45px",
     justifyContent: "space-between",
 
     [lgCardBreak]: {
