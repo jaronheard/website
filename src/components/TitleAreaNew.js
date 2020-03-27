@@ -3,7 +3,7 @@ import { jsx, css } from "@emotion/core";
 import { PropTypes } from "prop-types";
 import { useStaticQuery, graphql } from "gatsby";
 
-import { smBreak, colors } from "../_Theme/UpdatedBrandTheme";
+import { smBreak, colors, xsBreak } from "../_Theme/UpdatedBrandTheme";
 import DividerLine from "./DividerLine";
 
 const NewTitleArea = ({
@@ -52,9 +52,13 @@ const NewTitleArea = ({
           justify-content: stretch;
 
           ${smBreak} {
-            padding: 45px 40px 0;
+            padding: 45px 40px;
             margin-bottom: -45px;
             height: 250px;
+          }
+
+          ${xsBreak} {
+            padding: 20px 20px;
           }
 
           ${childrenContainerStyle}
@@ -72,6 +76,10 @@ const NewTitleArea = ({
           margin-bottom: 0px;
           height: 50px;
           background-color: white;
+
+          ${smBreak} {
+            margin-top: 45px;
+          }
         `}
       />
     </div>

@@ -182,9 +182,9 @@ const h2 = {
     marginBlockEnd: "1.6rem"
   },
   [smBreak]: {
-    fontSize: "1.7rem",
-    marginBlockStart: "1.7rem",
-    marginBlockEnd: "1.7rem"
+    fontSize: "1.5rem",
+    marginBlockStart: "1.5rem",
+    marginBlockEnd: "1.5rem"
   }
 };
 

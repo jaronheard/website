@@ -2,7 +2,12 @@
 import { jsx, css } from "@emotion/core";
 import { useStaticQuery, graphql } from "gatsby";
 
-import { colors, smBreak, lgCardBreak } from "../../_Theme/UpdatedBrandTheme";
+import {
+  colors,
+  smBreak,
+  lgCardBreak,
+  xsBreak
+} from "../../_Theme/UpdatedBrandTheme";
 import TitleAreaNew from "../../components/TitleAreaNew";
 import GridSingle from "../../components/GridSingle";
 
@@ -27,37 +32,35 @@ const PlatformHeader = () => {
         `}
         wideContent
       >
-        <div
+        <h2
           css={css`
-            display: grid;
+            max-width: 700px;
+            margin: 0;
+            ${lgCardBreak} {
+              max-width: 600px;
+            }
+
+            ${smBreak} {
+              max-width: 500px;
+            }
+
+            ${xsBreak} {
+              max-width: 400px;
+            }
           `}
         >
-          <h2
-            css={css`
-              max-width: 700px;
-              margin: 0;
-              ${lgCardBreak} {
-                max-width: 600px;
-              }
-
-              ${smBreak} {
-                max-width: 500px;
-              }
-            `}
-          >
-            {contentfulHeading.subtitle}
-          </h2>
-          <h1
-            css={css`
-              display: grid;
-              margin: 0;
-              justify-self: right;
-              align-self: end;
-            `}
-          >
-            {contentfulHeading.title}
-          </h1>
-        </div>
+          {contentfulHeading.subtitle}
+        </h2>
+        <h1
+          css={css`
+            display: grid;
+            margin: 0;
+            justify-self: right;
+            align-self: end;
+          `}
+        >
+          {contentfulHeading.title}
+        </h1>
       </GridSingle>
     </TitleAreaNew>
   );
