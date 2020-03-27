@@ -2,7 +2,7 @@
 import { jsx, css } from "@emotion/core";
 import { useStaticQuery, graphql } from "gatsby";
 
-import { smBreak } from "../../_Theme/UpdatedBrandTheme";
+import { smBreak, lgCardBreak } from "../../_Theme/UpdatedBrandTheme";
 import GridSingle from "../../components/GridSingle";
 import TitleAreaNew from "../../components/TitleAreaNew";
 
@@ -23,7 +23,7 @@ const Splash = () => {
     <TitleAreaNew backgroundImage={`url(${file.publicURL})`}>
       <GridSingle
         containerStyle={css`
-          width: 100vw;
+          width: 100%;
           padding: 0;
         `}
       >
@@ -35,6 +35,13 @@ const Splash = () => {
             font-weight: 600;
             letter-spacing: 0.025rem;
             line-height: 1.15;
+            margin: 0;
+            ${lgCardBreak} {
+              max-width: 550px;
+            }
+            ${smBreak} {
+              max-width: 425px;
+            }
           `}
         >
           {contentfulHeading.title}
@@ -43,11 +50,14 @@ const Splash = () => {
           css={css`
             max-width: 750px;
             display: grid;
+            margin: 0;
             justify-self: right;
-            margin-top: 65px;
-            margin-left: 300px;
+            align-self: end;
+            ${lgCardBreak} {
+              max-width: 650px;
+            }
             ${smBreak} {
-              margin-left: 0;
+              max-width: 550px;
             }
           `}
         >
