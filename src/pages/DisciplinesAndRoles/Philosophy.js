@@ -56,7 +56,6 @@ const disciplinesAndRoles = () => {
       </div>
     </GridSingle>
   );
-  // </div>
 };
 
 export default disciplinesAndRoles;
