@@ -18,18 +18,6 @@ const IndexPage = () => {
       swoopColor={colors.yellow.hex}
     >
       <Splash />
-      <DividerLine
-        hexColor={colors.purple.hex}
-        swoopStyle={css`
-          margin-bottom: -30px;
-          margin-top: 70px;
-        `}
-        lineStyle={css`
-          margin-bottom: 0px;
-          height: 50px;
-          background-color: white;
-        `}
-      />
       <div
         css={css`
           background-color: white;
