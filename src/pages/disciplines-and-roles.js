@@ -6,6 +6,7 @@ import PageLayout from "../components/PageLayout";
 import TitleAreaNew from "../components/TitleAreaNew";
 import DefaultTitleAreaContent from "../components/DefaultTitleAreaContent";
 import DividerLine from "../components/DividerLine";
+import ContentContainer from "../components/ContentContainer";
 import { colors } from "../_Theme/UpdatedBrandTheme";
 import Philosophy from "./DisciplinesAndRoles/Philosophy";
 import DeSiloExperience from "./DisciplinesAndRoles/DeSiloExperience";
@@ -39,12 +40,14 @@ const disciplinesAndRoles = () => {
           title={contentfulHeading.title}
         />
       </TitleAreaNew>
-      <Philosophy />
-      <DividerLine hexColor={colors.blue.hex} />
-      <DeSiloExperience />
-      <CivicExperience />
-      <ContributorCTA />
-      <DividerLine hexColor={colors.yellow.hex} />
+      <ContentContainer>
+        <Philosophy />
+        <DividerLine hexColor={colors.blue.hex} />
+        <DeSiloExperience />
+        <CivicExperience />
+        <ContributorCTA />
+        <DividerLine hexColor={colors.yellow.hex} />
+      </ContentContainer>
     </PageLayout>
   );
 };

@@ -6,6 +6,7 @@ import PageLayout from "../components/PageLayout";
 import TitleAreaNew from "../components/TitleAreaNew";
 import DefaultTitleAreaContent from "../components/DefaultTitleAreaContent";
 import DividerLine from "../components/DividerLine";
+import ContentContainer from "../components/ContentContainer";
 import EmbeddedForm from "../components/EmbeddedForm";
 import { colors } from "../_Theme/UpdatedBrandTheme";
 
@@ -33,8 +34,10 @@ const ContributorApplication = () => {
       <TitleAreaNew dividerLineColor={colors.yellow.hex}>
         <DefaultTitleAreaContent title={contentfulHeading.title} />
       </TitleAreaNew>
-      <EmbeddedForm formSrc="https://form.jotform.com/200786890019057" />
-      <DividerLine hexColor={colors.pink.hex} />
+      <ContentContainer>
+        <EmbeddedForm formSrc="https://form.jotform.com/200786890019057" />
+        <DividerLine hexColor={colors.pink.hex} />
+      </ContentContainer>
     </PageLayout>
   );
 };

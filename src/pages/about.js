@@ -7,6 +7,7 @@ import PageLayout from "../components/PageLayout";
 import TitleAreaNew from "../components/TitleAreaNew";
 import DefaultTitleAreaContent from "../components/DefaultTitleAreaContent";
 import DividerLine from "../components/DividerLine";
+import ContentContainer from "../components/ContentContainer";
 // import hackOregonTeam from "../images/team.png";
 import { colors, smBreak } from "../_Theme/UpdatedBrandTheme";
 import Staff from "./About/Staff";
@@ -46,37 +47,39 @@ const about = () => {
           title={contentfulHeading.title}
         />
       </TitleAreaNew>
-      <FeaturedPost />
-      <DividerLine hexColor={colors.blue.hex} />
-      <div
-        css={css`
-          width: 100%;
-          background-color: white;
-          padding-top: 100px;
-          ${smBreak} {
-            padding-top: 0;
-          }
-        `}
-      >
+      <ContentContainer>
+        <FeaturedPost />
+        <DividerLine hexColor={colors.blue.hex} />
         <div
           css={css`
-            width: 600px;
-            display: grid;
-            justify-items: center;
-            margin: 0 auto;
+            width: 100%;
+            background-color: white;
+            padding-top: 100px;
+            ${smBreak} {
+              padding-top: 0;
+            }
           `}
         >
-          <h2>{contentfulCallToActionBlock.tagline}</h2>
-          <p>
-            {documentToReactComponents(
-              contentfulCallToActionBlock.summary.json
-            )}
-          </p>
+          <div
+            css={css`
+              width: 600px;
+              display: grid;
+              justify-items: center;
+              margin: 0 auto;
+            `}
+          >
+            <h2>{contentfulCallToActionBlock.tagline}</h2>
+            <p>
+              {documentToReactComponents(
+                contentfulCallToActionBlock.summary.json
+              )}
+            </p>
+          </div>
         </div>
-      </div>
-      <DividerLine hexColor={colors.pink.hex} />
-      <Staff />
-      <DividerLine hexColor={colors.blue.hex} />
+        <DividerLine hexColor={colors.pink.hex} />
+        <Staff />
+        <DividerLine hexColor={colors.blue.hex} />
+      </ContentContainer>
     </PageLayout>
   );
 };

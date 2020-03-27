@@ -4,6 +4,7 @@ import { useStaticQuery, graphql } from "gatsby";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 
 import { smBreak, xsBreak } from "../../_Theme/UpdatedBrandTheme";
+import GridSingle from "../../components/GridSingle";
 
 const disciplinesAndRoles = () => {
   // eslint-disable-next-line react-hooks/rules-of-hooks
@@ -23,21 +24,20 @@ const disciplinesAndRoles = () => {
   );
 
   return (
-    <div
-      css={css`
-        width: 100%;
-        background-color: white;
+    <GridSingle
+      containerStyle={css`
+        ${smBreak} {
+          justify-content: center;
+        }
       `}
     >
       <div
         css={css`
-          max-width: 600px;
           display: grid;
-          justify-items: center;
-          margin: 0 auto;
 
           ${smBreak} {
             padding: 0 40px;
+            max-width: 600px;
           }
 
           ${xsBreak} {
@@ -46,12 +46,17 @@ const disciplinesAndRoles = () => {
         `}
       >
         <h2>{contentfulCallToActionBlock.tagline}</h2>
-        <p>
+        <div
+          css={css`
+            max-width: 800px;
+          `}
+        >
           {documentToReactComponents(contentfulCallToActionBlock.summary.json)}
-        </p>
+        </div>
       </div>
-    </div>
+    </GridSingle>
   );
+  // </div>
 };
 
 export default disciplinesAndRoles;
