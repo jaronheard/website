@@ -44,7 +44,7 @@ const NewTitleArea = ({
       <div
         css={css`
           display: grid;
-          align-content: center;
+          align-content: stretch;
           text-align: left;
           padding: 45px 40px;
           margin-bottom: -90px;

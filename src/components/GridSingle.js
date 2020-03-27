@@ -1,6 +1,7 @@
 /** @jsx jsx */
 import { jsx, css } from "@emotion/core";
 import PropTypes from "prop-types";
+import { lgCardBreak } from "../_Theme/UpdatedBrandTheme";
 
 const GridSingle = ({ children, wideContent, containerStyle }) => (
   <div
@@ -8,6 +9,11 @@ const GridSingle = ({ children, wideContent, containerStyle }) => (
       max-width: ${wideContent ? "1330px" : "1100px"};
       display: grid;
       margin: 0 auto;
+
+      ${lgCardBreak} {
+        max-width: ${wideContent ? "900px" : "900px"};
+      }
+
       ${containerStyle}
     `}
   >
