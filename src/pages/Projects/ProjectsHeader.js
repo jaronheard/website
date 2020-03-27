@@ -22,7 +22,6 @@ const ProjectsHeader = () => {
       <DefaultTitleAreaContent
         subtitle={contentfulHeading.subtitle}
         title={contentfulHeading.title}
-        wideContent
       />
     </TitleAreaNew>
   );

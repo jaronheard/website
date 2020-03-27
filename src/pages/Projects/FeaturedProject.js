@@ -4,7 +4,7 @@ import { useStaticQuery, graphql } from "gatsby";
 import ProjectFeature from "../../components/ProjectFeature";
 import GridSingle from "../../components/GridSingle";
 import SectionHeader from "../../components/SectionHeader";
-import { smBreak } from "../../_Theme/UpdatedBrandTheme";
+import { smBreak, xsBreak } from "../../_Theme/UpdatedBrandTheme";
 
 const FeaturedProject = () => {
   const { contentfulProjectCollection } = useStaticQuery(
@@ -65,7 +65,14 @@ const FeaturedProject = () => {
         }
       `}
     >
-      <GridSingle>
+      <GridSingle
+        containerStyle={css`
+          padding: 45px 40px;
+          ${xsBreak} {
+            padding: 20px 20px;
+          }
+        `}
+      >
         <SectionHeader
           title={contentfulProjectCollection.title}
           subtitle={project.title}

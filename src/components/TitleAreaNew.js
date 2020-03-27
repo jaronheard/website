@@ -52,7 +52,6 @@ const NewTitleArea = ({
           justify-content: stretch;
 
           ${smBreak} {
-            padding: 45px 40px;
             margin-bottom: -45px;
             height: 250px;
           }
