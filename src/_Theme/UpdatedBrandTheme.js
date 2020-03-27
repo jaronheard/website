@@ -521,25 +521,7 @@ export default {
   },
 
   ".DividerLineStyle": {
-    zIndex: -1,
-
-    [smBreak]: {
-      display: "none"
-    }
-  },
-
-  ".DividerLinePadding": {
-    height: "10px",
-    backgroundColor: "white",
-    margin: "100px 0",
-
-    [mdBreak]: {
-      display: "none"
-    },
-
-    [xsBreak]: {
-      margin: "50px 0"
-    }
+    zIndex: -1
   },
 
   ".centerSelf": {

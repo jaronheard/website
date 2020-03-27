@@ -5,7 +5,7 @@ import { PropTypes } from "prop-types";
 
 import { smBreak } from "../_Theme/UpdatedBrandTheme";
 
-const ContributorApplication = ({ formSrc }) => {
+const EmbeddedForm = ({ formSrc }) => {
   return (
     <div
       css={css`
@@ -16,7 +16,7 @@ const ContributorApplication = ({ formSrc }) => {
         }
 
         ${smBreak} {
-          margin-top: -50px;
+          margin-top: 13px;
         }
       `}
     >
@@ -25,8 +25,8 @@ const ContributorApplication = ({ formSrc }) => {
   );
 };
 
-ContributorApplication.propTypes = {
+EmbeddedForm.propTypes = {
   formSrc: PropTypes.string
 };
 
-export default ContributorApplication;
+export default EmbeddedForm;

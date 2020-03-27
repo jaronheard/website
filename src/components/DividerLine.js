@@ -1,25 +1,16 @@
 /* eslint-disable react/prop-types */
 /** @jsx jsx */
 import { jsx, css } from "@emotion/core";
+import { smBreak } from "../_Theme/UpdatedBrandTheme";
 
-const DividerLine = ({ hexColor = "#721D7C", lineStyle, swoopStyle }) => {
+const DividerLine = ({ hexColor = "#721D7C", swoopStyle }) => {
   return (
     <div
       css={css`
         margin-bottom: -10px;
       `}
     >
-      {/* Straight line for smaller screens */}
-      <div
-        className="DividerLinePadding"
-        css={css`
-          border-top: 10px solid ${hexColor};
-          ${lineStyle || ""}
-        `}
-      />
-
       {/* Swoop for larger screens */}
-
       <svg
         height="31"
         viewBox="0 0 1332 31"
@@ -30,6 +21,10 @@ const DividerLine = ({ hexColor = "#721D7C", lineStyle, swoopStyle }) => {
         css={css`
           ${swoopStyle || ""}
           padding: 20px 0;
+
+          ${smBreak} {
+            height: 23px;
+          }
         `}
       >
         <mask
