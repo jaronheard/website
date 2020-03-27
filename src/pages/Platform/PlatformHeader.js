@@ -1,9 +1,10 @@
-import React from "react";
+/** @jsx jsx */
+import { jsx, css } from "@emotion/core";
 import { useStaticQuery, graphql } from "gatsby";
 
-import platformImage from "../../images/platform.png";
-import { colors } from "../../_Theme/UpdatedBrandTheme";
-import TitleArea from "../../components/TitleArea";
+import { colors, smBreak } from "../../_Theme/UpdatedBrandTheme";
+import TitleAreaNew from "../../components/TitleAreaNew";
+import GridSingle from "../../components/GridSingle";
 
 const PlatformHeader = () => {
   const { contentfulHeading } = useStaticQuery(
@@ -18,13 +19,36 @@ const PlatformHeader = () => {
   );
 
   return (
-    <TitleArea
-      imageURL={platformImage}
-      imageOpacity={0.2}
-      title={contentfulHeading.title}
-      subtitle={contentfulHeading.subtitle}
-      swooshColor={colors.purple.hex}
-    />
+    <TitleAreaNew dividerLineColor={colors.purple.hex}>
+      <GridSingle
+        containerStyle={css`
+          width: 100%;
+          padding: 0;
+        `}
+        wideContent
+      >
+        <h2
+          css={css`
+            max-width: 700px;
+          `}
+        >
+          {contentfulHeading.subtitle}
+        </h2>
+        <h1
+          css={css`
+            margin-top: 80px;
+            display: grid;
+            justify-self: right;
+            margin-left: 300px;
+            ${smBreak} {
+              margin-left: 0;
+            }
+          `}
+        >
+          {contentfulHeading.title}
+        </h1>
+      </GridSingle>
+    </TitleAreaNew>
   );
 };
 

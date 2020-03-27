@@ -9,7 +9,8 @@ import DividerLine from "./DividerLine";
 const NewTitleArea = ({
   backgroundImage,
   children,
-  dividerLineColor = colors.purple.hex
+  dividerLineColor = colors.purple.hex,
+  childrenContainerStyle
 }) => {
   const { file } = useStaticQuery(graphql`
     query {
@@ -43,17 +44,18 @@ const NewTitleArea = ({
       <div
         css={css`
           display: grid;
-          justify-content: center;
           align-content: center;
           text-align: left;
-          padding: 45px 0;
+          padding: 45px 40px;
           margin-bottom: -90px;
           height: 370px;
+          justify-content: stretch;
 
           ${smBreak} {
             padding: 45px 20px 0;
             margin-bottom: -45px;
           }
+          ${childrenContainerStyle}
         `}
       >
         {children}
@@ -77,6 +79,7 @@ const NewTitleArea = ({
 NewTitleArea.propTypes = {
   backgroundImage: PropTypes.string,
   dividerLineColor: PropTypes.string,
+  childrenContainerStyle: PropTypes.string,
   // eslint-disable-next-line react/forbid-prop-types
   children: PropTypes.any
 };

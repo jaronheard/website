@@ -176,6 +176,11 @@ const h2 = {
   fontWeight: "400",
   marginBlockStart: "2rem",
   marginBlockEnd: "2rem",
+  [lgBreak]: {
+    fontSize: "2rem",
+    marginBlockStart: "1.6rem",
+    marginBlockEnd: "1.6rem"
+  },
   [smBreak]: {
     fontSize: "1.7rem",
     marginBlockStart: "1.7rem",

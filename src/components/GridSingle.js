@@ -8,7 +8,6 @@ const GridSingle = ({ children, wideContent, containerStyle }) => (
       max-width: ${wideContent ? "1330px" : "1100px"};
       display: grid;
       margin: 0 auto;
-      padding: 0 1rem;
       ${containerStyle}
     `}
   >
