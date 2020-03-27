@@ -2,7 +2,8 @@ import React from "react";
 import { useStaticQuery, graphql } from "gatsby";
 
 import { colors } from "../../_Theme/UpdatedBrandTheme";
-import TitleArea from "../../components/TitleArea";
+import TitleAreaNew from "../../components/TitleAreaNew";
+import DefaultTitleAreaContent from "../../components/DefaultTitleAreaContent";
 
 const ProjectsHeader = () => {
   const { contentfulHeading } = useStaticQuery(
@@ -17,11 +18,13 @@ const ProjectsHeader = () => {
   );
 
   return (
-    <TitleArea
-      title={contentfulHeading.title}
-      subtitle={contentfulHeading.subtitle}
-      swooshColor={colors.purple.hex}
-    />
+    <TitleAreaNew dividerLineColor={colors.purple.hex}>
+      <DefaultTitleAreaContent
+        subtitle={contentfulHeading.subtitle}
+        title={contentfulHeading.title}
+        wideContent
+      />
+    </TitleAreaNew>
   );
 };
 

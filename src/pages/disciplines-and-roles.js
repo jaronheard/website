@@ -3,7 +3,8 @@ import { jsx } from "@emotion/core";
 import { useStaticQuery, graphql } from "gatsby";
 
 import PageLayout from "../components/PageLayout";
-import TitleArea from "../components/TitleArea";
+import TitleAreaNew from "../components/TitleAreaNew";
+import DefaultTitleAreaContent from "../components/DefaultTitleAreaContent";
 import DividerLine from "../components/DividerLine";
 import { colors } from "../_Theme/UpdatedBrandTheme";
 import Philosophy from "./DisciplinesAndRoles/Philosophy";
@@ -32,11 +33,12 @@ const disciplinesAndRoles = () => {
       swoopColor={colors.purple.hex}
       hideCommonCTA
     >
-      <TitleArea
-        title={contentfulHeading.title}
-        subtitle={contentfulHeading.subtitle}
-        swooshColor={colors.purple.hex}
-      />
+      <TitleAreaNew dividerLineColor={colors.purple.hex}>
+        <DefaultTitleAreaContent
+          subtitle={contentfulHeading.subtitle}
+          title={contentfulHeading.title}
+        />
+      </TitleAreaNew>
       <Philosophy />
       <DividerLine hexColor={colors.blue.hex} />
       <DeSiloExperience />

@@ -2,7 +2,8 @@ import React from "react";
 import { graphql, useStaticQuery } from "gatsby";
 import PageLayout from "./PageLayout";
 import Post from "./Post";
-import TitleArea from "./TitleArea";
+import TitleAreaNew from "./TitleAreaNew";
+import DefaultTitleAreaContent from "./DefaultTitleAreaContent";
 import DividerLine from "./DividerLine";
 import { colors } from "../_Theme/UpdatedBrandTheme";
 
@@ -29,7 +30,9 @@ const PostTemplate = () => {
 
   return (
     <PageLayout title={contentfulPost.title}>
-      <TitleArea title="Post" />
+      <TitleAreaNew dividerLineColor={colors.blue.hex}>
+        <DefaultTitleAreaContent title="Post" />
+      </TitleAreaNew>
       <Post
         title={contentfulPost.title}
         content={contentfulPost.content}

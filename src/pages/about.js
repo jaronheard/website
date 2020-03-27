@@ -4,9 +4,10 @@ import { useStaticQuery, graphql } from "gatsby";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 
 import PageLayout from "../components/PageLayout";
-import TitleArea from "../components/TitleArea";
+import TitleAreaNew from "../components/TitleAreaNew";
+import DefaultTitleAreaContent from "../components/DefaultTitleAreaContent";
 import DividerLine from "../components/DividerLine";
-import hackOregonTeam from "../images/team.png";
+// import hackOregonTeam from "../images/team.png";
 import { colors, smBreak } from "../_Theme/UpdatedBrandTheme";
 import Staff from "./About/Staff";
 import FeaturedPost from "./About/FeaturedPost";
@@ -38,13 +39,13 @@ const about = () => {
       title={contentfulHeading.title}
       keywords={[`Civic Software Foundation`, `CIVIC Platform`]}
     >
-      <TitleArea
-        imageURL={hackOregonTeam}
-        imageOpacity={0.2}
-        title={contentfulHeading.title}
-        subtitle={contentfulHeading.subtitle}
-        swooshColor={colors.green.hex}
-      />
+      {/* TODO: Add back team pic */}
+      <TitleAreaNew dividerLineColor={colors.green.hex}>
+        <DefaultTitleAreaContent
+          subtitle={contentfulHeading.subtitle}
+          title={contentfulHeading.title}
+        />
+      </TitleAreaNew>
       <FeaturedPost />
       <DividerLine hexColor={colors.blue.hex} />
       <div
