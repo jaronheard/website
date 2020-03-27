@@ -14,7 +14,7 @@ const SectionHeader = ({
 }) => (
   <div
     css={css`
-      width: 100%;
+      width: 100vw;
       background-color: white;
     `}
   >
@@ -23,7 +23,7 @@ const SectionHeader = ({
         display: grid;
         margin: 0 auto;
         width: 100%;
-        max-width: ${wideContent ? "1330px" : "1040px"};
+        max-width: ${wideContent ? "1330px" : "1100px"};
         padding: ${wideContent ? "0 40px" : ""};
 
         ${lgCardBreak} {
