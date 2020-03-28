@@ -183,7 +183,7 @@ const h2 = {
   }
 };
 
-// Same as h2 but text shrinks faster
+// Same as h2 but text shrinks faster.
 export const h2Subtitle = {
   fontSize: "2.5rem",
   lineHeight: "1.10722",
