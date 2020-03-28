@@ -22,10 +22,14 @@ const Organization = ({ contentfulCallToActionBlock }) => (
         margin: 0 auto;
       `}
     >
-      <h2>{contentfulCallToActionBlock.tagline}</h2>
-      <p>
-        {documentToReactComponents(contentfulCallToActionBlock.summary.json)}
-      </p>
+      {contentfulCallToActionBlock && contentfulCallToActionBlock.tagline && (
+        <h2>{contentfulCallToActionBlock.tagline}</h2>
+      )}
+      {contentfulCallToActionBlock && contentfulCallToActionBlock.tagline && (
+        <p>
+          {documentToReactComponents(contentfulCallToActionBlock.summary.json)}
+        </p>
+      )}
     </div>
   </GridSingle>
 );
