@@ -2,7 +2,12 @@
 import { jsx, css } from "@emotion/core";
 import { PropTypes } from "prop-types";
 
-import { smBreak, lgCardBreak, xsBreak } from "../_Theme/UpdatedBrandTheme";
+import {
+  smBreak,
+  lgCardBreak,
+  xsBreak,
+  h2Subtitle
+} from "../_Theme/UpdatedBrandTheme";
 import GridSingle from "./GridSingle";
 
 const DefaultTitleAreaContent = ({ subtitle, title, wideContent }) => {
@@ -29,6 +34,8 @@ const DefaultTitleAreaContent = ({ subtitle, title, wideContent }) => {
           ${xsBreak} {
             max-width: 400px;
           }
+
+          ${h2Subtitle}
         `}
       >
         {subtitle || ""}

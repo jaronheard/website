@@ -176,6 +176,21 @@ const h2 = {
   fontWeight: "400",
   marginBlockStart: "2rem",
   marginBlockEnd: "2rem",
+  [smBreak]: {
+    fontSize: "1.7rem",
+    marginBlockStart: "1.7rem",
+    marginBlockEnd: "1.7rem"
+  }
+};
+
+// Same as h2 but text shrinks faster
+export const h2Subtitle = {
+  fontSize: "2.5rem",
+  lineHeight: "1.10722",
+  fontFamily: "'Rubik', sans-serif",
+  fontWeight: "400",
+  marginBlockStart: "2rem",
+  marginBlockEnd: "2rem",
   [lgBreak]: {
     fontSize: "2rem",
     marginBlockStart: "1.6rem",
