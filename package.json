@@ -52,7 +52,11 @@
     "eslint-watch": "^5.0.1",
     "husky": "^4.2.3",
     "lint-staged": "^10.0.8",
-    "prettier": "1.16.4"
+    "prettier": "1.16.4",
+    "stylelint": "^13.2.1",
+    "stylelint-config-prettier": "^8.0.1",
+    "stylelint-config-standard": "^20.0.0",
+    "stylelint-config-styled-components": "^0.1.1"
   },
   "keywords": [],
   "license": "MIT",
@@ -67,7 +71,9 @@
     "eslint-check": "eslint --print-config . | eslint-config-prettier-check",
     "lint": "eslint src",
     "lint:fix": "eslint src --fix",
-    "pretty": "yarn run format"
+    "lint:css": "stylelint '**/*.js'",
+    "pretty": "yarn run format",
+    "stylelint-check": "stylelint-config-prettier-check"
   },
   "husky": {
     "hooks": {

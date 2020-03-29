@@ -34,7 +34,7 @@ const HeaderDropdown = ({ open, headerHeight, goTo }) => {
         height: auto;
         background-color: ${colors.white};
         border-bottom: 3px solid ${colors.subdued.hex};
-        box-shadow: 6px 6px 0px ${colors.medium.hex};
+        box-shadow: 6px 6px 0 ${colors.medium.hex};
         display: grid;
         z-index: 100;
         position: absolute;
