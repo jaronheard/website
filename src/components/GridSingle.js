@@ -1,14 +1,20 @@
 /** @jsx jsx */
 import { jsx, css } from "@emotion/core";
 import PropTypes from "prop-types";
+import { lgCardBreak } from "../_Theme/UpdatedBrandTheme";
 
-const GridSingle = ({ children }) => (
+const GridSingle = ({ children, wideContent, containerStyle }) => (
   <div
     css={css`
-      max-width: 900px;
+      max-width: ${wideContent ? "1330px" : "1100px"};
       display: grid;
       margin: 0 auto;
-      padding: 0 1rem;
+
+      ${lgCardBreak} {
+        max-width: ${wideContent ? "900px" : "900px"};
+      }
+
+      ${containerStyle}
     `}
   >
     {children}
@@ -16,8 +22,10 @@ const GridSingle = ({ children }) => (
 );
 
 GridSingle.propTypes = {
+  wideContent: PropTypes.bool,
   // eslint-disable-next-line react/forbid-prop-types
-  children: PropTypes.any
+  children: PropTypes.any,
+  containerStyle: PropTypes.string
 };
 
 export default GridSingle;

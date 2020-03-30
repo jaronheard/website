@@ -2,8 +2,9 @@
 import { jsx, css } from "@emotion/core";
 import { useStaticQuery, graphql } from "gatsby";
 
-import { smBreak } from "../../_Theme/UpdatedBrandTheme";
+import { smBreak, lgCardBreak } from "../../_Theme/UpdatedBrandTheme";
 import GridSingle from "../../components/GridSingle";
+import TitleAreaNew from "../../components/TitleAreaNew";
 
 const Splash = () => {
   const { file, contentfulHeading } = useStaticQuery(graphql`
@@ -19,73 +20,51 @@ const Splash = () => {
   `);
 
   return (
-    <div>
-      <picture
-        css={css`
-          background-image: url(${file.publicURL});
-          background-size: cover;
-          background-repeat: no-repeat;
-          background-attachment: local;
-          background-position: center;
-          display: block;
-          position: absolute;
-          top: 0;
-          left: 0;
+    <TitleAreaNew backgroundImage={`url(${file.publicURL})`}>
+      <GridSingle
+        containerStyle={css`
           width: 100%;
-          height: 106%;
-          z-index: -2;
-          opacity: 0.2;
-        `}
-      />
-      <div
-        css={css`
-          display: grid;
-          justify-content: center;
-          align-content: center;
-          text-align: left;
-          padding-top: 90px;
-          margin-bottom: -90px;
-
-          ${smBreak} {
-            padding: 45px 20px 0;
-            margin-bottom: -45px;
-          }
+          padding: 0;
         `}
       >
-        <GridSingle
+        <h2
           css={css`
-            width: 100%;
+            max-width: 650px;
+            display: grid;
+            justify-self: left;
+            font-weight: 600;
+            letter-spacing: 0.025rem;
+            line-height: 1.15;
+            margin: 0;
+            ${lgCardBreak} {
+              max-width: 550px;
+            }
+            ${smBreak} {
+              max-width: 425px;
+            }
           `}
         >
-          <h2
-            css={css`
+          {contentfulHeading.title}
+        </h2>
+        <h4
+          css={css`
+            max-width: 750px;
+            display: grid;
+            margin: 0;
+            justify-self: right;
+            align-self: end;
+            ${lgCardBreak} {
               max-width: 650px;
-              display: grid;
-              justify-self: left;
-              font-weight: 600;
-              letter-spacing: 0.025rem;
-              line-height: 1.15;
-            `}
-          >
-            {contentfulHeading.title}
-          </h2>
-          <h4
-            css={css`
-              max-width: 750px;
-              display: grid;
-              justify-self: right;
-              margin-top: 65px;
-              margin-left: 300px;
-              ${smBreak} {
-                margin-left: 0;
-              }
-            `}
-          >
-            {contentfulHeading.subtitle}
-          </h4>
-        </GridSingle>
-      </div>
-    </div>
+            }
+            ${smBreak} {
+              max-width: 550px;
+            }
+          `}
+        >
+          {contentfulHeading.subtitle}
+        </h4>
+      </GridSingle>
+    </TitleAreaNew>
   );
 };
 

@@ -183,6 +183,26 @@ const h2 = {
   }
 };
 
+// Same as h2 but text shrinks faster
+export const h2Subtitle = {
+  fontSize: "2.5rem",
+  lineHeight: "1.10722",
+  fontFamily: "'Rubik', sans-serif",
+  fontWeight: "400",
+  marginBlockStart: "2rem",
+  marginBlockEnd: "2rem",
+  [lgBreak]: {
+    fontSize: "2rem",
+    marginBlockStart: "1.6rem",
+    marginBlockEnd: "1.6rem"
+  },
+  [smBreak]: {
+    fontSize: "1.5rem",
+    marginBlockStart: "1.5rem",
+    marginBlockEnd: "1.5rem"
+  }
+};
+
 const h3 = {
   fontSize: "1.5rem",
   lineHeight: "1.381",
@@ -433,7 +453,7 @@ export default {
     gridTemplateColumns: "repeat(3, 1fr)",
     margin: "25px auto",
     gridRowGap: "30px",
-    gridColumnGap: "15px",
+    gridColumnGap: "45px",
     justifyContent: "space-between",
 
     [lgCardBreak]: {
@@ -516,25 +536,7 @@ export default {
   },
 
   ".DividerLineStyle": {
-    zIndex: -1,
-
-    [smBreak]: {
-      display: "none"
-    }
-  },
-
-  ".DividerLinePadding": {
-    height: "10px",
-    backgroundColor: "white",
-    margin: "100px 0",
-
-    [mdBreak]: {
-      display: "none"
-    },
-
-    [xsBreak]: {
-      margin: "50px 0"
-    }
+    zIndex: -1
   },
 
   ".centerSelf": {

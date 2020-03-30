@@ -1,9 +1,10 @@
-import React from "react";
+/** @jsx jsx */
+import { jsx } from "@emotion/core";
 import { useStaticQuery, graphql } from "gatsby";
 
-import platformImage from "../../images/platform.png";
 import { colors } from "../../_Theme/UpdatedBrandTheme";
-import TitleArea from "../../components/TitleArea";
+import TitleAreaNew from "../../components/TitleAreaNew";
+import DefaultTitleAreaContent from "../../components/DefaultTitleAreaContent";
 
 const PlatformHeader = () => {
   const { contentfulHeading } = useStaticQuery(
@@ -18,13 +19,13 @@ const PlatformHeader = () => {
   );
 
   return (
-    <TitleArea
-      imageURL={platformImage}
-      imageOpacity={0.2}
-      title={contentfulHeading.title}
-      subtitle={contentfulHeading.subtitle}
-      swooshColor={colors.purple.hex}
-    />
+    <TitleAreaNew dividerLineColor={colors.purple.hex}>
+      <DefaultTitleAreaContent
+        subtitle={contentfulHeading.subtitle}
+        title={contentfulHeading.title}
+        wideContent
+      />
+    </TitleAreaNew>
   );
 };
 

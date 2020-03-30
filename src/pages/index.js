@@ -8,6 +8,7 @@ import OurDifferenceCards from "./Home/OurDifferenceCards";
 import CallToActionBlocks from "./Home/CallToActionBlocks";
 import QuoteBlock from "./Home/QuoteBlock";
 import DividerLine from "../components/DividerLine";
+import ContentContainer from "../components/ContentContainer";
 import { colors } from "../_Theme/UpdatedBrandTheme";
 
 const IndexPage = () => {
@@ -18,34 +19,24 @@ const IndexPage = () => {
       swoopColor={colors.yellow.hex}
     >
       <Splash />
-      <DividerLine
-        hexColor={colors.purple.hex}
-        swoopStyle={css`
-          margin-bottom: -30px;
-          margin-top: 70px;
-        `}
-        lineStyle={css`
-          margin-bottom: 0px;
-          height: 50px;
-          background-color: white;
-        `}
-      />
-      <div
-        css={css`
-          background-color: white;
-          display: grid;
-          justify-content: center;
-          margin-top: 10px;
-          padding-top: 10px;
-        `}
-      >
-        <OurDifferenceHeader />
-        <OurDifferenceCards />
-      </div>
-      <DividerLine hexColor={colors.yellow.hex} />
-      <CallToActionBlocks />
-      <QuoteBlock />
-      <DividerLine hexColor={colors.purple.hex} />
+      <ContentContainer>
+        <div
+          css={css`
+            background-color: white;
+            display: grid;
+            justify-content: center;
+            margin-top: 10px;
+            padding-top: 10px;
+          `}
+        >
+          <OurDifferenceHeader />
+          <OurDifferenceCards />
+        </div>
+        <DividerLine hexColor={colors.yellow.hex} />
+        <CallToActionBlocks />
+        <QuoteBlock />
+        <DividerLine hexColor={colors.purple.hex} />
+      </ContentContainer>
     </PageLayout>
   );
 };

@@ -5,7 +5,7 @@ import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 import { BLOCKS } from "@contentful/rich-text-types";
 import { Link } from "gatsby";
 import { Location } from "@reach/router";
-import { smBreak } from "../_Theme/UpdatedBrandTheme";
+import { xsBreak } from "../_Theme/UpdatedBrandTheme";
 import Video from "./Video";
 import GridSingle from "./GridSingle";
 
@@ -33,13 +33,16 @@ const Post = ({
     css={css`
       width: 100%;
       background-color: white;
-      padding-top: 4rem;
-      ${smBreak} {
-        padding-top: 0;
-      }
     `}
   >
-    <GridSingle>
+    <GridSingle
+      containerStyle={css`
+        padding: 45px 40px;
+        ${xsBreak} {
+          padding: 20px 20px;
+        }
+      `}
+    >
       {featured && (
         <div
           css={css`
@@ -47,7 +50,7 @@ const Post = ({
             display: flex;
           `}
         >
-          <p>Featured Post</p>
+          <h3>Featured Post</h3>
         </div>
       )}
       <h2>

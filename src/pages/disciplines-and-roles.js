@@ -3,8 +3,10 @@ import { jsx } from "@emotion/core";
 import { useStaticQuery, graphql } from "gatsby";
 
 import PageLayout from "../components/PageLayout";
-import TitleArea from "../components/TitleArea";
+import TitleAreaNew from "../components/TitleAreaNew";
+import DefaultTitleAreaContent from "../components/DefaultTitleAreaContent";
 import DividerLine from "../components/DividerLine";
+import ContentContainer from "../components/ContentContainer";
 import { colors } from "../_Theme/UpdatedBrandTheme";
 import Philosophy from "./DisciplinesAndRoles/Philosophy";
 import DeSiloExperience from "./DisciplinesAndRoles/DeSiloExperience";
@@ -32,17 +34,20 @@ const disciplinesAndRoles = () => {
       swoopColor={colors.purple.hex}
       hideCommonCTA
     >
-      <TitleArea
-        title={contentfulHeading.title}
-        subtitle={contentfulHeading.subtitle}
-        swooshColor={colors.purple.hex}
-      />
-      <Philosophy />
-      <DividerLine hexColor={colors.blue.hex} />
-      <DeSiloExperience />
-      <CivicExperience />
-      <ContributorCTA />
-      <DividerLine hexColor={colors.yellow.hex} />
+      <TitleAreaNew dividerLineColor={colors.purple.hex}>
+        <DefaultTitleAreaContent
+          subtitle={contentfulHeading.subtitle}
+          title={contentfulHeading.title}
+        />
+      </TitleAreaNew>
+      <ContentContainer>
+        <Philosophy />
+        <DividerLine hexColor={colors.blue.hex} />
+        <DeSiloExperience />
+        <CivicExperience />
+        <ContributorCTA />
+        <DividerLine hexColor={colors.yellow.hex} />
+      </ContentContainer>
     </PageLayout>
   );
 };

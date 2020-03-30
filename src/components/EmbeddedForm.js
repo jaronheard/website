@@ -3,20 +3,20 @@ import { jsx, css } from "@emotion/core";
 import JotformEmbed from "react-jotform-embed";
 import { PropTypes } from "prop-types";
 
-import { xsBreak, smBreak } from "../_Theme/UpdatedBrandTheme";
+import { smBreak } from "../_Theme/UpdatedBrandTheme";
 
-const ContributorApplication = ({ formSrc }) => {
+const EmbeddedForm = ({ formSrc }) => {
   return (
     <div
       css={css`
+        margin-top: 12px;
+
         .formFooter * {
           display: none;
         }
+
         ${smBreak} {
-          margin-top: -50px;
-        }
-        ${xsBreak} {
-          margin-top: -90px;
+          margin-top: 13px;
         }
       `}
     >
@@ -25,8 +25,8 @@ const ContributorApplication = ({ formSrc }) => {
   );
 };
 
-ContributorApplication.propTypes = {
+EmbeddedForm.propTypes = {
   formSrc: PropTypes.string
 };
 
-export default ContributorApplication;
+export default EmbeddedForm;

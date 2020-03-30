@@ -3,9 +3,10 @@ import { jsx } from "@emotion/core";
 import { useStaticQuery, graphql } from "gatsby";
 
 import PageLayout from "../components/PageLayout";
-import TitleArea from "../components/TitleArea";
+import TitleAreaNew from "../components/TitleAreaNew";
+import DefaultTitleAreaContent from "../components/DefaultTitleAreaContent";
 import DividerLine from "../components/DividerLine";
-import hackOregonTeam from "../images/team.png";
+import ContentContainer from "../components/ContentContainer";
 import EmbeddedForm from "../components/EmbeddedForm";
 import { colors } from "../_Theme/UpdatedBrandTheme";
 
@@ -30,14 +31,13 @@ const ContributorApplication = () => {
         `CIVIC Contributor Application`
       ]}
     >
-      <TitleArea
-        imageURL={hackOregonTeam}
-        imageOpacity={0.2}
-        title={contentfulHeading.title}
-        swooshColor={colors.yellow.hex}
-      />
-      <EmbeddedForm formSrc="https://form.jotform.com/200786890019057" />
-      <DividerLine hexColor={colors.pink.hex} />
+      <TitleAreaNew dividerLineColor={colors.yellow.hex}>
+        <DefaultTitleAreaContent title={contentfulHeading.title} />
+      </TitleAreaNew>
+      <ContentContainer>
+        <EmbeddedForm formSrc="https://form.jotform.com/200786890019057" />
+        <DividerLine hexColor={colors.pink.hex} />
+      </ContentContainer>
     </PageLayout>
   );
 };
