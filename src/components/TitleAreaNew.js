@@ -72,7 +72,7 @@ const NewTitleArea = ({
           margin-top: 70px;
         `}
         lineStyle={css`
-          margin-bottom: 0px;
+          margin-bottom: 0;
           height: 50px;
           background-color: white;
 

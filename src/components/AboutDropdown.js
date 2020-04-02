@@ -55,7 +55,7 @@ const AboutDropdown = ({ goTo }) => {
           right: -1em;
           background-color: white;
           border: 3px solid ${colors.subdued.hex};
-          box-shadow: 6px 6px 0px ${colors.medium.hex};
+          box-shadow: 6px 6px 0 ${colors.medium.hex};
           padding: 0 1em;
           width: max-content;
         `}
