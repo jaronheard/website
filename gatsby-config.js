@@ -46,7 +46,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
-        fonts: [`Rubik`, `Roboto`, `Roboto Condensed`],
+        // eslint-disable-next-line no-useless-escape
+        fonts: [`Rubik\:400,500,700,900`, `Roboto`, `Roboto Condensed`],
         display: "swap"
       }
     },
