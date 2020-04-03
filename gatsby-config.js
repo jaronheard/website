@@ -43,14 +43,6 @@ module.exports = {
         accessToken: `xiK4OR-Zu0SkKqqZGvCnej4wkJB3vMB5Yn6ptGWcTts`
       }
     },
-    {
-      resolve: `gatsby-plugin-google-fonts`,
-      options: {
-        // eslint-disable-next-line no-useless-escape
-        fonts: [`Rubik\:400,500,700,900`, `Roboto`, `Roboto Condensed`],
-        display: "swap"
-      }
-    },
     `gatsby-plugin-extract-schema`
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline

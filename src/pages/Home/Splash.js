@@ -9,7 +9,7 @@ import TitleAreaNew from "../../components/TitleAreaNew";
 const Splash = () => {
   const { contentfulAsset, contentfulHeading } = useStaticQuery(graphql`
     query {
-      contentfulAsset(title: { eq: "sandbox-pencil" }) {
+      contentfulAsset(title: { eq: "civic-software-screenshots" }) {
         file {
           url
         }
@@ -34,8 +34,7 @@ const Splash = () => {
             max-width: 650px;
             display: grid;
             justify-self: left;
-            font-weight: 500;
-            letter-spacing: 0.025rem;
+            font-weight: 700;
             line-height: 1.15;
             margin: 0;
             ${lgCardBreak} {
@@ -52,12 +51,12 @@ const Splash = () => {
               css={css`
                 color: ${colors.white};
                 background-color: ${colors.primary.hex};
-                line-height: 1.7;
-                box-shadow: 0 0 0 0.15rem ${colors.primary.hex},
-                  0.2rem 0 0 0.15rem ${colors.primary.hex},
-                  -0.2rem 0 0 0.15rem ${colors.primary.hex},
-                  0.5rem 0.3rem 0 0.15rem ${colors.plumLight.hex},
-                  0.2rem 0.3rem 0 0.15rem ${colors.plumLight.hex};
+                line-height: 1.3;
+                box-shadow: 0 0.1rem 0 0.2rem ${colors.primary.hex},
+                  0.2rem 0.1rem 0 0.2rem ${colors.primary.hex},
+                  -0.2rem 0.1rem 0 0.2rem ${colors.primary.hex},
+                  0.5rem 0.4rem 0 0.2rem ${colors.pink.hex},
+                  0.2rem 0.4rem 0 0.2rem ${colors.pink.hex};
                 box-decoration-break: clone;
               `}
             >
@@ -65,8 +64,7 @@ const Splash = () => {
             </span>
           </div>
         </h2>
-        <h4
-          className="ShadowBox"
+        <h3
           css={css`
             max-width: 600px;
             padding: 1rem;
@@ -82,8 +80,24 @@ const Splash = () => {
             }
           `}
         >
-          {contentfulHeading.subtitle}
-        </h4>
+          <div>
+            <span
+              css={css`
+                color: ${colors.white};
+                background-color: ${colors.primary.hex};
+                line-height: 1.4;
+                box-shadow: 0 0.1rem 0 0.2rem ${colors.primary.hex},
+                  0.2rem 0.1rem 0 0.2rem ${colors.primary.hex},
+                  -0.2rem 0.1rem 0 0.2rem ${colors.primary.hex},
+                  0.5rem 0.4rem 0 0.2rem ${colors.pink.hex},
+                  0.2rem 0.4rem 0 0.2rem ${colors.pink.hex};
+                box-decoration-break: clone;
+              `}
+            >
+              {contentfulHeading.subtitle}
+            </span>
+          </div>
+        </h3>
       </GridSingle>
     </TitleAreaNew>
   );

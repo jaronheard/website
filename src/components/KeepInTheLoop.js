@@ -7,10 +7,10 @@ const KeepInTheLoop = () => (
     css={css`
       display: grid;
       justify-items: center;
-      margin-bottom: 130px;
+      margin-bottom: 2rem;
 
       ${smBreak} {
-        margin-bottom: 100px;
+        margin-bottom: 2rem;
         padding: 20px;
       }
     `}
@@ -24,26 +24,14 @@ const KeepInTheLoop = () => (
         }
       `}
     >
-      <h2
-        css={css`
-          margin-top: 50px;
-          margin-bottom: 50px;
-
-          ${smBreak} {
-            margin-top: 25px;
-            margin-bottom: 25px;
-          }
-        `}
-      >
-        Keep in the loop
-      </h2>
+      <h2>Keep in the loop</h2>
       <p>
         Big announcements are on the horizon. Our newsletter will keep you
         informed on our next big opportunities.
       </p>
       <div
         css={css`
-          margin: 50px auto 50px;
+          margin: 1rem auto 2rem;
           display: grid;
           grid-template-columns: 200px 200px 330px;
           grid-column-gap: 40px;

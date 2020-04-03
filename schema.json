@@ -15160,16 +15160,6 @@
             "defaultValue": null
           },
           {
-            "name": "fonts",
-            "description": "",
-            "type": {
-              "kind": "INPUT_OBJECT",
-              "name": "StringQueryOperatorInput",
-              "ofType": null
-            },
-            "defaultValue": null
-          },
-          {
             "name": "pathCheck",
             "description": "",
             "type": {
@@ -15878,18 +15868,6 @@
             "description": null,
             "args": [],
             "type": { "kind": "SCALAR", "name": "String", "ofType": null },
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "fonts",
-            "description": null,
-            "args": [],
-            "type": {
-              "kind": "LIST",
-              "name": null,
-              "ofType": { "kind": "SCALAR", "name": "String", "ofType": null }
-            },
             "isDeprecated": false,
             "deprecationReason": null
           },
@@ -17165,12 +17143,6 @@
           },
           {
             "name": "pluginCreator___pluginOptions___accessToken",
-            "description": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "pluginCreator___pluginOptions___fonts",
             "description": null,
             "isDeprecated": false,
             "deprecationReason": null
@@ -96001,12 +95973,6 @@
           },
           {
             "name": "pluginOptions___accessToken",
-            "description": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "pluginOptions___fonts",
             "description": null,
             "isDeprecated": false,
             "deprecationReason": null

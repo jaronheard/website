@@ -41,6 +41,7 @@ const SectionHeader = ({
         className={big ? "h-1" : "h-2"}
         css={css`
           margin-bottom: 0;
+          margin-top: 3rem;
         `}
       >
         {title}
