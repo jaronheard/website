@@ -9,7 +9,7 @@ import TitleAreaNew from "../../components/TitleAreaNew";
 const Splash = () => {
   const { contentfulAsset, contentfulHeading } = useStaticQuery(graphql`
     query {
-      contentfulAsset(title: { eq: "civic-software-screenshots" }) {
+      contentfulAsset(title: { eq: "sandbox-pencil" }) {
         file {
           url
         }
@@ -51,13 +51,14 @@ const Splash = () => {
               css={css`
                 color: ${colors.white};
                 background-color: ${colors.primary.hex};
-                line-height: 1.3;
+                line-height: 1.7;
                 box-shadow: 0 0.1rem 0 0.2rem ${colors.primary.hex},
                   0.2rem 0.1rem 0 0.2rem ${colors.primary.hex},
                   -0.2rem 0.1rem 0 0.2rem ${colors.primary.hex},
-                  0.5rem 0.4rem 0 0.2rem ${colors.pink.hex},
-                  0.2rem 0.4rem 0 0.2rem ${colors.pink.hex};
+                  0.5rem 0.4rem 0 0.2rem ${colors.plumLight.hex},
+                  0.2rem 0.4rem 0 0.2rem ${colors.plumLight.hex};
                 box-decoration-break: clone;
+                letter-spacing: 0.1rem;
               `}
             >
               {contentfulHeading.title}
@@ -65,6 +66,7 @@ const Splash = () => {
           </div>
         </h2>
         <h3
+          className="ShadowBox"
           css={css`
             max-width: 600px;
             padding: 1rem;
@@ -82,17 +84,18 @@ const Splash = () => {
         >
           <div>
             <span
-              css={css`
-                color: ${colors.white};
-                background-color: ${colors.primary.hex};
-                line-height: 1.4;
-                box-shadow: 0 0.1rem 0 0.2rem ${colors.primary.hex},
-                  0.2rem 0.1rem 0 0.2rem ${colors.primary.hex},
-                  -0.2rem 0.1rem 0 0.2rem ${colors.primary.hex},
-                  0.5rem 0.4rem 0 0.2rem ${colors.pink.hex},
-                  0.2rem 0.4rem 0 0.2rem ${colors.pink.hex};
-                box-decoration-break: clone;
-              `}
+              className="h-4"
+              // css={css`
+              //   color: ${colors.white};
+              //   background-color: ${colors.primary.hex};
+              //   line-height: 1.4;
+              //   box-shadow: 0 0.1rem 0 0.2rem ${colors.primary.hex},
+              //     0.2rem 0.1rem 0 0.2rem ${colors.primary.hex},
+              //     -0.2rem 0.1rem 0 0.2rem ${colors.primary.hex},
+              //     0.5rem 0.4rem 0 0.2rem ${colors.pink.hex},
+              //     0.2rem 0.4rem 0 0.2rem ${colors.pink.hex};
+              //   box-decoration-break: clone;
+              // `}
             >
               {contentfulHeading.subtitle}
             </span>

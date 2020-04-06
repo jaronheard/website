@@ -21,9 +21,18 @@ export const shadows = {
   rightDown: `6px 6px 0px ${colors.medium.hex}`
 };
 
+export const colorShadows = color => ({
+  bottom: `0px 3px 0px ${color}`,
+  rightDown: `6px 6px 0px ${color}`
+});
+
 export const borders = {
   box: `4px solid ${BrandColors.subdued.hex}`
 };
+
+export const colorBorders = color => ({
+  box: `4px solid ${color}10`
+});
 
 export const noHover = {
   ":hover, :focus": {
