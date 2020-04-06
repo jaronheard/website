@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import { jsx, css } from "@emotion/core";
 import { Link } from "gatsby";
-import { xsBreak } from "../_Theme/UpdatedBrandTheme";
+import { xsBreak, maxContentWidth } from "../_Theme/UpdatedBrandTheme";
 
 const whiteText = css`
   color: white;
@@ -12,9 +12,9 @@ const Contact = () => (
   <div
     css={css`
       text-align: left;
-      max-width: 1230px;
       margin: 80px auto 0;
       padding: 5rem 3rem 0;
+      ${maxContentWidth}
     `}
     name="contact"
   >

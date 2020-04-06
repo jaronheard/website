@@ -88,6 +88,8 @@ const Splash = () => {
                 color: ${colors.white};
                 background-color: ${colors.primary.hex};
                 line-height: 1.4;
+                font-style: italic;
+                font-synthesis: none;
                 box-shadow: 0 0.1rem 0 0.2rem ${colors.primary.hex},
                   0.2rem 0.1rem 0 0.2rem ${colors.primary.hex},
                   -0.2rem 0.1rem 0 0.2rem ${colors.primary.hex},

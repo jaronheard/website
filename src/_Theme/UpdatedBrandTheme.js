@@ -1,6 +1,9 @@
 // Use with emotion's Global component
 import { BrandColors, VisualizationColors } from "@hackoregon/ui-themes";
 
+// Content width
+export const maxContentWidth = "max-width: 1100px;";
+
 // Breakpoints
 export const xsBreak = "@media (max-width:659.95px)";
 export const smBreak = "@media (max-width:959.95px)";
@@ -43,7 +46,7 @@ export const noHover = {
 export const focusBorder = {
   ":hover, :focus": {
     outline: "none",
-    boxShadow: `0px 0px 5px ${colors.blue.hex}`
+    boxShadow: `0px 0px 5px ${colors.pink.hex}`
   }
 };
 
@@ -59,7 +62,7 @@ export const underlineFocus = {
   },
 
   ":hover, :focus": {
-    color: BrandColors.action.hex,
+    color: BrandColors.secondary.hex,
     cursor: "pointer",
     backgroundSize: "100% 3px"
   }
@@ -563,11 +566,15 @@ export default {
     border: "none",
     padding: "0",
     cursor: "pointer",
-    margin: "15px 0",
     ...underlineFocus,
 
     "> h3": {
-      margin: "0"
+      margin: "0",
+      color: "white",
+      fontSize: "1.35rem"
+    },
+    "> p": {
+      color: "white"
     }
   }
 };

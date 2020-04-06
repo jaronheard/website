@@ -1,17 +1,14 @@
 /** @jsx jsx */
 import { jsx, css } from "@emotion/core";
 import { colors, smBreak, xsBreak } from "../_Theme/UpdatedBrandTheme";
+import GridSingle from "./GridSingle";
 
 const KeepInTheLoop = () => (
-  <div
-    css={css`
-      display: grid;
-      justify-items: center;
-      margin-bottom: 2rem;
-
-      ${smBreak} {
-        margin-bottom: 2rem;
-        padding: 20px;
+  <GridSingle
+    containerStyle={css`
+      padding: 45px 40px;
+      ${xsBreak} {
+        padding: 20px 20px;
       }
     `}
   >
@@ -33,7 +30,7 @@ const KeepInTheLoop = () => (
         css={css`
           margin: 1rem auto 2rem;
           display: grid;
-          grid-template-columns: 200px 200px 330px;
+          grid-template-columns: 2fr 2fr 3.5fr;
           grid-column-gap: 40px;
 
           input {
@@ -78,7 +75,7 @@ const KeepInTheLoop = () => (
         <p>Sign Up</p>
       </button>
     </div>
-  </div>
+  </GridSingle>
 );
 
 export default KeepInTheLoop;
