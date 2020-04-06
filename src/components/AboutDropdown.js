@@ -39,6 +39,7 @@ const AboutDropdown = ({ goTo }) => {
           About{" "}
           {dropdownOpen ? (
             <KeyboardArrowUpIcon
+              fontSize="small"
               css={css`
                 font-size: 1.5em;
                 margin-bottom: -5px;
@@ -46,6 +47,7 @@ const AboutDropdown = ({ goTo }) => {
             />
           ) : (
             <KeyboardArrowDownIcon
+              fontSize="small"
               css={css`
                 font-size: 1.5em;
                 margin-bottom: -5px;
