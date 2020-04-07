@@ -36,7 +36,7 @@ const ContributorCTA = () => {
     >
       <div
         css={css`
-          display: grid;
+          margin: 4rem 0 3rem 0;
 
           ${smBreak} {
             padding: 0 40px;

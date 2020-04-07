@@ -44,7 +44,9 @@ const disciplinesAndRoles = () => {
         <Philosophy />
         <DividerLine hexColor={colors.blue.hex} />
         <DeSiloExperience />
+        <DividerLine hexColor={colors.pink.hex} />
         <CivicExperience />
+        <DividerLine hexColor={colors.green.hex} />
         <ContributorCTA />
         <DividerLine hexColor={colors.yellow.hex} />
       </ContentContainer>

@@ -51,10 +51,10 @@ const CallToActionBlock = ({
     <div>
       <div
         css={css`
-          margin: 5rem 0 6rem;
+          margin: 5rem 0 6rem 0;
           padding: 0 70px;
           ${smBreak} {
-            margin: 0;
+            margin: 3rem 0 4rem 0;
             padding: 0 35px;
           }
         `}

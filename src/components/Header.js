@@ -20,7 +20,7 @@ import {
 const headerHeight = "45px";
 const headerContainer = css`
   background-color: ${colors.primary.hex};
-  border-bottom: 3px solid ${colors.plumLight.hex};
+  border-bottom: 0px solid ${colors.plumLight.hex};
   z-index: 100;
 `;
 const headerGrid = css`

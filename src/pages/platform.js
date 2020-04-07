@@ -5,6 +5,7 @@ import PlatformHeader from "./Platform/PlatformHeader";
 import PlatformComponents from "./Platform/PlatformComponents";
 import PageLayout from "../components/PageLayout";
 import ContentContainer from "../components/ContentContainer";
+import DividerLine from "../components/DividerLine";
 import { colors } from "../_Theme/UpdatedBrandTheme";
 
 const PlatformPage = () => {
@@ -18,6 +19,7 @@ const PlatformPage = () => {
       <ContentContainer>
         <PlatformComponents />
       </ContentContainer>
+      <DividerLine hexColor={colors.yellow.hex} />
     </PageLayout>
   );
 };

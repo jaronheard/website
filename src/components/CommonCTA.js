@@ -5,9 +5,8 @@ import CTAButtons from "./CTAButtons";
 const CommonCTA = () => (
   <div
     css={css`
-      display: grid;
       max-width: 400px;
-      margin: 1rem auto 2rem;
+      margin: 3rem auto 4rem;
       text-align: center;
     `}
   >

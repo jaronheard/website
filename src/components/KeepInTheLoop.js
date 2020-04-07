@@ -7,6 +7,10 @@ const KeepInTheLoop = () => (
   <GridSingle
     containerStyle={css`
       padding: 45px 40px;
+      max-width: 1100px;
+      ${smBreak} {
+        max-width: 600px;
+      }
       ${xsBreak} {
         padding: 20px 20px;
       }
@@ -32,6 +36,7 @@ const KeepInTheLoop = () => (
           display: grid;
           grid-template-columns: 2fr 2fr 3.5fr;
           grid-column-gap: 40px;
+          width: 100%;
 
           input {
             height: 50px;

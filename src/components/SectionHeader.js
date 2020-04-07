@@ -10,7 +10,8 @@ const SectionHeader = ({
   summary,
   big,
   wideContent,
-  shrinkToColumn
+  shrinkToColumn,
+  center
 }) => (
   <div
     css={css`
@@ -19,6 +20,7 @@ const SectionHeader = ({
       width: 100%;
       max-width: ${wideContent ? "1100px" : "1100px"};
       padding: ${wideContent ? "0 40px" : ""};
+      justify-content: ${center ? "center" : "start"};
 
       ${lgCardBreak} {
         max-width: 900px;
@@ -40,8 +42,7 @@ const SectionHeader = ({
       <h2
         className={big ? "h-1" : "h-2"}
         css={css`
-          margin-bottom: 0;
-          margin-top: 3rem;
+          max-width: 600px;
         `}
       >
         {title}
