@@ -43,36 +43,28 @@ const PlatformComponents = () => {
   return (
     <div
       css={css`
-        width: 100%;
-        background-color: white;
+        ${xsBreak} {
+          justify-items: center;
+        }
       `}
     >
-      <div
-        css={css`
-          padding: 4rem 0 3rem 0;
-          ${xsBreak} {
-            justify-items: center;
-          }
-        `}
+      <SectionHeader
+        title={contentfulHeading.title}
+        summary={contentfulHeading.summary.json}
+        center
+      />
+      <GridList
+        wideContent
+        bottomContent={contentfulContentList.extraContent.json}
+        buttonText={contentfulContentList.buttonText}
+        buttonLocalLink={contentfulContentList.buttonLink}
       >
-        <SectionHeader
-          title={contentfulHeading.title}
-          summary={contentfulHeading.summary.json}
-          center
-        />
-        <GridList
+        <GridListMap
+          callToActionBlockList={contentfulContentList.content}
+          colorShadow
           wideContent
-          bottomContent={contentfulContentList.extraContent.json}
-          buttonText={contentfulContentList.buttonText}
-          buttonLocalLink={contentfulContentList.buttonLink}
-        >
-          <GridListMap
-            callToActionBlockList={contentfulContentList.content}
-            colorShadow
-            wideContent
-          />
-        </GridList>
-      </div>
+        />
+      </GridList>
     </div>
   );
 };

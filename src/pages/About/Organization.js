@@ -9,9 +9,9 @@ import GridSingle from "../../components/GridSingle";
 const Organization = ({ contentfulCallToActionBlock }) => (
   <GridSingle
     containerStyle={css`
-      padding: 45px 40px;
+      padding: 0 40px;
       ${xsBreak} {
-        padding: 20px 20px;
+        padding: 0 20px;
       }
     `}
   >

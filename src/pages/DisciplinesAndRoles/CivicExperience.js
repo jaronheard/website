@@ -1,6 +1,7 @@
 /** @jsx jsx */
-import { jsx, css } from "@emotion/core";
+import { jsx } from "@emotion/core";
 import { useStaticQuery, graphql } from "gatsby";
+import { Fragment } from "react";
 
 import GridList from "../../components/GridList";
 import GridListMap from "../../components/GridListMap";
@@ -31,11 +32,7 @@ const CivicExperience = () => {
   );
 
   return (
-    <div
-      css={css`
-        margin: 4rem 0 3rem 0;
-      `}
-    >
+    <Fragment>
       <SectionHeader
         title={contentfulContentList.title}
         subtitle={contentfulContentList.subtitle.subtitle}
@@ -44,7 +41,7 @@ const CivicExperience = () => {
       <GridList shrinkToColumn>
         <GridListMap callToActionBlockList={contentfulContentList.content} />
       </GridList>
-    </div>
+    </Fragment>
   );
 };
 

@@ -1,10 +1,10 @@
 /** @jsx jsx */
-import { jsx, css } from "@emotion/core";
+import { jsx } from "@emotion/core";
 import { useStaticQuery, graphql } from "gatsby";
 import ProjectFeature from "../../components/ProjectFeature";
 import GridSingle from "../../components/GridSingle";
 import SectionHeader from "../../components/SectionHeader";
-import { smBreak, xsBreak } from "../../_Theme/UpdatedBrandTheme";
+import ContentContainer from "../../components/ContentContainer";
 
 const FeaturedProject = () => {
   const { contentfulProjectCollection } = useStaticQuery(
@@ -54,25 +54,8 @@ const FeaturedProject = () => {
   const project = contentfulProjectCollection.projects[0];
 
   return (
-    <div
-      css={css`
-        width: 100%;
-        background-color: white;
-        margin-top: 12px;
-
-        ${smBreak} {
-          margin-top: 10px;
-        }
-      `}
-    >
-      <GridSingle
-        containerStyle={css`
-          padding: 45px 40px;
-          ${xsBreak} {
-            padding: 20px 20px;
-          }
-        `}
-      >
+    <ContentContainer margin="md">
+      <GridSingle>
         <SectionHeader
           title={contentfulProjectCollection.title}
           subtitle={project.title}
@@ -93,7 +76,7 @@ const FeaturedProject = () => {
           image={project.image}
         />
       </GridSingle>
-    </div>
+    </ContentContainer>
   );
 };
 

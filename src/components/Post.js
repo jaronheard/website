@@ -29,55 +29,48 @@ const Post = ({
   updated,
   created
 }) => (
-  <div
-    css={css`
-      width: 100%;
-      background-color: white;
+  <GridSingle
+    containerStyle={css`
+      padding: 0 40px;
+      ${xsBreak} {
+        padding: 0 20px;
+      }
     `}
   >
-    <GridSingle
-      containerStyle={css`
-        padding: 45px 40px;
-        ${xsBreak} {
-          padding: 20px 20px;
-        }
-      `}
-    >
-      {featured && (
-        <div
-          css={css`
-            width: 100%;
-            display: flex;
-          `}
-        >
-          <h3>Featured Post</h3>
-        </div>
-      )}
-      <h2>
-        <Location>
-          {({ location }) => {
-            if (location.pathname === `/posts/${slug}`) {
-              return title;
-            }
-            return <Link to={`/posts/${slug}`}>{title}</Link>;
-          }}
-        </Location>
-      </h2>
-      {authors.map(author => (
-        <p
-          className="data-sm"
-          css={css`
-            margin-top: -1.5rem;
-          `}
-        >
-          Posted {created}
-          {updated !== created && `, updated ${updated}`} by{" "}
-          <a href={`mailto:${author.email}`}>{author.name}</a>
-        </p>
-      ))}
-      <p>{documentToReactComponents(content.json, options)}</p>
-    </GridSingle>
-  </div>
+    {featured && (
+      <div
+        css={css`
+          width: 100%;
+          display: flex;
+        `}
+      >
+        <h3>Featured Post</h3>
+      </div>
+    )}
+    <h2>
+      <Location>
+        {({ location }) => {
+          if (location.pathname === `/posts/${slug}`) {
+            return title;
+          }
+          return <Link to={`/posts/${slug}`}>{title}</Link>;
+        }}
+      </Location>
+    </h2>
+    {authors.map(author => (
+      <p
+        className="data-sm"
+        css={css`
+          margin-top: -1.5rem;
+        `}
+      >
+        Posted {created}
+        {updated !== created && `, updated ${updated}`} by{" "}
+        <a href={`mailto:${author.email}`}>{author.name}</a>
+      </p>
+    ))}
+    <p>{documentToReactComponents(content.json, options)}</p>
+  </GridSingle>
 );
 
 export default Post;

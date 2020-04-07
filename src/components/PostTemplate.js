@@ -6,6 +6,7 @@ import TitleAreaNew from "./TitleAreaNew";
 import DefaultTitleAreaContent from "./DefaultTitleAreaContent";
 import DividerLine from "./DividerLine";
 import { colors } from "../_Theme/UpdatedBrandTheme";
+import ContentContainer from "./ContentContainer";
 
 const PostTemplate = () => {
   const { contentfulPost } = useStaticQuery(
@@ -33,14 +34,16 @@ const PostTemplate = () => {
       <TitleAreaNew dividerLineColor={colors.blue.hex}>
         <DefaultTitleAreaContent title="Post" />
       </TitleAreaNew>
-      <Post
-        title={contentfulPost.title}
-        content={contentfulPost.content}
-        authors={contentfulPost.authors}
-        slug={contentfulPost.slug}
-        created={contentfulPost.createdAt}
-        updated={contentfulPost.updatedAt}
-      />
+      <ContentContainer margin="md">
+        <Post
+          title={contentfulPost.title}
+          content={contentfulPost.content}
+          authors={contentfulPost.authors}
+          slug={contentfulPost.slug}
+          created={contentfulPost.createdAt}
+          updated={contentfulPost.updatedAt}
+        />
+      </ContentContainer>
       <DividerLine hexColor={colors.pink.hex} />
     </PageLayout>
   );

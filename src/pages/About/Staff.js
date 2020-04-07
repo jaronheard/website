@@ -1,7 +1,6 @@
 /** @jsx jsx */
 import { jsx, css } from "@emotion/core";
 import { useStaticQuery, graphql } from "gatsby";
-import { Fragment } from "react";
 
 import { colors, noHover } from "../../_Theme/UpdatedBrandTheme";
 import GridList from "../../components/GridList";
@@ -31,74 +30,72 @@ const Staff = () => {
     `
   );
   return (
-    <Fragment>
-      <GridList>
-        {contentfulTeam.members.map(({ name, photo, title, email }) => {
-          return (
-            <section
-              css={css`
-                width: 322px;
-                height: 400px;
-                margin: 4rem 1rem 1rem 1rem;
-                display: flex;
-              `}
-            >
-              {photo && (
-                <img
-                  srcSet={photo.fluid.srcSet}
-                  sizes={photo.fluid.sizes}
-                  alt={photo.title}
-                />
-              )}
-              <div>
-                <div
-                  css={css`
-                    display: flex;
-                    position: relative;
-                    top: 360px;
-                    left: -312px;
-                    height: 80px;
-                    width: 322px;
-                    justify-content: center;
-                  `}
+    <GridList>
+      {contentfulTeam.members.map(({ name, photo, title, email }) => {
+        return (
+          <section
+            css={css`
+              width: 322px;
+              height: 400px;
+              margin: 4rem 1rem 1rem 1rem;
+              display: flex;
+            `}
+          >
+            {photo && (
+              <img
+                srcSet={photo.fluid.srcSet}
+                sizes={photo.fluid.sizes}
+                alt={photo.title}
+              />
+            )}
+            <div>
+              <div
+                css={css`
+                  display: flex;
+                  position: relative;
+                  top: 360px;
+                  left: -312px;
+                  height: 80px;
+                  width: 322px;
+                  justify-content: center;
+                `}
+              >
+                <a
+                  className="btn"
+                  href={`mailto:${email}`}
+                  css={[
+                    noHover,
+                    css`
+                      display: block;
+                      background-color: ${colors.primary.hex};
+                      height: max-content;
+                      width: max-content;
+                      padding: 0.5rem 1.5rem;
+                    `
+                  ]}
                 >
-                  <a
-                    className="btn"
-                    href={`mailto:${email}`}
-                    css={[
-                      noHover,
-                      css`
-                        display: block;
-                        background-color: ${colors.primary.hex};
-                        height: max-content;
-                        width: max-content;
-                        padding: 0.5rem 1.5rem;
-                      `
-                    ]}
+                  <p
+                    css={css`
+                      color: ${colors.white};
+                    `}
                   >
-                    <p
-                      css={css`
-                        color: ${colors.white};
-                      `}
-                    >
-                      {name}
-                    </p>
-                    <span
-                      className="h-6"
-                      css={css`
-                        color: ${colors.white};
-                      `}
-                    >
-                      {title}
-                    </span>
-                  </a>
-                </div>
+                    {name}
+                  </p>
+                  <span
+                    className="h-6"
+                    css={css`
+                      color: ${colors.white};
+                    `}
+                  >
+                    {title}
+                  </span>
+                </a>
               </div>
-            </section>
-          );
-        })}
-      </GridList>
-    </Fragment>
+            </div>
+          </section>
+        );
+      })}
+    </GridList>
   );
 };
 

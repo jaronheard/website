@@ -20,11 +20,11 @@ const ProjectsPage = () => {
       swoopColor={colors.yellow.hex}
     >
       <ProjectsHeader />
-      <ContentContainer>
-        <FeaturedProject />
-        <DividerLine hexColor={colors.pink.hex} />
-        <AboutOurProjects />
-        <DividerLine hexColor={colors.blue.hex} />
+      <FeaturedProject />
+      <DividerLine hexColor={colors.pink.hex} />
+      <AboutOurProjects />
+      <DividerLine hexColor={colors.blue.hex} />
+      <ContentContainer margin="md">
         <SectionHeader
           title="All Projects"
           subtitle="Only 2019–2020 projects for now. More history coming soon"
@@ -33,8 +33,8 @@ const ProjectsPage = () => {
         <GridList wideContent>
           <ProjectDetailList />
         </GridList>
-        <DividerLine hexColor={colors.green.hex} />
       </ContentContainer>
+      <DividerLine hexColor={colors.green.hex} />
     </PageLayout>
   );
 };

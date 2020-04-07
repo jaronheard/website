@@ -43,6 +43,7 @@ const SectionHeader = ({
         className={big ? "h-1" : "h-2"}
         css={css`
           max-width: 600px;
+          margin-top: 0;
         `}
       >
         {title}

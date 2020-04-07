@@ -40,16 +40,22 @@ const disciplinesAndRoles = () => {
           title={contentfulHeading.title}
         />
       </TitleAreaNew>
-      <ContentContainer>
+      <ContentContainer margin="md">
         <Philosophy />
-        <DividerLine hexColor={colors.blue.hex} />
-        <DeSiloExperience />
-        <DividerLine hexColor={colors.pink.hex} />
-        <CivicExperience />
-        <DividerLine hexColor={colors.green.hex} />
-        <ContributorCTA />
-        <DividerLine hexColor={colors.yellow.hex} />
       </ContentContainer>
+      <DividerLine hexColor={colors.blue.hex} />
+      <ContentContainer margin="md">
+        <DeSiloExperience />
+      </ContentContainer>
+      <DividerLine hexColor={colors.pink.hex} />
+      <ContentContainer margin="md">
+        <CivicExperience />
+      </ContentContainer>
+      <DividerLine hexColor={colors.green.hex} />
+      <ContentContainer margin="md">
+        <ContributorCTA />
+      </ContentContainer>
+      <DividerLine hexColor={colors.yellow.hex} />
     </PageLayout>
   );
 };

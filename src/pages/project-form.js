@@ -33,10 +33,10 @@ const ContributorApplication = () => {
       <TitleAreaNew dividerLineColor={colors.yellow.hex}>
         <DefaultTitleAreaContent title={contentfulHeading.title} />
       </TitleAreaNew>
-      <ContentContainer>
+      <ContentContainer margin="md">
         <EmbeddedForm formSrc="https://form.jotform.com/200788029904056" />
-        <DividerLine hexColor={colors.pink.hex} />
       </ContentContainer>
+      <DividerLine hexColor={colors.pink.hex} />
     </PageLayout>
   );
 };

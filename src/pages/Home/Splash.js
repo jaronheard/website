@@ -2,7 +2,7 @@
 import { jsx, css } from "@emotion/core";
 import { useStaticQuery, graphql } from "gatsby";
 
-import { smBreak, lgCardBreak, colors } from "../../_Theme/UpdatedBrandTheme";
+import { smBreak, colors } from "../../_Theme/UpdatedBrandTheme";
 import GridSingle from "../../components/GridSingle";
 import TitleAreaNew from "../../components/TitleAreaNew";
 
@@ -37,9 +37,6 @@ const Splash = () => {
             font-weight: 700;
             line-height: 1.15;
             margin: 0;
-            ${lgCardBreak} {
-              max-width: 550px;
-            }
             ${smBreak} {
               max-width: 425px;
             }
@@ -73,9 +70,6 @@ const Splash = () => {
             margin: 0;
             justify-self: right;
             align-self: end;
-            ${lgCardBreak} {
-              max-width: 500px;
-            }
             ${smBreak} {
               max-width: 4000px;
             }

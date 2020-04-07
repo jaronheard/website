@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { jsx, css } from "@emotion/core";
+import { jsx } from "@emotion/core";
 import { useStaticQuery, graphql } from "gatsby";
 
 import GridList from "../../components/GridList";
@@ -31,11 +31,7 @@ const DeSiloExperience = () => {
     `
   );
   return (
-    <div
-      css={css`
-        margin: 4rem 0 3rem 0;
-      `}
-    >
+    <div>
       <SectionHeader
         title={contentfulHeading.title}
         summary={contentfulHeading.summary.json}

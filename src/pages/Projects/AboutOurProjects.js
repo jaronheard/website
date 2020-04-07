@@ -1,8 +1,9 @@
-import React, { Fragment } from "react";
+import React from "react";
 import { useStaticQuery, graphql } from "gatsby";
 import SectionHeader from "../../components/SectionHeader";
 import ShadowBox from "../../components/ShadowBox";
 import GridList from "../../components/GridList";
+import ContentContainer from "../../components/ContentContainer";
 
 const AboutOurProjectsHeader = () => {
   const {
@@ -52,7 +53,7 @@ const AboutOurProjectsHeader = () => {
   const subtitle = `Over ${organizationCount} organizations, ${topicCount} topics, and ${projectTypeCount} project types.`;
 
   return (
-    <Fragment>
+    <ContentContainer margin="md">
       <SectionHeader
         title={contentfulHeading.title}
         subtitle={subtitle}
@@ -82,7 +83,7 @@ const AboutOurProjectsHeader = () => {
           </ul>
         </ShadowBox>
       </GridList>
-    </Fragment>
+    </ContentContainer>
   );
 };
 

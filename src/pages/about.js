@@ -47,16 +47,20 @@ const about = () => {
           title={contentfulHeading.title}
         />
       </TitleAreaNew>
-      <ContentContainer>
+      <ContentContainer margin="md">
         <FeaturedPost />
-        <DividerLine hexColor={colors.blue.hex} />
+      </ContentContainer>
+      <DividerLine hexColor={colors.blue.hex} />
+      <ContentContainer margin="md">
         <Organization
           contentfulCallToActionBlock={contentfulCallToActionBlock}
         />
-        <DividerLine hexColor={colors.pink.hex} />
-        <Staff />
-        <DividerLine hexColor={colors.blue.hex} />
       </ContentContainer>
+      <DividerLine hexColor={colors.pink.hex} />
+      <ContentContainer margin="md">
+        <Staff />
+      </ContentContainer>
+      <DividerLine hexColor={colors.blue.hex} />
     </PageLayout>
   );
 };

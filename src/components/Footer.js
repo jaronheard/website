@@ -2,6 +2,7 @@
 import { jsx, css } from "@emotion/core";
 import { BrandColors } from "@hackoregon/ui-themes";
 import Contact from "./Contact";
+import ContentContainer from "./ContentContainer";
 
 const footerText = css`
   color: ${BrandColors.subdued.hex};
@@ -9,35 +10,35 @@ const footerText = css`
 `;
 
 const Footer = () => (
-  <footer
-    css={css`
-      background-color: ${BrandColors.primary.hex};
-      text-align: center;
-      padding-bottom: 1rem;
-    `}
-  >
-    <Contact />
-    <div
+  <ContentContainer color={BrandColors.primary.hex}>
+    <footer
       css={css`
-        border-top: 1px solid white;
-        margin-top: 90px;
+        text-align: center;
+        padding-bottom: 1rem;
       `}
     >
-      <p className="p-sm" css={footerText}>
-        Civic Software Foundation is a 501(c)(3) registered non-profit
-        organization.
-        <br />
-        <a
-          css={css`
-            color: white;
-          `}
-          href
-        >
-          CC BY License
-        </a>
-      </p>
-    </div>
-  </footer>
+      <Contact />
+      <div
+        css={css`
+          border-top: 1px solid white;
+        `}
+      >
+        <p className="p-sm" css={footerText}>
+          Civic Software Foundation is a 501(c)(3) registered non-profit
+          organization.
+          <br />
+          <a
+            css={css`
+              color: white;
+            `}
+            href
+          >
+            CC BY License
+          </a>
+        </p>
+      </div>
+    </footer>
+  </ContentContainer>
 );
 
 export default Footer;
