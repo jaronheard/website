@@ -51,7 +51,6 @@ const PlatformComponents = () => {
       <SectionHeader
         title={contentfulHeading.title}
         summary={contentfulHeading.summary.json}
-        wideContent
       />
       <GridList
         wideContent

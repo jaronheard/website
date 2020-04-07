@@ -23,7 +23,6 @@ const PlatformHeader = () => {
       <DefaultTitleAreaContent
         subtitle={contentfulHeading.subtitle}
         title={contentfulHeading.title}
-        wideContent
       />
     </TitleAreaNew>
   );

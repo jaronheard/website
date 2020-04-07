@@ -17,7 +17,7 @@ const SectionHeader = ({
       display: grid;
       margin: 0 auto;
       width: 100%;
-      max-width: ${wideContent ? "1330px" : "1100px"};
+      max-width: ${wideContent ? "1100px" : "1100px"};
       padding: ${wideContent ? "0 40px" : ""};
 
       ${lgCardBreak} {
@@ -41,6 +41,7 @@ const SectionHeader = ({
         className={big ? "h-1" : "h-2"}
         css={css`
           margin-bottom: 0;
+          margin-top: 3rem;
         `}
       >
         {title}

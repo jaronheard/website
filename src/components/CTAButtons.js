@@ -10,7 +10,6 @@ const verticalStyle = css`
   justify-content: center;
   align-content: space-between;
   height: 200px;
-  margin-top: 80px;
 `;
 
 const CTAButtons = ({ vertical = false }) => (
@@ -18,7 +17,6 @@ const CTAButtons = ({ vertical = false }) => (
     css={css`
       display: grid;
       grid-template-columns: repeat(3, auto);
-      margin-top: 165px;
       grid-column-gap: 20px;
 
       ${smBreak} {

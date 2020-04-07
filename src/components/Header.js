@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { jsx, css } from "@emotion/core";
-import { Fragment, useState } from "react";
+import { useState } from "react";
 import { Link, navigate } from "gatsby";
 import { Logo } from "@hackoregon/ui-brand";
 import MenuIcon from "@material-ui/icons/Menu";
@@ -13,10 +13,40 @@ import {
   mdBreak,
   xsBreak,
   noHover,
-  focusBorder
+  focusBorder,
+  maxContentWidth
 } from "../_Theme/UpdatedBrandTheme";
 
-const headerHeight = "90px";
+const headerHeight = "45px";
+const headerContainer = css`
+  background-color: ${colors.primary.hex};
+  border-bottom: 3px solid ${colors.plumLight.hex};
+  z-index: 100;
+`;
+const headerGrid = css`
+  height: ${headerHeight};
+  display: grid;
+  margin: 0 auto;
+  padding: 0 2rem;
+  ${xsBreak} {
+    padding: 0 1rem;
+  }
+  ${maxContentWidth}
+`;
+const logoContainer = css`
+  position: absolute;
+  left: 50%;
+  top: 0.5em;
+
+  a {
+    position: relative;
+    left: -50%;
+    img {
+      height: 38px !important;
+      margin-top: -3px;
+    }
+  }
+`;
 
 const Header = () => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
@@ -31,61 +61,36 @@ const Header = () => {
   };
 
   return (
-    <Fragment>
-      <div
-        css={css`
-          height: ${headerHeight};
-          background-color: ${colors.white};
-          border-bottom: 3px solid ${colors.subdued.hex};
-          display: grid;
-          padding: 0 2rem;
-          ${xsBreak} {
-            padding: 0 1rem;
-          }
-          z-index: 100;
-        `}
-      >
+    <div css={headerContainer}>
+      <div css={headerGrid}>
         <div
           className="centerSelf"
-          css={css`
-            position: absolute;
-            left: 50%;
-            top: 1em;
-
-            ${smBreak} {
-              display: none;
-            }
-
-            a {
-              position: relative;
-              left: -50%;
-            }
-          `}
+          css={[
+            logoContainer,
+            css`
+              ${smBreak} {
+                display: none;
+              }
+            `
+          ]}
         >
           <Link to="/" css={noHover}>
-            <Logo type="standardLogo" />
+            <Logo type="standardLogoInverted" />
           </Link>
         </div>
 
         <div
-          className="centerSelf"
-          css={css`
-            position: absolute;
-            top: 1em;
-            left: 50%;
-
-            ${mdBreak} {
-              display: none;
-            }
-
-            a {
-              position: relative;
-              left: -50%;
-            }
-          `}
+          css={[
+            logoContainer,
+            css`
+              ${mdBreak} {
+                display: none;
+              }
+            `
+          ]}
         >
           <Link to="/" css={noHover}>
-            <Logo type="squareLogo" />
+            <Logo type="squareLogoInverted" />
           </Link>
         </div>
 
@@ -106,12 +111,22 @@ const Header = () => {
         >
           <button
             type="button"
-            className="btn-link"
+            className="headerButton"
+            css={css`
+              margin: 0;
+            `}
             onClick={() => {
               goTo("/platform/");
             }}
           >
-            <p className="action">Platform</p>
+            <h3
+              css={css`
+                color: white;
+                margin: 0;
+              `}
+            >
+              Platform
+            </h3>
           </button>
           <AboutDropdown goTo={goTo} />
         </div>
@@ -127,6 +142,7 @@ const Header = () => {
             height: max-content;
             align-self: center;
             border-radius: 5px;
+            color: white;
 
             ${focusBorder}
 
@@ -137,7 +153,11 @@ const Header = () => {
           type="button"
           onClick={toggleDropdown}
         >
-          <MenuIcon style={{ fontSize: "2.5rem" }} />
+          <MenuIcon
+            css={css`
+              font-size: 2.5rem;
+            `}
+          />
         </button>
       </div>
       <HeaderDropdown
@@ -145,7 +165,7 @@ const Header = () => {
         headerHeight={headerHeight}
         goTo={goTo}
       />
-    </Fragment>
+    </div>
   );
 };
 

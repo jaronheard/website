@@ -26,7 +26,7 @@ const GridList = ({
       <div
         className="GridListContent"
         css={css`
-          max-width: ${wideContent ? "1330px" : "1100px"};
+          max-width: ${wideContent ? "1100px" : "1100px"};
           padding: ${wideContent ? "0 40px" : ""};
 
           ${lgCardBreak} {

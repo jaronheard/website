@@ -27,12 +27,19 @@ const AboutDropdown = ({ goTo }) => {
         onClick={toggleDropdown}
         css={css`
           display: grid;
+          margin: 0;
         `}
       >
-        <p className="action">
+        <h3
+          css={css`
+            color: white;
+            margin: 0;
+          `}
+        >
           About{" "}
           {dropdownOpen ? (
             <KeyboardArrowUpIcon
+              height={16}
               css={css`
                 font-size: 1.5em;
                 margin-bottom: -5px;
@@ -40,29 +47,29 @@ const AboutDropdown = ({ goTo }) => {
             />
           ) : (
             <KeyboardArrowDownIcon
+              height={16}
               css={css`
                 font-size: 1.5em;
                 margin-bottom: -5px;
               `}
             />
           )}
-        </p>
+        </h3>
       </button>
       <div
         css={css`
           position: absolute;
-          top: ${dropdownOpen ? "88px" : "-2000px"};
+          top: ${dropdownOpen ? "40px" : "-2000px"};
           right: -1em;
-          background-color: white;
-          border: 3px solid ${colors.subdued.hex};
-          box-shadow: 6px 6px 0 ${colors.medium.hex};
+          background-color: ${colors.primary.hex};
+          outline: 3px solid ${colors.plumLight.hex};
           padding: 0 1em;
           width: max-content;
         `}
       >
         <ul
           css={css`
-            > li > button > p {
+            > li > button > h3 {
               margin: 0;
             }
           `}
@@ -76,7 +83,7 @@ const AboutDropdown = ({ goTo }) => {
                 goTo("/disciplines-and-roles/");
               }}
             >
-              <p>Disciplines & Roles</p>
+              <h3>Disciplines & Roles</h3>
             </button>
           </li>
           <li>
@@ -88,7 +95,7 @@ const AboutDropdown = ({ goTo }) => {
                 goTo("/projects/");
               }}
             >
-              <p>Projects</p>
+              <h3>Projects</h3>
             </button>
           </li>
           <li>
@@ -100,12 +107,22 @@ const AboutDropdown = ({ goTo }) => {
                 goTo("/about/");
               }}
             >
-              <p>About Us</p>
+              <h3>About Us</h3>
             </button>
           </li>
           <li>
-            <a href="#contact" tabIndex={`${dropdownOpen ? "0" : "1`"}`}>
-              <p>Contact</p>
+            <a
+              className="headerButton"
+              href="#contact"
+              tabIndex={`${dropdownOpen ? "0" : "1`"}`}
+            >
+              <h3
+                css={css`
+                  color: white;
+                `}
+              >
+                Contact
+              </h3>
             </a>
           </li>
         </ul>

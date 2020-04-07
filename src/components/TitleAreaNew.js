@@ -38,7 +38,7 @@ const NewTitleArea = ({
           width: 100%;
           height: 106%;
           z-index: -2;
-          opacity: 0.2;
+          opacity: 0.8;
         `}
       />
       <div
@@ -58,6 +58,7 @@ const NewTitleArea = ({
 
           ${xsBreak} {
             padding: 20px 20px;
+            height: auto;
           }
 
           ${childrenContainerStyle}

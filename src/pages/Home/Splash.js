@@ -2,15 +2,17 @@
 import { jsx, css } from "@emotion/core";
 import { useStaticQuery, graphql } from "gatsby";
 
-import { smBreak, lgCardBreak } from "../../_Theme/UpdatedBrandTheme";
+import { smBreak, lgCardBreak, colors } from "../../_Theme/UpdatedBrandTheme";
 import GridSingle from "../../components/GridSingle";
 import TitleAreaNew from "../../components/TitleAreaNew";
 
 const Splash = () => {
-  const { file, contentfulHeading } = useStaticQuery(graphql`
+  const { contentfulAsset, contentfulHeading } = useStaticQuery(graphql`
     query {
-      file(base: { eq: "hero__test--graph.png" }) {
-        publicURL
+      contentfulAsset(title: { eq: "sandbox-pencil" }) {
+        file {
+          url
+        }
       }
       contentfulHeading(contentful_id: { eq: "3Hy2d9lrRRmragYcOSoDl3" }) {
         subtitle
@@ -20,7 +22,7 @@ const Splash = () => {
   `);
 
   return (
-    <TitleAreaNew backgroundImage={`url(${file.publicURL})`}>
+    <TitleAreaNew backgroundImage={`url(${contentfulAsset.file.url})`}>
       <GridSingle
         containerStyle={css`
           width: 100%;
@@ -32,8 +34,7 @@ const Splash = () => {
             max-width: 650px;
             display: grid;
             justify-self: left;
-            font-weight: 600;
-            letter-spacing: 0.025rem;
+            font-weight: 700;
             line-height: 1.15;
             margin: 0;
             ${lgCardBreak} {
@@ -42,27 +43,65 @@ const Splash = () => {
             ${smBreak} {
               max-width: 425px;
             }
+            margin-bottom: 2rem;
           `}
         >
-          {contentfulHeading.title}
+          <div>
+            <span
+              css={css`
+                color: ${colors.white};
+                background-color: ${colors.primary.hex};
+                line-height: 1.7;
+                box-shadow: 0 0.1rem 0 0.2rem ${colors.primary.hex},
+                  0.2rem 0.1rem 0 0.2rem ${colors.primary.hex},
+                  -0.2rem 0.1rem 0 0.2rem ${colors.primary.hex},
+                  0.5rem 0.4rem 0 0.2rem ${colors.plumLight.hex},
+                  0.2rem 0.4rem 0 0.2rem ${colors.plumLight.hex};
+                box-decoration-break: clone;
+                letter-spacing: 0.1rem;
+              `}
+            >
+              {contentfulHeading.title}
+            </span>
+          </div>
         </h2>
-        <h4
+        <h3
           css={css`
-            max-width: 750px;
+            max-width: 600px;
+            padding: 1rem;
             display: grid;
             margin: 0;
             justify-self: right;
             align-self: end;
             ${lgCardBreak} {
-              max-width: 650px;
+              max-width: 500px;
             }
             ${smBreak} {
-              max-width: 550px;
+              max-width: 4000px;
             }
           `}
         >
-          {contentfulHeading.subtitle}
-        </h4>
+          <div>
+            <span
+              className="h-3"
+              css={css`
+                color: ${colors.white};
+                background-color: ${colors.primary.hex};
+                line-height: 1.4;
+                font-style: italic;
+                font-synthesis: none;
+                box-shadow: 0 0.1rem 0 0.2rem ${colors.primary.hex},
+                  0.2rem 0.1rem 0 0.2rem ${colors.primary.hex},
+                  -0.2rem 0.1rem 0 0.2rem ${colors.primary.hex},
+                  0.5rem 0.4rem 0 0.2rem ${colors.plumLight.hex},
+                  0.2rem 0.4rem 0 0.2rem ${colors.plumLight.hex};
+                box-decoration-break: clone;
+              `}
+            >
+              {contentfulHeading.subtitle}
+            </span>
+          </div>
+        </h3>
       </GridSingle>
     </TitleAreaNew>
   );

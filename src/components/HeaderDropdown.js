@@ -14,7 +14,7 @@ const DropdownSection = ({ children }) => {
   return (
     <div
       css={css`
-        border-top: 3px solid ${colors.subdued.hex};
+        border-top: 3px solid ${colors.plumLight.hex};
         height: max-content;
         padding: 0 3rem;
         ${xsBreak} {
@@ -32,9 +32,8 @@ const HeaderDropdown = ({ open, headerHeight, goTo }) => {
     <div
       css={css`
         height: auto;
-        background-color: ${colors.white};
-        border-bottom: 3px solid ${colors.subdued.hex};
-        box-shadow: 6px 6px 0 ${colors.medium.hex};
+        background-color: ${colors.primary.hex};
+        border-bottom: 3px solid ${colors.plumLight.hex};
         display: grid;
         z-index: 100;
         position: absolute;
@@ -47,24 +46,29 @@ const HeaderDropdown = ({ open, headerHeight, goTo }) => {
       `}
     >
       <DropdownSection>
-        <button
-          type="button"
-          className="headerButton"
-          onClick={() => {
-            goTo("/platform/");
-          }}
-        >
-          <h3>Platform</h3>
-        </button>
+        <ul className="h-3">
+          <li>
+            <button
+              type="button"
+              className="headerButton"
+              onClick={() => {
+                goTo("/platform/");
+              }}
+            >
+              <h3>Platform</h3>
+            </button>
+          </li>
+        </ul>
       </DropdownSection>
       <DropdownSection>
-        <h4
+        <h3
           css={css`
             margin-left: -1em;
+            color: ${colors.primary.subdued};
           `}
         >
           About
-        </h4>
+        </h3>
         <ul>
           <li>
             <button
@@ -115,7 +119,13 @@ const HeaderDropdown = ({ open, headerHeight, goTo }) => {
                 ${underlineFocus}
               `}
             >
-              <h3>Contact</h3>
+              <h3
+                css={css`
+                  color: white;
+                `}
+              >
+                Contact
+              </h3>
             </a>
           </li>
         </ul>

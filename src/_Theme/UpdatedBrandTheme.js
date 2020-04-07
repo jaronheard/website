@@ -1,6 +1,9 @@
 // Use with emotion's Global component
 import { BrandColors, VisualizationColors } from "@hackoregon/ui-themes";
 
+// Content width
+export const maxContentWidth = "max-width: 1100px;";
+
 // Breakpoints
 export const xsBreak = "@media (max-width:659.95px)";
 export const smBreak = "@media (max-width:959.95px)";
@@ -17,13 +20,22 @@ export const colors = {
 
 // Shadows
 export const shadows = {
-  bottom: `0px 3px 0px #AAA4AB`,
-  rightDown: `6px 6px 0px #AAA4AB`
+  bottom: `0px 3px 0px ${colors.medium.hex}`,
+  rightDown: `6px 6px 0px ${colors.medium.hex}`
 };
+
+export const colorShadows = color => ({
+  bottom: `0px 3px 0px ${color}`,
+  rightDown: `6px 6px 0px ${color}`
+});
 
 export const borders = {
   box: `4px solid ${BrandColors.subdued.hex}`
 };
+
+export const colorBorders = color => ({
+  box: `4px solid ${color}10`
+});
 
 export const noHover = {
   ":hover, :focus": {
@@ -34,7 +46,7 @@ export const noHover = {
 export const focusBorder = {
   ":hover, :focus": {
     outline: "none",
-    boxShadow: `0px 0px 5px ${colors.blue.hex}`
+    boxShadow: `0px 0px 5px ${colors.pink.hex}`
   }
 };
 
@@ -50,7 +62,7 @@ export const underlineFocus = {
   },
 
   ":hover, :focus": {
-    color: BrandColors.action.hex,
+    color: BrandColors.secondary.hex,
     cursor: "pointer",
     backgroundSize: "100% 3px"
   }
@@ -58,7 +70,7 @@ export const underlineFocus = {
 
 // Typography
 const body = {
-  fontFamily: "Roboto",
+  fontFamily: `-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"`,
   fontSize: "1.0625rem",
   lineHeight: "1.765rem",
   margin: 0,
@@ -79,7 +91,7 @@ const a = {
   backgroundImage: "linear-gradient(currentColor, currentColor)",
   backgroundPosition: "0% 100%",
   backgroundRepeat: "no-repeat",
-  backgroundSize: "0% 3px",
+  backgroundSize: "0% 2px",
 
   "&:focus": {
     outline: "none"
@@ -88,19 +100,19 @@ const a = {
   ":hover, :focus": {
     color: BrandColors.action.hex,
     cursor: "pointer",
-    backgroundSize: "100% 3px"
+    backgroundSize: "100% 2px"
   }
 };
 
 const p = {
   fontSize: "1.0625rem",
-  lineHeight: "1.765rem",
+  lineHeight: "1.5rem",
   color: BrandColors.tertiary.hex,
   marginBlockStart: "0.875rem",
   marginBlockEnd: "0.875rem",
   [smBreak]: {
     fontSize: "1rem",
-    lineHeight: "1.5rem"
+    lineHeight: "1.45rem"
   }
 };
 
@@ -111,6 +123,7 @@ const pSmall = {
   marginBlockEnd: "0.875rem"
 };
 
+// not yet updated
 const pLarge = {
   fontSize: "1.21125rem",
   lineHeight: "1.995rem",
@@ -122,6 +135,7 @@ const pLarge = {
   }
 };
 
+// not yet updated
 const input = {
   paddingLeft: "10px",
   paddingRight: "10px",
@@ -144,17 +158,17 @@ const input = {
 
 const action = {
   ...p,
-  fontFamily: "Rubik",
+  fontFamily: `-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"`,
   fontStyle: "normal",
-  fontWeight: "normal",
+  fontWeight: 500,
   fontSize: "1.25rem"
 };
 
 const h1 = {
   fontSize: "4rem",
   lineHeight: "1.0375",
-  fontFamily: "'Rubik', sans-serif",
-  fontWeight: "500",
+  fontFamily: `-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"`,
+  fontWeight: 800,
   marginBlockStart: "4rem",
   marginBlockEnd: "4rem",
   [lgBreak]: {
@@ -172,8 +186,8 @@ const h1 = {
 const h2 = {
   fontSize: "2.5rem",
   lineHeight: "1.10722",
-  fontFamily: "'Rubik', sans-serif",
-  fontWeight: "400",
+  fontFamily: `-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"`,
+  fontWeight: 900,
   marginBlockStart: "2rem",
   marginBlockEnd: "2rem",
   [smBreak]: {
@@ -187,8 +201,8 @@ const h2 = {
 export const h2Subtitle = {
   fontSize: "2.5rem",
   lineHeight: "1.10722",
-  fontFamily: "'Rubik', sans-serif",
-  fontWeight: "400",
+  fontFamily: `-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"`,
+  fontWeight: 1000,
   marginBlockStart: "2rem",
   marginBlockEnd: "2rem",
   [lgBreak]: {
@@ -206,8 +220,9 @@ export const h2Subtitle = {
 const h3 = {
   fontSize: "1.5rem",
   lineHeight: "1.381",
-  fontFamily: "'Rubik', sans-serif",
-  fontWeight: "500",
+  fontFamily: `-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"`,
+  fontWeight: 600,
+  color: colors.plumLight.hex,
   marginBlockStart: "1.5rem",
   marginBlockEnd: "1.5rem",
   [smBreak]: {
@@ -220,7 +235,7 @@ const h3 = {
 const h4 = {
   fontSize: "1.25rem",
   lineHeight: "1.381",
-  fontFamily: "'Rubik', sans-serif",
+  fontFamily: `-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"`,
   fontWeight: "400",
   marginBlockStart: "1.25rem",
   marginBlockEnd: "1.25rem",
@@ -234,7 +249,7 @@ const h4 = {
 const h5 = {
   fontSize: "1rem",
   lineHeight: "1.125rem",
-  fontFamily: "'Rubik', sans-serif",
+  fontFamily: `-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"`,
   fontWeight: "400",
   marginBlockStart: "1rem",
   marginBlockEnd: "1rem"
@@ -243,7 +258,7 @@ const h5 = {
 const h6 = {
   fontSize: "1rem",
   lineHeight: "0.9375rem",
-  fontFamily: "'Rubik', sans-serif",
+  fontFamily: `-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"`,
   fontWeight: "300",
   marginBlockStart: "1rem",
   marginBlockEnd: "1rem"
@@ -261,19 +276,19 @@ const code = {
 };
 
 const dataSmall = {
-  fontFamily: "Roboto Condensed",
+  fontFamily: `-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"`,
   fontSize: "0.86rem",
   lineHeight: "1.204rem"
 };
 
 const data = {
-  fontFamily: "Roboto Condensed",
+  fontFamily: `-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"`,
   fontSize: "1rem",
   lineHeight: "1.4rem"
 };
 
 const dataLarge = {
-  fontFamily: "Roboto Condensed",
+  fontFamily: `-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"`,
   fontSize: "1.14rem",
   lineHeight: "1.596rem"
 };
@@ -294,6 +309,8 @@ const button = {
 
   p: {
     ...action,
+    fontWeight: 700,
+    fontSize: "1.3rem",
     margin: 0,
     color: "white"
   },
@@ -319,9 +336,9 @@ export default {
 
   html: {
     fontSize: "1rem",
-    lineHeight: "1.4",
+    lineHeight: "1.425",
     backgroundColor: BrandColors.background.hex,
-    fontFamily: "Roboto",
+    fontFamily: `-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"`,
     fontWeight: "400",
     color: BrandColors.primary.hex,
     minHeight: "100%" /* [3] */,
@@ -428,18 +445,18 @@ export default {
     fontSize: "3.57rem",
     lineHeight: "1.2",
     fontWeight: "300",
-    fontFamily: "'Rubik', sans-serif",
+    fontFamily: `-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"`,
     marginBottom: "12px"
   },
 
   ".DataText": {
-    fontFamily: "Roboto Condensed",
+    fontFamily: `-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"`,
     fontSize: "0.86rem",
     lineHeight: "1.204rem"
   },
 
   ".DataFont": {
-    fontFamily: "Roboto Condensed"
+    fontFamily: `-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"`
   },
 
   ".LargeParagraph": pLarge,
@@ -549,11 +566,15 @@ export default {
     border: "none",
     padding: "0",
     cursor: "pointer",
-    margin: "15px 0",
     ...underlineFocus,
 
     "> h3": {
-      margin: "0"
+      margin: "0",
+      color: "white",
+      fontSize: "1.35rem"
+    },
+    "> p": {
+      color: "white"
     }
   }
 };
