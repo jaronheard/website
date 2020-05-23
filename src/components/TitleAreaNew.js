@@ -1,7 +1,6 @@
 /** @jsx jsx */
 import { jsx, css } from "@emotion/core";
 import { PropTypes } from "prop-types";
-import { useStaticQuery, graphql } from "gatsby";
 
 import { smBreak, colors, xsBreak } from "../_Theme/UpdatedBrandTheme";
 import DividerLine from "./DividerLine";
@@ -12,16 +11,6 @@ const NewTitleArea = ({
   dividerLineColor = colors.green.hex,
   childrenContainerStyle
 }) => {
-  const { file } = useStaticQuery(graphql`
-    query {
-      file(base: { eq: "hero__test--graph.png" }) {
-        publicURL
-      }
-    }
-  `);
-
-  const defaultBackgroundImage = `url(${file.publicURL})`;
-
   return (
     <div
       css={css`
@@ -30,7 +19,7 @@ const NewTitleArea = ({
     >
       <picture
         css={css`
-          background-image: ${backgroundImage || defaultBackgroundImage};
+          background-image: ${backgroundImage};
           background-size: cover;
           background-repeat: no-repeat;
           background-attachment: local;

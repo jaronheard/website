@@ -7,13 +7,8 @@ import GridSingle from "../../components/GridSingle";
 import TitleAreaNew from "../../components/TitleAreaNew";
 
 const Splash = () => {
-  const { contentfulAsset, contentfulHeading } = useStaticQuery(graphql`
+  const { contentfulHeading } = useStaticQuery(graphql`
     query {
-      contentfulAsset(title: { eq: "sandbox-pencil" }) {
-        file {
-          url
-        }
-      }
       contentfulHeading(contentful_id: { eq: "3Hy2d9lrRRmragYcOSoDl3" }) {
         subtitle
         title
@@ -22,7 +17,7 @@ const Splash = () => {
   `);
 
   return (
-    <TitleAreaNew backgroundImage={`url(${contentfulAsset.file.url})`}>
+    <TitleAreaNew>
       <GridSingle
         containerStyle={css`
           width: 100%;
