@@ -7,8 +7,13 @@ import GridSingle from "../../components/GridSingle";
 import TitleAreaNew from "../../components/TitleAreaNew";
 
 const Splash = () => {
-  const { contentfulHeading } = useStaticQuery(graphql`
+  const { contentfulAsset, contentfulHeading } = useStaticQuery(graphql`
     query {
+      contentfulAsset(contentful_id: { eq: "2nUqql9FbB65BEmuUzPX1B" }) {
+        file {
+          url
+        }
+      }
       contentfulHeading(contentful_id: { eq: "3Hy2d9lrRRmragYcOSoDl3" }) {
         subtitle
         title
@@ -17,7 +22,7 @@ const Splash = () => {
   `);
 
   return (
-    <TitleAreaNew>
+    <TitleAreaNew backgroundImage={`url(https:${contentfulAsset.file.url})`}>
       <GridSingle
         containerStyle={css`
           width: 100%;
@@ -41,15 +46,8 @@ const Splash = () => {
           <div>
             <span
               css={css`
-                color: ${colors.white};
-                background-color: ${colors.primary.hex};
-                line-height: 1.7;
-                box-shadow: 0 0.1rem 0 0.2rem ${colors.primary.hex},
-                  0.2rem 0.1rem 0 0.2rem ${colors.primary.hex},
-                  -0.2rem 0.1rem 0 0.2rem ${colors.primary.hex},
-                  0.5rem 0.4rem 0 0.2rem ${colors.plumLight.hex},
-                  0.2rem 0.4rem 0 0.2rem ${colors.plumLight.hex};
-                box-decoration-break: clone;
+                background-color: ${colors.subdued.hex};
+                line-height: 1.4;
                 letter-spacing: 0.1rem;
               `}
             >
@@ -74,17 +72,10 @@ const Splash = () => {
             <span
               className="h-3"
               css={css`
-                color: ${colors.white};
-                background-color: ${colors.primary.hex};
+                background-color: ${colors.subdued.hex};
                 line-height: 1.4;
                 font-style: italic;
                 font-synthesis: none;
-                box-shadow: 0 0.1rem 0 0.2rem ${colors.primary.hex},
-                  0.2rem 0.1rem 0 0.2rem ${colors.primary.hex},
-                  -0.2rem 0.1rem 0 0.2rem ${colors.primary.hex},
-                  0.5rem 0.4rem 0 0.2rem ${colors.plumLight.hex},
-                  0.2rem 0.4rem 0 0.2rem ${colors.plumLight.hex};
-                box-decoration-break: clone;
               `}
             >
               {contentfulHeading.subtitle}
