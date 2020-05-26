@@ -1,8 +1,9 @@
 /** @jsx jsx */
 import { jsx, css } from "@emotion/core";
 import { useStaticQuery, graphql } from "gatsby";
+import { Logo } from "@hackoregon/ui-brand";
 
-import { smBreak, colors } from "../../_Theme/UpdatedBrandTheme";
+import { smBreak } from "../../_Theme/UpdatedBrandTheme";
 import GridSingle from "../../components/GridSingle";
 import TitleAreaNew from "../../components/TitleAreaNew";
 
@@ -36,20 +37,27 @@ const Splash = () => {
             justify-self: left;
             font-weight: 700;
             line-height: 1.15;
-            margin: 1rem 0 2rem;
             ${smBreak} {
-              max-width: 425px;
+              max-width: 4000px;
             }
           `}
         >
           <div>
             <span
               css={css`
-                background-color: ${colors.subdued.hex};
                 line-height: 1.4;
                 letter-spacing: 0.1rem;
               `}
             >
+              <Logo
+                type="squareLogo"
+                css={css`
+                  height: 40px !important;
+                  top: 10px !important;
+                  margin-right: 10px !important;
+                  position: relative;
+                `}
+              />
               {contentfulHeading.title}
             </span>
           </div>
@@ -57,10 +65,9 @@ const Splash = () => {
         <h3
           css={css`
             max-width: 600px;
-            padding: 1rem;
             display: grid;
             margin: 0;
-            justify-self: right;
+            justify-self: left;
             align-self: end;
             ${smBreak} {
               max-width: 4000px;
@@ -71,7 +78,6 @@ const Splash = () => {
             <span
               className="h-3"
               css={css`
-                background-color: ${colors.subdued.hex};
                 line-height: 1.4;
                 font-style: italic;
                 font-synthesis: none;

@@ -45,7 +45,6 @@ const DefaultTitleAreaContent = ({ subtitle, title, wideContent }) => {
         <div>
           <span
             css={css`
-              background-color: ${colors.subdued.hex};
               line-height: 1.4;
             `}
           >

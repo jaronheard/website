@@ -1,8 +1,7 @@
 /** @jsx jsx */
 import { jsx, css } from "@emotion/core";
 import { useState } from "react";
-import { Link, navigate } from "gatsby";
-import { Logo } from "@hackoregon/ui-brand";
+import { navigate } from "gatsby";
 import MenuIcon from "@material-ui/icons/Menu";
 
 import HeaderDropdown from "./HeaderDropdown";
@@ -12,7 +11,6 @@ import {
   smBreak,
   mdBreak,
   xsBreak,
-  noHover,
   focusBorder,
   maxContentWidth
 } from "../_Theme/UpdatedBrandTheme";
@@ -63,11 +61,7 @@ const Header = () => {
   return (
     <div css={headerContainer}>
       <div css={headerGrid}>
-        <div css={[logoContainer]}>
-          <Link to="/" css={noHover}>
-            <Logo type="squareLogoInverted" />
-          </Link>
-        </div>
+        <div css={[logoContainer]} />
 
         <div
           css={css`
