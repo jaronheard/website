@@ -9,7 +9,7 @@ import { colors } from "../_Theme/UpdatedBrandTheme";
 import ContentContainer from "./ContentContainer";
 
 const PostTemplate = () => {
-  const { contentfulPost } = useStaticQuery(
+  const { contentfulPost, contentfulAsset } = useStaticQuery(
     graphql`
       query PostQuery($slug: String) {
         contentfulPost(slug: { eq: $slug }) {
@@ -25,13 +25,21 @@ const PostTemplate = () => {
           createdAt(formatString: "MMMM DD, YYYY")
           updatedAt(formatString: "MMMM DD, YYYY")
         }
+        contentfulAsset(title: { eq: "civic-cairo-pattern-6" }) {
+          file {
+            url
+          }
+        }
       }
     `
   );
 
   return (
     <PageLayout title={contentfulPost.title}>
-      <TitleAreaNew dividerLineColor={colors.blue.hex}>
+      <TitleAreaNew
+        dividerLineColor={colors.blue.hex}
+        backgroundImage={`url(https:${contentfulAsset.file.url})`}
+      >
         <DefaultTitleAreaContent title="Post" />
       </TitleAreaNew>
       <ContentContainer margin="md">

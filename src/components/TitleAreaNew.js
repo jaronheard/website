@@ -29,8 +29,8 @@ const NewTitleArea = ({
           top: 0;
           left: 0;
           width: 100%;
-          height: 120%;
-          z-index: -2;
+          height: 600px;
+          z-index: -1;
           opacity: 0.8;
         `}
       />

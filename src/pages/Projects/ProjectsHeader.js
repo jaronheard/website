@@ -6,19 +6,27 @@ import TitleAreaNew from "../../components/TitleAreaNew";
 import DefaultTitleAreaContent from "../../components/DefaultTitleAreaContent";
 
 const ProjectsHeader = () => {
-  const { contentfulHeading } = useStaticQuery(
+  const { contentfulHeading, contentfulAsset } = useStaticQuery(
     graphql`
       query {
         contentfulHeading(contentful_id: { eq: "7mvVTRyNzrgC3JTb4SdNsT" }) {
           title
           subtitle
         }
+        contentfulAsset(title: { eq: "civic-cairo-pattern-3" }) {
+          file {
+            url
+          }
+        }
       }
     `
   );
 
   return (
-    <TitleAreaNew dividerLineColor={colors.purple.hex}>
+    <TitleAreaNew
+      backgroundImage={`url(https:${contentfulAsset.file.url})`}
+      dividerLineColor={colors.purple.hex}
+    >
       <DefaultTitleAreaContent
         subtitle={contentfulHeading.subtitle}
         title={contentfulHeading.title}

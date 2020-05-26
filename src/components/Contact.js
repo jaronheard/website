@@ -10,12 +10,13 @@ const whiteText = css`
 `;
 
 const Contact = () => (
-  <ContentContainer margin="md" color={colors.primary.hex}>
+  <ContentContainer margin="sm" color={colors.primary.hex}>
     <div
       css={css`
         text-align: left;
-        padding: 3rem 3rem 0;
+        padding: 0 3rem 0;
         ${maxContentWidth}
+        margin: 0 auto;
       `}
       name="contact"
     >
@@ -33,8 +34,8 @@ const Contact = () => (
         css={css`
           width: 100%;
           display: grid;
-          justify-content: space-around;
-          grid-template-columns: max-content max-content;
+          grid-template-columns: max-content max-content 1fr;
+          grid-gap: 4rem;
 
           ${xsBreak} {
             grid-template-columns: 1fr;

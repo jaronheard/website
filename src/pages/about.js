@@ -13,9 +13,13 @@ import Staff from "./About/Staff";
 import FeaturedPost from "./About/FeaturedPost";
 import Organization from "./About/Organization";
 
-const about = () => {
+const About = () => {
   // eslint-disable-next-line react-hooks/rules-of-hooks
-  const { contentfulHeading, contentfulCallToActionBlock } = useStaticQuery(
+  const {
+    contentfulHeading,
+    contentfulCallToActionBlock,
+    contentfulAsset
+  } = useStaticQuery(
     graphql`
       query {
         contentfulHeading(contentful_id: { eq: "29hwKSc4FX6b1sM8ydG5EX" }) {
@@ -31,6 +35,11 @@ const about = () => {
             json
           }
         }
+        contentfulAsset(title: { eq: "civic-cairo-pattern-5" }) {
+          file {
+            url
+          }
+        }
       }
     `
   );
@@ -41,7 +50,10 @@ const about = () => {
       keywords={[`Civic Software Foundation`, `CIVIC Platform`]}
     >
       {/* TODO: Add back team pic */}
-      <TitleAreaNew dividerLineColor={colors.green.hex}>
+      <TitleAreaNew
+        dividerLineColor={colors.green.hex}
+        backgroundImage={`url(https:${contentfulAsset.file.url})`}
+      >
         <DefaultTitleAreaContent
           subtitle={contentfulHeading.subtitle}
           title={contentfulHeading.title}
@@ -65,4 +77,4 @@ const about = () => {
   );
 };
 
-export default about;
+export default About;

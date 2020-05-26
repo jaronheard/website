@@ -16,7 +16,7 @@ const PlatformPage = () => {
       swoopColor={colors.pink.hex}
     >
       <PlatformHeader />
-      <ContentContainer>
+      <ContentContainer margin="md">
         <PlatformComponents />
       </ContentContainer>
       <DividerLine hexColor={colors.yellow.hex} />

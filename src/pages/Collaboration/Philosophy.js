@@ -6,7 +6,7 @@ import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 import { smBreak, xsBreak } from "../../_Theme/UpdatedBrandTheme";
 import GridSingle from "../../components/GridSingle";
 
-const disciplinesAndRoles = () => {
+const collaborationPhilosophy = () => {
   // eslint-disable-next-line react-hooks/rules-of-hooks
   const { contentfulCallToActionBlock } = useStaticQuery(
     graphql`
@@ -56,4 +56,4 @@ const disciplinesAndRoles = () => {
   );
 };
 
-export default disciplinesAndRoles;
+export default collaborationPhilosophy;

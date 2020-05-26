@@ -9,7 +9,7 @@ import TitleAreaNew from "../../components/TitleAreaNew";
 const Splash = () => {
   const { contentfulAsset, contentfulHeading } = useStaticQuery(graphql`
     query {
-      contentfulAsset(contentful_id: { eq: "2nUqql9FbB65BEmuUzPX1B" }) {
+      contentfulAsset(title: { eq: "civic-cairo-pattern" }) {
         file {
           url
         }
@@ -36,11 +36,10 @@ const Splash = () => {
             justify-self: left;
             font-weight: 700;
             line-height: 1.15;
-            margin: 0;
+            margin: 1rem 0 2rem;
             ${smBreak} {
               max-width: 425px;
             }
-            margin-bottom: 2rem;
           `}
         >
           <div>
