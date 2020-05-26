@@ -1,7 +1,6 @@
 /** @jsx jsx */
 import { jsx, css } from "@emotion/core";
 import { PropTypes } from "prop-types";
-import { useStaticQuery, graphql } from "gatsby";
 
 import { smBreak, colors, xsBreak } from "../_Theme/UpdatedBrandTheme";
 import DividerLine from "./DividerLine";
@@ -9,24 +8,18 @@ import DividerLine from "./DividerLine";
 const NewTitleArea = ({
   backgroundImage,
   children,
-  dividerLineColor = colors.purple.hex,
+  dividerLineColor = colors.green.hex,
   childrenContainerStyle
 }) => {
-  const { file } = useStaticQuery(graphql`
-    query {
-      file(base: { eq: "hero__test--graph.png" }) {
-        publicURL
-      }
-    }
-  `);
-
-  const defaultBackgroundImage = `url(${file.publicURL})`;
-
   return (
-    <div>
+    <div
+      css={css`
+        z-index: -1;
+      `}
+    >
       <picture
         css={css`
-          background-image: ${backgroundImage || defaultBackgroundImage};
+          background-image: ${backgroundImage};
           background-size: cover;
           background-repeat: no-repeat;
           background-attachment: local;
@@ -36,8 +29,8 @@ const NewTitleArea = ({
           top: 0;
           left: 0;
           width: 100%;
-          height: 106%;
-          z-index: -2;
+          height: 600px;
+          z-index: -1;
           opacity: 0.8;
         `}
       />
@@ -46,14 +39,14 @@ const NewTitleArea = ({
           display: grid;
           align-content: stretch;
           text-align: left;
-          padding: 45px 40px;
-          margin-bottom: -90px;
+          padding: 25px 40px;
+          margin-bottom: -30px;
           height: 370px;
           justify-content: stretch;
 
           ${smBreak} {
             margin-bottom: -45px;
-            height: 250px;
+            height: auto;
           }
 
           ${xsBreak} {
@@ -69,8 +62,8 @@ const NewTitleArea = ({
       <DividerLine
         hexColor={dividerLineColor}
         swoopStyle={css`
-          margin-bottom: -30px;
-          margin-top: 70px;
+          margin-bottom: -1.5rem;
+          margin-top: 2rem;
         `}
         lineStyle={css`
           margin-bottom: 0;

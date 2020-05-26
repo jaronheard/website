@@ -6,7 +6,8 @@ import {
   smBreak,
   lgCardBreak,
   xsBreak,
-  h2Subtitle
+  h2Subtitle,
+  colors
 } from "../_Theme/UpdatedBrandTheme";
 import GridSingle from "./GridSingle";
 
@@ -36,9 +37,21 @@ const DefaultTitleAreaContent = ({ subtitle, title, wideContent }) => {
           }
 
           ${h2Subtitle}
+          font-weight: 700;
+          line-height: 1.4;
+          letter-spacing: 0.1rem;
         `}
       >
-        {subtitle || ""}
+        <div>
+          <span
+            css={css`
+              background-color: ${colors.subdued.hex};
+              line-height: 1.4;
+            `}
+          >
+            {subtitle || ""}
+          </span>
+        </div>
       </h2>
       <h1
         css={css`
@@ -46,6 +59,7 @@ const DefaultTitleAreaContent = ({ subtitle, title, wideContent }) => {
           margin: 0;
           justify-self: right;
           align-self: end;
+          background-color: ${colors.subdued.hex};
         `}
       >
         {title || ""}

@@ -20,7 +20,7 @@ import {
 const headerHeight = "45px";
 const headerContainer = css`
   background-color: ${colors.primary.hex};
-  border-bottom: 3px solid ${colors.plumLight.hex};
+  border-bottom: 0px solid ${colors.plumLight.hex};
   z-index: 100;
 `;
 const headerGrid = css`
@@ -35,7 +35,7 @@ const headerGrid = css`
 `;
 const logoContainer = css`
   position: absolute;
-  left: 50%;
+  left: 15%;
   top: 0.5em;
 
   a {
@@ -63,32 +63,7 @@ const Header = () => {
   return (
     <div css={headerContainer}>
       <div css={headerGrid}>
-        <div
-          className="centerSelf"
-          css={[
-            logoContainer,
-            css`
-              ${smBreak} {
-                display: none;
-              }
-            `
-          ]}
-        >
-          <Link to="/" css={noHover}>
-            <Logo type="standardLogoInverted" />
-          </Link>
-        </div>
-
-        <div
-          css={[
-            logoContainer,
-            css`
-              ${mdBreak} {
-                display: none;
-              }
-            `
-          ]}
-        >
+        <div css={[logoContainer]}>
           <Link to="/" css={noHover}>
             <Logo type="squareLogoInverted" />
           </Link>

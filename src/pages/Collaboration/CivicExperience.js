@@ -3,7 +3,6 @@ import { jsx } from "@emotion/core";
 import { useStaticQuery, graphql } from "gatsby";
 import { Fragment } from "react";
 
-import { colors } from "../../_Theme/UpdatedBrandTheme";
 import GridList from "../../components/GridList";
 import GridListMap from "../../components/GridListMap";
 import SectionHeader from "../../components/SectionHeader";
@@ -39,11 +38,7 @@ const CivicExperience = () => {
         subtitle={contentfulContentList.subtitle.subtitle}
         shrinkToColumn
       />
-      <GridList
-        showDividerLine
-        dividerLineColor={colors.green.hex}
-        shrinkToColumn
-      >
+      <GridList shrinkToColumn>
         <GridListMap callToActionBlockList={contentfulContentList.content} />
       </GridList>
     </Fragment>

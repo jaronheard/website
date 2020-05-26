@@ -10,8 +10,8 @@ import {
 
 const quoteBox = css`
   padding: 0 70px;
-  max-width: 790px;
-  margin: 60px auto 0;
+  max-width: 600px;
+  margin: 0 auto;
   position: relative;
 `;
 const markSize = css`

@@ -59,31 +59,24 @@ const AboutDropdown = ({ goTo }) => {
       <div
         css={css`
           position: absolute;
-          top: ${dropdownOpen ? "40px" : "-2000px"};
+          top: ${dropdownOpen ? "37px" : "-2000px"};
           right: -1em;
           background-color: ${colors.primary.hex};
-          outline: 3px solid ${colors.plumLight.hex};
-          padding: 0 1em;
+          padding: 0.7em 1em;
           width: max-content;
         `}
       >
-        <ul
-          css={css`
-            > li > button > h3 {
-              margin: 0;
-            }
-          `}
-        >
+        <ul>
           <li>
             <button
               tabIndex={`${dropdownOpen ? "0" : "-1"}`}
               type="button"
               className="headerButton"
               onClick={() => {
-                goTo("/disciplines-and-roles/");
+                goTo("/collaboration/");
               }}
             >
-              <h3>Disciplines & Roles</h3>
+              <h4>Collaboration</h4>
             </button>
           </li>
           <li>
@@ -95,7 +88,7 @@ const AboutDropdown = ({ goTo }) => {
                 goTo("/projects/");
               }}
             >
-              <h3>Projects</h3>
+              <h4>Projects</h4>
             </button>
           </li>
           <li>
@@ -107,7 +100,7 @@ const AboutDropdown = ({ goTo }) => {
                 goTo("/about/");
               }}
             >
-              <h3>About Us</h3>
+              <h4>About Us</h4>
             </button>
           </li>
           <li>
@@ -116,13 +109,7 @@ const AboutDropdown = ({ goTo }) => {
               href="#contact"
               tabIndex={`${dropdownOpen ? "0" : "1`"}`}
             >
-              <h3
-                css={css`
-                  color: white;
-                `}
-              >
-                Contact
-              </h3>
+              <h4>Contact</h4>
             </a>
           </li>
         </ul>

@@ -76,10 +76,10 @@ const HeaderDropdown = ({ open, headerHeight, goTo }) => {
               tabIndex={`${open ? "0" : "-1"}`}
               className="headerButton"
               onClick={() => {
-                goTo("/disciplines-and-roles/");
+                goTo("/collaboration/");
               }}
             >
-              <h3>Disciplines & Roles</h3>
+              <h3>Collaboration</h3>
             </button>
           </li>
           <li>

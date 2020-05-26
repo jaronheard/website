@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { jsx, css } from "@emotion/core";
+import { jsx } from "@emotion/core";
 
 import PageLayout from "../components/PageLayout";
 import Splash from "./Home/Splash";
@@ -19,21 +19,13 @@ const IndexPage = () => {
       swoopColor={colors.yellow.hex}
     >
       <Splash />
-      <ContentContainer>
-        <div
-          css={css`
-            background-color: white;
-            display: grid;
-            justify-content: center;
-            margin-top: 10px;
-            padding-top: 10px;
-          `}
-        >
-          <OurDifferenceHeader />
-          <OurDifferenceCards />
-        </div>
-        <DividerLine hexColor={colors.yellow.hex} />
-        <CallToActionBlocks />
+      <ContentContainer margin="md">
+        <OurDifferenceHeader />
+        <OurDifferenceCards />
+      </ContentContainer>
+      <DividerLine hexColor={colors.yellow.hex} />
+      <CallToActionBlocks />
+      <ContentContainer margin="sm">
         <QuoteBlock
           author="Catherine Nikolovski"
           title="Founder of CIVIC"
@@ -42,8 +34,8 @@ const IndexPage = () => {
           When political will meets public imagination, the technology we can
           create is unlike anything the world has ever seen.
         </QuoteBlock>
-        <DividerLine hexColor={colors.purple.hex} />
       </ContentContainer>
+      <DividerLine hexColor={colors.purple.hex} />
     </PageLayout>
   );
 };

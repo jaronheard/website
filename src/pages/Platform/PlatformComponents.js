@@ -2,11 +2,10 @@
 import { jsx, css } from "@emotion/core";
 import { useStaticQuery, graphql } from "gatsby";
 
-import { colors } from "../../_Theme/UpdatedBrandTheme";
+import { xsBreak } from "../../_Theme/UpdatedBrandTheme";
 import GridList from "../../components/GridList";
 import GridListMap from "../../components/GridListMap";
 import SectionHeader from "../../components/SectionHeader";
-import DividerLine from "../../components/DividerLine";
 
 const PlatformComponents = () => {
   const { contentfulContentList, contentfulHeading } = useStaticQuery(
@@ -44,13 +43,15 @@ const PlatformComponents = () => {
   return (
     <div
       css={css`
-        width: 100%;
-        background-color: white;
+        ${xsBreak} {
+          justify-items: center;
+        }
       `}
     >
       <SectionHeader
         title={contentfulHeading.title}
         summary={contentfulHeading.summary.json}
+        center
       />
       <GridList
         wideContent
@@ -64,7 +65,6 @@ const PlatformComponents = () => {
           wideContent
         />
       </GridList>
-      <DividerLine hexColor={colors.yellow.hex} />
     </div>
   );
 };

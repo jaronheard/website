@@ -1,9 +1,7 @@
 /** @jsx jsx */
 import { jsx } from "@emotion/core";
 import { useStaticQuery, graphql } from "gatsby";
-import { Fragment } from "react";
 
-import { colors } from "../../_Theme/UpdatedBrandTheme";
 import GridList from "../../components/GridList";
 import GridListMap from "../../components/GridListMap";
 import SectionHeader from "../../components/SectionHeader";
@@ -33,18 +31,19 @@ const DeSiloExperience = () => {
     `
   );
   return (
-    <Fragment>
+    <div>
       <SectionHeader
         title={contentfulHeading.title}
         summary={contentfulHeading.summary.json}
+        shrinkToColumn
       />
-      <GridList showDividerLine dividerLineColor={colors.pink.hex}>
+      <GridList shrinkToColumn>
         <GridListMap
           callToActionBlockList={contentfulContentList.content}
           colorShadow
         />
       </GridList>
-    </Fragment>
+    </div>
   );
 };
 

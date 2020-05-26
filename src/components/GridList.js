@@ -57,13 +57,13 @@ const GridList = ({
       {(bottomContent || buttonText) && (
         <div
           css={css`
-            margin: 115px auto 0;
+            margin: 0 auto;
             max-width: 600px;
             display: grid;
             justify-items: right;
 
             ${smBreak} {
-              margin: 60px auto 0;
+              margin: 0 auto;
               padding: 0 20px;
               justify-items: center;
             }
@@ -75,13 +75,8 @@ const GridList = ({
               to={buttonLocalLink}
               className="btn-purple"
               css={css`
-                margin-top: 70px;
                 width: max-content;
                 padding: 0 1rem;
-
-                ${smBreak} {
-                  margin-top: 30px;
-                }
               `}
             >
               <p>{buttonText}</p>

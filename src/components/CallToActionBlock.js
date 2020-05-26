@@ -5,6 +5,7 @@ import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
 import { Link } from "gatsby";
 import DividerLine from "./DividerLine";
 import { colors, smBreak, xsBreak } from "../_Theme/UpdatedBrandTheme";
+import ContentContainer from "./ContentContainer";
 
 // https://app.contentful.com/spaces/3j4jpxgb52st/content_types/callToActionBlock/fields
 
@@ -49,18 +50,17 @@ const CallToActionBlock = ({
 
   return (
     <div>
-      <div
-        css={css`
-          margin: 5rem 0 6rem;
-          padding: 0 70px;
-          ${smBreak} {
-            margin: 0;
-            padding: 0 35px;
-          }
-        `}
-      >
+      <ContentContainer margin="lg">
         <div
           css={css`
+            padding: 0 70px;
+            ${smBreak} {
+              padding: 0 35px;
+            }
+          `}
+        >
+          <div
+            css={css`
             display: grid;
             grid-template-columns: repeat(2, auto);
             grid-template-rows: auto;
@@ -83,36 +83,40 @@ const CallToActionBlock = ({
               justify-items: center;
             }
           `}
-        >
-          {CTAimage}
-          <div css={contentStyle}>
-            {tagline && (
-              <h2
-                className={big && "h-1"}
-                css={css`
-                  margin: 0;
-                `}
-              >
-                {tagline}
-              </h2>
-            )}
-            {summary && (
-              <div
-                css={css`
-                  margin: 40px 0;
-                `}
-              >
-                {documentToReactComponents(summary)}
-              </div>
-            )}
-            {button && (
-              <Link to={`${buttonLocalLink}`} className={`btn-${buttonColor}`}>
-                <p>{button}</p>
-              </Link>
-            )}
+          >
+            {CTAimage}
+            <div css={contentStyle}>
+              {tagline && (
+                <h2
+                  className={big && "h-1"}
+                  css={css`
+                    margin: 0;
+                  `}
+                >
+                  {tagline}
+                </h2>
+              )}
+              {summary && (
+                <div
+                  css={css`
+                    margin: 40px 0;
+                  `}
+                >
+                  {documentToReactComponents(summary)}
+                </div>
+              )}
+              {button && (
+                <Link
+                  to={`${buttonLocalLink}`}
+                  className={`btn-${buttonColor}`}
+                >
+                  <p>{button}</p>
+                </Link>
+              )}
+            </div>
           </div>
         </div>
-      </div>
+      </ContentContainer>
       <DividerLine hexColor={colors[dividerColor].hex} />
     </div>
   );

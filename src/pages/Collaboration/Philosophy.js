@@ -1,26 +1,23 @@
 /** @jsx jsx */
 import { jsx, css } from "@emotion/core";
-import { useStaticQuery, graphql, Link } from "gatsby";
+import { useStaticQuery, graphql } from "gatsby";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 
 import { smBreak, xsBreak } from "../../_Theme/UpdatedBrandTheme";
-import SectionHeader from "../../components/SectionHeader";
 import GridSingle from "../../components/GridSingle";
 
-const ContributorCTA = () => {
+const collaborationPhilosophy = () => {
   // eslint-disable-next-line react-hooks/rules-of-hooks
   const { contentfulCallToActionBlock } = useStaticQuery(
     graphql`
       query {
         contentfulCallToActionBlock(
-          contentful_id: { eq: "21xkawY7SG0sBSVFakqzZU" }
+          contentful_id: { eq: "74dAGTiSRBzwL5yXbUuWY0" }
         ) {
           tagline
           summary {
             json
           }
-          button
-          buttonLocalLink
         }
       }
     `
@@ -36,8 +33,6 @@ const ContributorCTA = () => {
     >
       <div
         css={css`
-          display: grid;
-
           ${smBreak} {
             padding: 0 40px;
             max-width: 600px;
@@ -48,29 +43,17 @@ const ContributorCTA = () => {
           }
         `}
       >
-        <SectionHeader title={contentfulCallToActionBlock.tagline} />
+        <h2>{contentfulCallToActionBlock.tagline}</h2>
         <div
           css={css`
             max-width: 800px;
           `}
         >
           {documentToReactComponents(contentfulCallToActionBlock.summary.json)}
-          {contentfulCallToActionBlock.button && (
-            <Link
-              to={`${contentfulCallToActionBlock.buttonLocalLink}`}
-              className="btn-green"
-              css={css`
-                justify-self: end;
-                margin-top: 20px;
-              `}
-            >
-              <p>{contentfulCallToActionBlock.button}</p>
-            </Link>
-          )}
         </div>
       </div>
     </GridSingle>
   );
 };
 
-export default ContributorCTA;
+export default collaborationPhilosophy;
