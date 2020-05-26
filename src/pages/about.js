@@ -14,7 +14,7 @@ import FeaturedPost from "./About/FeaturedPost";
 import Organization from "./About/Organization";
 
 const About = () => {
-  // eslint-disable-next-line react-hooks/rules-of-hooks
+  // eslint-disable react-hooks/rules-of-hooks
   const {
     contentfulHeading,
     contentfulCallToActionBlock,
