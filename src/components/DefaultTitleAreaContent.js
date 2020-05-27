@@ -24,6 +24,7 @@ const DefaultTitleAreaContent = ({ subtitle, title, wideContent }) => {
         css={css`
           max-width: 700px;
           margin: 0;
+          color: ${colors.subdued.hex};
           ${lgCardBreak} {
             max-width: 600px;
           }
@@ -58,7 +59,7 @@ const DefaultTitleAreaContent = ({ subtitle, title, wideContent }) => {
           margin: 0;
           justify-self: right;
           align-self: end;
-          background-color: ${colors.subdued.hex};
+          color: ${colors.subdued.hex};
         `}
       >
         {title || ""}

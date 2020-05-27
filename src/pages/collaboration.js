@@ -15,18 +15,13 @@ import ContributorCTA from "./Collaboration/ContributorCTA";
 
 const collaboration = () => {
   // eslint-disable-next-line react-hooks/rules-of-hooks
-  const { contentfulHeading, contentfulAsset } = useStaticQuery(
+  const { contentfulHeading } = useStaticQuery(
     graphql`
       query {
         contentfulHeading(contentful_id: { eq: "4NCEgZyiEd8QQnm3njhaw4" }) {
           id
           title
           subtitle
-        }
-        contentfulAsset(title: { eq: "civic-cairo-pattern-4" }) {
-          file {
-            url
-          }
         }
       }
     `
@@ -39,10 +34,7 @@ const collaboration = () => {
       swoopColor={colors.purple.hex}
       hideCommonCTA
     >
-      <TitleAreaNew
-        dividerLineColor={colors.purple.hex}
-        backgroundImage={`url(https:${contentfulAsset.file.url})`}
-      >
+      <TitleAreaNew dividerLineColor={colors.purple.hex}>
         <DefaultTitleAreaContent
           subtitle={contentfulHeading.subtitle}
           title={contentfulHeading.title}
