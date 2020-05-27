@@ -24,6 +24,7 @@ const DefaultTitleAreaContent = ({ subtitle, title, wideContent }) => {
         css={css`
           max-width: 700px;
           margin: 0;
+          color: ${colors.subdued.hex};
           ${lgCardBreak} {
             max-width: 600px;
           }
@@ -37,15 +38,11 @@ const DefaultTitleAreaContent = ({ subtitle, title, wideContent }) => {
           }
 
           ${h2Subtitle}
-          font-weight: 700;
-          line-height: 1.4;
-          letter-spacing: 0.1rem;
         `}
       >
         <div>
           <span
             css={css`
-              background-color: ${colors.subdued.hex};
               line-height: 1.4;
             `}
           >
@@ -59,7 +56,7 @@ const DefaultTitleAreaContent = ({ subtitle, title, wideContent }) => {
           margin: 0;
           justify-self: right;
           align-self: end;
-          background-color: ${colors.subdued.hex};
+          color: ${colors.subdued.hex};
         `}
       >
         {title || ""}
