@@ -12,11 +12,15 @@ const logoContainer = css`
   left: -4vw;
   top: 0px;
   img {
-    height: 8vw !important;
+    height: 100px !important;
     margin-top: -100px;
   }
   ${smBreak} {
-    left: -2vw;
+    left: 0;
+    img {
+      height: 60px !important;
+      margin-top: -100px;
+    }
   }
 `;
 
