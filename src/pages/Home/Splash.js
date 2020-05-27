@@ -10,7 +10,7 @@ import TitleAreaNew from "../../components/TitleAreaNew";
 const logoContainer = css`
   position: relative;
   left: -4vw;
-  top: 0px;
+  top: 0;
   img {
     height: 100px !important;
     margin-top: -100px;
@@ -19,7 +19,7 @@ const logoContainer = css`
     left: 0;
     img {
       height: 60px !important;
-      margin-top: -100px;
+      margin-top: -120px;
     }
   }
 `;
@@ -43,12 +43,13 @@ const Splash = () => {
         `}
       >
         <h2
+          className="h-1"
           css={css`
-            max-width: 700px;
+            margin-top: 0px;
+            margin-bottom: 1rem;
+            max-width: 900px;
             display: grid;
             justify-self: left;
-            font-weight: 700;
-            line-height: 1.15;
             color: ${colors.subdued.hex};
             ${smBreak} {
               max-width: 4000px;
@@ -61,8 +62,8 @@ const Splash = () => {
             </div>
             <span
               css={css`
-                line-height: 1.4;
-                letter-spacing: 0.1rem;
+                /* line-height: 1.4;
+                letter-spacing: 0.1rem; */
               `}
             >
               {contentfulHeading.title}
@@ -71,7 +72,7 @@ const Splash = () => {
         </h2>
         <h3
           css={css`
-            max-width: 700px;
+            max-width: 900px;
             display: grid;
             margin: 0;
             justify-self: left;
@@ -85,9 +86,9 @@ const Splash = () => {
             <span
               className="h-3"
               css={css`
-                line-height: 1.4;
+                /* line-height: 1.4;
                 font-style: italic;
-                font-synthesis: none;
+                font-synthesis: none; */
                 color: ${colors.subdued.hex};
               `}
             >

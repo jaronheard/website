@@ -38,9 +38,6 @@ const DefaultTitleAreaContent = ({ subtitle, title, wideContent }) => {
           }
 
           ${h2Subtitle}
-          font-weight: 700;
-          line-height: 1.4;
-          letter-spacing: 0.1rem;
         `}
       >
         <div>
