@@ -3,18 +3,26 @@ import { jsx, css } from "@emotion/core";
 import { useStaticQuery, graphql } from "gatsby";
 import { Logo } from "@hackoregon/ui-brand";
 
-import { smBreak } from "../../_Theme/UpdatedBrandTheme";
+import { smBreak, colors } from "../../_Theme/UpdatedBrandTheme";
 import GridSingle from "../../components/GridSingle";
 import TitleAreaNew from "../../components/TitleAreaNew";
 
+const logoContainer = css`
+  position: relative;
+  left: -4vw;
+  top: 0px;
+  img {
+    height: 8vw !important;
+    margin-top: -100px;
+  }
+  ${smBreak} {
+    left: -2vw;
+  }
+`;
+
 const Splash = () => {
-  const { contentfulAsset, contentfulHeading } = useStaticQuery(graphql`
+  const { contentfulHeading } = useStaticQuery(graphql`
     query {
-      contentfulAsset(title: { eq: "civic-cairo-pattern" }) {
-        file {
-          url
-        }
-      }
       contentfulHeading(contentful_id: { eq: "3Hy2d9lrRRmragYcOSoDl3" }) {
         subtitle
         title
@@ -23,7 +31,7 @@ const Splash = () => {
   `);
 
   return (
-    <TitleAreaNew backgroundImage={`url(https:${contentfulAsset.file.url})`}>
+    <TitleAreaNew>
       <GridSingle
         containerStyle={css`
           width: 100%;
@@ -32,39 +40,34 @@ const Splash = () => {
       >
         <h2
           css={css`
-            max-width: 650px;
+            max-width: 700px;
             display: grid;
             justify-self: left;
             font-weight: 700;
             line-height: 1.15;
+            color: ${colors.subdued.hex};
             ${smBreak} {
               max-width: 4000px;
             }
           `}
         >
           <div>
+            <div css={logoContainer}>
+              <Logo type="squareLogoInverted" />
+            </div>
             <span
               css={css`
                 line-height: 1.4;
                 letter-spacing: 0.1rem;
               `}
             >
-              <Logo
-                type="squareLogo"
-                css={css`
-                  height: 40px !important;
-                  top: 10px !important;
-                  margin-right: 10px !important;
-                  position: relative;
-                `}
-              />
               {contentfulHeading.title}
             </span>
           </div>
         </h2>
         <h3
           css={css`
-            max-width: 600px;
+            max-width: 700px;
             display: grid;
             margin: 0;
             justify-self: left;
@@ -81,6 +84,7 @@ const Splash = () => {
                 line-height: 1.4;
                 font-style: italic;
                 font-synthesis: none;
+                color: ${colors.subdued.hex};
               `}
             >
               {contentfulHeading.subtitle}

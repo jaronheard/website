@@ -16,13 +16,14 @@ const PageLayout = ({
   keywords,
   children,
   hideCommonCTA,
-  swoopColor
+  swoopColor,
+  home
 }) => {
   return (
     <Fragment>
       <SEO title={title} keywords={keywords} />
       <Wrapper>
-        <Header />
+        <Header home={home} />
         {children}
         {!hideCommonCTA && (
           <Fragment>
@@ -45,7 +46,8 @@ PageLayout.propTypes = {
     PropTypes.node
   ]),
   hideCommonCTA: PropTypes.bool,
-  swoopColor: PropTypes.string
+  swoopColor: PropTypes.string,
+  home: PropTypes.bool
 };
 
 export default PageLayout;

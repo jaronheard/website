@@ -17,6 +17,7 @@ const IndexPage = () => {
       title="Home"
       keywords={[`Civic Software Foundation`, `CIVIC Platform`]}
       swoopColor={colors.yellow.hex}
+      home
     >
       <Splash />
       <ContentContainer margin="md">

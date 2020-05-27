@@ -19,11 +19,12 @@ const NewTitleArea = ({
     >
       <picture
         css={css`
-          /* background-image: ${backgroundImage};
+          background-image: ${backgroundImage};
           background-size: cover;
           background-repeat: no-repeat;
           background-attachment: local;
-          background-position: center; */
+          background-position: center;
+          background-color: ${colors.primary.hex};
           display: block;
           position: absolute;
           top: 0;
@@ -31,7 +32,6 @@ const NewTitleArea = ({
           width: 100%;
           height: 600px;
           z-index: -1;
-          opacity: 0.8;
         `}
       />
       <div

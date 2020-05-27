@@ -1,8 +1,10 @@
 /** @jsx jsx */
 import { jsx, css } from "@emotion/core";
 import { useState } from "react";
-import { navigate } from "gatsby";
+import { PropTypes } from "prop-types";
+import { navigate, Link } from "gatsby";
 import MenuIcon from "@material-ui/icons/Menu";
+import { Logo } from "@hackoregon/ui-brand";
 
 import HeaderDropdown from "./HeaderDropdown";
 import AboutDropdown from "./AboutDropdown";
@@ -12,13 +14,14 @@ import {
   mdBreak,
   xsBreak,
   focusBorder,
-  maxContentWidth
+  maxContentWidth,
+  noHover
 } from "../_Theme/UpdatedBrandTheme";
 
 const headerHeight = "45px";
 const headerContainer = css`
   background-color: ${colors.primary.hex};
-  border-bottom: 0px solid ${colors.plumLight.hex};
+  border-bottom: 0 solid ${colors.plumLight.hex};
   z-index: 100;
 `;
 const headerGrid = css`
@@ -46,7 +49,7 @@ const logoContainer = css`
   }
 `;
 
-const Header = () => {
+const Header = ({ home }) => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
 
   const toggleDropdown = () => {
@@ -61,7 +64,13 @@ const Header = () => {
   return (
     <div css={headerContainer}>
       <div css={headerGrid}>
-        <div css={[logoContainer]} />
+        <div css={[logoContainer]}>
+          {!home && (
+            <Link to="/" css={noHover}>
+              <Logo type="standardLogoInverted" />
+            </Link>
+          )}
+        </div>
 
         <div
           css={css`
@@ -136,6 +145,10 @@ const Header = () => {
       />
     </div>
   );
+};
+
+Header.propTypes = {
+  home: PropTypes.bool
 };
 
 export default Header;
