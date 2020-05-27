@@ -1,7 +1,6 @@
 /** @jsx jsx */
 import { jsx, css } from "@emotion/core";
 import { useState } from "react";
-import { PropTypes } from "prop-types";
 import { navigate, Link } from "gatsby";
 import MenuIcon from "@material-ui/icons/Menu";
 import { Logo } from "@hackoregon/ui-brand";
@@ -18,7 +17,7 @@ import {
   noHover
 } from "../_Theme/UpdatedBrandTheme";
 
-const headerHeight = "45px";
+const headerHeight = "70px";
 const headerContainer = css`
   background-color: ${colors.primary.hex};
   border-bottom: 0 solid ${colors.plumLight.hex};
@@ -27,6 +26,7 @@ const headerContainer = css`
 const headerGrid = css`
   height: ${headerHeight};
   display: grid;
+  grid-template-columns: auto auto;
   margin: 0 auto;
   padding: 0 2rem;
   ${xsBreak} {
@@ -35,21 +35,15 @@ const headerGrid = css`
   ${maxContentWidth}
 `;
 const logoContainer = css`
-  position: absolute;
-  left: 15%;
-  top: 0.5em;
-
   a {
-    position: relative;
-    left: -50%;
     img {
-      height: 38px !important;
-      margin-top: -3px;
+      height: 60px !important;
+      margin-top: 8px;
     }
   }
 `;
 
-const Header = ({ home }) => {
+const Header = () => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
 
   const toggleDropdown = () => {
@@ -65,11 +59,9 @@ const Header = ({ home }) => {
     <div css={headerContainer}>
       <div css={headerGrid}>
         <div css={[logoContainer]}>
-          {!home && (
-            <Link to="/" css={noHover}>
-              <Logo type="standardLogoInverted" />
-            </Link>
-          )}
+          <Link to="/" css={noHover}>
+            <Logo type="standardLogoInverted" />
+          </Link>
         </div>
 
         <div
@@ -145,10 +137,6 @@ const Header = ({ home }) => {
       />
     </div>
   );
-};
-
-Header.propTypes = {
-  home: PropTypes.bool
 };
 
 export default Header;
