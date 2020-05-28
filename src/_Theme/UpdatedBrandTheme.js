@@ -340,6 +340,10 @@ const blockquote = {
   }
 };
 
+const i = {
+  fontStyle: "italic"
+};
+
 export default {
   /* Base */
 
@@ -379,6 +383,7 @@ export default {
   strong,
   b,
   blockquote,
+  i,
 
   // Class names
   ".p-sm": pSmall,

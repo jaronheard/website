@@ -2,7 +2,8 @@
 import { jsx, css } from "@emotion/core";
 import { useStaticQuery, graphql, Link } from "gatsby";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
-
+import { Logo } from "@hackoregon/ui-brand";
+import options from "../../_Common/contentfulOptions";
 import GridSingle from "../../components/GridSingle";
 
 const FeaturedPost = () => {
@@ -28,12 +29,17 @@ const FeaturedPost = () => {
         padding: 0 20px;
       `}
     >
-      {documentToReactComponents(contentfulFeaturedPost.post.preview.json)}
+      <Logo type="squareLogo" />
+      {documentToReactComponents(
+        contentfulFeaturedPost.post.preview.json,
+        options
+      )}
+      {/* TODO add space */}
       <Link
         to={`posts/${contentfulFeaturedPost.post.slug}`}
         className="btn-pink"
       >
-        <p>Learn More</p>
+        <p>See Details</p>
       </Link>
     </GridSingle>
   );
