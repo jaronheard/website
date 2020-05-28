@@ -2,43 +2,11 @@
 /** @jsx jsx */
 import { jsx, css } from "@emotion/core";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
-import { BLOCKS } from "@contentful/rich-text-types";
 import { Link } from "gatsby";
 import { Location } from "@reach/router";
 import { xsBreak } from "../_Theme/UpdatedBrandTheme";
-import Video from "./Video";
 import GridSingle from "./GridSingle";
-
-const options = {
-  renderNode: {
-    [BLOCKS.EMBEDDED_ENTRY]: node => (
-      <Video
-        title={node.data.target.fields.title["en-US"]}
-        url={node.data.target.fields.url["en-US"]}
-      />
-    ),
-    [BLOCKS.UL_LIST]: (node, children) => (
-      <ul
-        css={css`
-          list-style: disc;
-          padding-left: 2em;
-        `}
-      >
-        {children}
-      </ul>
-    ),
-    [BLOCKS.OL_LIST]: (node, children) => (
-      <ol
-        css={css`
-          list-style-type: decimal;
-          padding-left: 2em;
-        `}
-      >
-        {children}
-      </ol>
-    )
-  }
-};
+import options from "../_Common/contentfulOptions";
 
 const Post = ({
   title,

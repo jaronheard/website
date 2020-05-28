@@ -4,10 +4,10 @@ import { jsx } from "@emotion/core";
 import PageLayout from "../components/PageLayout";
 import Splash from "./Home/Splash";
 import FeaturedPost from "./Home/FeaturedPost";
-import OurDifferenceHeader from "./Home/OurDifferenceHeader";
-import OurDifferenceCards from "./Home/OurDifferenceCards";
+// import OurDifferenceHeader from "./Home/OurDifferenceHeader";
+// import OurDifferenceCards from "./Home/OurDifferenceCards";
 import CallToActionBlocks from "./Home/CallToActionBlocks";
-import QuoteBlock from "../components/QuoteBlock";
+// import QuoteBlock from "../components/QuoteBlock";
 import DividerLine from "../components/DividerLine";
 import ContentContainer from "../components/ContentContainer";
 import { colors } from "../_Theme/UpdatedBrandTheme";
@@ -24,13 +24,13 @@ const IndexPage = () => {
         <FeaturedPost />
       </ContentContainer>
       <DividerLine hexColor={colors.yellow.hex} />
-      <ContentContainer margin="md">
+      {/* <ContentContainer margin="md">
         <OurDifferenceHeader />
         <OurDifferenceCards />
-      </ContentContainer>
-      <DividerLine hexColor={colors.purple.hex} />
+      </ContentContainer> */}
+      {/* <DividerLine hexColor={colors.purple.hex} /> */}
       <CallToActionBlocks />
-      <ContentContainer margin="sm">
+      {/* <ContentContainer margin="sm">
         <QuoteBlock
           author="Catherine Nikolovski"
           title="Founder of CIVIC"
@@ -39,8 +39,8 @@ const IndexPage = () => {
           When political will meets public imagination, the technology we can
           create is unlike anything the world has ever seen.
         </QuoteBlock>
-      </ContentContainer>
-      <DividerLine hexColor={colors.green.hex} />
+      </ContentContainer> */}
+      {/* <DividerLine hexColor={colors.green.hex} /> */}
     </PageLayout>
   );
 };
