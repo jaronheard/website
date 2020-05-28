@@ -1,6 +1,6 @@
 /** @jsx jsx */
-import { jsx } from "@emotion/core";
-import { useStaticQuery, graphql } from "gatsby";
+import { jsx, css } from "@emotion/core";
+import { useStaticQuery, graphql, Link } from "gatsby";
 
 import PageLayout from "../components/PageLayout";
 import TitleAreaNew from "../components/TitleAreaNew";
@@ -35,6 +35,32 @@ const ContributorApplication = () => {
         <DefaultTitleAreaContent title={contentfulHeading.title} />
       </TitleAreaNew>
       <ContentContainer margin="md">
+        <div
+          css={css`
+            width: 100%;
+            max-width: 900px;
+            margin: 0 auto;
+          `}
+        >
+          <p
+            css={css`
+              font-style: italic;
+            `}
+          >
+            This is CIVIC&apos;s general application form. Use the{" "}
+            <Link to="/data-feminism-apply">
+              <p
+                className="a"
+                css={css`
+                  display: inline;
+                `}
+              >
+                Structured Context Application
+              </p>
+            </Link>{" "}
+            if you are applying from the Data Feminism group.
+          </p>
+        </div>
         <EmbeddedForm formSrc="https://form.jotform.com/200786890019057" />
       </ContentContainer>
       <DividerLine hexColor={colors.pink.hex} />

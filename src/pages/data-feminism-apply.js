@@ -1,6 +1,6 @@
 /** @jsx jsx */
-import { jsx } from "@emotion/core";
-import { useStaticQuery, graphql } from "gatsby";
+import { jsx, css } from "@emotion/core";
+import { useStaticQuery, graphql, Link } from "gatsby";
 
 import PageLayout from "../components/PageLayout";
 import TitleAreaNew from "../components/TitleAreaNew";
@@ -35,6 +35,32 @@ const ContributorApplication = () => {
         <DefaultTitleAreaContent title={contentfulHeading.title} />
       </TitleAreaNew>
       <ContentContainer margin="md">
+        <div
+          css={css`
+            width: 100%;
+            max-width: 900px;
+            margin: 0 auto;
+          `}
+        >
+          <p
+            css={css`
+              font-style: italic;
+            `}
+          >
+            This application is for the Data Feminism group, there is also the{" "}
+            <Link to="/contributor-apply">
+              <p
+                className="a"
+                css={css`
+                  display: inline;
+                `}
+              >
+                general contributor application form
+              </p>
+            </Link>
+            .
+          </p>
+        </div>
         <EmbeddedForm formSrc="https://form.jotform.com/201465789968173" />
       </ContentContainer>
       <DividerLine hexColor={colors.pink.hex} />
