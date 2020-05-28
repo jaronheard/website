@@ -101,7 +101,7 @@ const AboutDropdown = ({ goTo }) => {
                 goTo("/about/");
               }}
             >
-              <h4>About Us</h4>
+              <h4>Organization</h4>
             </button>
           </li>
           <li>

@@ -101,7 +101,7 @@ const HeaderDropdown = ({ open, headerHeight, goTo }) => {
                 goTo("/about/");
               }}
             >
-              <h3 css={menuItem}>About Us</h3>
+              <h3 css={menuItem}>Organization</h3>
             </button>
           </li>
           <li
