@@ -48,7 +48,7 @@ const ContributorApplication = () => {
             `}
           >
             This is CIVIC&apos;s general application form. Use the{" "}
-            <Link to="/data-feminism-apply">
+            <Link to="/structured-context-apply">
               <p
                 className="a"
                 css={css`
