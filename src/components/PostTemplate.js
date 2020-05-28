@@ -24,6 +24,8 @@ const PostTemplate = ({ pageContext }) => {
           slug={post.slug}
           created={post.createdAt}
           updated={post.updatedAt}
+          buttonText={post.buttonText}
+          buttonLocalLink={post.buttonLocalLink}
         />
       </ContentContainer>
       <DividerLine hexColor={colors.pink.hex} />

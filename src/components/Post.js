@@ -15,7 +15,9 @@ const Post = ({
   featured,
   slug,
   updated,
-  created
+  created,
+  buttonText,
+  buttonLocalLink
 }) => (
   <GridSingle
     containerStyle={css`
@@ -58,6 +60,17 @@ const Post = ({
       </p>
     ))}
     <div>{documentToReactComponents(content.json, options)}</div>
+    {buttonText && (
+      <Link
+        to={buttonLocalLink}
+        className="btn-yellow"
+        css={css`
+          margin-top: 1.5rem;
+        `}
+      >
+        <p>{buttonText}</p>
+      </Link>
+    )}
   </GridSingle>
 );
 
