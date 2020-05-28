@@ -4,7 +4,6 @@ import { useStaticQuery, graphql, Link } from "gatsby";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 
 import { smBreak, xsBreak } from "../../_Theme/UpdatedBrandTheme";
-import SectionHeader from "../../components/SectionHeader";
 import GridSingle from "../../components/GridSingle";
 import ContentContainer from "../../components/ContentContainer";
 
@@ -48,7 +47,7 @@ const ContributorCTA = () => {
             }
           `}
         >
-          <SectionHeader title={contentfulCallToActionBlock.tagline} />
+          <h2>{contentfulCallToActionBlock.tagline}</h2>
           <div
             css={css`
               max-width: 800px;
