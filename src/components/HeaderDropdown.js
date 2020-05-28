@@ -9,6 +9,11 @@ import {
   underlineFocus
 } from "../_Theme/UpdatedBrandTheme";
 
+const menuItem = css`
+  color: ${colors.subdued.hex};
+  margin: 1rem 0;
+`;
+
 // eslint-disable-next-line react/prop-types
 const DropdownSection = ({ children }) => {
   return (
@@ -46,7 +51,7 @@ const HeaderDropdown = ({ open, headerHeight, goTo }) => {
       `}
     >
       <DropdownSection>
-        <ul className="h-3">
+        <ul>
           <li>
             <button
               type="button"
@@ -55,20 +60,13 @@ const HeaderDropdown = ({ open, headerHeight, goTo }) => {
                 goTo("/platform/");
               }}
             >
-              <h3>Platform</h3>
+              <h3 css={menuItem}>Platform</h3>
             </button>
           </li>
         </ul>
       </DropdownSection>
       <DropdownSection>
-        <h3
-          css={css`
-            margin-left: -1em;
-            color: ${colors.primary.subdued};
-          `}
-        >
-          About
-        </h3>
+        <h3 className="h-2">About</h3>
         <ul>
           <li>
             <button
@@ -79,7 +77,7 @@ const HeaderDropdown = ({ open, headerHeight, goTo }) => {
                 goTo("/collaboration/");
               }}
             >
-              <h3>Collaboration</h3>
+              <h3 css={menuItem}>Collaboration</h3>
             </button>
           </li>
           <li>
@@ -91,7 +89,7 @@ const HeaderDropdown = ({ open, headerHeight, goTo }) => {
                 goTo("/projects/");
               }}
             >
-              <h3>Projects</h3>
+              <h3 css={menuItem}>Projects</h3>
             </button>
           </li>
           <li>
@@ -103,7 +101,7 @@ const HeaderDropdown = ({ open, headerHeight, goTo }) => {
                 goTo("/about/");
               }}
             >
-              <h3>About Us</h3>
+              <h3 css={menuItem}>About Us</h3>
             </button>
           </li>
           <li
@@ -119,13 +117,7 @@ const HeaderDropdown = ({ open, headerHeight, goTo }) => {
                 ${underlineFocus}
               `}
             >
-              <h3
-                css={css`
-                  color: white;
-                `}
-              >
-                Contact
-              </h3>
+              <h3 css={menuItem}>Contact</h3>
             </a>
           </li>
         </ul>
