@@ -23,6 +23,7 @@ const Splash = () => {
           width: 100%;
           padding: 0;
         `}
+        wideContent
       >
         <h2
           className="h-1"

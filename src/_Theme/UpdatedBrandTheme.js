@@ -331,6 +331,15 @@ const strong = {
 
 const b = strong;
 
+const blockquote = {
+  padding: "0 1em",
+  color: colors.plumLight.hex,
+  borderLeft: `.25em solid ${colors.plumLight.hex}`,
+  p: {
+    color: colors.plumLight.hex
+  }
+};
+
 export default {
   /* Base */
 
@@ -369,6 +378,7 @@ export default {
   input,
   strong,
   b,
+  blockquote,
 
   // Class names
   ".p-sm": pSmall,

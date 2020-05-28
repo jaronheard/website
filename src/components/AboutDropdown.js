@@ -4,7 +4,7 @@ import KeyboardArrowDownIcon from "@material-ui/icons/KeyboardArrowDown";
 import KeyboardArrowUpIcon from "@material-ui/icons/KeyboardArrowUp";
 import { useState } from "react";
 import { PropTypes } from "prop-types";
-import { colors } from "../_Theme/UpdatedBrandTheme";
+import { colors, borders } from "../_Theme/UpdatedBrandTheme";
 
 const AboutDropdown = ({ goTo }) => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
@@ -36,7 +36,7 @@ const AboutDropdown = ({ goTo }) => {
             margin: 0;
           `}
         >
-          About{" "}
+          About
           {dropdownOpen ? (
             <KeyboardArrowUpIcon
               height={16}
@@ -64,6 +64,7 @@ const AboutDropdown = ({ goTo }) => {
           background-color: ${colors.primary.hex};
           padding: 0.7em 1em;
           width: max-content;
+          border: ${borders.box};
         `}
       >
         <ul>
