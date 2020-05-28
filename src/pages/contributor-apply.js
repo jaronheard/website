@@ -37,9 +37,10 @@ const ContributorApplication = () => {
       <ContentContainer margin="md">
         <div
           css={css`
-            width: 100%;
+            width: calc(100%-40px);
             max-width: 900px;
             margin: 0 auto;
+            padding: 0 20px;
           `}
         >
           <p
@@ -60,8 +61,8 @@ const ContributorApplication = () => {
             </Link>{" "}
             if you are applying from the Data Feminism group.
           </p>
+          <EmbeddedForm formSrc="https://form.jotform.com/200786890019057" />
         </div>
-        <EmbeddedForm formSrc="https://form.jotform.com/200786890019057" />
       </ContentContainer>
       <DividerLine hexColor={colors.pink.hex} />
     </PageLayout>
