@@ -11,14 +11,14 @@ import {
 } from "../_Theme/UpdatedBrandTheme";
 import GridSingle from "./GridSingle";
 
-const DefaultTitleAreaContent = ({ subtitle, title, wideContent }) => {
+const DefaultTitleAreaContent = ({ subtitle, title }) => {
   return (
     <GridSingle
       containerStyle={css`
         width: 100%;
         padding: 0;
       `}
-      wideContent={wideContent}
+      wideContent
     >
       <h2
         css={css`
@@ -67,8 +67,7 @@ const DefaultTitleAreaContent = ({ subtitle, title, wideContent }) => {
 
 DefaultTitleAreaContent.propTypes = {
   subtitle: PropTypes.string,
-  title: PropTypes.string,
-  wideContent: PropTypes.bool
+  title: PropTypes.string
 };
 
 export default DefaultTitleAreaContent;

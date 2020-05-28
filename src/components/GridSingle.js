@@ -6,7 +6,7 @@ import { lgCardBreak } from "../_Theme/UpdatedBrandTheme";
 const GridSingle = ({ children, wideContent, containerStyle }) => (
   <div
     css={css`
-      max-width: ${wideContent ? "1100px" : "1100px"};
+      max-width: ${wideContent ? "1100px" : "900px"};
       display: grid;
       margin: 0 auto;
 
