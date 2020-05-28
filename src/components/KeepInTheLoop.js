@@ -8,6 +8,7 @@ const KeepInTheLoop = () => (
   <ContentContainer margin="sm">
     <GridSingle
       containerStyle={css`
+        padding: 0 20px;
         max-width: 1100px;
         ${smBreak} {
           max-width: 600px;
@@ -28,11 +29,15 @@ const KeepInTheLoop = () => (
             margin-top: 0;
           `}
         >
-          Keep in the loop
+          Stay up to date{" "}
+          <span role="img" aria-label="mail heart emoji">
+            💌
+          </span>
         </h2>
         <p>
-          Big announcements are on the horizon. Our newsletter will keep you
-          informed on our next big opportunities.
+          Be the first to know about program announcements, new technology
+          releases, and special surprises. We promise to never spam, bore, or
+          annoy.
         </p>
         <div
           css={css`
