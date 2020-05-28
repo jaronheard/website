@@ -1,5 +1,6 @@
+/* eslint-disable react/prop-types */
 import React from "react";
-import { graphql, useStaticQuery } from "gatsby";
+
 import PageLayout from "./PageLayout";
 import Post from "./Post";
 import TitleAreaNew from "./TitleAreaNew";
@@ -8,44 +9,26 @@ import DividerLine from "./DividerLine";
 import { colors } from "../_Theme/UpdatedBrandTheme";
 import ContentContainer from "./ContentContainer";
 
-const PostTemplate = () => {
-  const { contentfulPost } = useStaticQuery(
-    graphql`
-      query PostQuery($slug: String) {
-        contentfulPost(slug: { eq: $slug }) {
-          slug
-          title
-          content {
-            json
-          }
-          authors {
-            name
-            email
-          }
-          createdAt(formatString: "MMMM DD, YYYY")
-          updatedAt(formatString: "MMMM DD, YYYY")
-        }
-      }
-    `
-  );
+const PostTemplate = ({ pageContext }) => {
+  const { post } = pageContext;
 
   return (
-    <PageLayout title={contentfulPost.title}>
+    <PageLayout title={post.title}>
       <TitleAreaNew dividerLineColor={colors.blue.hex}>
-        <DefaultTitleAreaContent title="Post" />
+        <DefaultTitleAreaContent title={post.title} />
       </TitleAreaNew>
       <ContentContainer margin="md">
         <Post
-          title={contentfulPost.title}
-          content={contentfulPost.content}
-          authors={contentfulPost.authors}
-          slug={contentfulPost.slug}
-          created={contentfulPost.createdAt}
-          updated={contentfulPost.updatedAt}
+          content={post.content}
+          authors={post.authors}
+          slug={post.slug}
+          created={post.createdAt}
+          updated={post.updatedAt}
         />
       </ContentContainer>
       <DividerLine hexColor={colors.pink.hex} />
     </PageLayout>
   );
 };
+
 export default PostTemplate;

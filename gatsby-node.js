@@ -15,6 +15,16 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
         edges {
           node {
             slug
+            title
+            content {
+              json
+            }
+            authors {
+              name
+              email
+            }
+            createdAt(formatString: "MMMM DD, YYYY")
+            updatedAt(formatString: "MMMM DD, YYYY")
           }
         }
       }
@@ -35,7 +45,9 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
       component: path.resolve(`./src/components/PostTemplate.js`),
       // You can use the values in this context in
       // our page layout component
-      context: { slug: node.slug }
+      context: {
+        post: node
+      }
     });
   });
 };
