@@ -14,7 +14,7 @@ const ContributorApplication = () => {
   const { contentfulHeading } = useStaticQuery(
     graphql`
       query {
-        contentfulHeading(contentful_id: { eq: "MEKrVhiC7uZ8YSQJ429IC" }) {
+        contentfulHeading(contentful_id: { eq: "2tJ28EnrlmGkfwUTYSBsT2" }) {
           id
           title
         }
@@ -48,20 +48,20 @@ const ContributorApplication = () => {
               font-style: italic;
             `}
           >
-            This is CIVIC&apos;s general application form. Use the{" "}
-            <Link to="/structured-context-apply">
+            This application is for the Data Feminism group, there is also the{" "}
+            <Link to="/contributor-apply">
               <p
                 className="a"
                 css={css`
                   display: inline;
                 `}
               >
-                Structured Context Application
+                general contributor application form
               </p>
-            </Link>{" "}
-            if you are applying from the Data Feminism group.
+            </Link>
+            .
           </p>
-          <EmbeddedForm formSrc="https://form.jotform.com/200786890019057" />
+          <EmbeddedForm formSrc="https://form.jotform.com/201465789968173" />
         </div>
       </ContentContainer>
       <DividerLine hexColor={colors.pink.hex} />

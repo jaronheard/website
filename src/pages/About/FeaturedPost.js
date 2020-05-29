@@ -18,6 +18,8 @@ const FeaturedPost = () => {
           }
           createdAt(formatString: "MMMM DD, YYYY")
           updatedAt(formatString: "MMMM DD, YYYY")
+          buttonText
+          buttonLocalLink
         }
       }
     `
@@ -32,6 +34,8 @@ const FeaturedPost = () => {
       created={contentfulPost.createdAt}
       updated={contentfulPost.updatedAt}
       featured
+      buttonText={contentfulPost.buttonText}
+      buttonLocalLink={contentfulPost.buttonLocalLink}
     />
   );
 };
