@@ -23,7 +23,7 @@ Kick off your project with this default boilerplate. This starter ships with the
 
 Have issues? Open an issue! Improvements? Pull requests welcome!
 
-## 🚀 Quick start
+## ⛴ Quick start
 
 1.  **Create a Gatsby site.**
 
