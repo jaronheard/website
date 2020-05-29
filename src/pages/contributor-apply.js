@@ -56,7 +56,7 @@ const ContributorApplication = () => {
                   display: inline;
                 `}
               >
-                Structured Context Application
+                Structured Context Program Application
               </p>
             </Link>{" "}
             if you are applying from the Data Feminism group.
