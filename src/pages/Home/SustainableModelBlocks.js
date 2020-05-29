@@ -34,13 +34,40 @@ const CallToActionBlocks = () => {
           subtitle {
             subtitle
           }
+          image {
+            description
+            fluid {
+              srcSet
+              sizes
+            }
+          }
         }
       }
     `
   );
 
+  const { image } = contentfulContentList;
+
   return (
     <Fragment>
+      <div
+        css={css`
+          position: absolute;
+          width: 100%;
+          text-align: center;
+        `}
+      >
+        <img
+          srcSet={image.fluid.srcSet}
+          sizes={image.fluid.sizes}
+          alt={image.description}
+          css={css`
+            opacity: 0.5;
+            position: relative;
+            z-index: -1;
+          `}
+        />
+      </div>
       <div
         css={css`
           max-width: 1100px;

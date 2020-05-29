@@ -53,7 +53,7 @@ const CallToActionBlock = ({
 
   return (
     <div css={wrapperCss}>
-      <ContentContainer margin="lg">
+      <ContentContainer margin="lg" noBackground>
         <div
           css={css`
             ${!pair && "padding: 0 70px;"}
