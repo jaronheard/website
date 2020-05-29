@@ -17,17 +17,17 @@ function marginCss(margin) {
 
 // The dual containers is needed because of our SVG wavy lines
 
-const ContentContainer = ({ margin, color, children }) => (
+const ContentContainer = ({ margin, color, children, noBackground }) => (
   <div
     css={css`
-      background-color: ${color || "pink"};
+      ${!noBackground && `background-color: ${color || "pink"};`}
       padding: ${marginCss(margin)};
     `}
   >
     <div
       css={css`
         margin: ${marginCss(margin)};
-        background-color: ${color || "blue"};
+        ${!noBackground && `background-color: ${color || "blue"};`}
       `}
     >
       {children}
@@ -38,6 +38,7 @@ const ContentContainer = ({ margin, color, children }) => (
 ContentContainer.propTypes = {
   margin: PropTypes.string,
   color: PropTypes.string,
+  noBackground: PropTypes.bool,
   // eslint-disable-next-line react/forbid-prop-types
   children: PropTypes.any
 };
