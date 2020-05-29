@@ -5,12 +5,19 @@ import { Fragment } from "react";
 
 import CallToActionBlock from "../../components/CallToActionBlock";
 import DividerLine from "../../components/DividerLine";
-import { smBreak } from "../../_Theme/UpdatedBrandTheme";
+import { xsBreak, smBreak } from "../../_Theme/UpdatedBrandTheme";
 
 const contentGrid = css`
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-column-gap: 70px;
+  ${smBreak} {
+    grid-column-gap: 30px;
+  }
+  ${xsBreak} {
+    grid-template-columns: 1fr;
+    grid-column-gap: 0;
+  }
 `;
 
 const colorOrder = ["yellow", "pink"];
@@ -72,7 +79,10 @@ const CallToActionBlocks = () => {
         css={css`
           max-width: 1100px;
           margin: 0 auto;
-          padding: 2.5rem 0 2rem 0;
+          padding: 2.5rem 70px 2rem;
+          ${smBreak} {
+            padding: 2.5rem 35px 2rem;
+          }
         `}
       >
         <h2
@@ -100,7 +110,7 @@ const CallToActionBlocks = () => {
               noDivider
               wrapperCss={css`
                 display: inline-grid;
-                ${smBreak} {
+                ${xsBreak} {
                   display: grid;
                 }
               `}

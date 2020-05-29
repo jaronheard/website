@@ -56,10 +56,13 @@ const CallToActionBlock = ({
       <ContentContainer margin="lg" noBackground>
         <div
           css={css`
-            ${!pair && "padding: 0 70px;"}
-            ${smBreak} {
-              padding: 0 35px;
-            }
+            ${!pair &&
+              `
+              padding: 0 70px;
+              ${smBreak} {
+                padding: 0 35px;
+              }
+            `}
           `}
         >
           <div
@@ -81,11 +84,14 @@ const CallToActionBlock = ({
 
             ${xsBreak} {
               grid-template-columns: auto;
-              grid-template-rows: repeat(2, auto);
-              grid-template-areas: 
-                "image"
-                "content";
-              grid-row-gap: 80px;
+              ${!pair &&
+                `
+                grid-template-rows: repeat(2, auto);
+                grid-template-areas: 
+                  "image"
+                  "content";
+                grid-row-gap: 80px;
+              `}
               justify-items: center;
             }
           `}
