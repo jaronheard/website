@@ -28,7 +28,7 @@ const Splash = () => {
         <h2
           className="h-1"
           css={css`
-            margin-top: 0px;
+            margin-top: 0;
             margin-bottom: 1rem;
             max-width: 900px;
             display: grid;
