@@ -86,19 +86,20 @@ const CallToActionBlocks = () => {
         `}
       >
         <h2
+          className="h-1"
           css={css`
             margin: 0;
           `}
         >
           {contentfulContentList.title}
         </h2>
-        <div
+        <h3
           css={css`
             margin-top: 40px;
           `}
         >
           {contentfulContentList.subtitle.subtitle}
-        </div>
+        </h3>
         <div css={contentGrid}>
           {contentfulContentList.content.map((content, i) => (
             <CallToActionBlock

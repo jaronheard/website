@@ -32,19 +32,21 @@ const CallToActionBlocks = () => {
     `
   );
 
-  return contentfulContentList.content.map((content, i) => (
-    <CallToActionBlock
-      tagline={content.tagline}
-      summary={content.summary && content.summary.json}
-      button={content.button}
-      buttonLocalLink={content.buttonLocalLink}
-      image={content.image}
-      reverseLayout={i % 2 === 0}
-      buttonColor={colorOrder[i]}
-      dividerColor={colorOrder[i + 1]}
-      big
-    />
-  ));
+  return contentfulContentList.content
+    .slice(0, -1)
+    .map((content, i) => (
+      <CallToActionBlock
+        tagline={content.tagline}
+        summary={content.summary && content.summary.json}
+        button={content.button}
+        buttonLocalLink={content.buttonLocalLink}
+        image={content.image}
+        reverseLayout={i % 2 === 0}
+        buttonColor={colorOrder[i]}
+        dividerColor={colorOrder[i + 1]}
+        big
+      />
+    ));
 };
 
 export default CallToActionBlocks;
