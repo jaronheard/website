@@ -7,6 +7,7 @@ import FeaturedPost from "./Home/FeaturedPost";
 // import OurDifferenceHeader from "./Home/OurDifferenceHeader";
 // import OurDifferenceCards from "./Home/OurDifferenceCards";
 import CallToActionBlocks from "./Home/CallToActionBlocks";
+import SustainableModelBlocks from "./Home/SustainableModelBlocks";
 // import QuoteBlock from "../components/QuoteBlock";
 import DividerLine from "../components/DividerLine";
 import ContentContainer from "../components/ContentContainer";
@@ -30,6 +31,7 @@ const IndexPage = () => {
       </ContentContainer> */}
       {/* <DividerLine hexColor={colors.purple.hex} /> */}
       <CallToActionBlocks />
+      <SustainableModelBlocks />
       {/* <ContentContainer margin="sm">
         <QuoteBlock
           author="Catherine Nikolovski"

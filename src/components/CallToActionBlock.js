@@ -44,16 +44,19 @@ const CallToActionBlock = ({
   reverseLayout,
   big,
   buttonColor,
-  dividerColor
+  dividerColor,
+  noDivider,
+  wrapperCss,
+  pair
 }) => {
   const CTAimage = image && makeImage(image);
 
   return (
-    <div>
+    <div css={wrapperCss}>
       <ContentContainer margin="lg">
         <div
           css={css`
-            padding: 0 70px;
+            ${!pair && "padding: 0 70px;"}
             ${smBreak} {
               padding: 0 35px;
             }
@@ -62,9 +65,12 @@ const CallToActionBlock = ({
           <div
             css={css`
             display: grid;
-            grid-template-columns: repeat(2, auto);
-            grid-template-rows: auto;
-            grid-column-gap: 80px;
+            ${!pair &&
+              `
+              grid-template-columns: repeat(2, auto);
+              grid-template-rows: auto;
+              grid-column-gap: 80px;
+            `}
             grid-template-areas: "${
               reverseLayout ? "image content" : "content image"
             }";
@@ -117,7 +123,7 @@ const CallToActionBlock = ({
           </div>
         </div>
       </ContentContainer>
-      <DividerLine hexColor={colors[dividerColor].hex} />
+      {!noDivider && <DividerLine hexColor={colors[dividerColor].hex} />}
     </div>
   );
 };
