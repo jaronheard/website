@@ -45,6 +45,16 @@ const ContributorApplication = () => {
         >
           <p
             css={css`
+              font-weight: bold;
+            `}
+          >
+            Warning! If you use the Privacy Badger extension, you won&apos;t be
+            able to save or submit this form. We&apos;re aware of the issue and
+            working to resolve it. Make sure to turn it off and refresh the
+            page.
+          </p>
+          <p
+            css={css`
               font-style: italic;
             `}
           >
