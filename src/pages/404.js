@@ -1,16 +1,13 @@
 import React from "react";
 
 import SEO from "../components/SEO";
-import Wrapper from "../components/Wrapper";
 
 const NotFoundPage = () => (
-  <Wrapper>
-    <div heroTitle="Civic and Gatsby Starter" heroSubtitle="They play nice!">
-      <SEO title="404: Not found" />
-      <h1>NOT FOUND</h1>
-      <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
-    </div>
-  </Wrapper>
+  <div heroTitle="Civic and Gatsby Starter" heroSubtitle="They play nice!">
+    <SEO title="404: Not found" />
+    <h1>NOT FOUND</h1>
+    <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
+  </div>
 );
 
 export default NotFoundPage;
