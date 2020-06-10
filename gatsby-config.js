@@ -43,7 +43,14 @@ module.exports = {
         accessToken: `xiK4OR-Zu0SkKqqZGvCnej4wkJB3vMB5Yn6ptGWcTts`
       }
     },
-    `gatsby-plugin-extract-schema`
+    `gatsby-plugin-extract-schema`,
+    {
+      resolve: "gatsby-plugin-mailchimp",
+      options: {
+        endpoint:
+          "https://hackoregon.us3.list-manage.com/subscribe/post?u=6bed8811c700af6cf48dfe893&amp;id=b11a78686d" // add your MC list endpoint here; see instructions below
+      }
+    }
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
