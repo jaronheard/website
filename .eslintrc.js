@@ -10,6 +10,7 @@ module.exports = {
     "emotion/import-from-emotion": "error",
     "emotion/styled-import": "error",
     "jsx-a11y/img-has-alt": 0,
+    "jsx-a11y/label-has-for": 0,
     "prefer-arrow-callback": 0,
     "no-underscore-dangle": 0,
     "func-names": 2,
