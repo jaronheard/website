@@ -9,7 +9,7 @@
         "http://localhost/posts/structured-context-data-feminism",
         "http://localhost/projects/"
       ],
-      "numberOfRuns": 2,
+      "numberOfRuns": 5,
       "staticDistDir": "./public"
     },
     "assert": {
