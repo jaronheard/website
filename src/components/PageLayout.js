@@ -6,7 +6,6 @@ import PropTypes from "prop-types";
 import SEO from "./SEO";
 import Header from "./Header";
 import Footer from "./Footer";
-import Wrapper from "./Wrapper";
 import CommonCTA from "./CommonCTA";
 import DividerLine from "./DividerLine";
 import KeepInTheLoop from "./KeepInTheLoop";
@@ -22,18 +21,16 @@ const PageLayout = ({
   return (
     <Fragment>
       <SEO title={title} keywords={keywords} />
-      <Wrapper>
-        <Header home={home} />
-        {children}
-        {!hideCommonCTA && (
-          <Fragment>
-            <CommonCTA />
-            <DividerLine hexColor={swoopColor} />
-          </Fragment>
-        )}
-        <KeepInTheLoop />
-        <Footer />
-      </Wrapper>
+      <Header home={home} />
+      {children}
+      {!hideCommonCTA && (
+        <Fragment>
+          <CommonCTA />
+          <DividerLine hexColor={swoopColor} />
+        </Fragment>
+      )}
+      <KeepInTheLoop />
+      <Footer />
     </Fragment>
   );
 };
