@@ -1,4 +1,6 @@
-import React from "react";
+/* eslint-disable react/prop-types */
+/** @jsx jsx */
+import { jsx, css } from "@emotion/core";
 import { useStaticQuery, graphql } from "gatsby";
 import CallToActionBlock from "../../components/CallToActionBlock";
 
@@ -32,21 +34,22 @@ const CallToActionBlocks = () => {
     `
   );
 
-  return contentfulContentList.content
-    .slice(0, -1)
-    .map((content, i) => (
-      <CallToActionBlock
-        tagline={content.tagline}
-        summary={content.summary && content.summary.json}
-        button={content.button}
-        buttonLocalLink={content.buttonLocalLink}
-        image={content.image}
-        reverseLayout={i % 2 === 0}
-        buttonColor={colorOrder[i]}
-        dividerColor={colorOrder[i + 1]}
-        big
-      />
-    ));
+  return contentfulContentList.content.slice(0, -1).map((content, i) => (
+    <CallToActionBlock
+      tagline={content.tagline}
+      summary={content.summary && content.summary.json}
+      button={content.button}
+      buttonLocalLink={content.buttonLocalLink}
+      image={content.image}
+      reverseLayout={i % 2 === 0}
+      buttonColor={colorOrder[i]}
+      dividerColor={colorOrder[i + 1]}
+      big
+      wrapperCss={css`
+        background-color: white;
+      `}
+    />
+  ));
 };
 
 export default CallToActionBlocks;

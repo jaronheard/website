@@ -10,7 +10,7 @@ import CallToActionBlocks from "./Home/CallToActionBlocks";
 import SustainableModelBlocks from "./Home/SustainableModelBlocks";
 // import QuoteBlock from "../components/QuoteBlock";
 // import DividerLine from "../components/DividerLine";
-import ContentContainer from "../components/ContentContainer";
+// import ContentContainer from "../components/ContentContainer";
 import { colors } from "../_Theme/UpdatedBrandTheme";
 
 const IndexPage = () => {
@@ -21,7 +21,7 @@ const IndexPage = () => {
       swoopColor={colors.yellow.hex}
     >
       <Splash />
-      <ContentContainer margin="sm">{/* <FeaturedPost /> */}</ContentContainer>
+      {/* <ContentContainer margin="sm"><FeaturedPost /></ContentContainer> */}
       {/* <DividerLine hexColor={colors.yellow.hex} /> */}
       {/* <ContentContainer margin="md">
         <OurDifferenceHeader />
