@@ -67,17 +67,25 @@ const Contact = () => (
             <Link to="/contributor-apply/">Apply to contribute</Link>
           </li>
           <li>
-            <a href="mailto:hi@civicsoftwarefoundation.org">
-              hi@civicsoftwarefoundation.org
+            <a
+              href="https://airtable.com/shr8nHiuUtIAQ8Yzl"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Report an issue
             </a>
           </li>
-          <li
-            className="extra-margin"
-            css={css`
-              margin: 30px 0;
-            `}
-          >
-            <Link to="/projects/">Past projects</Link>
+          <li>
+            <a
+              href="https://airtable.com/shrIq8aOqhrJhCxzS"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Make a suggestion
+            </a>
+          </li>
+          <li>
+            <a href="mailto:hi@civicsoftwarefoundation.org">Other inquiries</a>
           </li>
         </ul>
 

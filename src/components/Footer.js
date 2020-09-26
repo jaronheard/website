@@ -25,7 +25,7 @@ const Footer = () => (
       >
         <p className="p-sm" css={footerText}>
           Civic Software Foundation is a 501(c)(3) registered non-profit
-          organization.
+          organization. EIN 46-5498921
           <br />
           <a
             css={css`
