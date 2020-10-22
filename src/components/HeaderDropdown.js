@@ -86,6 +86,18 @@ const HeaderDropdown = ({ open, headerHeight, goTo }) => {
               tabIndex={`${open ? "0" : "-1"}`}
               className="headerButton"
               onClick={() => {
+                goTo("/library/");
+              }}
+            >
+              <h3 css={menuItem}>Data Library</h3>
+            </button>
+          </li>
+          <li>
+            <button
+              type="button"
+              tabIndex={`${open ? "0" : "-1"}`}
+              className="headerButton"
+              onClick={() => {
                 goTo("/projects/");
               }}
             >
