@@ -10,6 +10,7 @@ const ShadowBox = ({
   cardStyle,
   shadowColor,
   wide,
+  fullWidth,
   children
 }) => {
   return (
@@ -17,6 +18,7 @@ const ShadowBox = ({
       className="ShadowBox"
       css={css`
         ${wide || FooterContent ? `max-width: 400px;` : ""}
+        ${fullWidth ? `max-width: 1100px; margin: 1rem auto;` : ""}
         ${shadowColor ? `box-shadow: 6px 6px 0px rgb(${shadowColor});` : ""}
         ${cardStyle}
       `}
@@ -63,6 +65,7 @@ ShadowBox.propTypes = {
   cardStyle: PropTypes.string, // css
   shadowColor: PropTypes.string, // hex code
   wide: PropTypes.bool,
+  fullWidth: PropTypes.bool,
   // eslint-disable-next-line react/forbid-prop-types
   children: PropTypes.any
 };

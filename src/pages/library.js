@@ -3,6 +3,7 @@ import { jsx } from "@emotion/core";
 
 import LibraryHeader from "./Library/LibraryHeader";
 import LibraryComponents from "./Library/LibraryComponents";
+import Challenges from "./Library/UpcomingChallenges";
 import PageLayout from "../components/PageLayout";
 import ContentContainer from "../components/ContentContainer";
 import DividerLine from "../components/DividerLine";
@@ -18,6 +19,9 @@ const LibraryPage = () => {
       <LibraryHeader />
       <ContentContainer margin="md">
         <LibraryComponents />
+      </ContentContainer>
+      <ContentContainer margin="md">
+        <Challenges />
       </ContentContainer>
       <DividerLine hexColor={colors.yellow.hex} />
     </PageLayout>

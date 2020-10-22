@@ -35,9 +35,14 @@ const makeImage = image => (
   />
 );
 
+const DefaultContainer = ({ children }) => <div>{children}</div>;
+
 const CallToActionBlock = ({
   tagline,
   summary,
+  extraContent,
+  extraContentType,
+  ExtraContentContainer = DefaultContainer,
   button,
   buttonLocalLink,
   image,
@@ -116,6 +121,11 @@ const CallToActionBlock = ({
                 >
                   {documentToReactComponents(summary)}
                 </div>
+              )}
+              {extraContent && !extraContentType && (
+                <ExtraContentContainer>
+                  {documentToReactComponents(extraContent)}
+                </ExtraContentContainer>
               )}
               {button && (
                 <Link

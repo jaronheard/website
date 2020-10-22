@@ -2,39 +2,45 @@
 import { jsx, css } from "@emotion/core";
 import { useStaticQuery, graphql } from "gatsby";
 
-import { xsBreak } from "../../_Theme/UpdatedBrandTheme";
-import GridList from "../../components/GridList";
-import GridListMap from "../../components/GridListMap";
-import SectionHeader from "../../components/SectionHeader";
+import { colors, xsBreak } from "../../_Theme/UpdatedBrandTheme";
 
-const PlatformComponents = () => {
-  const { contentfulContentList, contentfulHeading } = useStaticQuery(
+import SectionHeader from "../../components/SectionHeader";
+import CallToActionBlock from "../../components/CallToActionBlock";
+import DividerLine from "../../components/DividerLine";
+
+const containerStyle = css`
+  ul > li > p {
+    margin-block-start: 0;
+    margin-block-end: 0;
+  }
+`;
+
+// eslint-disable-next-line react/prop-types
+const LibraryContainer = ({ children }) => (
+  <div css={containerStyle}>{children}</div>
+);
+
+const LibraryComponents = () => {
+  const { contentfulCallToActionBlock, contentfulHeading } = useStaticQuery(
     graphql`
-      query {
-        contentfulContentList(contentful_id: { eq: "7DqbXnpUlLESjEXI3GEoxN" }) {
-          content {
-            ... on ContentfulCallToActionBlock {
-              summary {
-                json
-              }
-              extraContent {
-                json
-              }
-              extraContentType
-              tagline
-            }
-          }
-          extraContent {
-            json
-          }
-          buttonText
-          buttonLink
-        }
-        contentfulHeading(contentful_id: { eq: "4WxH55d5Hyk9bZtNc4lA9N" }) {
+      {
+        contentfulHeading(contentful_id: { eq: "38L1I74z7WUhU1pyTCk6tx" }) {
           title
           summary {
             json
           }
+        }
+        contentfulCallToActionBlock(
+          contentful_id: { eq: "2Ieibdd8yuutPPbQx6jnnl" }
+        ) {
+          tagline
+          summary {
+            json
+          }
+          extraContent {
+            json
+          }
+          extraContentType
         }
       }
     `
@@ -53,20 +59,23 @@ const PlatformComponents = () => {
         summary={contentfulHeading.summary.json}
         center
       />
-      <GridList
-        wideContent
-        bottomContent={contentfulContentList.extraContent.json}
-        buttonText={contentfulContentList.buttonText}
-        buttonLocalLink={contentfulContentList.buttonLink}
-      >
-        <GridListMap
-          callToActionBlockList={contentfulContentList.content}
-          colorShadow
-          wideContent
-        />
-      </GridList>
+      <DividerLine hexColor={colors.green.hex} />
+      <CallToActionBlock
+        tagline={contentfulCallToActionBlock.tagline}
+        summary={
+          contentfulCallToActionBlock.summary &&
+          contentfulCallToActionBlock.summary.json
+        }
+        extraContent={
+          contentfulCallToActionBlock.extraContent &&
+          contentfulCallToActionBlock.extraContent.json
+        }
+        extraContentType={contentfulCallToActionBlock.extraContentType}
+        ExtraContentContainer={LibraryContainer}
+        dividerColor="blue"
+      />
     </div>
   );
 };
 
-export default PlatformComponents;
+export default LibraryComponents;
