@@ -86,18 +86,6 @@ const AboutDropdown = ({ goTo }) => {
               type="button"
               className="headerButton"
               onClick={() => {
-                goTo("/library/");
-              }}
-            >
-              <h4>Data Library</h4>
-            </button>
-          </li>
-          <li>
-            <button
-              tabIndex={`${dropdownOpen ? "0" : "-1"}`}
-              type="button"
-              className="headerButton"
-              onClick={() => {
                 goTo("/projects/");
               }}
             >
