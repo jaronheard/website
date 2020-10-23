@@ -31,7 +31,7 @@ const CompletedChallenges = () => {
               summary
               outcomes
               applicants
-              link
+              slug
             }
           }
         }
@@ -56,7 +56,7 @@ const CompletedChallenges = () => {
             summary={node.summary}
             outcomes={node.outcomes}
             applicants={node.applicants}
-            link={node.link}
+            slug={node.slug}
             completed
           />
         ))}

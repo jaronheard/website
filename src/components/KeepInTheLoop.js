@@ -43,9 +43,10 @@ const KeepInTheLoop = ({ library }) => (
         </h2>
         {library ? (
           <p>
-            These updates are exclusively for announcements and opportunities
-            related to the CIVIC Data Library. We promise never to spam, bore,
-            annoy, or sell your information.
+            Excited about the focus sessions, but don’t see a fit for you yet?
+            Join our updates list! These updates are exclusively for
+            announcements and opportunities related to the CIVIC Data Library.
+            We promise never to spam, bore, or sell your information.
           </p>
         ) : (
           <p>

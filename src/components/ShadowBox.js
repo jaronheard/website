@@ -1,5 +1,6 @@
 /** @jsx jsx */
 import { jsx, css } from "@emotion/core";
+import { Link } from "@reach/router";
 import PropTypes from "prop-types";
 
 const ConditionalWrapper = ({ condition, wrapper, children }) =>
@@ -28,9 +29,9 @@ const ShadowBox = ({
     <ConditionalWrapper
       condition={!!link}
       wrapper={chilldren => (
-        <a href={link} aria-label={title}>
+        <Link to={link} aria-label={title}>
           {chilldren}
-        </a>
+        </Link>
       )}
     >
       <div

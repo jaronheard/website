@@ -1,5 +1,6 @@
 /** @jsx jsx */
 import { jsx, css } from "@emotion/core";
+import { Link } from "@reach/router";
 import PropTypes from "prop-types";
 import UpdatedBrandTheme, { colors } from "../_Theme/UpdatedBrandTheme";
 import ShadowBox from "./ShadowBox";
@@ -13,21 +14,21 @@ const details = css`
   }
 `;
 
-const Button = ({ url }) => (
+const Button = ({ slug }) => (
   <div
     css={css`
       text-align: right;
       margin-right: 1.5em;
     `}
   >
-    <a href={url} target="_blank" rel="noreferrer" className="btn-purple">
+    <Link to={`sessions/${slug}`} className="btn-purple">
       <p>Read more & apply</p>
-    </a>
+    </Link>
   </div>
 );
 
 Button.propTypes = {
-  url: PropTypes.string
+  slug: PropTypes.string
 };
 
 const tagList = css`
@@ -64,7 +65,7 @@ const Challenge = ({
   summary,
   outcomes,
   applicants,
-  link,
+  slug,
   completed
 }) => {
   const dateObj = new Date(date);
@@ -72,8 +73,8 @@ const Challenge = ({
     <ShadowBox
       title={title}
       fullWidth
-      Button={!completed && link && <Button url={link} />}
-      link={completed && link}
+      Button={!completed && <Button slug={slug} />}
+      link={completed && `sessions/${slug}`}
     >
       <div css={details}>
         {tags && (
@@ -124,7 +125,7 @@ Challenge.propTypes = {
   summary: PropTypes.string,
   outcomes: PropTypes.string,
   applicants: PropTypes.string,
-  link: PropTypes.string,
+  slug: PropTypes.string,
   completed: PropTypes.bool
 };
 

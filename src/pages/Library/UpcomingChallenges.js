@@ -32,7 +32,7 @@ const Challenges = () => {
               outcomes
               applicants
               completed
-              link
+              slug
             }
           }
         }
@@ -57,7 +57,7 @@ const Challenges = () => {
             summary={node.summary}
             outcomes={node.outcomes}
             applicants={node.applicants}
-            link={node.link}
+            slug={node.slug}
           />
         ))}
       </GridSingle>

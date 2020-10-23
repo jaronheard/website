@@ -31,6 +31,27 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
           }
         }
       }
+      allContentfulChallenge {
+        edges {
+          node {
+            slug
+            title
+            description {
+              json
+            }
+            tags
+            date
+            time
+            summary
+            outcomes
+            applicants
+            link
+            completed
+            createdAt(formatString: "MMMM DD, YYYY")
+            updatedAt(formatString: "MMMM DD, YYYY")
+          }
+        }
+      }
     }
   `);
   if (result.errors) {
@@ -50,6 +71,23 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
       // our page layout component
       context: {
         post: node
+      }
+    });
+  });
+  // Create focus session pages.
+  const sessions = result.data.allContentfulChallenge.edges;
+  // you'll call `createPage` for each result
+  sessions.forEach(({ node }) => {
+    createPage({
+      // This is the slug you created before
+      // (or `node.frontmatter.slug`)
+      path: `/sessions/${node.slug}`,
+      // This component will wrap our MDX content
+      component: path.resolve(`./src/components/ChallengeTemplate.js`),
+      // You can use the values in this context in
+      // our page layout component
+      context: {
+        challenge: node
       }
     });
   });
