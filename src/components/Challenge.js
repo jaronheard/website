@@ -70,7 +70,7 @@ const Challenge = ({
   const dateObj = new Date(date);
   return (
     <ShadowBox
-      title={`${completed ? "✅ " : "🤔 "}${title}`}
+      title={title}
       fullWidth
       Button={!completed && link && <Button url={link} />}
       link={completed && link}
