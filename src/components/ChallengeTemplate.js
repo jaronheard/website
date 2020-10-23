@@ -7,7 +7,7 @@ import DefaultTitleAreaContent from "./DefaultTitleAreaContent";
 import DividerLine from "./DividerLine";
 import { colors } from "../_Theme/UpdatedBrandTheme";
 import ContentContainer from "./ContentContainer";
-import Challenge from "./Challenge";
+import ChallengeFull from "./ChallengeFull";
 
 const ChallengeTemplate = ({ pageContext }) => {
   const { challenge } = pageContext;
@@ -21,7 +21,7 @@ const ChallengeTemplate = ({ pageContext }) => {
         />
       </TitleAreaNew>
       <ContentContainer margin="md">
-        <Challenge
+        <ChallengeFull
           title={challenge.title}
           tags={challenge.tags}
           time={challenge.time}
@@ -29,7 +29,10 @@ const ChallengeTemplate = ({ pageContext }) => {
           summary={challenge.summary}
           outcomes={challenge.outcomes}
           applicants={challenge.applicants}
+          slug={challenge.slug}
           link={challenge.link}
+          description={challenge.description.json}
+          completed={challenge.completed}
         />
       </ContentContainer>
       <DividerLine hexColor={colors.pink.hex} />
