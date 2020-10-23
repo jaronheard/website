@@ -7,20 +7,20 @@ import SectionHeader from "../../components/SectionHeader";
 import GridSingle from "../../components/GridSingle";
 import Challenge from "../../components/Challenge";
 
-const Challenges = () => {
+const CompletedChallenges = () => {
   const { allContentfulChallenge, contentfulHeading } = useStaticQuery(
     graphql`
       {
-        contentfulHeading(contentful_id: { eq: "3ArSDhlLmIZKwNxNDONjuM" }) {
+        contentfulHeading(contentful_id: { eq: "vHSpohuoxFbfwFCdvcfZr" }) {
           title
           summary {
             json
           }
         }
         allContentfulChallenge(
-          filter: { completed: { eq: false } }
-          limit: 3
-          sort: { fields: date, order: ASC }
+          filter: { completed: { eq: true } }
+          limit: 10
+          sort: { fields: date, order: DESC }
         ) {
           edges {
             node {
@@ -31,7 +31,6 @@ const Challenges = () => {
               summary
               outcomes
               applicants
-              completed
               link
             }
           }
@@ -58,6 +57,7 @@ const Challenges = () => {
             outcomes={node.outcomes}
             applicants={node.applicants}
             link={node.link}
+            completed
           />
         ))}
       </GridSingle>
@@ -65,4 +65,4 @@ const Challenges = () => {
   );
 };
 
-export default Challenges;
+export default CompletedChallenges;

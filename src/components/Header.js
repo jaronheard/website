@@ -86,6 +86,25 @@ const Header = () => {
               margin: 0;
             `}
             onClick={() => {
+              goTo("/library/");
+            }}
+          >
+            <h3
+              css={css`
+                color: white;
+                margin: 0;
+              `}
+            >
+              Library
+            </h3>
+          </button>
+          <button
+            type="button"
+            className="headerButton"
+            css={css`
+              margin: 0;
+            `}
+            onClick={() => {
               goTo("/platform/");
             }}
           >

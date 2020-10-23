@@ -72,6 +72,7 @@ const LibraryComponents = () => {
         }
         extraContentType={contentfulCallToActionBlock.extraContentType}
         ExtraContentContainer={LibraryContainer}
+        narrow
         dividerColor="blue"
       />
     </div>

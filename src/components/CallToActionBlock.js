@@ -48,6 +48,7 @@ const CallToActionBlock = ({
   image,
   reverseLayout,
   big,
+  narrow,
   buttonColor,
   dividerColor,
   noDivider,
@@ -83,7 +84,7 @@ const CallToActionBlock = ({
               reverseLayout ? "image content" : "content image"
             }";
             width: 100%;
-            max-width: 1100px;
+            max-width: ${narrow ? "900px" : "1100px"};
             margin: 0 auto;
             align-items: center;
 

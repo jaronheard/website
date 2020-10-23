@@ -2,6 +2,16 @@
 import { jsx, css } from "@emotion/core";
 import PropTypes from "prop-types";
 
+const ConditionalWrapper = ({ condition, wrapper, children }) =>
+  condition ? wrapper(children) : children;
+
+ConditionalWrapper.propTypes = {
+  condition: PropTypes.bool,
+  wrapper: PropTypes.func,
+  // eslint-disable-next-line react/forbid-prop-types
+  children: PropTypes.any
+};
+
 const ShadowBox = ({
   title,
   MainContent,
@@ -11,49 +21,59 @@ const ShadowBox = ({
   shadowColor,
   wide,
   fullWidth,
-  children
+  children,
+  link
 }) => {
   return (
-    <div
-      className="ShadowBox"
-      css={css`
+    <ConditionalWrapper
+      condition={!!link}
+      wrapper={chilldren => <a href={link}>{chilldren}</a>}
+    >
+      <div
+        className="ShadowBox"
+        css={css`
         ${wide || FooterContent ? `max-width: 400px;` : ""}
-        ${fullWidth ? `max-width: 1100px; margin: 1rem auto;` : ""}
+        ${
+          fullWidth
+            ? `max-width: 1100px; margin: 1rem auto; padding: inherit 1rem;`
+            : ""
+        }
         ${shadowColor ? `box-shadow: 6px 6px 0px rgb(${shadowColor});` : ""}
         ${cardStyle}
       `}
-    >
-      <div className="ShadowBoxContent">
-        {title && (
-          <h3
+      >
+        <div className="ShadowBoxContent">
+          {title && (
+            <h3
+              css={css`
+                margin-top: 0;
+              `}
+            >
+              {title}
+            </h3>
+          )}
+          {MainContent}
+          {children}
+          {Button}
+        </div>
+        {FooterContent && (
+          <div
+            className="ShadowBoxFooter"
             css={css`
-              margin-top: 0;
-            `}
-          >
-            {title}
-          </h3>
-        )}
-        {MainContent}
-        {children}
-        {Button}
-      </div>
-      {FooterContent && (
-        <div
-          className="ShadowBoxFooter"
-          css={css`
-            ${shadowColor
-              ? `
+              ${shadowColor
+                ? `
             > ul {
               background-color: rgba(${shadowColor}, .1);
             }
           `
-              : ""}
-          `}
-        >
-          {FooterContent}
-        </div>
-      )}
-    </div>
+                : ""}
+            `}
+          >
+            {FooterContent}
+          </div>
+        )}
+      </div>
+    </ConditionalWrapper>
   );
 };
 
@@ -66,6 +86,7 @@ ShadowBox.propTypes = {
   shadowColor: PropTypes.string, // hex code
   wide: PropTypes.bool,
   fullWidth: PropTypes.bool,
+  link: PropTypes.string,
   // eslint-disable-next-line react/forbid-prop-types
   children: PropTypes.any
 };

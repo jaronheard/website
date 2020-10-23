@@ -21,7 +21,7 @@ const Button = ({ url }) => (
     `}
   >
     <a href={url} target="_blank" rel="noreferrer" className="btn-purple">
-      <p>Apply</p>
+      <p>Read more & apply</p>
     </a>
   </div>
 );
@@ -64,11 +64,17 @@ const Challenge = ({
   summary,
   outcomes,
   applicants,
-  link
+  link,
+  completed
 }) => {
   const dateObj = new Date(date);
   return (
-    <ShadowBox title={title} fullWidth Button={link && <Button url={link} />}>
+    <ShadowBox
+      title={`${completed ? "✅ " : "🤔 "}${title}`}
+      fullWidth
+      Button={!completed && link && <Button url={link} />}
+      link={completed && link}
+    >
       <div css={details}>
         {tags && (
           <ul css={tagList}>
@@ -78,32 +84,34 @@ const Challenge = ({
           </ul>
         )}
       </div>
-      <div>
-        <i>
-          {date && dateObj.toLocaleDateString("en-US", dateOptions)}{" "}
-          {Intl.DateTimeFormat().resolvedOptions().timeZone}
-        </i>
-      </div>
+      {!completed && (
+        <div>
+          <i>
+            {date && dateObj.toLocaleDateString("en-US", dateOptions)}{" "}
+            {Intl.DateTimeFormat().resolvedOptions().timeZone}
+          </i>
+        </div>
+      )}
       {summary && <p>{summary}</p>}
-      {applicants && (
+      {!completed && applicants && (
         <p>
           <strong>Encouraged applicants: </strong>
           {applicants}
         </p>
       )}
-      {outcomes && (
+      {!completed && outcomes && (
         <p>
           <strong>Expected outcomes: </strong>
           {outcomes}
         </p>
       )}
-      {applicants && (
+      {!completed && applicants && (
         <p>
           <strong>Encouraged applicants: </strong>
           {applicants}
         </p>
       )}
-      {time && (
+      {!completed && time && (
         <p>
           <strong>Expected preparation time: </strong>
           {time}
@@ -121,7 +129,8 @@ Challenge.propTypes = {
   summary: PropTypes.string,
   outcomes: PropTypes.string,
   applicants: PropTypes.string,
-  link: PropTypes.string
+  link: PropTypes.string,
+  completed: PropTypes.bool
 };
 
 export default Challenge;

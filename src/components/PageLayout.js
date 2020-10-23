@@ -15,6 +15,7 @@ const PageLayout = ({
   keywords,
   children,
   hideCommonCTA,
+  hideKeepInTheLoop,
   swoopColor,
   home
 }) => {
@@ -29,7 +30,7 @@ const PageLayout = ({
           <DividerLine hexColor={swoopColor} />
         </Fragment>
       )}
-      <KeepInTheLoop />
+      {!hideKeepInTheLoop && <KeepInTheLoop />}
       <Footer />
     </Fragment>
   );
@@ -43,6 +44,7 @@ PageLayout.propTypes = {
     PropTypes.node
   ]),
   hideCommonCTA: PropTypes.bool,
+  hideKeepInTheLoop: PropTypes.bool,
   swoopColor: PropTypes.string,
   home: PropTypes.bool
 };
