@@ -27,7 +27,11 @@ const ShadowBox = ({
   return (
     <ConditionalWrapper
       condition={!!link}
-      wrapper={chilldren => <a href={link}>{chilldren}</a>}
+      wrapper={chilldren => (
+        <a href={link} aria-label={title}>
+          {chilldren}
+        </a>
+      )}
     >
       <div
         className="ShadowBox"
