@@ -93,12 +93,6 @@ const Challenge = ({
         </div>
       )}
       {summary && <p>{summary}</p>}
-      {!completed && applicants && (
-        <p>
-          <strong>Encouraged applicants: </strong>
-          {applicants}
-        </p>
-      )}
       {!completed && outcomes && (
         <p>
           <strong>Expected outcomes: </strong>
