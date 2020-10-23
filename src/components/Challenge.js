@@ -87,6 +87,7 @@ const Challenge = ({
       {!completed && (
         <div>
           <i>
+            {"Sync Time: "}
             {date && dateObj.toLocaleDateString("en-US", dateOptions)}{" "}
             {Intl.DateTimeFormat().resolvedOptions().timeZone}
           </i>
