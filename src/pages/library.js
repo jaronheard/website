@@ -15,7 +15,7 @@ import KeepInTheLoop from "../components/KeepInTheLoop";
 const LibraryPage = () => {
   return (
     <PageLayout
-      title="Data Library"
+      title="CIVIC Data Library"
       keywords={[`Civic Software Foundation`, `CIVIC Data Library`]}
       swoopColor={colors.pink.hex}
       hideCommonCTA
