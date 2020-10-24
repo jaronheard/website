@@ -11,6 +11,7 @@ const Button = ({ url, title }) => (
     css={css`
       float: right;
       margin-right: 1.5em;
+      margin-top: 2rem;
     `}
   >
     <a href={url} target="_blank" rel="noreferrer" className="btn-yellow">
@@ -43,7 +44,7 @@ const GeneralChallengeApplication = () => {
   const { summary, buttonLink, buttonTitle } = contentfulCallToActionSimple;
 
   return (
-    <GridSingle containerStyle="padding: 1rem;">
+    <GridSingle containerStyle="padding: 1rem; margin-top: 2rem; margin-bottom: 2rem;">
       {documentToReactComponents(summary.json)}
       <div
         css={css`

@@ -19,7 +19,8 @@ const Button = () => (
   <div
     css={css`
       text-align: right;
-      margin-right: 1.5em;
+      margin-right: 2rem;
+      margin-top: 2rem;
     `}
   >
     <a
@@ -111,23 +112,27 @@ const Challenge = ({
         </Fragment>
       )}
       {summary && documentToReactComponents(summary)}
-      {!completed && outcomes && (
-        <p>
-          <strong>Expected outcomes: </strong>
-          {outcomes}
-        </p>
-      )}
-      {!completed && applicants && (
-        <p>
-          <strong>Encouraged applicants: </strong>
-          {applicants}
-        </p>
-      )}
-      {!completed && time && (
-        <p>
-          <strong>Expected preparation time: </strong>
-          {time}
-        </p>
+      {!completed && (
+        <ul>
+          {outcomes && (
+            <li>
+              <strong>Expected outcomes: </strong>
+              {outcomes}
+            </li>
+          )}
+          {applicants && (
+            <li>
+              <strong>Encouraged applicants: </strong>
+              {applicants}
+            </li>
+          )}
+          {time && (
+            <li>
+              <strong>Expected preparation time: </strong>
+              {time}
+            </li>
+          )}
+        </ul>
       )}
       {description && documentToReactComponents(description)}
     </ShadowBox>

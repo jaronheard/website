@@ -2,6 +2,15 @@
 import { jsx, css } from "@emotion/core";
 import { Link } from "@reach/router";
 import PropTypes from "prop-types";
+import { colors, noHover } from "../_Theme/UpdatedBrandTheme";
+
+const focusBorder = {
+  ":hover, :focus": {
+    outline: "none",
+    boxShadow: `0px 4px 0px ${colors.pink.hex}`,
+    background: "none"
+  }
+};
 
 const ConditionalWrapper = ({ condition, wrapper, children }) =>
   condition ? wrapper(children) : children;
@@ -29,7 +38,7 @@ const ShadowBox = ({
     <ConditionalWrapper
       condition={!!link}
       wrapper={chilldren => (
-        <Link to={link} aria-label={title}>
+        <Link to={link} aria-label={title} css={[noHover, focusBorder]}>
           {chilldren}
         </Link>
       )}

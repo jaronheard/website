@@ -133,6 +133,9 @@ const CallToActionBlock = ({
                 <Link
                   to={`${buttonLocalLink}`}
                   className={`btn-${buttonColor}`}
+                  css={css`
+                    margin-top: 2rem;
+                  `}
                 >
                   <p>{button}</p>
                 </Link>
@@ -141,6 +144,9 @@ const CallToActionBlock = ({
                 <a
                   href={`${buttonExternalLink}`}
                   className={`btn-${buttonColor}`}
+                  css={css`
+                    margin-top: 2rem;
+                  `}
                 >
                   <p>{button}</p>
                 </a>
