@@ -47,13 +47,10 @@ const ShadowBox = ({
         className="ShadowBox"
         css={css`
         ${wide || FooterContent ? `max-width: 400px;` : ""}
-        ${
-          fullWidth
-            ? `max-width: 1100px; margin: 1rem auto; padding: inherit 1rem;`
-            : ""
-        }
+        ${fullWidth ? `max-width: 1100px; margin: 1rem auto; width: 100%;` : ""}
         ${shadowColor ? `box-shadow: 6px 6px 0px rgb(${shadowColor});` : ""}
         ${cardStyle}
+        ${FooterContent ? `display: grid;` : ""}
       `}
       >
         <div className="ShadowBoxContent">

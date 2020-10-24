@@ -1,11 +1,10 @@
 /** @jsx jsx */
-import { jsx } from "@emotion/core";
+import { jsx, css } from "@emotion/core";
 import { useStaticQuery, graphql } from "gatsby";
-import { Fragment } from "react";
 
 import SectionHeader from "../../components/SectionHeader";
-import GridSingle from "../../components/GridSingle";
 import Challenge from "../../components/Challenge";
+import ContentContainer from "../../components/ContentContainer";
 
 const CompletedChallenges = () => {
   const { allContentfulChallenge, contentfulHeading } = useStaticQuery(
@@ -41,13 +40,18 @@ const CompletedChallenges = () => {
   );
 
   return (
-    <Fragment>
+    <div
+      css={css`
+        margin: 0 auto 6rem auto;
+        max-width: 900px;
+      `}
+    >
       <SectionHeader
         title={contentfulHeading.title}
         summary={contentfulHeading.summary.json}
         center
       />
-      <GridSingle containerStyle="padding: 0 1rem; margin-bottom: 6rem;">
+      <ContentContainer>
         {allContentfulChallenge.edges.slice(0, 10).map(({ node }) => (
           <Challenge
             title={node.title}
@@ -61,8 +65,8 @@ const CompletedChallenges = () => {
             completed
           />
         ))}
-      </GridSingle>
-    </Fragment>
+      </ContentContainer>
+    </div>
   );
 };
 

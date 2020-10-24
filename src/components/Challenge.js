@@ -34,20 +34,13 @@ Button.propTypes = {
 };
 
 const tagList = css`
-  margin: -0.6125rem 0 0 0;
+  margin: -0.6125rem 0 0 -0.25rem;
   li {
-    display: inline;
-    padding: 0.25rem;
+    display: inline-block;
+    padding: 0.125rem 0.25rem;
     margin: 0.25rem 0.25rem;
-    line-height: 2rem;
     background-color: ${colors.heroPurple.hex};
     color: ${colors.white};
-    :first-child {
-      margin-left: 0;
-    }
-    :last-child {
-      margin-right: 0;
-    }
   }
 `;
 
