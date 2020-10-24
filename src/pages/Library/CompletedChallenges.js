@@ -46,7 +46,7 @@ const CompletedChallenges = () => {
         summary={contentfulHeading.summary.json}
         center
       />
-      <GridSingle containerStyle="padding: 0 1rem;">
+      <GridSingle containerStyle="padding: 0 1rem; margin-bottom: 6rem;">
         {allContentfulChallenge.edges.map(({ node }) => (
           <Challenge
             title={node.title}

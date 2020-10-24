@@ -1,5 +1,6 @@
 /* eslint-disable react/prop-types */
-import React from "react";
+/** @jsx jsx */
+import { jsx, css } from "@emotion/core";
 
 import PageLayout from "./PageLayout";
 import TitleAreaNew from "./TitleAreaNew";
@@ -8,12 +9,13 @@ import DividerLine from "./DividerLine";
 import { colors } from "../_Theme/UpdatedBrandTheme";
 import ContentContainer from "./ContentContainer";
 import ChallengeFull from "./ChallengeFull";
+import KeepInTheLoop from "./KeepInTheLoop";
 
 const ChallengeTemplate = ({ pageContext }) => {
   const { challenge } = pageContext;
 
   return (
-    <PageLayout title={challenge.title}>
+    <PageLayout title={challenge.title} hideCommonCTA hideKeepInTheLoop>
       <TitleAreaNew dividerLineColor={colors.blue.hex}>
         <DefaultTitleAreaContent
           title={challenge.title}
@@ -36,6 +38,12 @@ const ChallengeTemplate = ({ pageContext }) => {
         />
       </ContentContainer>
       <DividerLine hexColor={colors.pink.hex} />
+      <KeepInTheLoop library />
+      <div
+        css={css`
+          margin-bottom: 4rem;
+        `}
+      />
     </PageLayout>
   );
 };

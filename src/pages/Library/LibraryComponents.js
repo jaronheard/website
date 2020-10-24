@@ -37,6 +37,8 @@ const LibraryComponents = () => {
           summary {
             json
           }
+          button
+          buttonExternalLink
           extraContent {
             json
           }
@@ -74,6 +76,9 @@ const LibraryComponents = () => {
         ExtraContentContainer={LibraryContainer}
         narrow
         dividerColor="blue"
+        button={contentfulCallToActionBlock.button}
+        buttonExternalLink={contentfulCallToActionBlock.buttonExternalLink}
+        buttonColor="blue"
       />
     </div>
   );

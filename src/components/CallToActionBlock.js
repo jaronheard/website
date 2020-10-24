@@ -45,6 +45,7 @@ const CallToActionBlock = ({
   ExtraContentContainer = DefaultContainer,
   button,
   buttonLocalLink,
+  buttonExternalLink,
   image,
   reverseLayout,
   big,
@@ -128,13 +129,21 @@ const CallToActionBlock = ({
                   {documentToReactComponents(extraContent)}
                 </ExtraContentContainer>
               )}
-              {button && (
+              {button && buttonLocalLink && (
                 <Link
                   to={`${buttonLocalLink}`}
                   className={`btn-${buttonColor}`}
                 >
                   <p>{button}</p>
                 </Link>
+              )}
+              {button && buttonExternalLink && (
+                <a
+                  href={`${buttonExternalLink}`}
+                  className={`btn-${buttonColor}`}
+                >
+                  <p>{button}</p>
+                </a>
               )}
             </div>
           </div>

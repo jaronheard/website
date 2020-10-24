@@ -88,7 +88,7 @@ const Challenge = ({
       {!completed && (
         <div>
           <i>
-            {"Sync Time: "}
+            {"Synchronous virtual meeting: "}
             {date && dateObj.toLocaleDateString("en-US", dateOptions)}{" "}
             {Intl.DateTimeFormat().resolvedOptions().timeZone}
           </i>

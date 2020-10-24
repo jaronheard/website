@@ -1,5 +1,5 @@
 /** @jsx jsx */
-import { jsx } from "@emotion/core";
+import { jsx, css } from "@emotion/core";
 
 import LibraryHeader from "./Library/LibraryHeader";
 import LibraryComponents from "./Library/LibraryComponents";
@@ -29,12 +29,17 @@ const LibraryPage = () => {
         <UpcomingChallenges />
         <GeneralChallengeApplication />
       </ContentContainer>
+      <DividerLine hexColor={colors.pink.hex} />
+      <KeepInTheLoop library />
       <DividerLine hexColor={colors.yellow.hex} />{" "}
-      <ContentContainer margin="md">
+      <ContentContainer
+        css={css`
+          margin-bottom: 24rem !important;
+        `}
+        margin="md"
+      >
         <CompletedChallenges />
       </ContentContainer>
-      <DividerLine hexColor={colors.blue.hex} />
-      <KeepInTheLoop library />
     </PageLayout>
   );
 };
