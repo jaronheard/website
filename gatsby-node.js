@@ -42,7 +42,9 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
             tags
             date
             time
-            summary
+            summary {
+              json
+            }
             outcomes
             applicants
             link

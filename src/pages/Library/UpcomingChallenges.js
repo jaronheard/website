@@ -18,8 +18,7 @@ const Challenges = () => {
           }
         }
         allContentfulChallenge(
-          filter: { completed: { eq: false } }
-          limit: 3
+          filter: { completed: { ne: true } }
           sort: { fields: date, order: ASC }
         ) {
           edges {
@@ -28,7 +27,9 @@ const Challenges = () => {
               tags
               time
               date
-              summary
+              summary {
+                json
+              }
               outcomes
               applicants
               completed
@@ -48,13 +49,13 @@ const Challenges = () => {
         center
       />
       <GridSingle containerStyle="padding: 0 1rem;">
-        {allContentfulChallenge.edges.map(({ node }) => (
+        {allContentfulChallenge.edges.slice(0, 3).map(({ node }) => (
           <Challenge
             title={node.title}
             tags={node.tags}
             time={node.time}
             date={node.date}
-            summary={node.summary}
+            summary={node.summary.json}
             outcomes={node.outcomes}
             applicants={node.applicants}
             slug={node.slug}

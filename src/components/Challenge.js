@@ -1,4 +1,5 @@
 /** @jsx jsx */
+import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 import { jsx, css } from "@emotion/core";
 import { Link } from "@reach/router";
 import PropTypes from "prop-types";
@@ -97,7 +98,7 @@ const Challenge = ({
           </i>
         </div>
       )}
-      {summary && <p>{summary}</p>}
+      {summary && documentToReactComponents(summary)}
       {!completed && outcomes && (
         <p>
           <strong>Expected outcomes: </strong>
@@ -125,7 +126,9 @@ Challenge.propTypes = {
   date: PropTypes.instanceOf(Date),
   time: PropTypes.string,
   tags: PropTypes.arrayOf(PropTypes.shape({ name: PropTypes.string })),
-  summary: PropTypes.string,
+  summary: PropTypes.shape({
+    /* contentful JSON */
+  }),
   outcomes: PropTypes.string,
   applicants: PropTypes.string,
   slug: PropTypes.string,

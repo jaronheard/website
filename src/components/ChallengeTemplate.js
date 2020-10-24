@@ -28,7 +28,7 @@ const ChallengeTemplate = ({ pageContext }) => {
           tags={challenge.tags}
           time={challenge.time}
           date={challenge.date}
-          summary={challenge.summary}
+          // summary={challenge.summary.json}
           outcomes={challenge.outcomes}
           applicants={challenge.applicants}
           slug={challenge.slug}
