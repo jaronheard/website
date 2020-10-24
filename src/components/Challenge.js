@@ -89,8 +89,11 @@ const Challenge = ({
         <div>
           <i>
             {"Synchronous virtual meeting: "}
-            {date && dateObj.toLocaleDateString("en-US", dateOptions)}{" "}
-            {Intl.DateTimeFormat().resolvedOptions().timeZone}
+            {date
+              ? `${dateObj.toLocaleDateString("en-US", dateOptions)} ${
+                  Intl.DateTimeFormat().resolvedOptions().timeZone
+                }`
+              : "TBD"}
           </i>
         </div>
       )}
