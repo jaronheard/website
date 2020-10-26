@@ -2,6 +2,7 @@
 import { jsx, css } from "@emotion/core";
 import { useState } from "react";
 import addToMailchimp from "gatsby-plugin-mailchimp";
+import { string } from "prop-types";
 import { colors, smBreak } from "../_Theme/UpdatedBrandTheme";
 
 const formItem = css``;
@@ -19,7 +20,7 @@ const resultMsg = css`
   }
 `;
 
-function Mailchimp() {
+function Mailchimp({ endpoint }) {
   const [resultMessage, setResultMessage] = useState("");
   const [error, setError] = useState(false);
   const [FNAME, setFNAME] = useState("");
@@ -41,7 +42,7 @@ function Mailchimp() {
       FNAME,
       LNAME
     };
-    addToMailchimp(email, fields).then(result => {
+    addToMailchimp(email, fields, endpoint).then(result => {
       setResultMessage(result.msg.split("<a")[0]);
       setError(result.result === "error");
     });
@@ -159,5 +160,9 @@ function Mailchimp() {
     </form>
   );
 }
+
+Mailchimp.propTypes = {
+  endpoint: string
+};
 
 export default Mailchimp;

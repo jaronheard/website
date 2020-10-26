@@ -35,14 +35,21 @@ const makeImage = image => (
   />
 );
 
+const DefaultContainer = ({ children }) => <div>{children}</div>;
+
 const CallToActionBlock = ({
   tagline,
   summary,
+  extraContent,
+  extraContentType,
+  ExtraContentContainer = DefaultContainer,
   button,
   buttonLocalLink,
+  buttonExternalLink,
   image,
   reverseLayout,
   big,
+  narrow,
   buttonColor,
   dividerColor,
   noDivider,
@@ -78,7 +85,7 @@ const CallToActionBlock = ({
               reverseLayout ? "image content" : "content image"
             }";
             width: 100%;
-            max-width: 1100px;
+            max-width: ${narrow ? "900px" : "1100px"};
             margin: 0 auto;
             align-items: center;
 
@@ -117,13 +124,32 @@ const CallToActionBlock = ({
                   {documentToReactComponents(summary)}
                 </div>
               )}
-              {button && (
+              {extraContent && !extraContentType && (
+                <ExtraContentContainer>
+                  {documentToReactComponents(extraContent)}
+                </ExtraContentContainer>
+              )}
+              {button && buttonLocalLink && (
                 <Link
                   to={`${buttonLocalLink}`}
                   className={`btn-${buttonColor}`}
+                  css={css`
+                    margin-top: 2rem;
+                  `}
                 >
                   <p>{button}</p>
                 </Link>
+              )}
+              {button && buttonExternalLink && (
+                <a
+                  href={`${buttonExternalLink}`}
+                  className={`btn-${buttonColor}`}
+                  css={css`
+                    margin-top: 2rem;
+                  `}
+                >
+                  <p>{button}</p>
+                </a>
               )}
             </div>
           </div>

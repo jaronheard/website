@@ -53,6 +53,17 @@ const HeaderDropdown = ({ open, headerHeight, goTo }) => {
       <DropdownSection>
         <ul>
           <li>
+            <li>
+              <button
+                type="button"
+                className="headerButton"
+                onClick={() => {
+                  goTo("/library/");
+                }}
+              >
+                <h3 css={menuItem}>Library</h3>
+              </button>
+            </li>
             <button
               type="button"
               className="headerButton"

@@ -509,7 +509,7 @@ export default {
     background: "white",
     border: borders.box,
     // boxShadow: shadows.rightDown,
-    display: "grid",
+    display: "block",
 
     [xsBreak]: {
       width: "calc(100% - 20px)"
