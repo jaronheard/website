@@ -24,7 +24,7 @@ const Button = ({ slug }) => (
     `}
   >
     <Link to={`sessions/${slug}`} className="btn-purple">
-      <p>Read more & apply</p>
+      <p>Read more</p>
     </Link>
   </div>
 );

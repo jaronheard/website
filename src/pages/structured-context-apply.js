@@ -47,7 +47,8 @@ const ContributorApplication = () => {
               font-style: italic;
             `}
           >
-            This application is for the Data Feminism group, there is also the{" "}
+            This application is for a program that has completed, please use the
+            {` `}
             <Link to="/contributor-apply">
               <p
                 className="a"

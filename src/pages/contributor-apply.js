@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { jsx, css } from "@emotion/core";
-import { useStaticQuery, graphql, Link } from "gatsby";
+import { useStaticQuery, graphql } from "gatsby";
 
 import PageLayout from "../components/PageLayout";
 import TitleAreaNew from "../components/TitleAreaNew";
@@ -58,18 +58,7 @@ const ContributorApplication = () => {
               font-style: italic;
             `}
           >
-            This is CIVIC&apos;s general application form. Use the{" "}
-            <Link to="/structured-context-apply">
-              <p
-                className="a"
-                css={css`
-                  display: inline;
-                `}
-              >
-                Structured Context Program Application
-              </p>
-            </Link>{" "}
-            if you are applying from the Data Feminism group.
+            This is CIVIC&apos;s general application form.
           </p>
           <EmbeddedForm formSrc="https://form.jotform.com/200786890019057" />
         </div>

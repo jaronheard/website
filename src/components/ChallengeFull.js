@@ -29,7 +29,7 @@ const Button = () => (
       rel="noreferrer"
       className="btn-purple"
     >
-      <p>Apply</p>
+      <p>Request to join</p>
     </a>
   </div>
 );
