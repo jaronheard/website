@@ -110,8 +110,8 @@ const Contact = () => (
             <p css={whiteText} className="p-sm">
               Portland, OR
             </p>
-            <a css={whiteText} className="p-sm" href="tel:5033839131">
-              +1-503-383-9131‬
+            <a css={whiteText} className="p-sm" href="tel:9712700240">
+              +1-971-270-0240‬
             </a>
           </div>
 
