@@ -70,7 +70,7 @@ export const underlineFocus = {
 
 // Typography
 const body = {
-  fontFamily: `-apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"`,
+  fontFamily: `system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"`,
   fontSize: "1.0625rem",
   lineHeight: "1.765rem",
   margin: 0,
