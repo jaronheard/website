@@ -2,14 +2,22 @@
 import { jsx, css } from "@emotion/core";
 import { PropTypes } from "prop-types";
 
-import { smBreak, colors, xsBreak } from "../_Theme/UpdatedBrandTheme";
+import {
+  smBreak,
+  colors,
+  xsBreak,
+  mdBreak,
+  lgBreak
+} from "../_Theme/UpdatedBrandTheme";
+import CivicHeaderImage from "./CivicHeaderImage";
 import DividerLine from "./DividerLine";
 
 const NewTitleArea = ({
   backgroundImage,
   children,
   dividerLineColor = colors.green.hex,
-  childrenContainerStyle
+  childrenContainerStyle,
+  showHeaderImage
 }) => {
   return (
     <div
@@ -17,7 +25,7 @@ const NewTitleArea = ({
         z-index: -1;
       `}
     >
-      <picture
+      <div
         css={css`
           background-image: ${backgroundImage};
           background-size: cover;
@@ -32,17 +40,48 @@ const NewTitleArea = ({
           width: 100%;
           height: 600px;
           z-index: -1;
+          ${xsBreak} {
+            height: 900px;
+          }
         `}
-      />
+      >
+        {showHeaderImage ? (
+          <div
+            css={css`
+              display: block;
+              position: absolute;
+              right: 1rem;
+              bottom: 0;
+              ${lgBreak} {
+                display: none;
+              }
+            `}
+          >
+            <CivicHeaderImage
+              css={css`
+                display: block;
+                ${lgBreak} {
+                  display: none;
+                }
+              `}
+            />
+          </div>
+        ) : null}
+      </div>
       <div
         css={css`
-          display: grid;
+          display: flex;
+          flex-direction: column;
           align-content: stretch;
           text-align: left;
           padding: 25px 40px;
           margin-bottom: -30px;
           height: 370px;
           justify-content: stretch;
+
+          ${mdBreak} {
+            height: auto;
+          }
 
           ${smBreak} {
             margin-bottom: -45px;
@@ -58,6 +97,19 @@ const NewTitleArea = ({
         `}
       >
         {children}
+        {showHeaderImage ? (
+          <div
+            css={css`
+              display: none;
+              ${xsBreak} {
+                display: flex;
+                height: auto;
+              }
+            `}
+          >
+            <CivicHeaderImage />
+          </div>
+        ) : null}
       </div>
       <DividerLine
         hexColor={dividerLineColor}
@@ -83,6 +135,7 @@ NewTitleArea.propTypes = {
   backgroundImage: PropTypes.string,
   dividerLineColor: PropTypes.string,
   childrenContainerStyle: PropTypes.string,
+  showHeaderImage: PropTypes.bool,
   // eslint-disable-next-line react/forbid-prop-types
   children: PropTypes.any
 };
