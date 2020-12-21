@@ -104,7 +104,7 @@ const NewTitleArea = ({
               display: none;
               ${xsBreak} {
                 display: flex;
-                height: 350px;
+                height: 320px;
                 margin: 0 auto 2rem auto;
               }
             `}
