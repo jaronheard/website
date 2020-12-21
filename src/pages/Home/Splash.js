@@ -17,11 +17,13 @@ const Splash = () => {
   `);
 
   return (
-    <TitleAreaNew>
+    <TitleAreaNew showHeaderImage>
       <GridSingle
         containerStyle={css`
           width: 100%;
           padding: 0;
+          display: flex;
+          flex-direction: column;
         `}
         wideContent
       >
@@ -31,7 +33,7 @@ const Splash = () => {
             margin-top: 0;
             margin-bottom: 1rem;
             max-width: 900px;
-            display: grid;
+            display: block;
             justify-self: left;
             color: ${colors.subdued.hex};
             ${smBreak} {
@@ -43,24 +45,12 @@ const Splash = () => {
             <span>{contentfulHeading.title}</span>
           </div>
         </h2>
-        <span
-          className="h-2"
-          css={css`
-            margin-top: 0;
-            margin-bottom: 0;
-          `}
-          role="img"
-          aria-label="skin tone rainbow of clapping hands"
-        >
-          👏🏻👏🏼👏🏽👏🏾👏🏿
-        </span>
         <h3
           css={css`
             max-width: 900px;
-            display: grid;
+            display: block;
             margin: 0;
             justify-self: left;
-            align-self: end;
             ${smBreak} {
               max-width: 4000px;
             }
@@ -70,9 +60,6 @@ const Splash = () => {
             <span
               className="h-3"
               css={css`
-                /* line-height: 1.4;
-                font-style: italic;
-                font-synthesis: none; */
                 color: ${colors.subdued.hex};
               `}
             >
