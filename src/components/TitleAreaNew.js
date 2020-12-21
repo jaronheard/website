@@ -52,6 +52,7 @@ const NewTitleArea = ({
               position: absolute;
               right: 1rem;
               bottom: 0;
+              height: 350px;
               ${lgBreak} {
                 display: none;
               }
@@ -103,7 +104,8 @@ const NewTitleArea = ({
               display: none;
               ${xsBreak} {
                 display: flex;
-                height: auto;
+                height: 350px;
+                margin: 0 auto 2rem auto;
               }
             `}
           >
