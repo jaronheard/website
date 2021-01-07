@@ -14,7 +14,7 @@ This is the repo for the website for civicsoftwarefoundation.org. It was generat
     Navigate into the website directory and start it up.
 
     ```sh
-    cd my-default-starter/
+    cd website/
     yarn
     yarn start
     ```
