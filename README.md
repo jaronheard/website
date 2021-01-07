@@ -1,46 +1,22 @@
-<!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
-<p align="center">
-  <a href="https://www.gatsbyjs.org">
-    <img alt="Gatsby" src="https://www.gatsbyjs.org/monogram.svg" height="60" />
-  </a>
-    <a href="https://www.civicplatform.org">
-    <img alt="CIVIC" src="https://civicplatform.org/8423c2821974cccdbdadd9a431a2aa5e.svg" height="60" />
-  </a>  
-</p>
-<h1 align="center">
-  Gatsby's default starter + ✨CIVIC magic✨
-</h1>
-
-Kick off your project with this default boilerplate. This starter ships with the main Gatsby configuration files you might need to get up and running blazing fast with the blazing fast app generator for React.
-
-**Changes/Additions**
-
-- added <a href="https://www.npmjs.com/package/@hackoregon/ui-themes/">@hackoregon/ui-themes</a> (CIVIC magic)
-- added emotion and related plugins for styling
-- used prettier and eslint settings from [civic repo](https://github.com/hackoregon/civic)
-
-**Feedback**
-
-Have issues? Open an issue! Improvements? Pull requests welcome!
+# Website
+This is the repo for the website for civicsoftwarefoundation.org. It was generated from [jaronheard/civic-gatsby-starter](https://github.com/jaronheard/civic-gatsby-starter) but has evolved over time.
 
 ## ⛴ Quick start
 
-1.  **Create a Gatsby site.**
-
-    Use the Gatsby CLI to create a new site, specifying the default starter.
+1.  **Clone repo**
 
     ```sh
-    # create a new Gatsby site using the default starter + ✨CIVIC magic✨
-    npx gatsby new my-default-starter https://github.com/jaronheard/civic-gatsby-starter
+    git clone https://github.com/hackoregon/website.git
     ```
 
-1.  **Start developing.**
+2.  **Start developing.**
 
-    Navigate into your new site’s directory and start it up.
+    Navigate into the website directory and start it up.
 
     ```sh
     cd my-default-starter/
-    gatsby develop
+    yarn
+    yarn start
     ```
 
 1.  **Open the source code and start editing!**
@@ -52,6 +28,8 @@ Have issues? Open an issue! Improvements? Pull requests welcome!
     Open the `my-default-starter` directory in your code editor of choice and edit `src/pages/index.js`. Save your changes and the browser will update in real time!
 
 ## 🧐 What's inside?
+
+**Note: there's more files than this, if you have a question about one, feel free to open an issue.
 
 A quick look at the top-level files and directories you'll see in a Gatsby project.
 
@@ -87,9 +65,9 @@ A quick look at the top-level files and directories you'll see in a Gatsby proje
 
 9.  **`LICENSE`**: Gatsby is licensed under the MIT license.
 
-10. **`package-lock.json`** (See `package.json` below, first). This is an automatically generated file based on the exact versions of your npm dependencies that were installed for your project. **(You won’t change this file directly).**
+10. **`yarn.lock`** (See `package.json` below, first). This is an automatically generated file based on the exact versions of your npm dependencies that were installed for your project. **(You won’t change this file directly).**
 
-11. **`package.json`**: A manifest file for Node.js projects, which includes things like metadata (the project’s name, author, etc). This manifest is how npm knows which packages to install for your project.
+11. **`package.json`**: A manifest file for Node.js projects, which includes things like metadata (the project’s name, author, etc). This manifest is how yarn knows which packages to install for your project.
 
 12. **`README.md`**: A text file containing useful reference information about your project.
 
@@ -100,9 +78,3 @@ Looking for more guidance? Full documentation for Gatsby lives [on the website](
 - **For most developers, we recommend starting with our [in-depth tutorial for creating a site with Gatsby](https://www.gatsbyjs.org/tutorial/).** It starts with zero assumptions about your level of ability and walks through every step of the process.
 
 - **To dive straight into code samples, head [to our documentation](https://www.gatsbyjs.org/docs/).** In particular, check out the _Guides_, _API Reference_, and _Advanced Tutorials_ sections in the sidebar.
-
-## 💫 Deploy
-
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/gatsbyjs/gatsby-starter-default)
-
-<!-- AUTO-GENERATED-CONTENT:END -->
