@@ -1454,36 +1454,6 @@
                 "defaultValue": null
               },
               {
-                "name": "spaceId",
-                "description": "",
-                "type": {
-                  "kind": "INPUT_OBJECT",
-                  "name": "StringQueryOperatorInput",
-                  "ofType": null
-                },
-                "defaultValue": null
-              },
-              {
-                "name": "createdAt",
-                "description": "",
-                "type": {
-                  "kind": "INPUT_OBJECT",
-                  "name": "DateQueryOperatorInput",
-                  "ofType": null
-                },
-                "defaultValue": null
-              },
-              {
-                "name": "updatedAt",
-                "description": "",
-                "type": {
-                  "kind": "INPUT_OBJECT",
-                  "name": "DateQueryOperatorInput",
-                  "ofType": null
-                },
-                "defaultValue": null
-              },
-              {
                 "name": "file",
                 "description": "",
                 "type": {
@@ -1519,16 +1489,6 @@
                 "type": {
                   "kind": "INPUT_OBJECT",
                   "name": "StringQueryOperatorInput",
-                  "ofType": null
-                },
-                "defaultValue": null
-              },
-              {
-                "name": "sys",
-                "description": "",
-                "type": {
-                  "kind": "INPUT_OBJECT",
-                  "name": "ContentfulAssetSysFilterInput",
                   "ofType": null
                 },
                 "defaultValue": null
@@ -1868,21 +1828,21 @@
                 "defaultValue": null
               },
               {
-                "name": "content",
-                "description": "",
-                "type": {
-                  "kind": "INPUT_OBJECT",
-                  "name": "contentfulCallToActionSimpleSummaryRichTextNodeContentFilterListInput",
-                  "ofType": null
-                },
-                "defaultValue": null
-              },
-              {
                 "name": "nodeType",
                 "description": "",
                 "type": {
                   "kind": "INPUT_OBJECT",
                   "name": "StringQueryOperatorInput",
+                  "ofType": null
+                },
+                "defaultValue": null
+              },
+              {
+                "name": "content",
+                "description": "",
+                "type": {
+                  "kind": "INPUT_OBJECT",
+                  "name": "contentfulCallToActionSimpleSummaryRichTextNodeContentFilterListInput",
                   "ofType": null
                 },
                 "defaultValue": null
@@ -2035,6 +1995,16 @@
                 "type": {
                   "kind": "INPUT_OBJECT",
                   "name": "StringQueryOperatorInput",
+                  "ofType": null
+                },
+                "defaultValue": null
+              },
+              {
+                "name": "featuredcalltoaction",
+                "description": "",
+                "type": {
+                  "kind": "INPUT_OBJECT",
+                  "name": "ContentfulFeaturedCallToActionFilterListInput",
                   "ofType": null
                 },
                 "defaultValue": null
@@ -2364,21 +2334,21 @@
                 "defaultValue": null
               },
               {
-                "name": "nodeType",
-                "description": "",
-                "type": {
-                  "kind": "INPUT_OBJECT",
-                  "name": "StringQueryOperatorInput",
-                  "ofType": null
-                },
-                "defaultValue": null
-              },
-              {
                 "name": "content",
                 "description": "",
                 "type": {
                   "kind": "INPUT_OBJECT",
                   "name": "contentfulChallengeSummaryRichTextNodeContentFilterListInput",
+                  "ofType": null
+                },
+                "defaultValue": null
+              },
+              {
+                "name": "nodeType",
+                "description": "",
+                "type": {
+                  "kind": "INPUT_OBJECT",
+                  "name": "StringQueryOperatorInput",
                   "ofType": null
                 },
                 "defaultValue": null
@@ -11713,18 +11683,6 @@
             "description": null,
             "isDeprecated": false,
             "deprecationReason": null
-          },
-          {
-            "name": "INSIDE",
-            "description": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "OUTSIDE",
-            "description": null,
-            "isDeprecated": false,
-            "deprecationReason": null
           }
         ],
         "possibleTypes": null
@@ -12048,11 +12006,7 @@
             "name": "presentationWidth",
             "description": null,
             "args": [],
-            "type": {
-              "kind": "NON_NULL",
-              "name": null,
-              "ofType": { "kind": "SCALAR", "name": "Int", "ofType": null }
-            },
+            "type": { "kind": "SCALAR", "name": "Int", "ofType": null },
             "isDeprecated": false,
             "deprecationReason": null
           },
@@ -12060,11 +12014,7 @@
             "name": "presentationHeight",
             "description": null,
             "args": [],
-            "type": {
-              "kind": "NON_NULL",
-              "name": null,
-              "ofType": { "kind": "SCALAR", "name": "Int", "ofType": null }
-            },
+            "type": { "kind": "SCALAR", "name": "Int", "ofType": null },
             "isDeprecated": false,
             "deprecationReason": null
           }
@@ -12179,11 +12129,7 @@
             "name": "presentationWidth",
             "description": null,
             "args": [],
-            "type": {
-              "kind": "NON_NULL",
-              "name": null,
-              "ofType": { "kind": "SCALAR", "name": "Int", "ofType": null }
-            },
+            "type": { "kind": "SCALAR", "name": "Int", "ofType": null },
             "isDeprecated": false,
             "deprecationReason": null
           },
@@ -12191,11 +12137,7 @@
             "name": "presentationHeight",
             "description": null,
             "args": [],
-            "type": {
-              "kind": "NON_NULL",
-              "name": null,
-              "ofType": { "kind": "SCALAR", "name": "Int", "ofType": null }
-            },
+            "type": { "kind": "SCALAR", "name": "Int", "ofType": null },
             "isDeprecated": false,
             "deprecationReason": null
           }
@@ -14215,7 +14157,7 @@
         "fields": [
           {
             "name": "next",
-            "description": null,
+            "description": "",
             "args": [],
             "type": { "kind": "OBJECT", "name": "File", "ofType": null },
             "isDeprecated": false,
@@ -14235,7 +14177,7 @@
           },
           {
             "name": "previous",
-            "description": null,
+            "description": "",
             "args": [],
             "type": { "kind": "OBJECT", "name": "File", "ofType": null },
             "isDeprecated": false,
@@ -14317,18 +14259,6 @@
             "description": null,
             "args": [],
             "type": { "kind": "SCALAR", "name": "Int", "ofType": null },
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "totalCount",
-            "description": null,
-            "args": [],
-            "type": {
-              "kind": "NON_NULL",
-              "name": null,
-              "ofType": { "kind": "SCALAR", "name": "Int", "ofType": null }
-            },
             "isDeprecated": false,
             "deprecationReason": null
           }
@@ -16384,7 +16314,7 @@
         "fields": [
           {
             "name": "next",
-            "description": null,
+            "description": "",
             "args": [],
             "type": { "kind": "OBJECT", "name": "Directory", "ofType": null },
             "isDeprecated": false,
@@ -16408,7 +16338,7 @@
           },
           {
             "name": "previous",
-            "description": null,
+            "description": "",
             "args": [],
             "type": { "kind": "OBJECT", "name": "Directory", "ofType": null },
             "isDeprecated": false,
@@ -18743,56 +18673,6 @@
           },
           {
             "name": "icon",
-            "description": "",
-            "type": {
-              "kind": "INPUT_OBJECT",
-              "name": "StringQueryOperatorInput",
-              "ofType": null
-            },
-            "defaultValue": null
-          },
-          {
-            "name": "cache_busting_mode",
-            "description": "",
-            "type": {
-              "kind": "INPUT_OBJECT",
-              "name": "StringQueryOperatorInput",
-              "ofType": null
-            },
-            "defaultValue": null
-          },
-          {
-            "name": "include_favicon",
-            "description": "",
-            "type": {
-              "kind": "INPUT_OBJECT",
-              "name": "BooleanQueryOperatorInput",
-              "ofType": null
-            },
-            "defaultValue": null
-          },
-          {
-            "name": "legacy",
-            "description": "",
-            "type": {
-              "kind": "INPUT_OBJECT",
-              "name": "BooleanQueryOperatorInput",
-              "ofType": null
-            },
-            "defaultValue": null
-          },
-          {
-            "name": "theme_color_in_head",
-            "description": "",
-            "type": {
-              "kind": "INPUT_OBJECT",
-              "name": "BooleanQueryOperatorInput",
-              "ofType": null
-            },
-            "defaultValue": null
-          },
-          {
-            "name": "cacheDigest",
             "description": "",
             "type": {
               "kind": "INPUT_OBJECT",
@@ -21146,46 +21026,6 @@
             "deprecationReason": null
           },
           {
-            "name": "cache_busting_mode",
-            "description": null,
-            "args": [],
-            "type": { "kind": "SCALAR", "name": "String", "ofType": null },
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "include_favicon",
-            "description": null,
-            "args": [],
-            "type": { "kind": "SCALAR", "name": "Boolean", "ofType": null },
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "legacy",
-            "description": null,
-            "args": [],
-            "type": { "kind": "SCALAR", "name": "Boolean", "ofType": null },
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "theme_color_in_head",
-            "description": null,
-            "args": [],
-            "type": { "kind": "SCALAR", "name": "Boolean", "ofType": null },
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "cacheDigest",
-            "description": null,
-            "args": [],
-            "type": { "kind": "SCALAR", "name": "String", "ofType": null },
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
             "name": "spaceId",
             "description": null,
             "args": [],
@@ -22589,36 +22429,6 @@
           },
           {
             "name": "pluginCreator___pluginOptions___icon",
-            "description": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "pluginCreator___pluginOptions___cache_busting_mode",
-            "description": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "pluginCreator___pluginOptions___include_favicon",
-            "description": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "pluginCreator___pluginOptions___legacy",
-            "description": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "pluginCreator___pluginOptions___theme_color_in_head",
-            "description": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "pluginCreator___pluginOptions___cacheDigest",
             "description": null,
             "isDeprecated": false,
             "deprecationReason": null
@@ -24218,7 +24028,7 @@
         "fields": [
           {
             "name": "next",
-            "description": null,
+            "description": "",
             "args": [],
             "type": { "kind": "OBJECT", "name": "Site", "ofType": null },
             "isDeprecated": false,
@@ -24238,7 +24048,7 @@
           },
           {
             "name": "previous",
-            "description": null,
+            "description": "",
             "args": [],
             "type": { "kind": "OBJECT", "name": "Site", "ofType": null },
             "isDeprecated": false,
@@ -25413,7 +25223,7 @@
         "fields": [
           {
             "name": "next",
-            "description": null,
+            "description": "",
             "args": [],
             "type": { "kind": "OBJECT", "name": "ImageSharp", "ofType": null },
             "isDeprecated": false,
@@ -25437,7 +25247,7 @@
           },
           {
             "name": "previous",
-            "description": null,
+            "description": "",
             "args": [],
             "type": { "kind": "OBJECT", "name": "ImageSharp", "ofType": null },
             "isDeprecated": false,
@@ -25652,27 +25462,6 @@
           },
           {
             "name": "height",
-            "description": "",
-            "type": {
-              "kind": "INPUT_OBJECT",
-              "name": "IntQueryOperatorInput",
-              "ofType": null
-            },
-            "defaultValue": null
-          }
-        ],
-        "interfaces": null,
-        "enumValues": null,
-        "possibleTypes": null
-      },
-      {
-        "kind": "INPUT_OBJECT",
-        "name": "ContentfulAssetSysFilterInput",
-        "description": null,
-        "fields": null,
-        "inputFields": [
-          {
-            "name": "revision",
             "description": "",
             "type": {
               "kind": "INPUT_OBJECT",
@@ -26211,80 +26000,6 @@
             "deprecationReason": null
           },
           {
-            "name": "spaceId",
-            "description": null,
-            "args": [],
-            "type": { "kind": "SCALAR", "name": "String", "ofType": null },
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "createdAt",
-            "description": null,
-            "args": [
-              {
-                "name": "formatString",
-                "description": "Format the date using Moment.js' date tokens, e.g. `date(formatString: \"YYYY MMMM DD\")`. See https://momentjs.com/docs/#/displaying/format/ for documentation for different tokens.",
-                "type": { "kind": "SCALAR", "name": "String", "ofType": null },
-                "defaultValue": null
-              },
-              {
-                "name": "fromNow",
-                "description": "Returns a string generated with Moment.js' `fromNow` function",
-                "type": { "kind": "SCALAR", "name": "Boolean", "ofType": null },
-                "defaultValue": null
-              },
-              {
-                "name": "difference",
-                "description": "Returns the difference between this date and the current time. Defaults to \"milliseconds\" but you can also pass in as the measurement \"years\", \"months\", \"weeks\", \"days\", \"hours\", \"minutes\", and \"seconds\".",
-                "type": { "kind": "SCALAR", "name": "String", "ofType": null },
-                "defaultValue": null
-              },
-              {
-                "name": "locale",
-                "description": "Configures the locale Moment.js will use to format the date.",
-                "type": { "kind": "SCALAR", "name": "String", "ofType": null },
-                "defaultValue": null
-              }
-            ],
-            "type": { "kind": "SCALAR", "name": "Date", "ofType": null },
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "updatedAt",
-            "description": null,
-            "args": [
-              {
-                "name": "formatString",
-                "description": "Format the date using Moment.js' date tokens, e.g. `date(formatString: \"YYYY MMMM DD\")`. See https://momentjs.com/docs/#/displaying/format/ for documentation for different tokens.",
-                "type": { "kind": "SCALAR", "name": "String", "ofType": null },
-                "defaultValue": null
-              },
-              {
-                "name": "fromNow",
-                "description": "Returns a string generated with Moment.js' `fromNow` function",
-                "type": { "kind": "SCALAR", "name": "Boolean", "ofType": null },
-                "defaultValue": null
-              },
-              {
-                "name": "difference",
-                "description": "Returns the difference between this date and the current time. Defaults to \"milliseconds\" but you can also pass in as the measurement \"years\", \"months\", \"weeks\", \"days\", \"hours\", \"minutes\", and \"seconds\".",
-                "type": { "kind": "SCALAR", "name": "String", "ofType": null },
-                "defaultValue": null
-              },
-              {
-                "name": "locale",
-                "description": "Configures the locale Moment.js will use to format the date.",
-                "type": { "kind": "SCALAR", "name": "String", "ofType": null },
-                "defaultValue": null
-              }
-            ],
-            "type": { "kind": "SCALAR", "name": "Date", "ofType": null },
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
             "name": "file",
             "description": null,
             "args": [],
@@ -26317,18 +26032,6 @@
             "description": null,
             "args": [],
             "type": { "kind": "SCALAR", "name": "String", "ofType": null },
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "sys",
-            "description": null,
-            "args": [],
-            "type": {
-              "kind": "OBJECT",
-              "name": "ContentfulAssetSys",
-              "ofType": null
-            },
             "isDeprecated": false,
             "deprecationReason": null
           },
@@ -26784,25 +26487,6 @@
           },
           {
             "name": "height",
-            "description": null,
-            "args": [],
-            "type": { "kind": "SCALAR", "name": "Int", "ofType": null },
-            "isDeprecated": false,
-            "deprecationReason": null
-          }
-        ],
-        "inputFields": null,
-        "interfaces": [],
-        "enumValues": null,
-        "possibleTypes": null
-      },
-      {
-        "kind": "OBJECT",
-        "name": "ContentfulAssetSys",
-        "description": null,
-        "fields": [
-          {
-            "name": "revision",
             "description": null,
             "args": [],
             "type": { "kind": "SCALAR", "name": "Int", "ofType": null },
@@ -27470,36 +27154,6 @@
             "defaultValue": null
           },
           {
-            "name": "spaceId",
-            "description": "",
-            "type": {
-              "kind": "INPUT_OBJECT",
-              "name": "StringQueryOperatorInput",
-              "ofType": null
-            },
-            "defaultValue": null
-          },
-          {
-            "name": "createdAt",
-            "description": "",
-            "type": {
-              "kind": "INPUT_OBJECT",
-              "name": "DateQueryOperatorInput",
-              "ofType": null
-            },
-            "defaultValue": null
-          },
-          {
-            "name": "updatedAt",
-            "description": "",
-            "type": {
-              "kind": "INPUT_OBJECT",
-              "name": "DateQueryOperatorInput",
-              "ofType": null
-            },
-            "defaultValue": null
-          },
-          {
             "name": "file",
             "description": "",
             "type": {
@@ -27535,16 +27189,6 @@
             "type": {
               "kind": "INPUT_OBJECT",
               "name": "StringQueryOperatorInput",
-              "ofType": null
-            },
-            "defaultValue": null
-          },
-          {
-            "name": "sys",
-            "description": "",
-            "type": {
-              "kind": "INPUT_OBJECT",
-              "name": "ContentfulAssetSysFilterInput",
               "ofType": null
             },
             "defaultValue": null
@@ -28174,24 +27818,6 @@
             "deprecationReason": null
           },
           {
-            "name": "spaceId",
-            "description": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "createdAt",
-            "description": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "updatedAt",
-            "description": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
             "name": "file___url",
             "description": null,
             "isDeprecated": false,
@@ -28241,12 +27867,6 @@
           },
           {
             "name": "node_locale",
-            "description": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "sys___revision",
             "description": null,
             "isDeprecated": false,
             "deprecationReason": null
@@ -28674,7 +28294,7 @@
         "fields": [
           {
             "name": "next",
-            "description": null,
+            "description": "",
             "args": [],
             "type": {
               "kind": "OBJECT",
@@ -28702,7 +28322,7 @@
           },
           {
             "name": "previous",
-            "description": null,
+            "description": "",
             "args": [],
             "type": {
               "kind": "OBJECT",
@@ -28898,6 +28518,16 @@
             "defaultValue": null
           },
           {
+            "name": "featuredcalltoaction",
+            "description": "",
+            "type": {
+              "kind": "INPUT_OBJECT",
+              "name": "ContentfulFeaturedCallToActionFilterListInput",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
             "name": "summary",
             "description": "",
             "type": {
@@ -28984,6 +28614,261 @@
       },
       {
         "kind": "INPUT_OBJECT",
+        "name": "ContentfulFeaturedCallToActionFilterListInput",
+        "description": null,
+        "fields": null,
+        "inputFields": [
+          {
+            "name": "elemMatch",
+            "description": "",
+            "type": {
+              "kind": "INPUT_OBJECT",
+              "name": "ContentfulFeaturedCallToActionFilterInput",
+              "ofType": null
+            },
+            "defaultValue": null
+          }
+        ],
+        "interfaces": null,
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "INPUT_OBJECT",
+        "name": "ContentfulFeaturedCallToActionFilterInput",
+        "description": null,
+        "fields": null,
+        "inputFields": [
+          {
+            "name": "id",
+            "description": "",
+            "type": {
+              "kind": "INPUT_OBJECT",
+              "name": "StringQueryOperatorInput",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "parent",
+            "description": "",
+            "type": {
+              "kind": "INPUT_OBJECT",
+              "name": "NodeFilterInput",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "children",
+            "description": "",
+            "type": {
+              "kind": "INPUT_OBJECT",
+              "name": "NodeFilterListInput",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "internal",
+            "description": "",
+            "type": {
+              "kind": "INPUT_OBJECT",
+              "name": "InternalFilterInput",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "location",
+            "description": "",
+            "type": {
+              "kind": "INPUT_OBJECT",
+              "name": "StringQueryOperatorInput",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "callToAction",
+            "description": "",
+            "type": {
+              "kind": "INPUT_OBJECT",
+              "name": "ContentfulCallToActionSimpleFilterInput",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "spaceId",
+            "description": "",
+            "type": {
+              "kind": "INPUT_OBJECT",
+              "name": "StringQueryOperatorInput",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "contentful_id",
+            "description": "",
+            "type": {
+              "kind": "INPUT_OBJECT",
+              "name": "StringQueryOperatorInput",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "createdAt",
+            "description": "",
+            "type": {
+              "kind": "INPUT_OBJECT",
+              "name": "DateQueryOperatorInput",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "updatedAt",
+            "description": "",
+            "type": {
+              "kind": "INPUT_OBJECT",
+              "name": "DateQueryOperatorInput",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "sys",
+            "description": "",
+            "type": {
+              "kind": "INPUT_OBJECT",
+              "name": "ContentfulFeaturedCallToActionSysFilterInput",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "node_locale",
+            "description": "",
+            "type": {
+              "kind": "INPUT_OBJECT",
+              "name": "StringQueryOperatorInput",
+              "ofType": null
+            },
+            "defaultValue": null
+          }
+        ],
+        "interfaces": null,
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "INPUT_OBJECT",
+        "name": "ContentfulFeaturedCallToActionSysFilterInput",
+        "description": null,
+        "fields": null,
+        "inputFields": [
+          {
+            "name": "revision",
+            "description": "",
+            "type": {
+              "kind": "INPUT_OBJECT",
+              "name": "IntQueryOperatorInput",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "contentType",
+            "description": "",
+            "type": {
+              "kind": "INPUT_OBJECT",
+              "name": "ContentfulFeaturedCallToActionSysContentTypeFilterInput",
+              "ofType": null
+            },
+            "defaultValue": null
+          }
+        ],
+        "interfaces": null,
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "INPUT_OBJECT",
+        "name": "ContentfulFeaturedCallToActionSysContentTypeFilterInput",
+        "description": null,
+        "fields": null,
+        "inputFields": [
+          {
+            "name": "sys",
+            "description": "",
+            "type": {
+              "kind": "INPUT_OBJECT",
+              "name": "ContentfulFeaturedCallToActionSysContentTypeSysFilterInput",
+              "ofType": null
+            },
+            "defaultValue": null
+          }
+        ],
+        "interfaces": null,
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "INPUT_OBJECT",
+        "name": "ContentfulFeaturedCallToActionSysContentTypeSysFilterInput",
+        "description": null,
+        "fields": null,
+        "inputFields": [
+          {
+            "name": "type",
+            "description": "",
+            "type": {
+              "kind": "INPUT_OBJECT",
+              "name": "StringQueryOperatorInput",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "linkType",
+            "description": "",
+            "type": {
+              "kind": "INPUT_OBJECT",
+              "name": "StringQueryOperatorInput",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "id",
+            "description": "",
+            "type": {
+              "kind": "INPUT_OBJECT",
+              "name": "StringQueryOperatorInput",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "contentful_id",
+            "description": "",
+            "type": {
+              "kind": "INPUT_OBJECT",
+              "name": "StringQueryOperatorInput",
+              "ofType": null
+            },
+            "defaultValue": null
+          }
+        ],
+        "interfaces": null,
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "INPUT_OBJECT",
         "name": "contentfulCallToActionSimpleSummaryRichTextNodeFilterInput",
         "description": null,
         "fields": null,
@@ -29029,21 +28914,21 @@
             "defaultValue": null
           },
           {
-            "name": "content",
-            "description": "",
-            "type": {
-              "kind": "INPUT_OBJECT",
-              "name": "contentfulCallToActionSimpleSummaryRichTextNodeContentFilterListInput",
-              "ofType": null
-            },
-            "defaultValue": null
-          },
-          {
             "name": "nodeType",
             "description": "",
             "type": {
               "kind": "INPUT_OBJECT",
               "name": "StringQueryOperatorInput",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "content",
+            "description": "",
+            "type": {
+              "kind": "INPUT_OBJECT",
+              "name": "contentfulCallToActionSimpleSummaryRichTextNodeContentFilterListInput",
               "ofType": null
             },
             "defaultValue": null
@@ -29101,21 +28986,21 @@
         "fields": null,
         "inputFields": [
           {
-            "name": "content",
-            "description": "",
-            "type": {
-              "kind": "INPUT_OBJECT",
-              "name": "contentfulCallToActionSimpleSummaryRichTextNodeContentContentFilterListInput",
-              "ofType": null
-            },
-            "defaultValue": null
-          },
-          {
             "name": "nodeType",
             "description": "",
             "type": {
               "kind": "INPUT_OBJECT",
               "name": "StringQueryOperatorInput",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "content",
+            "description": "",
+            "type": {
+              "kind": "INPUT_OBJECT",
+              "name": "contentfulCallToActionSimpleSummaryRichTextNodeContentContentFilterListInput",
               "ofType": null
             },
             "defaultValue": null
@@ -29149,6 +29034,338 @@
       {
         "kind": "INPUT_OBJECT",
         "name": "contentfulCallToActionSimpleSummaryRichTextNodeContentContentFilterInput",
+        "description": null,
+        "fields": null,
+        "inputFields": [
+          {
+            "name": "nodeType",
+            "description": "",
+            "type": {
+              "kind": "INPUT_OBJECT",
+              "name": "StringQueryOperatorInput",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "value",
+            "description": "",
+            "type": {
+              "kind": "INPUT_OBJECT",
+              "name": "StringQueryOperatorInput",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "marks",
+            "description": "",
+            "type": {
+              "kind": "INPUT_OBJECT",
+              "name": "contentfulCallToActionSimpleSummaryRichTextNodeContentContentMarksFilterListInput",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "content",
+            "description": "",
+            "type": {
+              "kind": "INPUT_OBJECT",
+              "name": "contentfulCallToActionSimpleSummaryRichTextNodeContentContentContentFilterListInput",
+              "ofType": null
+            },
+            "defaultValue": null
+          }
+        ],
+        "interfaces": null,
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "INPUT_OBJECT",
+        "name": "contentfulCallToActionSimpleSummaryRichTextNodeContentContentMarksFilterListInput",
+        "description": null,
+        "fields": null,
+        "inputFields": [
+          {
+            "name": "elemMatch",
+            "description": "",
+            "type": {
+              "kind": "INPUT_OBJECT",
+              "name": "contentfulCallToActionSimpleSummaryRichTextNodeContentContentMarksFilterInput",
+              "ofType": null
+            },
+            "defaultValue": null
+          }
+        ],
+        "interfaces": null,
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "INPUT_OBJECT",
+        "name": "contentfulCallToActionSimpleSummaryRichTextNodeContentContentMarksFilterInput",
+        "description": null,
+        "fields": null,
+        "inputFields": [
+          {
+            "name": "type",
+            "description": "",
+            "type": {
+              "kind": "INPUT_OBJECT",
+              "name": "StringQueryOperatorInput",
+              "ofType": null
+            },
+            "defaultValue": null
+          }
+        ],
+        "interfaces": null,
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "INPUT_OBJECT",
+        "name": "contentfulCallToActionSimpleSummaryRichTextNodeContentContentContentFilterListInput",
+        "description": null,
+        "fields": null,
+        "inputFields": [
+          {
+            "name": "elemMatch",
+            "description": "",
+            "type": {
+              "kind": "INPUT_OBJECT",
+              "name": "contentfulCallToActionSimpleSummaryRichTextNodeContentContentContentFilterInput",
+              "ofType": null
+            },
+            "defaultValue": null
+          }
+        ],
+        "interfaces": null,
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "INPUT_OBJECT",
+        "name": "contentfulCallToActionSimpleSummaryRichTextNodeContentContentContentFilterInput",
+        "description": null,
+        "fields": null,
+        "inputFields": [
+          {
+            "name": "content",
+            "description": "",
+            "type": {
+              "kind": "INPUT_OBJECT",
+              "name": "contentfulCallToActionSimpleSummaryRichTextNodeContentContentContentContentFilterListInput",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "nodeType",
+            "description": "",
+            "type": {
+              "kind": "INPUT_OBJECT",
+              "name": "StringQueryOperatorInput",
+              "ofType": null
+            },
+            "defaultValue": null
+          }
+        ],
+        "interfaces": null,
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "INPUT_OBJECT",
+        "name": "contentfulCallToActionSimpleSummaryRichTextNodeContentContentContentContentFilterListInput",
+        "description": null,
+        "fields": null,
+        "inputFields": [
+          {
+            "name": "elemMatch",
+            "description": "",
+            "type": {
+              "kind": "INPUT_OBJECT",
+              "name": "contentfulCallToActionSimpleSummaryRichTextNodeContentContentContentContentFilterInput",
+              "ofType": null
+            },
+            "defaultValue": null
+          }
+        ],
+        "interfaces": null,
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "INPUT_OBJECT",
+        "name": "contentfulCallToActionSimpleSummaryRichTextNodeContentContentContentContentFilterInput",
+        "description": null,
+        "fields": null,
+        "inputFields": [
+          {
+            "name": "marks",
+            "description": "",
+            "type": {
+              "kind": "INPUT_OBJECT",
+              "name": "contentfulCallToActionSimpleSummaryRichTextNodeContentContentContentContentMarksFilterListInput",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "value",
+            "description": "",
+            "type": {
+              "kind": "INPUT_OBJECT",
+              "name": "StringQueryOperatorInput",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "nodeType",
+            "description": "",
+            "type": {
+              "kind": "INPUT_OBJECT",
+              "name": "StringQueryOperatorInput",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "content",
+            "description": "",
+            "type": {
+              "kind": "INPUT_OBJECT",
+              "name": "contentfulCallToActionSimpleSummaryRichTextNodeContentContentContentContentContentFilterListInput",
+              "ofType": null
+            },
+            "defaultValue": null
+          }
+        ],
+        "interfaces": null,
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "INPUT_OBJECT",
+        "name": "contentfulCallToActionSimpleSummaryRichTextNodeContentContentContentContentMarksFilterListInput",
+        "description": null,
+        "fields": null,
+        "inputFields": [
+          {
+            "name": "elemMatch",
+            "description": "",
+            "type": {
+              "kind": "INPUT_OBJECT",
+              "name": "contentfulCallToActionSimpleSummaryRichTextNodeContentContentContentContentMarksFilterInput",
+              "ofType": null
+            },
+            "defaultValue": null
+          }
+        ],
+        "interfaces": null,
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "INPUT_OBJECT",
+        "name": "contentfulCallToActionSimpleSummaryRichTextNodeContentContentContentContentMarksFilterInput",
+        "description": null,
+        "fields": null,
+        "inputFields": [
+          {
+            "name": "type",
+            "description": "",
+            "type": {
+              "kind": "INPUT_OBJECT",
+              "name": "StringQueryOperatorInput",
+              "ofType": null
+            },
+            "defaultValue": null
+          }
+        ],
+        "interfaces": null,
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "INPUT_OBJECT",
+        "name": "contentfulCallToActionSimpleSummaryRichTextNodeContentContentContentContentContentFilterListInput",
+        "description": null,
+        "fields": null,
+        "inputFields": [
+          {
+            "name": "elemMatch",
+            "description": "",
+            "type": {
+              "kind": "INPUT_OBJECT",
+              "name": "contentfulCallToActionSimpleSummaryRichTextNodeContentContentContentContentContentFilterInput",
+              "ofType": null
+            },
+            "defaultValue": null
+          }
+        ],
+        "interfaces": null,
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "INPUT_OBJECT",
+        "name": "contentfulCallToActionSimpleSummaryRichTextNodeContentContentContentContentContentFilterInput",
+        "description": null,
+        "fields": null,
+        "inputFields": [
+          {
+            "name": "content",
+            "description": "",
+            "type": {
+              "kind": "INPUT_OBJECT",
+              "name": "contentfulCallToActionSimpleSummaryRichTextNodeContentContentContentContentContentContentFilterListInput",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "nodeType",
+            "description": "",
+            "type": {
+              "kind": "INPUT_OBJECT",
+              "name": "StringQueryOperatorInput",
+              "ofType": null
+            },
+            "defaultValue": null
+          }
+        ],
+        "interfaces": null,
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "INPUT_OBJECT",
+        "name": "contentfulCallToActionSimpleSummaryRichTextNodeContentContentContentContentContentContentFilterListInput",
+        "description": null,
+        "fields": null,
+        "inputFields": [
+          {
+            "name": "elemMatch",
+            "description": "",
+            "type": {
+              "kind": "INPUT_OBJECT",
+              "name": "contentfulCallToActionSimpleSummaryRichTextNodeContentContentContentContentContentContentFilterInput",
+              "ofType": null
+            },
+            "defaultValue": null
+          }
+        ],
+        "interfaces": null,
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "INPUT_OBJECT",
+        "name": "contentfulCallToActionSimpleSummaryRichTextNodeContentContentContentContentContentContentFilterInput",
         "description": null,
         "fields": null,
         "inputFields": [
@@ -29297,109 +29514,6 @@
       {
         "kind": "INPUT_OBJECT",
         "name": "ContentfulCallToActionSimpleSysContentTypeSysFilterInput",
-        "description": null,
-        "fields": null,
-        "inputFields": [
-          {
-            "name": "type",
-            "description": "",
-            "type": {
-              "kind": "INPUT_OBJECT",
-              "name": "StringQueryOperatorInput",
-              "ofType": null
-            },
-            "defaultValue": null
-          },
-          {
-            "name": "linkType",
-            "description": "",
-            "type": {
-              "kind": "INPUT_OBJECT",
-              "name": "StringQueryOperatorInput",
-              "ofType": null
-            },
-            "defaultValue": null
-          },
-          {
-            "name": "id",
-            "description": "",
-            "type": {
-              "kind": "INPUT_OBJECT",
-              "name": "StringQueryOperatorInput",
-              "ofType": null
-            },
-            "defaultValue": null
-          },
-          {
-            "name": "contentful_id",
-            "description": "",
-            "type": {
-              "kind": "INPUT_OBJECT",
-              "name": "StringQueryOperatorInput",
-              "ofType": null
-            },
-            "defaultValue": null
-          }
-        ],
-        "interfaces": null,
-        "enumValues": null,
-        "possibleTypes": null
-      },
-      {
-        "kind": "INPUT_OBJECT",
-        "name": "ContentfulFeaturedCallToActionSysFilterInput",
-        "description": null,
-        "fields": null,
-        "inputFields": [
-          {
-            "name": "revision",
-            "description": "",
-            "type": {
-              "kind": "INPUT_OBJECT",
-              "name": "IntQueryOperatorInput",
-              "ofType": null
-            },
-            "defaultValue": null
-          },
-          {
-            "name": "contentType",
-            "description": "",
-            "type": {
-              "kind": "INPUT_OBJECT",
-              "name": "ContentfulFeaturedCallToActionSysContentTypeFilterInput",
-              "ofType": null
-            },
-            "defaultValue": null
-          }
-        ],
-        "interfaces": null,
-        "enumValues": null,
-        "possibleTypes": null
-      },
-      {
-        "kind": "INPUT_OBJECT",
-        "name": "ContentfulFeaturedCallToActionSysContentTypeFilterInput",
-        "description": null,
-        "fields": null,
-        "inputFields": [
-          {
-            "name": "sys",
-            "description": "",
-            "type": {
-              "kind": "INPUT_OBJECT",
-              "name": "ContentfulFeaturedCallToActionSysContentTypeSysFilterInput",
-              "ofType": null
-            },
-            "defaultValue": null
-          }
-        ],
-        "interfaces": null,
-        "enumValues": null,
-        "possibleTypes": null
-      },
-      {
-        "kind": "INPUT_OBJECT",
-        "name": "ContentfulFeaturedCallToActionSysContentTypeSysFilterInput",
         "description": null,
         "fields": null,
         "inputFields": [
@@ -29723,6 +29837,22 @@
             "deprecationReason": null
           },
           {
+            "name": "featuredcalltoaction",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "LIST",
+              "name": null,
+              "ofType": {
+                "kind": "OBJECT",
+                "name": "ContentfulFeaturedCallToAction",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
             "name": "summary",
             "description": null,
             "args": [],
@@ -29916,6 +30046,14 @@
             "deprecationReason": null
           },
           {
+            "name": "nodeType",
+            "description": null,
+            "args": [],
+            "type": { "kind": "SCALAR", "name": "String", "ofType": null },
+            "isDeprecated": true,
+            "deprecationReason": "This field is deprecated, please use 'json' instead."
+          },
+          {
             "name": "content",
             "description": null,
             "args": [],
@@ -29930,14 +30068,6 @@
             },
             "isDeprecated": false,
             "deprecationReason": null
-          },
-          {
-            "name": "nodeType",
-            "description": null,
-            "args": [],
-            "type": { "kind": "SCALAR", "name": "String", "ofType": null },
-            "isDeprecated": true,
-            "deprecationReason": "This field is deprecated, please use 'json' instead."
           },
           {
             "name": "summary",
@@ -29967,6 +30097,14 @@
         "description": null,
         "fields": [
           {
+            "name": "nodeType",
+            "description": null,
+            "args": [],
+            "type": { "kind": "SCALAR", "name": "String", "ofType": null },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
             "name": "content",
             "description": null,
             "args": [],
@@ -29976,6 +30114,111 @@
               "ofType": {
                 "kind": "OBJECT",
                 "name": "contentfulCallToActionSimpleSummaryRichTextNodeContentContent",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
+        "inputFields": null,
+        "interfaces": [],
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "OBJECT",
+        "name": "contentfulCallToActionSimpleSummaryRichTextNodeContentContent",
+        "description": null,
+        "fields": [
+          {
+            "name": "nodeType",
+            "description": null,
+            "args": [],
+            "type": { "kind": "SCALAR", "name": "String", "ofType": null },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "value",
+            "description": null,
+            "args": [],
+            "type": { "kind": "SCALAR", "name": "String", "ofType": null },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "marks",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "LIST",
+              "name": null,
+              "ofType": {
+                "kind": "OBJECT",
+                "name": "contentfulCallToActionSimpleSummaryRichTextNodeContentContentMarks",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "content",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "LIST",
+              "name": null,
+              "ofType": {
+                "kind": "OBJECT",
+                "name": "contentfulCallToActionSimpleSummaryRichTextNodeContentContentContent",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
+        "inputFields": null,
+        "interfaces": [],
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "OBJECT",
+        "name": "contentfulCallToActionSimpleSummaryRichTextNodeContentContentMarks",
+        "description": null,
+        "fields": [
+          {
+            "name": "type",
+            "description": null,
+            "args": [],
+            "type": { "kind": "SCALAR", "name": "String", "ofType": null },
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
+        "inputFields": null,
+        "interfaces": [],
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "OBJECT",
+        "name": "contentfulCallToActionSimpleSummaryRichTextNodeContentContentContent",
+        "description": null,
+        "fields": [
+          {
+            "name": "content",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "LIST",
+              "name": null,
+              "ofType": {
+                "kind": "OBJECT",
+                "name": "contentfulCallToActionSimpleSummaryRichTextNodeContentContentContentContent",
                 "ofType": null
               }
             },
@@ -29998,7 +30241,120 @@
       },
       {
         "kind": "OBJECT",
-        "name": "contentfulCallToActionSimpleSummaryRichTextNodeContentContent",
+        "name": "contentfulCallToActionSimpleSummaryRichTextNodeContentContentContentContent",
+        "description": null,
+        "fields": [
+          {
+            "name": "marks",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "LIST",
+              "name": null,
+              "ofType": {
+                "kind": "OBJECT",
+                "name": "contentfulCallToActionSimpleSummaryRichTextNodeContentContentContentContentMarks",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "value",
+            "description": null,
+            "args": [],
+            "type": { "kind": "SCALAR", "name": "String", "ofType": null },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "nodeType",
+            "description": null,
+            "args": [],
+            "type": { "kind": "SCALAR", "name": "String", "ofType": null },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "content",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "LIST",
+              "name": null,
+              "ofType": {
+                "kind": "OBJECT",
+                "name": "contentfulCallToActionSimpleSummaryRichTextNodeContentContentContentContentContent",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
+        "inputFields": null,
+        "interfaces": [],
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "OBJECT",
+        "name": "contentfulCallToActionSimpleSummaryRichTextNodeContentContentContentContentMarks",
+        "description": null,
+        "fields": [
+          {
+            "name": "type",
+            "description": null,
+            "args": [],
+            "type": { "kind": "SCALAR", "name": "String", "ofType": null },
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
+        "inputFields": null,
+        "interfaces": [],
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "OBJECT",
+        "name": "contentfulCallToActionSimpleSummaryRichTextNodeContentContentContentContentContent",
+        "description": null,
+        "fields": [
+          {
+            "name": "content",
+            "description": null,
+            "args": [],
+            "type": {
+              "kind": "LIST",
+              "name": null,
+              "ofType": {
+                "kind": "OBJECT",
+                "name": "contentfulCallToActionSimpleSummaryRichTextNodeContentContentContentContentContentContent",
+                "ofType": null
+              }
+            },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "nodeType",
+            "description": null,
+            "args": [],
+            "type": { "kind": "SCALAR", "name": "String", "ofType": null },
+            "isDeprecated": false,
+            "deprecationReason": null
+          }
+        ],
+        "inputFields": null,
+        "interfaces": [],
+        "enumValues": null,
+        "possibleTypes": null
+      },
+      {
+        "kind": "OBJECT",
+        "name": "contentfulCallToActionSimpleSummaryRichTextNodeContentContentContentContentContentContent",
         "description": null,
         "fields": [
           {
@@ -30214,137 +30570,6 @@
         ],
         "inputFields": null,
         "interfaces": [],
-        "enumValues": null,
-        "possibleTypes": null
-      },
-      {
-        "kind": "INPUT_OBJECT",
-        "name": "ContentfulFeaturedCallToActionFilterInput",
-        "description": null,
-        "fields": null,
-        "inputFields": [
-          {
-            "name": "id",
-            "description": "",
-            "type": {
-              "kind": "INPUT_OBJECT",
-              "name": "StringQueryOperatorInput",
-              "ofType": null
-            },
-            "defaultValue": null
-          },
-          {
-            "name": "parent",
-            "description": "",
-            "type": {
-              "kind": "INPUT_OBJECT",
-              "name": "NodeFilterInput",
-              "ofType": null
-            },
-            "defaultValue": null
-          },
-          {
-            "name": "children",
-            "description": "",
-            "type": {
-              "kind": "INPUT_OBJECT",
-              "name": "NodeFilterListInput",
-              "ofType": null
-            },
-            "defaultValue": null
-          },
-          {
-            "name": "internal",
-            "description": "",
-            "type": {
-              "kind": "INPUT_OBJECT",
-              "name": "InternalFilterInput",
-              "ofType": null
-            },
-            "defaultValue": null
-          },
-          {
-            "name": "location",
-            "description": "",
-            "type": {
-              "kind": "INPUT_OBJECT",
-              "name": "StringQueryOperatorInput",
-              "ofType": null
-            },
-            "defaultValue": null
-          },
-          {
-            "name": "callToAction",
-            "description": "",
-            "type": {
-              "kind": "INPUT_OBJECT",
-              "name": "ContentfulCallToActionSimpleFilterInput",
-              "ofType": null
-            },
-            "defaultValue": null
-          },
-          {
-            "name": "spaceId",
-            "description": "",
-            "type": {
-              "kind": "INPUT_OBJECT",
-              "name": "StringQueryOperatorInput",
-              "ofType": null
-            },
-            "defaultValue": null
-          },
-          {
-            "name": "contentful_id",
-            "description": "",
-            "type": {
-              "kind": "INPUT_OBJECT",
-              "name": "StringQueryOperatorInput",
-              "ofType": null
-            },
-            "defaultValue": null
-          },
-          {
-            "name": "createdAt",
-            "description": "",
-            "type": {
-              "kind": "INPUT_OBJECT",
-              "name": "DateQueryOperatorInput",
-              "ofType": null
-            },
-            "defaultValue": null
-          },
-          {
-            "name": "updatedAt",
-            "description": "",
-            "type": {
-              "kind": "INPUT_OBJECT",
-              "name": "DateQueryOperatorInput",
-              "ofType": null
-            },
-            "defaultValue": null
-          },
-          {
-            "name": "sys",
-            "description": "",
-            "type": {
-              "kind": "INPUT_OBJECT",
-              "name": "ContentfulFeaturedCallToActionSysFilterInput",
-              "ofType": null
-            },
-            "defaultValue": null
-          },
-          {
-            "name": "node_locale",
-            "description": "",
-            "type": {
-              "kind": "INPUT_OBJECT",
-              "name": "StringQueryOperatorInput",
-              "ofType": null
-            },
-            "defaultValue": null
-          }
-        ],
-        "interfaces": null,
         "enumValues": null,
         "possibleTypes": null
       },
@@ -31164,6 +31389,204 @@
             "deprecationReason": null
           },
           {
+            "name": "callToAction___featuredcalltoaction",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "callToAction___featuredcalltoaction___id",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "callToAction___featuredcalltoaction___parent___id",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "callToAction___featuredcalltoaction___parent___children",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "callToAction___featuredcalltoaction___children",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "callToAction___featuredcalltoaction___children___id",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "callToAction___featuredcalltoaction___children___children",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "callToAction___featuredcalltoaction___internal___content",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "callToAction___featuredcalltoaction___internal___contentDigest",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "callToAction___featuredcalltoaction___internal___description",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "callToAction___featuredcalltoaction___internal___fieldOwners",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "callToAction___featuredcalltoaction___internal___ignoreType",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "callToAction___featuredcalltoaction___internal___mediaType",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "callToAction___featuredcalltoaction___internal___owner",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "callToAction___featuredcalltoaction___internal___type",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "callToAction___featuredcalltoaction___location",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "callToAction___featuredcalltoaction___callToAction___id",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "callToAction___featuredcalltoaction___callToAction___children",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "callToAction___featuredcalltoaction___callToAction___tagline",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "callToAction___featuredcalltoaction___callToAction___buttonTitle",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "callToAction___featuredcalltoaction___callToAction___buttonLink",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "callToAction___featuredcalltoaction___callToAction___featuredcalltoaction",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "callToAction___featuredcalltoaction___callToAction___spaceId",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "callToAction___featuredcalltoaction___callToAction___contentful_id",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "callToAction___featuredcalltoaction___callToAction___createdAt",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "callToAction___featuredcalltoaction___callToAction___updatedAt",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "callToAction___featuredcalltoaction___callToAction___node_locale",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "callToAction___featuredcalltoaction___spaceId",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "callToAction___featuredcalltoaction___contentful_id",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "callToAction___featuredcalltoaction___createdAt",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "callToAction___featuredcalltoaction___updatedAt",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "callToAction___featuredcalltoaction___sys___revision",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "callToAction___featuredcalltoaction___node_locale",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
             "name": "callToAction___summary___id",
             "description": null,
             "isDeprecated": false,
@@ -31248,13 +31671,13 @@
             "deprecationReason": null
           },
           {
-            "name": "callToAction___summary___content",
+            "name": "callToAction___summary___nodeType",
             "description": null,
             "isDeprecated": false,
             "deprecationReason": null
           },
           {
-            "name": "callToAction___summary___content___content",
+            "name": "callToAction___summary___content",
             "description": null,
             "isDeprecated": false,
             "deprecationReason": null
@@ -31266,7 +31689,7 @@
             "deprecationReason": null
           },
           {
-            "name": "callToAction___summary___nodeType",
+            "name": "callToAction___summary___content___content",
             "description": null,
             "isDeprecated": false,
             "deprecationReason": null
@@ -31404,13 +31827,13 @@
             "deprecationReason": null
           },
           {
-            "name": "callToAction___childContentfulCallToActionSimpleSummaryRichTextNode___content",
+            "name": "callToAction___childContentfulCallToActionSimpleSummaryRichTextNode___nodeType",
             "description": null,
             "isDeprecated": false,
             "deprecationReason": null
           },
           {
-            "name": "callToAction___childContentfulCallToActionSimpleSummaryRichTextNode___content___content",
+            "name": "callToAction___childContentfulCallToActionSimpleSummaryRichTextNode___content",
             "description": null,
             "isDeprecated": false,
             "deprecationReason": null
@@ -31422,7 +31845,7 @@
             "deprecationReason": null
           },
           {
-            "name": "callToAction___childContentfulCallToActionSimpleSummaryRichTextNode___nodeType",
+            "name": "callToAction___childContentfulCallToActionSimpleSummaryRichTextNode___content___content",
             "description": null,
             "isDeprecated": false,
             "deprecationReason": null
@@ -31682,7 +32105,7 @@
         "fields": [
           {
             "name": "next",
-            "description": null,
+            "description": "",
             "args": [],
             "type": {
               "kind": "OBJECT",
@@ -31710,7 +32133,7 @@
           },
           {
             "name": "previous",
-            "description": null,
+            "description": "",
             "args": [],
             "type": {
               "kind": "OBJECT",
@@ -32393,25 +32816,13 @@
             "deprecationReason": null
           },
           {
+            "name": "nodeType",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
             "name": "content",
-            "description": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "content___content",
-            "description": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "content___content___value",
-            "description": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "content___content___nodeType",
             "description": null,
             "isDeprecated": false,
             "deprecationReason": null
@@ -32423,7 +32834,49 @@
             "deprecationReason": null
           },
           {
-            "name": "nodeType",
+            "name": "content___content",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "content___content___nodeType",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "content___content___value",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "content___content___marks",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "content___content___marks___type",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "content___content___content",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "content___content___content___content",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "content___content___content___nodeType",
             "description": null,
             "isDeprecated": false,
             "deprecationReason": null
@@ -32623,7 +33076,7 @@
         "fields": [
           {
             "name": "next",
-            "description": null,
+            "description": "",
             "args": [],
             "type": {
               "kind": "OBJECT",
@@ -32651,7 +33104,7 @@
           },
           {
             "name": "previous",
-            "description": null,
+            "description": "",
             "args": [],
             "type": {
               "kind": "OBJECT",
@@ -33352,6 +33805,546 @@
             "deprecationReason": null
           },
           {
+            "name": "featuredcalltoaction",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "featuredcalltoaction___id",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "featuredcalltoaction___parent___id",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "featuredcalltoaction___parent___parent___id",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "featuredcalltoaction___parent___parent___children",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "featuredcalltoaction___parent___children",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "featuredcalltoaction___parent___children___id",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "featuredcalltoaction___parent___children___children",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "featuredcalltoaction___parent___internal___content",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "featuredcalltoaction___parent___internal___contentDigest",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "featuredcalltoaction___parent___internal___description",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "featuredcalltoaction___parent___internal___fieldOwners",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "featuredcalltoaction___parent___internal___ignoreType",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "featuredcalltoaction___parent___internal___mediaType",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "featuredcalltoaction___parent___internal___owner",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "featuredcalltoaction___parent___internal___type",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "featuredcalltoaction___children",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "featuredcalltoaction___children___id",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "featuredcalltoaction___children___parent___id",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "featuredcalltoaction___children___parent___children",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "featuredcalltoaction___children___children",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "featuredcalltoaction___children___children___id",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "featuredcalltoaction___children___children___children",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "featuredcalltoaction___children___internal___content",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "featuredcalltoaction___children___internal___contentDigest",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "featuredcalltoaction___children___internal___description",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "featuredcalltoaction___children___internal___fieldOwners",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "featuredcalltoaction___children___internal___ignoreType",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "featuredcalltoaction___children___internal___mediaType",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "featuredcalltoaction___children___internal___owner",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "featuredcalltoaction___children___internal___type",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "featuredcalltoaction___internal___content",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "featuredcalltoaction___internal___contentDigest",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "featuredcalltoaction___internal___description",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "featuredcalltoaction___internal___fieldOwners",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "featuredcalltoaction___internal___ignoreType",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "featuredcalltoaction___internal___mediaType",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "featuredcalltoaction___internal___owner",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "featuredcalltoaction___internal___type",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "featuredcalltoaction___location",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "featuredcalltoaction___callToAction___id",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "featuredcalltoaction___callToAction___parent___id",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "featuredcalltoaction___callToAction___parent___children",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "featuredcalltoaction___callToAction___children",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "featuredcalltoaction___callToAction___children___id",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "featuredcalltoaction___callToAction___children___children",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "featuredcalltoaction___callToAction___internal___content",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "featuredcalltoaction___callToAction___internal___contentDigest",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "featuredcalltoaction___callToAction___internal___description",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "featuredcalltoaction___callToAction___internal___fieldOwners",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "featuredcalltoaction___callToAction___internal___ignoreType",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "featuredcalltoaction___callToAction___internal___mediaType",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "featuredcalltoaction___callToAction___internal___owner",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "featuredcalltoaction___callToAction___internal___type",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "featuredcalltoaction___callToAction___tagline",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "featuredcalltoaction___callToAction___buttonTitle",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "featuredcalltoaction___callToAction___buttonLink",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "featuredcalltoaction___callToAction___featuredcalltoaction",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "featuredcalltoaction___callToAction___featuredcalltoaction___id",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "featuredcalltoaction___callToAction___featuredcalltoaction___children",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "featuredcalltoaction___callToAction___featuredcalltoaction___location",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "featuredcalltoaction___callToAction___featuredcalltoaction___spaceId",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "featuredcalltoaction___callToAction___featuredcalltoaction___contentful_id",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "featuredcalltoaction___callToAction___featuredcalltoaction___createdAt",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "featuredcalltoaction___callToAction___featuredcalltoaction___updatedAt",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "featuredcalltoaction___callToAction___featuredcalltoaction___node_locale",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "featuredcalltoaction___callToAction___summary___id",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "featuredcalltoaction___callToAction___summary___children",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "featuredcalltoaction___callToAction___summary___nodeType",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "featuredcalltoaction___callToAction___summary___content",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "featuredcalltoaction___callToAction___summary___summary",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "featuredcalltoaction___callToAction___summary___json",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "featuredcalltoaction___callToAction___spaceId",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "featuredcalltoaction___callToAction___contentful_id",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "featuredcalltoaction___callToAction___createdAt",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "featuredcalltoaction___callToAction___updatedAt",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "featuredcalltoaction___callToAction___sys___revision",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "featuredcalltoaction___callToAction___node_locale",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "featuredcalltoaction___callToAction___childContentfulCallToActionSimpleSummaryRichTextNode___id",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "featuredcalltoaction___callToAction___childContentfulCallToActionSimpleSummaryRichTextNode___children",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "featuredcalltoaction___callToAction___childContentfulCallToActionSimpleSummaryRichTextNode___nodeType",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "featuredcalltoaction___callToAction___childContentfulCallToActionSimpleSummaryRichTextNode___content",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "featuredcalltoaction___callToAction___childContentfulCallToActionSimpleSummaryRichTextNode___summary",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "featuredcalltoaction___callToAction___childContentfulCallToActionSimpleSummaryRichTextNode___json",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "featuredcalltoaction___spaceId",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "featuredcalltoaction___contentful_id",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "featuredcalltoaction___createdAt",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "featuredcalltoaction___updatedAt",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "featuredcalltoaction___sys___revision",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "featuredcalltoaction___node_locale",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
             "name": "summary___id",
             "description": null,
             "isDeprecated": false,
@@ -33580,25 +34573,13 @@
             "deprecationReason": null
           },
           {
+            "name": "summary___nodeType",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
             "name": "summary___content",
-            "description": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "summary___content___content",
-            "description": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "summary___content___content___value",
-            "description": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "summary___content___content___nodeType",
             "description": null,
             "isDeprecated": false,
             "deprecationReason": null
@@ -33610,7 +34591,31 @@
             "deprecationReason": null
           },
           {
-            "name": "summary___nodeType",
+            "name": "summary___content___content",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "summary___content___content___nodeType",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "summary___content___content___value",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "summary___content___content___marks",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "summary___content___content___content",
             "description": null,
             "isDeprecated": false,
             "deprecationReason": null
@@ -33916,25 +34921,13 @@
             "deprecationReason": null
           },
           {
+            "name": "childContentfulCallToActionSimpleSummaryRichTextNode___nodeType",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
             "name": "childContentfulCallToActionSimpleSummaryRichTextNode___content",
-            "description": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "childContentfulCallToActionSimpleSummaryRichTextNode___content___content",
-            "description": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "childContentfulCallToActionSimpleSummaryRichTextNode___content___content___value",
-            "description": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "childContentfulCallToActionSimpleSummaryRichTextNode___content___content___nodeType",
             "description": null,
             "isDeprecated": false,
             "deprecationReason": null
@@ -33946,7 +34939,31 @@
             "deprecationReason": null
           },
           {
-            "name": "childContentfulCallToActionSimpleSummaryRichTextNode___nodeType",
+            "name": "childContentfulCallToActionSimpleSummaryRichTextNode___content___content",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "childContentfulCallToActionSimpleSummaryRichTextNode___content___content___nodeType",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "childContentfulCallToActionSimpleSummaryRichTextNode___content___content___value",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "childContentfulCallToActionSimpleSummaryRichTextNode___content___content___marks",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "childContentfulCallToActionSimpleSummaryRichTextNode___content___content___content",
             "description": null,
             "isDeprecated": false,
             "deprecationReason": null
@@ -34146,7 +35163,7 @@
         "fields": [
           {
             "name": "next",
-            "description": null,
+            "description": "",
             "args": [],
             "type": {
               "kind": "OBJECT",
@@ -34174,7 +35191,7 @@
           },
           {
             "name": "previous",
-            "description": null,
+            "description": "",
             "args": [],
             "type": {
               "kind": "OBJECT",
@@ -36032,7 +37049,7 @@
         "fields": [
           {
             "name": "next",
-            "description": null,
+            "description": "",
             "args": [],
             "type": {
               "kind": "OBJECT",
@@ -36060,7 +37077,7 @@
           },
           {
             "name": "previous",
-            "description": null,
+            "description": "",
             "args": [],
             "type": {
               "kind": "OBJECT",
@@ -36207,21 +37224,21 @@
         "fields": null,
         "inputFields": [
           {
-            "name": "nodeType",
-            "description": "",
-            "type": {
-              "kind": "INPUT_OBJECT",
-              "name": "StringQueryOperatorInput",
-              "ofType": null
-            },
-            "defaultValue": null
-          },
-          {
             "name": "content",
             "description": "",
             "type": {
               "kind": "INPUT_OBJECT",
               "name": "contentfulChallengeSummaryRichTextNodeContentContentFilterListInput",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "nodeType",
+            "description": "",
+            "type": {
+              "kind": "INPUT_OBJECT",
+              "name": "StringQueryOperatorInput",
               "ofType": null
             },
             "defaultValue": null
@@ -36259,11 +37276,11 @@
         "fields": null,
         "inputFields": [
           {
-            "name": "nodeType",
+            "name": "data",
             "description": "",
             "type": {
               "kind": "INPUT_OBJECT",
-              "name": "StringQueryOperatorInput",
+              "name": "contentfulChallengeSummaryRichTextNodeContentContentDataFilterInput",
               "ofType": null
             },
             "defaultValue": null
@@ -36279,11 +37296,11 @@
             "defaultValue": null
           },
           {
-            "name": "data",
+            "name": "nodeType",
             "description": "",
             "type": {
               "kind": "INPUT_OBJECT",
-              "name": "contentfulChallengeSummaryRichTextNodeContentContentDataFilterInput",
+              "name": "StringQueryOperatorInput",
               "ofType": null
             },
             "defaultValue": null
@@ -36438,14 +37455,6 @@
             "deprecationReason": null
           },
           {
-            "name": "nodeType",
-            "description": null,
-            "args": [],
-            "type": { "kind": "SCALAR", "name": "String", "ofType": null },
-            "isDeprecated": true,
-            "deprecationReason": "This field is deprecated, please use 'json' instead."
-          },
-          {
             "name": "content",
             "description": null,
             "args": [],
@@ -36460,6 +37469,14 @@
             },
             "isDeprecated": false,
             "deprecationReason": null
+          },
+          {
+            "name": "nodeType",
+            "description": null,
+            "args": [],
+            "type": { "kind": "SCALAR", "name": "String", "ofType": null },
+            "isDeprecated": true,
+            "deprecationReason": "This field is deprecated, please use 'json' instead."
           },
           {
             "name": "summary",
@@ -36489,14 +37506,6 @@
         "description": null,
         "fields": [
           {
-            "name": "nodeType",
-            "description": null,
-            "args": [],
-            "type": { "kind": "SCALAR", "name": "String", "ofType": null },
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
             "name": "content",
             "description": null,
             "args": [],
@@ -36509,6 +37518,14 @@
                 "ofType": null
               }
             },
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "nodeType",
+            "description": null,
+            "args": [],
+            "type": { "kind": "SCALAR", "name": "String", "ofType": null },
             "isDeprecated": false,
             "deprecationReason": null
           }
@@ -36524,10 +37541,14 @@
         "description": null,
         "fields": [
           {
-            "name": "nodeType",
+            "name": "data",
             "description": null,
             "args": [],
-            "type": { "kind": "SCALAR", "name": "String", "ofType": null },
+            "type": {
+              "kind": "OBJECT",
+              "name": "contentfulChallengeSummaryRichTextNodeContentContentData",
+              "ofType": null
+            },
             "isDeprecated": false,
             "deprecationReason": null
           },
@@ -36540,14 +37561,10 @@
             "deprecationReason": null
           },
           {
-            "name": "data",
+            "name": "nodeType",
             "description": null,
             "args": [],
-            "type": {
-              "kind": "OBJECT",
-              "name": "contentfulChallengeSummaryRichTextNodeContentContentData",
-              "ofType": null
-            },
+            "type": { "kind": "SCALAR", "name": "String", "ofType": null },
             "isDeprecated": false,
             "deprecationReason": null
           },
@@ -36666,21 +37683,21 @@
             "defaultValue": null
           },
           {
-            "name": "nodeType",
-            "description": "",
-            "type": {
-              "kind": "INPUT_OBJECT",
-              "name": "StringQueryOperatorInput",
-              "ofType": null
-            },
-            "defaultValue": null
-          },
-          {
             "name": "content",
             "description": "",
             "type": {
               "kind": "INPUT_OBJECT",
               "name": "contentfulChallengeSummaryRichTextNodeContentFilterListInput",
+              "ofType": null
+            },
+            "defaultValue": null
+          },
+          {
+            "name": "nodeType",
+            "description": "",
+            "type": {
+              "kind": "INPUT_OBJECT",
+              "name": "StringQueryOperatorInput",
               "ofType": null
             },
             "defaultValue": null
@@ -37274,19 +38291,7 @@
             "deprecationReason": null
           },
           {
-            "name": "nodeType",
-            "description": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
             "name": "content",
-            "description": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "content___nodeType",
             "description": null,
             "isDeprecated": false,
             "deprecationReason": null
@@ -37298,7 +38303,7 @@
             "deprecationReason": null
           },
           {
-            "name": "content___content___nodeType",
+            "name": "content___content___data___uri",
             "description": null,
             "isDeprecated": false,
             "deprecationReason": null
@@ -37310,7 +38315,7 @@
             "deprecationReason": null
           },
           {
-            "name": "content___content___data___uri",
+            "name": "content___content___nodeType",
             "description": null,
             "isDeprecated": false,
             "deprecationReason": null
@@ -37329,6 +38334,18 @@
           },
           {
             "name": "content___content___content___nodeType",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "content___nodeType",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "nodeType",
             "description": null,
             "isDeprecated": false,
             "deprecationReason": null
@@ -37528,7 +38545,7 @@
         "fields": [
           {
             "name": "next",
-            "description": null,
+            "description": "",
             "args": [],
             "type": {
               "kind": "OBJECT",
@@ -37556,7 +38573,7 @@
           },
           {
             "name": "previous",
-            "description": null,
+            "description": "",
             "args": [],
             "type": {
               "kind": "OBJECT",
@@ -39280,19 +40297,7 @@
             "deprecationReason": null
           },
           {
-            "name": "summary___nodeType",
-            "description": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
             "name": "summary___content",
-            "description": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "summary___content___nodeType",
             "description": null,
             "isDeprecated": false,
             "deprecationReason": null
@@ -39304,19 +40309,31 @@
             "deprecationReason": null
           },
           {
-            "name": "summary___content___content___nodeType",
-            "description": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
             "name": "summary___content___content___value",
             "description": null,
             "isDeprecated": false,
             "deprecationReason": null
           },
           {
+            "name": "summary___content___content___nodeType",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
             "name": "summary___content___content___content",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "summary___content___nodeType",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "summary___nodeType",
             "description": null,
             "isDeprecated": false,
             "deprecationReason": null
@@ -39910,19 +40927,7 @@
             "deprecationReason": null
           },
           {
-            "name": "childContentfulChallengeSummaryRichTextNode___nodeType",
-            "description": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
             "name": "childContentfulChallengeSummaryRichTextNode___content",
-            "description": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "childContentfulChallengeSummaryRichTextNode___content___nodeType",
             "description": null,
             "isDeprecated": false,
             "deprecationReason": null
@@ -39934,19 +40939,31 @@
             "deprecationReason": null
           },
           {
-            "name": "childContentfulChallengeSummaryRichTextNode___content___content___nodeType",
-            "description": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
             "name": "childContentfulChallengeSummaryRichTextNode___content___content___value",
             "description": null,
             "isDeprecated": false,
             "deprecationReason": null
           },
           {
+            "name": "childContentfulChallengeSummaryRichTextNode___content___content___nodeType",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
             "name": "childContentfulChallengeSummaryRichTextNode___content___content___content",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "childContentfulChallengeSummaryRichTextNode___content___nodeType",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "childContentfulChallengeSummaryRichTextNode___nodeType",
             "description": null,
             "isDeprecated": false,
             "deprecationReason": null
@@ -40434,7 +41451,7 @@
         "fields": [
           {
             "name": "next",
-            "description": null,
+            "description": "",
             "args": [],
             "type": {
               "kind": "OBJECT",
@@ -40462,7 +41479,7 @@
           },
           {
             "name": "previous",
-            "description": null,
+            "description": "",
             "args": [],
             "type": {
               "kind": "OBJECT",
@@ -45050,24 +46067,6 @@
             "deprecationReason": null
           },
           {
-            "name": "post___authors___photo___spaceId",
-            "description": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "post___authors___photo___createdAt",
-            "description": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "post___authors___photo___updatedAt",
-            "description": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
             "name": "post___authors___photo___title",
             "description": null,
             "isDeprecated": false,
@@ -46210,7 +47209,7 @@
         "fields": [
           {
             "name": "next",
-            "description": null,
+            "description": "",
             "args": [],
             "type": {
               "kind": "OBJECT",
@@ -46238,7 +47237,7 @@
           },
           {
             "name": "previous",
-            "description": null,
+            "description": "",
             "args": [],
             "type": {
               "kind": "OBJECT",
@@ -53925,24 +54924,6 @@
             "deprecationReason": null
           },
           {
-            "name": "project___image___spaceId",
-            "description": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "project___image___createdAt",
-            "description": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "project___image___updatedAt",
-            "description": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
             "name": "project___image___file___url",
             "description": null,
             "isDeprecated": false,
@@ -53974,12 +54955,6 @@
           },
           {
             "name": "project___image___node_locale",
-            "description": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "project___image___sys___revision",
             "description": null,
             "isDeprecated": false,
             "deprecationReason": null
@@ -55665,24 +56640,6 @@
             "deprecationReason": null
           },
           {
-            "name": "project___contentlist___image___spaceId",
-            "description": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "project___contentlist___image___createdAt",
-            "description": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "project___contentlist___image___updatedAt",
-            "description": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
             "name": "project___contentlist___image___title",
             "description": null,
             "isDeprecated": false,
@@ -56495,7 +57452,7 @@
         "fields": [
           {
             "name": "next",
-            "description": null,
+            "description": "",
             "args": [],
             "type": {
               "kind": "OBJECT",
@@ -56523,7 +57480,7 @@
           },
           {
             "name": "previous",
-            "description": null,
+            "description": "",
             "args": [],
             "type": {
               "kind": "OBJECT",
@@ -57566,24 +58523,6 @@
             "deprecationReason": null
           },
           {
-            "name": "project___image___spaceId",
-            "description": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "project___image___createdAt",
-            "description": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "project___image___updatedAt",
-            "description": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
             "name": "project___image___file___url",
             "description": null,
             "isDeprecated": false,
@@ -57615,12 +58554,6 @@
           },
           {
             "name": "project___image___node_locale",
-            "description": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "project___image___sys___revision",
             "description": null,
             "isDeprecated": false,
             "deprecationReason": null
@@ -59306,24 +60239,6 @@
             "deprecationReason": null
           },
           {
-            "name": "project___contentlist___image___spaceId",
-            "description": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "project___contentlist___image___createdAt",
-            "description": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "project___contentlist___image___updatedAt",
-            "description": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
             "name": "project___contentlist___image___title",
             "description": null,
             "isDeprecated": false,
@@ -60136,7 +61051,7 @@
         "fields": [
           {
             "name": "next",
-            "description": null,
+            "description": "",
             "args": [],
             "type": {
               "kind": "OBJECT",
@@ -60164,7 +61079,7 @@
           },
           {
             "name": "previous",
-            "description": null,
+            "description": "",
             "args": [],
             "type": {
               "kind": "OBJECT",
@@ -61207,24 +62122,6 @@
             "deprecationReason": null
           },
           {
-            "name": "project___image___spaceId",
-            "description": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "project___image___createdAt",
-            "description": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "project___image___updatedAt",
-            "description": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
             "name": "project___image___file___url",
             "description": null,
             "isDeprecated": false,
@@ -61256,12 +62153,6 @@
           },
           {
             "name": "project___image___node_locale",
-            "description": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "project___image___sys___revision",
             "description": null,
             "isDeprecated": false,
             "deprecationReason": null
@@ -62947,24 +63838,6 @@
             "deprecationReason": null
           },
           {
-            "name": "project___contentlist___image___spaceId",
-            "description": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "project___contentlist___image___createdAt",
-            "description": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "project___contentlist___image___updatedAt",
-            "description": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
             "name": "project___contentlist___image___title",
             "description": null,
             "isDeprecated": false,
@@ -63777,7 +64650,7 @@
         "fields": [
           {
             "name": "next",
-            "description": null,
+            "description": "",
             "args": [],
             "type": {
               "kind": "OBJECT",
@@ -63805,7 +64678,7 @@
           },
           {
             "name": "previous",
-            "description": null,
+            "description": "",
             "args": [],
             "type": {
               "kind": "OBJECT",
@@ -64760,7 +65633,7 @@
         "fields": [
           {
             "name": "next",
-            "description": null,
+            "description": "",
             "args": [],
             "type": {
               "kind": "OBJECT",
@@ -64788,7 +65661,7 @@
           },
           {
             "name": "previous",
-            "description": null,
+            "description": "",
             "args": [],
             "type": {
               "kind": "OBJECT",
@@ -65671,7 +66544,7 @@
         "fields": [
           {
             "name": "next",
-            "description": null,
+            "description": "",
             "args": [],
             "type": {
               "kind": "OBJECT",
@@ -65699,7 +66572,7 @@
           },
           {
             "name": "previous",
-            "description": null,
+            "description": "",
             "args": [],
             "type": {
               "kind": "OBJECT",
@@ -66754,24 +67627,6 @@
             "deprecationReason": null
           },
           {
-            "name": "authors___photo___spaceId",
-            "description": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "authors___photo___createdAt",
-            "description": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "authors___photo___updatedAt",
-            "description": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
             "name": "authors___photo___file___url",
             "description": null,
             "isDeprecated": false,
@@ -66803,12 +67658,6 @@
           },
           {
             "name": "authors___photo___node_locale",
-            "description": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "authors___photo___sys___revision",
             "description": null,
             "isDeprecated": false,
             "deprecationReason": null
@@ -69720,7 +70569,7 @@
         "fields": [
           {
             "name": "next",
-            "description": null,
+            "description": "",
             "args": [],
             "type": {
               "kind": "OBJECT",
@@ -69748,7 +70597,7 @@
           },
           {
             "name": "previous",
-            "description": null,
+            "description": "",
             "args": [],
             "type": {
               "kind": "OBJECT",
@@ -71201,7 +72050,7 @@
         "fields": [
           {
             "name": "next",
-            "description": null,
+            "description": "",
             "args": [],
             "type": {
               "kind": "OBJECT",
@@ -71229,7 +72078,7 @@
           },
           {
             "name": "previous",
-            "description": null,
+            "description": "",
             "args": [],
             "type": {
               "kind": "OBJECT",
@@ -72260,24 +73109,6 @@
             "deprecationReason": null
           },
           {
-            "name": "members___photo___spaceId",
-            "description": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "members___photo___createdAt",
-            "description": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "members___photo___updatedAt",
-            "description": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
             "name": "members___photo___file___url",
             "description": null,
             "isDeprecated": false,
@@ -72309,12 +73140,6 @@
           },
           {
             "name": "members___photo___node_locale",
-            "description": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "members___photo___sys___revision",
             "description": null,
             "isDeprecated": false,
             "deprecationReason": null
@@ -73468,7 +74293,7 @@
         "fields": [
           {
             "name": "next",
-            "description": null,
+            "description": "",
             "args": [],
             "type": {
               "kind": "OBJECT",
@@ -73496,7 +74321,7 @@
           },
           {
             "name": "previous",
-            "description": null,
+            "description": "",
             "args": [],
             "type": {
               "kind": "OBJECT",
@@ -74431,24 +75256,6 @@
             "deprecationReason": null
           },
           {
-            "name": "photo___spaceId",
-            "description": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "photo___createdAt",
-            "description": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "photo___updatedAt",
-            "description": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
             "name": "photo___file___url",
             "description": null,
             "isDeprecated": false,
@@ -74486,12 +75293,6 @@
           },
           {
             "name": "photo___node_locale",
-            "description": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "photo___sys___revision",
             "description": null,
             "isDeprecated": false,
             "deprecationReason": null
@@ -75098,24 +75899,6 @@
           },
           {
             "name": "team___members___photo___contentful_id",
-            "description": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "team___members___photo___spaceId",
-            "description": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "team___members___photo___createdAt",
-            "description": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "team___members___photo___updatedAt",
             "description": null,
             "isDeprecated": false,
             "deprecationReason": null
@@ -75806,24 +76589,6 @@
           },
           {
             "name": "post___authors___photo___contentful_id",
-            "description": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "post___authors___photo___spaceId",
-            "description": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "post___authors___photo___createdAt",
-            "description": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "post___authors___photo___updatedAt",
             "description": null,
             "isDeprecated": false,
             "deprecationReason": null
@@ -76911,7 +77676,7 @@
         "fields": [
           {
             "name": "next",
-            "description": null,
+            "description": "",
             "args": [],
             "type": {
               "kind": "OBJECT",
@@ -76939,7 +77704,7 @@
           },
           {
             "name": "previous",
-            "description": null,
+            "description": "",
             "args": [],
             "type": {
               "kind": "OBJECT",
@@ -77810,7 +78575,7 @@
         "fields": [
           {
             "name": "next",
-            "description": null,
+            "description": "",
             "args": [],
             "type": {
               "kind": "OBJECT",
@@ -77838,7 +78603,7 @@
           },
           {
             "name": "previous",
-            "description": null,
+            "description": "",
             "args": [],
             "type": {
               "kind": "OBJECT",
@@ -78751,7 +79516,7 @@
         "fields": [
           {
             "name": "next",
-            "description": null,
+            "description": "",
             "args": [],
             "type": {
               "kind": "OBJECT",
@@ -78779,7 +79544,7 @@
           },
           {
             "name": "previous",
-            "description": null,
+            "description": "",
             "args": [],
             "type": {
               "kind": "OBJECT",
@@ -79650,7 +80415,7 @@
         "fields": [
           {
             "name": "next",
-            "description": null,
+            "description": "",
             "args": [],
             "type": {
               "kind": "OBJECT",
@@ -79678,7 +80443,7 @@
           },
           {
             "name": "previous",
-            "description": null,
+            "description": "",
             "args": [],
             "type": {
               "kind": "OBJECT",
@@ -81183,24 +81948,6 @@
             "deprecationReason": null
           },
           {
-            "name": "image___spaceId",
-            "description": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "image___createdAt",
-            "description": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "image___updatedAt",
-            "description": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
             "name": "image___file___url",
             "description": null,
             "isDeprecated": false,
@@ -81238,12 +81985,6 @@
           },
           {
             "name": "image___node_locale",
-            "description": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "image___sys___revision",
             "description": null,
             "isDeprecated": false,
             "deprecationReason": null
@@ -82649,7 +83390,7 @@
         "fields": [
           {
             "name": "next",
-            "description": null,
+            "description": "",
             "args": [],
             "type": {
               "kind": "OBJECT",
@@ -82677,7 +83418,7 @@
           },
           {
             "name": "previous",
-            "description": null,
+            "description": "",
             "args": [],
             "type": {
               "kind": "OBJECT",
@@ -83720,24 +84461,6 @@
             "deprecationReason": null
           },
           {
-            "name": "projects___image___spaceId",
-            "description": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "projects___image___createdAt",
-            "description": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "projects___image___updatedAt",
-            "description": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
             "name": "projects___image___file___url",
             "description": null,
             "isDeprecated": false,
@@ -83769,12 +84492,6 @@
           },
           {
             "name": "projects___image___node_locale",
-            "description": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "projects___image___sys___revision",
             "description": null,
             "isDeprecated": false,
             "deprecationReason": null
@@ -85460,24 +86177,6 @@
             "deprecationReason": null
           },
           {
-            "name": "projects___contentlist___image___spaceId",
-            "description": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "projects___contentlist___image___createdAt",
-            "description": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "projects___contentlist___image___updatedAt",
-            "description": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
             "name": "projects___contentlist___image___title",
             "description": null,
             "isDeprecated": false,
@@ -86290,7 +86989,7 @@
         "fields": [
           {
             "name": "next",
-            "description": null,
+            "description": "",
             "args": [],
             "type": {
               "kind": "OBJECT",
@@ -86318,7 +87017,7 @@
           },
           {
             "name": "previous",
-            "description": null,
+            "description": "",
             "args": [],
             "type": {
               "kind": "OBJECT",
@@ -87595,7 +88294,7 @@
         "fields": [
           {
             "name": "next",
-            "description": null,
+            "description": "",
             "args": [],
             "type": {
               "kind": "OBJECT",
@@ -87623,7 +88322,7 @@
           },
           {
             "name": "previous",
-            "description": null,
+            "description": "",
             "args": [],
             "type": {
               "kind": "OBJECT",
@@ -88900,7 +89599,7 @@
         "fields": [
           {
             "name": "next",
-            "description": null,
+            "description": "",
             "args": [],
             "type": {
               "kind": "OBJECT",
@@ -88928,7 +89627,7 @@
           },
           {
             "name": "previous",
-            "description": null,
+            "description": "",
             "args": [],
             "type": {
               "kind": "OBJECT",
@@ -90205,7 +90904,7 @@
         "fields": [
           {
             "name": "next",
-            "description": null,
+            "description": "",
             "args": [],
             "type": {
               "kind": "OBJECT",
@@ -90233,7 +90932,7 @@
           },
           {
             "name": "previous",
-            "description": null,
+            "description": "",
             "args": [],
             "type": {
               "kind": "OBJECT",
@@ -93546,7 +94245,7 @@
         "fields": [
           {
             "name": "next",
-            "description": null,
+            "description": "",
             "args": [],
             "type": {
               "kind": "OBJECT",
@@ -93574,7 +94273,7 @@
           },
           {
             "name": "previous",
-            "description": null,
+            "description": "",
             "args": [],
             "type": {
               "kind": "OBJECT",
@@ -95234,7 +95933,7 @@
         "fields": [
           {
             "name": "next",
-            "description": null,
+            "description": "",
             "args": [],
             "type": {
               "kind": "OBJECT",
@@ -95262,7 +95961,7 @@
           },
           {
             "name": "previous",
-            "description": null,
+            "description": "",
             "args": [],
             "type": {
               "kind": "OBJECT",
@@ -97335,7 +98034,7 @@
         "fields": [
           {
             "name": "next",
-            "description": null,
+            "description": "",
             "args": [],
             "type": {
               "kind": "OBJECT",
@@ -97363,7 +98062,7 @@
           },
           {
             "name": "previous",
-            "description": null,
+            "description": "",
             "args": [],
             "type": {
               "kind": "OBJECT",
@@ -98772,7 +99471,7 @@
         "fields": [
           {
             "name": "next",
-            "description": null,
+            "description": "",
             "args": [],
             "type": {
               "kind": "OBJECT",
@@ -98800,7 +99499,7 @@
           },
           {
             "name": "previous",
-            "description": null,
+            "description": "",
             "args": [],
             "type": {
               "kind": "OBJECT",
@@ -100104,7 +100803,7 @@
         "fields": [
           {
             "name": "next",
-            "description": null,
+            "description": "",
             "args": [],
             "type": {
               "kind": "OBJECT",
@@ -100132,7 +100831,7 @@
           },
           {
             "name": "previous",
-            "description": null,
+            "description": "",
             "args": [],
             "type": {
               "kind": "OBJECT",
@@ -102033,24 +102732,6 @@
             "deprecationReason": null
           },
           {
-            "name": "image___spaceId",
-            "description": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "image___createdAt",
-            "description": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "image___updatedAt",
-            "description": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
             "name": "image___file___url",
             "description": null,
             "isDeprecated": false,
@@ -102088,12 +102769,6 @@
           },
           {
             "name": "image___node_locale",
-            "description": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "image___sys___revision",
             "description": null,
             "isDeprecated": false,
             "deprecationReason": null
@@ -102927,24 +103602,6 @@
             "deprecationReason": null
           },
           {
-            "name": "contentlist___image___spaceId",
-            "description": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "contentlist___image___createdAt",
-            "description": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "contentlist___image___updatedAt",
-            "description": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
             "name": "contentlist___image___file___url",
             "description": null,
             "isDeprecated": false,
@@ -102976,12 +103633,6 @@
           },
           {
             "name": "contentlist___image___node_locale",
-            "description": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "contentlist___image___sys___revision",
             "description": null,
             "isDeprecated": false,
             "deprecationReason": null
@@ -104381,7 +105032,7 @@
         "fields": [
           {
             "name": "next",
-            "description": null,
+            "description": "",
             "args": [],
             "type": {
               "kind": "OBJECT",
@@ -104409,7 +105060,7 @@
           },
           {
             "name": "previous",
-            "description": null,
+            "description": "",
             "args": [],
             "type": {
               "kind": "OBJECT",
@@ -105886,7 +106537,7 @@
         "fields": [
           {
             "name": "next",
-            "description": null,
+            "description": "",
             "args": [],
             "type": {
               "kind": "OBJECT",
@@ -105914,7 +106565,7 @@
           },
           {
             "name": "previous",
-            "description": null,
+            "description": "",
             "args": [],
             "type": {
               "kind": "OBJECT",
@@ -107017,24 +107668,6 @@
             "deprecationReason": null
           },
           {
-            "name": "project___image___spaceId",
-            "description": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "project___image___createdAt",
-            "description": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "project___image___updatedAt",
-            "description": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
             "name": "project___image___file___url",
             "description": null,
             "isDeprecated": false,
@@ -107066,12 +107699,6 @@
           },
           {
             "name": "project___image___node_locale",
-            "description": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "project___image___sys___revision",
             "description": null,
             "isDeprecated": false,
             "deprecationReason": null
@@ -108757,24 +109384,6 @@
             "deprecationReason": null
           },
           {
-            "name": "project___contentlist___image___spaceId",
-            "description": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "project___contentlist___image___createdAt",
-            "description": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "project___contentlist___image___updatedAt",
-            "description": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
             "name": "project___contentlist___image___title",
             "description": null,
             "isDeprecated": false,
@@ -109527,7 +110136,7 @@
         "fields": [
           {
             "name": "next",
-            "description": null,
+            "description": "",
             "args": [],
             "type": {
               "kind": "OBJECT",
@@ -109555,7 +110164,7 @@
           },
           {
             "name": "previous",
-            "description": null,
+            "description": "",
             "args": [],
             "type": {
               "kind": "OBJECT",
@@ -110492,7 +111101,7 @@
         "fields": [
           {
             "name": "next",
-            "description": null,
+            "description": "",
             "args": [],
             "type": {
               "kind": "OBJECT",
@@ -110520,7 +111129,7 @@
           },
           {
             "name": "previous",
-            "description": null,
+            "description": "",
             "args": [],
             "type": {
               "kind": "OBJECT",
@@ -111391,7 +112000,7 @@
         "fields": [
           {
             "name": "next",
-            "description": null,
+            "description": "",
             "args": [],
             "type": {
               "kind": "OBJECT",
@@ -111419,7 +112028,7 @@
           },
           {
             "name": "previous",
-            "description": null,
+            "description": "",
             "args": [],
             "type": {
               "kind": "OBJECT",
@@ -112366,24 +112975,6 @@
             "deprecationReason": null
           },
           {
-            "name": "image___spaceId",
-            "description": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "image___createdAt",
-            "description": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "image___updatedAt",
-            "description": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
             "name": "image___file___url",
             "description": null,
             "isDeprecated": false,
@@ -112421,12 +113012,6 @@
           },
           {
             "name": "image___node_locale",
-            "description": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "image___sys___revision",
             "description": null,
             "isDeprecated": false,
             "deprecationReason": null
@@ -113075,24 +113660,6 @@
           },
           {
             "name": "program___project___image___contentful_id",
-            "description": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "program___project___image___spaceId",
-            "description": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "program___project___image___createdAt",
-            "description": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "program___project___image___updatedAt",
             "description": null,
             "isDeprecated": false,
             "deprecationReason": null
@@ -113999,24 +114566,6 @@
           },
           {
             "name": "organizations___project___image___contentful_id",
-            "description": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "organizations___project___image___spaceId",
-            "description": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "organizations___project___image___createdAt",
-            "description": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "organizations___project___image___updatedAt",
             "description": null,
             "isDeprecated": false,
             "deprecationReason": null
@@ -114964,24 +115513,6 @@
             "deprecationReason": null
           },
           {
-            "name": "topics___project___image___spaceId",
-            "description": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "topics___project___image___createdAt",
-            "description": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "topics___project___image___updatedAt",
-            "description": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
             "name": "topics___project___image___title",
             "description": null,
             "isDeprecated": false,
@@ -115924,24 +116455,6 @@
             "deprecationReason": null
           },
           {
-            "name": "projectTypes___project___image___spaceId",
-            "description": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "projectTypes___project___image___createdAt",
-            "description": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "projectTypes___project___image___updatedAt",
-            "description": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
             "name": "projectTypes___project___image___title",
             "description": null,
             "isDeprecated": false,
@@ -116879,24 +117392,6 @@
           },
           {
             "name": "projectcollection___projects___image___contentful_id",
-            "description": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "projectcollection___projects___image___spaceId",
-            "description": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "projectcollection___projects___image___createdAt",
-            "description": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "projectcollection___projects___image___updatedAt",
             "description": null,
             "isDeprecated": false,
             "deprecationReason": null
@@ -118054,24 +118549,6 @@
             "deprecationReason": null
           },
           {
-            "name": "contentlist___image___spaceId",
-            "description": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "contentlist___image___createdAt",
-            "description": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "contentlist___image___updatedAt",
-            "description": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
             "name": "contentlist___image___file___url",
             "description": null,
             "isDeprecated": false,
@@ -118103,12 +118580,6 @@
           },
           {
             "name": "contentlist___image___node_locale",
-            "description": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "contentlist___image___sys___revision",
             "description": null,
             "isDeprecated": false,
             "deprecationReason": null
@@ -120024,7 +120495,7 @@
         "fields": [
           {
             "name": "next",
-            "description": null,
+            "description": "",
             "args": [],
             "type": {
               "kind": "OBJECT",
@@ -120052,7 +120523,7 @@
           },
           {
             "name": "previous",
-            "description": null,
+            "description": "",
             "args": [],
             "type": {
               "kind": "OBJECT",
@@ -121107,7 +121578,7 @@
         "fields": [
           {
             "name": "next",
-            "description": null,
+            "description": "",
             "args": [],
             "type": {
               "kind": "OBJECT",
@@ -121135,7 +121606,7 @@
           },
           {
             "name": "previous",
-            "description": null,
+            "description": "",
             "args": [],
             "type": {
               "kind": "OBJECT",
@@ -122167,7 +122638,7 @@
         "fields": [
           {
             "name": "next",
-            "description": null,
+            "description": "",
             "args": [],
             "type": {
               "kind": "OBJECT",
@@ -122195,7 +122666,7 @@
           },
           {
             "name": "previous",
-            "description": null,
+            "description": "",
             "args": [],
             "type": {
               "kind": "OBJECT",
@@ -122944,36 +123415,6 @@
             "deprecationReason": null
           },
           {
-            "name": "pluginOptions___cache_busting_mode",
-            "description": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "pluginOptions___include_favicon",
-            "description": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "pluginOptions___legacy",
-            "description": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "pluginOptions___theme_color_in_head",
-            "description": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
-            "name": "pluginOptions___cacheDigest",
-            "description": null,
-            "isDeprecated": false,
-            "deprecationReason": null
-          },
-          {
             "name": "pluginOptions___spaceId",
             "description": null,
             "isDeprecated": false,
@@ -123300,7 +123741,7 @@
         "fields": [
           {
             "name": "next",
-            "description": null,
+            "description": "",
             "args": [],
             "type": { "kind": "OBJECT", "name": "SitePlugin", "ofType": null },
             "isDeprecated": false,
@@ -123324,7 +123765,7 @@
           },
           {
             "name": "previous",
-            "description": null,
+            "description": "",
             "args": [],
             "type": { "kind": "OBJECT", "name": "SitePlugin", "ofType": null },
             "isDeprecated": false,
@@ -124199,7 +124640,7 @@
       },
       {
         "name": "dateformat",
-        "description": "Add date formatting options.",
+        "description": "Add date formating options.",
         "locations": ["FIELD_DEFINITION"],
         "args": [
           {

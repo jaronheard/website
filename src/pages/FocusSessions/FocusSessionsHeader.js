@@ -6,13 +6,12 @@ import { colors } from "../../_Theme/UpdatedBrandTheme";
 import TitleAreaNew from "../../components/TitleAreaNew";
 import DefaultTitleAreaContent from "../../components/DefaultTitleAreaContent";
 
-const LibraryHeader = () => {
+const FocusSessionsHeader = () => {
   const { contentfulHeading } = useStaticQuery(
     graphql`
       query {
-        contentfulHeading(contentful_id: { eq: "5qWqKgWM7W6wPK4U1V08fF" }) {
+        contentfulHeading(contentful_id: { eq: "sWhmtCeTithz2Jp9QZFRZ" }) {
           title
-          subtitle
         }
       }
     `
@@ -25,4 +24,4 @@ const LibraryHeader = () => {
   );
 };
 
-export default LibraryHeader;
+export default FocusSessionsHeader;

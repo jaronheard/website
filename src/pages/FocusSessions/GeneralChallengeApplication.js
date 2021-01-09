@@ -14,7 +14,12 @@ const Button = ({ url, title }) => (
       margin-top: 2rem;
     `}
   >
-    <a href={url} target="_blank" rel="noreferrer" className="btn-yellow">
+    <a
+      href={url}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="btn-yellow"
+    >
       <p>{title}</p>
     </a>
   </div>

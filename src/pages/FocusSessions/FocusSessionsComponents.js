@@ -16,11 +16,11 @@ const containerStyle = css`
 `;
 
 // eslint-disable-next-line react/prop-types
-const LibraryContainer = ({ children }) => (
+const FocusSessionsContainer = ({ children }) => (
   <div css={containerStyle}>{children}</div>
 );
 
-const LibraryComponents = () => {
+const FocusSessionsComponents = () => {
   const { contentfulCallToActionBlock, contentfulHeading } = useStaticQuery(
     graphql`
       {
@@ -73,7 +73,7 @@ const LibraryComponents = () => {
           contentfulCallToActionBlock.extraContent.json
         }
         extraContentType={contentfulCallToActionBlock.extraContentType}
-        ExtraContentContainer={LibraryContainer}
+        ExtraContentContainer={FocusSessionsContainer}
         narrow
         dividerColor="blue"
         button={contentfulCallToActionBlock.button}
@@ -84,4 +84,4 @@ const LibraryComponents = () => {
   );
 };
 
-export default LibraryComponents;
+export default FocusSessionsComponents;
