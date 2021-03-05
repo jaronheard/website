@@ -7,8 +7,15 @@
 const path = require("path");
 
 exports.createPages = async ({ graphql, actions, reporter }) => {
-  // Destructure the createPage function from the actions object
-  const { createPage } = actions;
+  const { createPage, createRedirect } = actions;
+  createRedirect({
+    fromPath: "/project-form",
+    toPath: "https://airtable.com/shrncGaq8OOP6JGEY"
+  });
+  createRedirect({
+    fromPath: "/impact-form",
+    toPath: "https://airtable.com/shrncGaq8OOP6JGEY"
+  });
   const result = await graphql(`
     query {
       allContentfulPost {

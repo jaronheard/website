@@ -51,6 +51,7 @@ module.exports = {
           "https://hackoregon.us3.list-manage.com/subscribe/post?u=6bed8811c700af6cf48dfe893&amp;id=b11a78686d" // add your MC list endpoint here; see instructions below
       }
     },
+    `gatsby-plugin-netlify`, // generates a _headers and _redirects file at the root of the public folder for Netlify
     `gatsby-plugin-layout`
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
