@@ -10,11 +10,13 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   const { createPage, createRedirect } = actions;
   createRedirect({
     fromPath: "/project-form",
-    toPath: "https://airtable.com/shrncGaq8OOP6JGEY"
+    toPath: "https://airtable.com/shrncGaq8OOP6JGEY",
+    force: true
   });
   createRedirect({
     fromPath: "/impact-form",
-    toPath: "https://airtable.com/shrncGaq8OOP6JGEY"
+    toPath: "https://airtable.com/shrncGaq8OOP6JGEY",
+    force: true
   });
   const result = await graphql(`
     query {
