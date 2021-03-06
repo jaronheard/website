@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { jsx, css } from "@emotion/core";
-import { useStaticQuery, graphql, Link } from "gatsby";
+import { useStaticQuery, graphql } from "gatsby";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 
 import { smBreak, xsBreak } from "../../_Theme/UpdatedBrandTheme";
@@ -57,8 +57,8 @@ const ContributorCTA = () => {
               contentfulCallToActionBlock.summary.json
             )}
             {contentfulCallToActionBlock.button && (
-              <Link
-                to={`${contentfulCallToActionBlock.buttonLocalLink}`}
+              <a
+                href={`${contentfulCallToActionBlock.buttonLocalLink}`}
                 className="btn-green"
                 css={css`
                   justify-self: end;
@@ -66,7 +66,7 @@ const ContributorCTA = () => {
                 `}
               >
                 <p>{contentfulCallToActionBlock.button}</p>
-              </Link>
+              </a>
             )}
           </div>
         </div>
