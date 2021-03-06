@@ -10,12 +10,12 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   const { createPage, createRedirect } = actions;
   createRedirect({
     fromPath: "/project-form",
-    toPath: "https://airtable.com/shrncGaq8OOP6JGEY",
+    toPath: "https://form.jotform.com/200788029904056",
     force: true
   });
   createRedirect({
     fromPath: "/impact-form",
-    toPath: "https://airtable.com/shrncGaq8OOP6JGEY",
+    toPath: "https://form.jotform.com/200788029904056",
     force: true
   });
   const result = await graphql(`

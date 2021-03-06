@@ -58,10 +58,10 @@ const Contact = () => (
           `}
         >
           <li>
-            <Link to="/project-form/">Project inquiries</Link>
+            <a href="/project-form/">Project inquiries</a>
           </li>
           <li>
-            <Link to="/impact-form/">Partnership inquiries</Link>
+            <a href="/impact-form/">Partnership inquiries</a>
           </li>
           <li>
             <Link to="/contributor-apply/">Apply to contribute</Link>
