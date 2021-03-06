@@ -18,6 +18,11 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     toPath: "https://form.jotform.com/200788029904056",
     force: true
   });
+  createRedirect({
+    fromPath: "/contributor-apply",
+    toPath: "https://form.jotform.com/200786890019057",
+    force: true
+  });
   const result = await graphql(`
     query {
       allContentfulPost {
