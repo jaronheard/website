@@ -10,7 +10,7 @@ import ContentContainer from "../components/ContentContainer";
 // import hackOregonTeam from "../images/team.png";
 import { colors } from "../_Theme/UpdatedBrandTheme";
 import Staff from "./About/Staff";
-import FeaturedPost from "./About/FeaturedPost";
+import StaffNote from "./About/StaffNote";
 import Organization from "./About/Organization";
 
 const About = () => {
@@ -47,10 +47,10 @@ const About = () => {
           title={contentfulHeading.title}
         />
       </TitleAreaNew>
-      <ContentContainer margin="md">
+      {/* <ContentContainer margin="md">
         <FeaturedPost />
       </ContentContainer>
-      <DividerLine hexColor={colors.blue.hex} />
+      <DividerLine hexColor={colors.blue.hex} /> */}
       <ContentContainer margin="md">
         <Organization
           contentfulCallToActionBlock={contentfulCallToActionBlock}
@@ -59,6 +59,7 @@ const About = () => {
       <DividerLine hexColor={colors.pink.hex} />
       <ContentContainer margin="md">
         <Staff />
+        <StaffNote />
       </ContentContainer>
       <DividerLine hexColor={colors.blue.hex} />
     </PageLayout>
