@@ -30,13 +30,13 @@ const CTAButtons = ({ vertical = false }) => (
       <p>CIVIC Platform</p>
     </Link>
 
-    <Link to="/project-form/" className="btn-blue">
+    <a href="/project-form/" className="btn-blue">
       <p>Bring Your Project</p>
-    </Link>
+    </a>
 
-    <Link to="/impact-form/" className="btn-green">
+    <a href="/impact-form/" className="btn-green">
       <p>Scale Your Impact</p>
-    </Link>
+    </a>
   </div>
 );
 

@@ -1,6 +1,5 @@
 /** @jsx jsx */
 import { jsx, css } from "@emotion/core";
-import { Link } from "gatsby";
 import { xsBreak, maxContentWidth, colors } from "../_Theme/UpdatedBrandTheme";
 import ContentContainer from "./ContentContainer";
 
@@ -58,13 +57,13 @@ const Contact = () => (
           `}
         >
           <li>
-            <Link to="/project-form/">Project inquiries</Link>
+            <a href="/project-form/">Project inquiries</a>
           </li>
           <li>
-            <Link to="/impact-form/">Partnership inquiries</Link>
+            <a href="/impact-form/">Partnership inquiries</a>
           </li>
           <li>
-            <Link to="/contributor-apply/">Apply to contribute</Link>
+            <a href="/contributor-apply/">Apply to contribute</a>
           </li>
           <li>
             <a

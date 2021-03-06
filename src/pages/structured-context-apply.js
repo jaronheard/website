@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { jsx, css } from "@emotion/core";
-import { useStaticQuery, graphql, Link } from "gatsby";
+import { useStaticQuery, graphql } from "gatsby";
 
 import PageLayout from "../components/PageLayout";
 import TitleAreaNew from "../components/TitleAreaNew";
@@ -49,7 +49,7 @@ const ContributorApplication = () => {
           >
             This application is for a program that has completed, please use the
             {` `}
-            <Link to="/contributor-apply">
+            <a href="/contributor-apply">
               <p
                 className="a"
                 css={css`
@@ -58,7 +58,7 @@ const ContributorApplication = () => {
               >
                 general contributor application form
               </p>
-            </Link>
+            </a>
             .
           </p>
 
