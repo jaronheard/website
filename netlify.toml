@@ -8,3 +8,9 @@
     best-practices = 0.9
     seo = 0.8
     pwa = 0.5
+
+[[redirects]]
+  from = "/library"
+  to = "https://civicdatalibrary.org"
+  status = 302
+  force = true
