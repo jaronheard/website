@@ -54,15 +54,12 @@ const HeaderDropdown = ({ open, headerHeight, goTo }) => {
         <ul>
           <li>
             <li>
-              <button
-                type="button"
+              <a
                 className="headerButton"
-                onClick={() => {
-                  goTo("/library/");
-                }}
+                href="https://www.civicdatalibrary.org"
               >
                 <h3 css={menuItem}>Library</h3>
-              </button>
+              </a>
             </li>
             <button
               type="button"

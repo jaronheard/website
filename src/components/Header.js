@@ -79,15 +79,12 @@ const Header = () => {
             }
           `}
         >
-          <button
-            type="button"
+          <a
             className="headerButton"
             css={css`
               margin: 0;
             `}
-            onClick={() => {
-              goTo("/library/");
-            }}
+            href="https://www.civicdatalibrary.org"
           >
             <h3
               css={css`
@@ -97,7 +94,7 @@ const Header = () => {
             >
               Library
             </h3>
-          </button>
+          </a>
           <button
             type="button"
             className="headerButton"
