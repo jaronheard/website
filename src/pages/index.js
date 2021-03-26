@@ -3,7 +3,7 @@ import { jsx } from "@emotion/core";
 
 import PageLayout from "../components/PageLayout";
 import Splash from "./Home/Splash";
-import Teaser from "./Home/Teaser";
+// import Teaser from "./Home/Teaser";
 import FeaturedCTA from "./Home/FeaturedCTA";
 // import OurDifferenceHeader from "./Home/OurDifferenceHeader";
 // import OurDifferenceCards from "./Home/OurDifferenceCards";
@@ -22,8 +22,8 @@ const IndexPage = () => {
       swoopColor={colors.yellow.hex}
     >
       <Splash />
-      <Teaser />
-      <DividerLine hexColor={colors.blue.hex} />
+      {/* <Teaser />
+      <DividerLine hexColor={colors.blue.hex} /> */}
       <ContentContainer margin="sm">
         <FeaturedCTA />
       </ContentContainer>

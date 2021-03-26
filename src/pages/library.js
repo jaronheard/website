@@ -22,7 +22,7 @@ const LibraryPage = () => {
               summary {
                 json
               }
-              buttonLink
+              buttonHref
               buttonTitle
             }
           }
@@ -41,9 +41,9 @@ const LibraryPage = () => {
     {}
   );
   const visionNode = CTANodes["7G0jZnu5uJxhpxtVNXyli7"];
-  const joinNode = CTANodes["5hyKcbsKzpt8tcGKvS0Anc"];
-  const publisherNode = CTANodes["60P95Pu4mUHzL9lkKliYT1"];
-  const contextTeamNode = CTANodes["6ZBqjxU2nwfmPIw1xnCFJp"];
+  // const joinNode = CTANodes["5hyKcbsKzpt8tcGKvS0Anc"];
+  // const publisherNode = CTANodes["60P95Pu4mUHzL9lkKliYT1"];
+  // const contextTeamNode = CTANodes["6ZBqjxU2nwfmPIw1xnCFJp"];
   const gridContainerStyle = css`
     margin-bottom: 4rem;
 
@@ -75,30 +75,12 @@ const LibraryPage = () => {
         {/* Vision */}
         <GridSingle containerStyle={gridContainerStyle}>
           {documentToReactComponents(visionNode.summary.json)}
+          <a href={`${visionNode.buttonHref}`} className="btn-yellow">
+            <p>{visionNode.buttonTitle}</p>
+          </a>
         </GridSingle>
       </ContentContainer>
       <DividerLine hexColor={colors.yellow.hex} />
-      <ContentContainer margin="md">
-        {/* Join Us */}
-        <GridSingle containerStyle={gridContainerStyle}>
-          {documentToReactComponents(joinNode.summary.json)}
-        </GridSingle>
-        {/* Publisher CTA */}
-        <GridSingle containerStyle={gridContainerStyle}>
-          {documentToReactComponents(publisherNode.summary.json)}
-          <a className="btn-green" href={publisherNode.buttonLink}>
-            <p>{publisherNode.buttonTitle}</p>
-          </a>
-        </GridSingle>
-        {/* CIVIC Context Team CTA */}
-        <GridSingle containerStyle={gridContainerStyle}>
-          {documentToReactComponents(contextTeamNode.summary.json)}
-          <a className="btn-yellow" href={contextTeamNode.buttonLink}>
-            <p>{contextTeamNode.buttonTitle}</p>
-          </a>
-        </GridSingle>
-      </ContentContainer>
-      <DividerLine hexColor={colors.pink.hex} />
       <KeepInTheLoop library />
     </PageLayout>
   );
