@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { jsx, css } from "@emotion/core";
-import { useStaticQuery, graphql } from "gatsby";
+import { useStaticQuery, graphql, Link } from "gatsby";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 
 import ContentContainer from "../../components/ContentContainer";
@@ -13,7 +13,7 @@ const Teaser = () => {
         contentfulCallToActionSimple(
           contentful_id: { eq: "4xAM1s3NoGu4eCpkLGBa27" }
         ) {
-          buttonHref
+          buttonLink
           buttonTitle
           summary {
             json
@@ -23,7 +23,7 @@ const Teaser = () => {
     `
   );
 
-  const { summary, buttonHref, buttonTitle } = contentfulCallToActionSimple;
+  const { summary, buttonLink, buttonTitle } = contentfulCallToActionSimple;
 
   return (
     <ContentContainer margin="sm">
@@ -33,15 +33,15 @@ const Teaser = () => {
         `}
       >
         {documentToReactComponents(summary.json)}
-        <a
-          href={buttonHref}
+        <Link
+          to={buttonLink}
           className="btn-pink"
           css={css`
             margin-top: 20px;
           `}
         >
           <p>{buttonTitle}</p>
-        </a>
+        </Link>
       </GridSingle>
     </ContentContainer>
   );
