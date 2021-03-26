@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { jsx, css } from "@emotion/core";
-import { useStaticQuery, graphql } from "gatsby";
+import { useStaticQuery, graphql, Link } from "gatsby";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 import { Logo } from "@hackoregon/ui-brand";
 import options from "../../_Common/contentfulOptions";
@@ -18,7 +18,7 @@ const FeaturedCTA = () => {
               json
             }
             buttonTitle
-            buttonHref
+            buttonLink
           }
         }
       }
@@ -37,12 +37,12 @@ const FeaturedCTA = () => {
         options
       )}
       {/* TODO add space */}
-      <a
-        href={`${contentfulFeaturedCallToAction.callToAction.buttonHref}`}
+      <Link
+        to={`${contentfulFeaturedCallToAction.callToAction.buttonLink}`}
         className="btn-pink"
       >
         <p>{contentfulFeaturedCallToAction.callToAction.buttonTitle}</p>
-      </a>
+      </Link>
     </GridSingle>
   );
 };
